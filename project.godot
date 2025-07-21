@@ -40,10 +40,6 @@ StringTypesChecker="*res://launcher/scripts/helpers/string/string_types_checker.
 window/size/viewport_width=1280
 window/size/viewport_height=960
 
-[editor]
-
-run/main_run_args="--dialogues C:\\Users\\prototype\\Desktop\\test_dialogue_animations\\dialogues.json --recording_mode single --recordings_output_dir C:\\Users\\prototype\\Desktop\\test_dialogue_animations --fps 24.0"
-
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
