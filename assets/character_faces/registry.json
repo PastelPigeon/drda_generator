@@ -1,0 +1,827 @@
+{
+	"spr_alphysface_0": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_0.png"
+	],
+	"spr_alphysface_1": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_1.png"
+	],
+	"spr_alphysface_10": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_10.png"
+	],
+	"spr_alphysface_11": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_11.png"
+	],
+	"spr_alphysface_12": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_12.png"
+	],
+	"spr_alphysface_2": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_2.png"
+	],
+	"spr_alphysface_3": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_3.png"
+	],
+	"spr_alphysface_4": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_4.png"
+	],
+	"spr_alphysface_5": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_5.png"
+	],
+	"spr_alphysface_6": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_6.png"
+	],
+	"spr_alphysface_7": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_7.png"
+	],
+	"spr_alphysface_8": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_8.png"
+	],
+	"spr_alphysface_9": [
+		"res://assets/character_faces/spr_alphysface/spr_alphysface_9.png"
+	],
+	"spr_face_asgore0": [
+		"res://assets/character_faces/spr_face_asgore/spr_face_asgore0.png"
+	],
+	"spr_face_asgore1": [
+		"res://assets/character_faces/spr_face_asgore/spr_face_asgore1.png"
+	],
+	"spr_face_asgore2": [
+		"res://assets/character_faces/spr_face_asgore/spr_face_asgore2.png"
+	],
+	"spr_face_asgore3": [
+		"res://assets/character_faces/spr_face_asgore/spr_face_asgore3.png"
+	],
+	"spr_face_asgore4": [
+		"res://assets/character_faces/spr_face_asgore/spr_face_asgore4.png"
+	],
+	"spr_face_asgore5": [
+		"res://assets/character_faces/spr_face_asgore/spr_face_asgore5.png"
+	],
+	"spr_face_asgore6": [
+		"res://assets/character_faces/spr_face_asgore/spr_face_asgore6.png"
+	],
+	"spr_face_asgore7": [
+		"res://assets/character_faces/spr_face_asgore/spr_face_asgore7.png"
+	],
+	"spr_face_asgore8": [
+		"res://assets/character_faces/spr_face_asgore/spr_face_asgore8.png"
+	],
+	"spr_face_berdly_dark_0": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_0.png"
+	],
+	"spr_face_berdly_dark_1": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_1.png"
+	],
+	"spr_face_berdly_dark_10": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_10.png"
+	],
+	"spr_face_berdly_dark_11": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_11.png"
+	],
+	"spr_face_berdly_dark_12": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_12.png"
+	],
+	"spr_face_berdly_dark_13": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_13.png"
+	],
+	"spr_face_berdly_dark_14": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_14.png"
+	],
+	"spr_face_berdly_dark_15": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_15.png"
+	],
+	"spr_face_berdly_dark_16": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_16.png"
+	],
+	"spr_face_berdly_dark_17": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_17.png"
+	],
+	"spr_face_berdly_dark_18": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_18.png"
+	],
+	"spr_face_berdly_dark_19": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_19.png"
+	],
+	"spr_face_berdly_dark_2": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_2.png"
+	],
+	"spr_face_berdly_dark_20": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_20.png"
+	],
+	"spr_face_berdly_dark_21": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_21.png"
+	],
+	"spr_face_berdly_dark_22": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_22.png"
+	],
+	"spr_face_berdly_dark_23": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_23.png"
+	],
+	"spr_face_berdly_dark_3": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_3.png"
+	],
+	"spr_face_berdly_dark_4": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_4.png"
+	],
+	"spr_face_berdly_dark_5": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_5.png"
+	],
+	"spr_face_berdly_dark_6": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_6.png"
+	],
+	"spr_face_berdly_dark_7": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_7.png"
+	],
+	"spr_face_berdly_dark_8": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_8.png"
+	],
+	"spr_face_berdly_dark_9": [
+		"res://assets/character_faces/spr_face_berdly_dark/spr_face_berdly_dark_9.png"
+	],
+	"spr_face_king_0": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_0.png"
+	],
+	"spr_face_king_1": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_1.png"
+	],
+	"spr_face_king_10": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_10.png"
+	],
+	"spr_face_king_11": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_11.png"
+	],
+	"spr_face_king_12": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_12.png"
+	],
+	"spr_face_king_13": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_13.png"
+	],
+	"spr_face_king_2": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_2.png"
+	],
+	"spr_face_king_3": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_3.png"
+	],
+	"spr_face_king_4": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_4.png"
+	],
+	"spr_face_king_5": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_5.png"
+	],
+	"spr_face_king_6": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_6.png"
+	],
+	"spr_face_king_7": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_7.png"
+	],
+	"spr_face_king_8": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_8.png"
+	],
+	"spr_face_king_9": [
+		"res://assets/character_faces/spr_face_king/spr_face_king_9.png"
+	],
+	"spr_face_l0_0": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_0.png"
+	],
+	"spr_face_l0_1": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_1.png"
+	],
+	"spr_face_l0_10": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_10.png"
+	],
+	"spr_face_l0_11": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_11.png"
+	],
+	"spr_face_l0_12": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_12.png"
+	],
+	"spr_face_l0_13": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_13.png"
+	],
+	"spr_face_l0_14": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_14.png"
+	],
+	"spr_face_l0_2": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_2.png"
+	],
+	"spr_face_l0_3": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_3.png"
+	],
+	"spr_face_l0_4": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_4.png"
+	],
+	"spr_face_l0_5": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_5.png"
+	],
+	"spr_face_l0_6": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_6.png"
+	],
+	"spr_face_l0_7": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_7.png"
+	],
+	"spr_face_l0_8": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_8.png"
+	],
+	"spr_face_l0_9": [
+		"res://assets/character_faces/spr_face_l0/spr_face_l0_9.png"
+	],
+	"spr_face_n_matome_0": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_0.png"
+	],
+	"spr_face_n_matome_1": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_1.png"
+	],
+	"spr_face_n_matome_10": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_10.png"
+	],
+	"spr_face_n_matome_11": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_11.png"
+	],
+	"spr_face_n_matome_12": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_12.png"
+	],
+	"spr_face_n_matome_13": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_13.png"
+	],
+	"spr_face_n_matome_14": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_14.png"
+	],
+	"spr_face_n_matome_15": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_15.png"
+	],
+	"spr_face_n_matome_16": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_16.png"
+	],
+	"spr_face_n_matome_17": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_17.png"
+	],
+	"spr_face_n_matome_18": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_18.png"
+	],
+	"spr_face_n_matome_19": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_19.png"
+	],
+	"spr_face_n_matome_2": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_2.png"
+	],
+	"spr_face_n_matome_20": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_20.png"
+	],
+	"spr_face_n_matome_21": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_21.png"
+	],
+	"spr_face_n_matome_22": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_22.png"
+	],
+	"spr_face_n_matome_23": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_23.png"
+	],
+	"spr_face_n_matome_24": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_24.png"
+	],
+	"spr_face_n_matome_25": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_25.png"
+	],
+	"spr_face_n_matome_26": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_26.png"
+	],
+	"spr_face_n_matome_27": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_27.png"
+	],
+	"spr_face_n_matome_28": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_28.png"
+	],
+	"spr_face_n_matome_29": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_29.png"
+	],
+	"spr_face_n_matome_3": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_3.png"
+	],
+	"spr_face_n_matome_30": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_30.png"
+	],
+	"spr_face_n_matome_31": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_31.png"
+	],
+	"spr_face_n_matome_32": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_32.png"
+	],
+	"spr_face_n_matome_33": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_33.png"
+	],
+	"spr_face_n_matome_34": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_34.png"
+	],
+	"spr_face_n_matome_35": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_35.png"
+	],
+	"spr_face_n_matome_36": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_36.png"
+	],
+	"spr_face_n_matome_37": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_37.png"
+	],
+	"spr_face_n_matome_38": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_38.png"
+	],
+	"spr_face_n_matome_39": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_39.png"
+	],
+	"spr_face_n_matome_4": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_4.png"
+	],
+	"spr_face_n_matome_40": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_40.png"
+	],
+	"spr_face_n_matome_41": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_41.png"
+	],
+	"spr_face_n_matome_5": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_5.png"
+	],
+	"spr_face_n_matome_6": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_6.png"
+	],
+	"spr_face_n_matome_7": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_7.png"
+	],
+	"spr_face_n_matome_8": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_8.png"
+	],
+	"spr_face_n_matome_9": [
+		"res://assets/character_faces/spr_face_n_matome/spr_face_n_matome_9.png"
+	],
+	"spr_face_queen_0": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_0.png"
+	],
+	"spr_face_queen_1": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_1.png"
+	],
+	"spr_face_queen_10": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_10.png"
+	],
+	"spr_face_queen_11": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_11.png"
+	],
+	"spr_face_queen_12": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_12.png"
+	],
+	"spr_face_queen_13": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_13.png"
+	],
+	"spr_face_queen_14": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_14.png"
+	],
+	"spr_face_queen_15": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_15.png"
+	],
+	"spr_face_queen_16": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_16.png"
+	],
+	"spr_face_queen_17": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_17.png"
+	],
+	"spr_face_queen_18": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_18.png"
+	],
+	"spr_face_queen_19": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_19.png"
+	],
+	"spr_face_queen_2": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_2.png"
+	],
+	"spr_face_queen_20": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_20.png"
+	],
+	"spr_face_queen_21": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_21.png"
+	],
+	"spr_face_queen_22": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_22.png"
+	],
+	"spr_face_queen_23": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_23.png"
+	],
+	"spr_face_queen_24": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_24.png"
+	],
+	"spr_face_queen_25": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_25.png"
+	],
+	"spr_face_queen_26": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_26.png"
+	],
+	"spr_face_queen_27": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_27.png"
+	],
+	"spr_face_queen_3": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_3.png"
+	],
+	"spr_face_queen_4": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_4.png"
+	],
+	"spr_face_queen_5": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_5.png"
+	],
+	"spr_face_queen_6": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_6.png"
+	],
+	"spr_face_queen_7": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_7.png"
+	],
+	"spr_face_queen_8": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_8.png"
+	],
+	"spr_face_queen_9": [
+		"res://assets/character_faces/spr_face_queen/spr_face_queen_9.png"
+	],
+	"spr_face_rudy_0": [
+		"res://assets/character_faces/spr_face_rudy/spr_face_rudy_0.png"
+	],
+	"spr_face_rudy_1": [
+		"res://assets/character_faces/spr_face_rudy/spr_face_rudy_1.png"
+	],
+	"spr_face_rudy_2": [
+		"res://assets/character_faces/spr_face_rudy/spr_face_rudy_2.png"
+	],
+	"spr_face_rudy_3": [
+		"res://assets/character_faces/spr_face_rudy/spr_face_rudy_3.png"
+	],
+	"spr_face_rudy_4": [
+		"res://assets/character_faces/spr_face_rudy/spr_face_rudy_4.png"
+	],
+	"spr_face_rudy_5": [
+		"res://assets/character_faces/spr_face_rudy/spr_face_rudy_5.png"
+	],
+	"spr_face_rudy_6": [
+		"res://assets/character_faces/spr_face_rudy/spr_face_rudy_6.png"
+	],
+	"spr_face_rudy_7": [
+		"res://assets/character_faces/spr_face_rudy/spr_face_rudy_7.png"
+	],
+	"spr_face_rurus_0": [
+		"res://assets/character_faces/spr_face_rurus/spr_face_rurus_0.png"
+	],
+	"spr_face_rurus_1": [
+		"res://assets/character_faces/spr_face_rurus/spr_face_rurus_1.png"
+	],
+	"spr_face_rurus_2": [
+		"res://assets/character_faces/spr_face_rurus/spr_face_rurus_2.png"
+	],
+	"spr_face_rurus_3": [
+		"res://assets/character_faces/spr_face_rurus/spr_face_rurus_3.png"
+	],
+	"spr_face_rurus_4": [
+		"res://assets/character_faces/spr_face_rurus/spr_face_rurus_4.png"
+	],
+	"spr_face_rurus_5": [
+		"res://assets/character_faces/spr_face_rurus/spr_face_rurus_5.png"
+	],
+	"spr_face_rurus_6": [
+		"res://assets/character_faces/spr_face_rurus/spr_face_rurus_6.png"
+	],
+	"spr_face_r_dark_0": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_0.png"
+	],
+	"spr_face_r_dark_1": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_1.png"
+	],
+	"spr_face_r_dark_10": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_10.png"
+	],
+	"spr_face_r_dark_11": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_11.png"
+	],
+	"spr_face_r_dark_12": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_12.png"
+	],
+	"spr_face_r_dark_2": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_2.png"
+	],
+	"spr_face_r_dark_3": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_3.png"
+	],
+	"spr_face_r_dark_4": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_4.png"
+	],
+	"spr_face_r_dark_5": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_5.png"
+	],
+	"spr_face_r_dark_6": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_6.png"
+	],
+	"spr_face_r_dark_7": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_7.png"
+	],
+	"spr_face_r_dark_8": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_8.png"
+	],
+	"spr_face_r_dark_9": [
+		"res://assets/character_faces/spr_face_r_dark/spr_face_r_dark_9.png"
+	],
+	"spr_face_r_nohat_0": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_0.png"
+	],
+	"spr_face_r_nohat_1": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_1.png"
+	],
+	"spr_face_r_nohat_10": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_10.png"
+	],
+	"spr_face_r_nohat_11": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_11.png"
+	],
+	"spr_face_r_nohat_12": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_12.png"
+	],
+	"spr_face_r_nohat_13": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_13.png"
+	],
+	"spr_face_r_nohat_14": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_14.png"
+	],
+	"spr_face_r_nohat_15": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_15.png"
+	],
+	"spr_face_r_nohat_16": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_16.png"
+	],
+	"spr_face_r_nohat_17": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_17.png"
+	],
+	"spr_face_r_nohat_18": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_18.png"
+	],
+	"spr_face_r_nohat_19": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_19.png"
+	],
+	"spr_face_r_nohat_2": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_2.png"
+	],
+	"spr_face_r_nohat_20": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_20.png"
+	],
+	"spr_face_r_nohat_21": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_21.png"
+	],
+	"spr_face_r_nohat_22": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_22.png"
+	],
+	"spr_face_r_nohat_23": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_23.png"
+	],
+	"spr_face_r_nohat_24": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_24.png"
+	],
+	"spr_face_r_nohat_25": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_25.png"
+	],
+	"spr_face_r_nohat_26": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_26.png"
+	],
+	"spr_face_r_nohat_27": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_27.png"
+	],
+	"spr_face_r_nohat_28": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_28.png"
+	],
+	"spr_face_r_nohat_29": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_29.png"
+	],
+	"spr_face_r_nohat_3": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_3.png"
+	],
+	"spr_face_r_nohat_30": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_30.png"
+	],
+	"spr_face_r_nohat_31": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_31.png"
+	],
+	"spr_face_r_nohat_32": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_32.png"
+	],
+	"spr_face_r_nohat_33": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_33.png"
+	],
+	"spr_face_r_nohat_34": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_34.png"
+	],
+	"spr_face_r_nohat_35": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_35.png"
+	],
+	"spr_face_r_nohat_36": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_36.png"
+	],
+	"spr_face_r_nohat_37": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_37.png"
+	],
+	"spr_face_r_nohat_38": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_38.png"
+	],
+	"spr_face_r_nohat_39": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_39.png"
+	],
+	"spr_face_r_nohat_4": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_4.png"
+	],
+	"spr_face_r_nohat_40": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_40.png"
+	],
+	"spr_face_r_nohat_5": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_5.png"
+	],
+	"spr_face_r_nohat_6": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_6.png"
+	],
+	"spr_face_r_nohat_7": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_7.png"
+	],
+	"spr_face_r_nohat_8": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_8.png"
+	],
+	"spr_face_r_nohat_9": [
+		"res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_9.png"
+	],
+	"spr_face_susie_alt_0": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_0.png"
+	],
+	"spr_face_susie_alt_1": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_1.png"
+	],
+	"spr_face_susie_alt_10": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_10.png"
+	],
+	"spr_face_susie_alt_11": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_11.png"
+	],
+	"spr_face_susie_alt_12": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_12.png"
+	],
+	"spr_face_susie_alt_13": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_13.png"
+	],
+	"spr_face_susie_alt_14": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_14.png"
+	],
+	"spr_face_susie_alt_15": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_15.png"
+	],
+	"spr_face_susie_alt_16": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_16.png"
+	],
+	"spr_face_susie_alt_17": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_17.png"
+	],
+	"spr_face_susie_alt_18": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_18.png"
+	],
+	"spr_face_susie_alt_19": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_19.png"
+	],
+	"spr_face_susie_alt_2": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_2.png"
+	],
+	"spr_face_susie_alt_20": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_20.png"
+	],
+	"spr_face_susie_alt_21": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_21.png"
+	],
+	"spr_face_susie_alt_22": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_22.png"
+	],
+	"spr_face_susie_alt_23": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_23.png"
+	],
+	"spr_face_susie_alt_24": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_24.png"
+	],
+	"spr_face_susie_alt_25": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_25.png"
+	],
+	"spr_face_susie_alt_26": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_26.png"
+	],
+	"spr_face_susie_alt_27": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_27.png"
+	],
+	"spr_face_susie_alt_28": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_28.png"
+	],
+	"spr_face_susie_alt_29": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_29.png"
+	],
+	"spr_face_susie_alt_3": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_3.png"
+	],
+	"spr_face_susie_alt_30": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_30.png"
+	],
+	"spr_face_susie_alt_31": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_31.png"
+	],
+	"spr_face_susie_alt_32": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_32.png"
+	],
+	"spr_face_susie_alt_33": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_33.png"
+	],
+	"spr_face_susie_alt_34": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_34.png"
+	],
+	"spr_face_susie_alt_35": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_35.png"
+	],
+	"spr_face_susie_alt_36": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_36.png"
+	],
+	"spr_face_susie_alt_37": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_37.png"
+	],
+	"spr_face_susie_alt_38": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_38.png"
+	],
+	"spr_face_susie_alt_39": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_39.png"
+	],
+	"spr_face_susie_alt_4": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_4.png"
+	],
+	"spr_face_susie_alt_40": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_40.png"
+	],
+	"spr_face_susie_alt_5": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_5.png"
+	],
+	"spr_face_susie_alt_6": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_6.png"
+	],
+	"spr_face_susie_alt_7": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_7.png"
+	],
+	"spr_face_susie_alt_8": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_8.png"
+	],
+	"spr_face_susie_alt_9": [
+		"res://assets/character_faces/spr_face_susie_alt/spr_face_susie_alt_9.png"
+	],
+	"spr_face_t0": [
+		"res://assets/character_faces/spr_face_t/spr_face_t0.png"
+	],
+	"spr_face_t1": [
+		"res://assets/character_faces/spr_face_t/spr_face_t1.png"
+	],
+	"spr_face_t2": [
+		"res://assets/character_faces/spr_face_t/spr_face_t2.png"
+	],
+	"spr_face_t3": [
+		"res://assets/character_faces/spr_face_t/spr_face_t3.png"
+	],
+	"spr_face_t4": [
+		"res://assets/character_faces/spr_face_t/spr_face_t4.png"
+	],
+	"spr_face_t5": [
+		"res://assets/character_faces/spr_face_t/spr_face_t5.png"
+	],
+	"spr_face_t6": [
+		"res://assets/character_faces/spr_face_t/spr_face_t6.png"
+	],
+	"spr_face_t7": [
+		"res://assets/character_faces/spr_face_t/spr_face_t7.png"
+	],
+	"spr_face_t8": [
+		"res://assets/character_faces/spr_face_t/spr_face_t8.png"
+	],
+	"spr_face_t9": [
+		"res://assets/character_faces/spr_face_t/spr_face_t9.png"
+	],
+	"spr_face_undyne_0": [
+		"res://assets/character_faces/spr_face_undyne/spr_face_undyne_0.png"
+	],
+	"spr_face_undyne_1": [
+		"res://assets/character_faces/spr_face_undyne/spr_face_undyne_1.png"
+	],
+	"spr_face_undyne_2": [
+		"res://assets/character_faces/spr_face_undyne/spr_face_undyne_2.png"
+	],
+	"spr_face_undyne_3": [
+		"res://assets/character_faces/spr_face_undyne/spr_face_undyne_3.png"
+	],
+	"spr_face_undyne_4": [
+		"res://assets/character_faces/spr_face_undyne/spr_face_undyne_4.png"
+	],
+	"spr_face_undyne_5": [
+		"res://assets/character_faces/spr_face_undyne/spr_face_undyne_5.png"
+	],
+	"spr_face_undyne_6": [
+		"res://assets/character_faces/spr_face_undyne/spr_face_undyne_6.png"
+	],
+	"spr_face_undyne_7": [
+		"res://assets/character_faces/spr_face_undyne/spr_face_undyne_7.png"
+	],
+	"spr_face_undyne_8": [
+		"res://assets/character_faces/spr_face_undyne/spr_face_undyne_8.png"
+	],
+	"spr_face_undyne_9": [
+		"res://assets/character_faces/spr_face_undyne/spr_face_undyne_9.png"
+	]
+}

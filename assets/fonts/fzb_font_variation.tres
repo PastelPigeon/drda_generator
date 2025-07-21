@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://cgejr2nhtmh8w"]
+
+[ext_resource type="FontFile" uid="uid://l66kvf7q2r5j" path="res://assets/fonts/FZBitmap-GBK-11X12-2.ttf" id="1_yl8cu"]
+
+[resource]
+base_font = ExtResource("1_yl8cu")
+spacing_glyph = 8
+spacing_bottom = 22

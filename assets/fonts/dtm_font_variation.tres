@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://b8ejit864xrw2"]
+
+[ext_resource type="FontFile" uid="uid://8lgrplacx65j" path="res://assets/fonts/DTM-Mono-1.otf" id="1_xaljb"]
+
+[resource]
+base_font = ExtResource("1_xaljb")

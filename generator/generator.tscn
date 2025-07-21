@@ -1,0 +1,141 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdek1m6ysenjg"]
+
+[ext_resource type="Script" uid="uid://cmijniia7p5ab" path="res://generator/scripts/generator/generator.gd" id="1_n178k"]
+[ext_resource type="Script" uid="uid://jqtk34kfuj22" path="res://generator/scripts/generator/background.gd" id="2_rcwul"]
+[ext_resource type="Script" uid="uid://df1dqpi4c4jxh" path="res://generator/scripts/generator/dialogue_texture_dark.gd" id="3_jdrsx"]
+[ext_resource type="Script" uid="uid://ch0xc8bhtmyva" path="res://generator/scripts/generator/dialogue_texture_light.gd" id="4_xmo7a"]
+[ext_resource type="Script" uid="uid://wdxffr1yusu0" path="res://generator/scripts/generator/animation_player.gd" id="5_nd3na"]
+
+[sub_resource type="Gradient" id="Gradient_rcwul"]
+offsets = PackedFloat32Array(0, 0.974026)
+colors = PackedColorArray(0.188235, 0.188235, 0.313726, 1, 0.0117647, 0.0117647, 0.490196, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jdrsx"]
+gradient = SubResource("Gradient_rcwul")
+fill_to = Vector2(0, 1)
+
+[node name="Generator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n178k")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0, 1)
+script = ExtResource("2_rcwul")
+
+[node name="Dialogue" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 49.0
+offset_top = 622.0
+offset_right = 1281.0
+offset_bottom = 954.0
+
+[node name="DialogueTextureDark" type="TextureRect" parent="Dialogue"]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 332.0
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("3_jdrsx")
+
+[node name="DialogueTextureLight" type="TextureRect" parent="Dialogue"]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 332.0
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("4_xmo7a")
+
+[node name="CharacterFace" type="TextureRect" parent="Dialogue"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 76.0
+offset_right = 278.0
+offset_bottom = 272.0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="PlaceholderChar" type="Control" parent="Dialogue"]
+anchors_preset = 0
+offset_left = 299.0
+offset_top = 58.0
+offset_right = 339.0
+offset_bottom = 98.0
+
+[node name="Shadow" type="RichTextLabel" parent="Dialogue/PlaceholderChar"]
+clip_children = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 42.0
+offset_bottom = 64.0
+bbcode_enabled = true
+text = "[font=res://assets/fonts/dtm_font_variation.tres][font_size=51]*"
+fit_content = true
+
+[node name="TextureRect" type="TextureRect" parent="Dialogue/PlaceholderChar/Shadow"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_jdrsx")
+
+[node name="Text" type="RichTextLabel" parent="Dialogue/PlaceholderChar"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[font=res://assets/fonts/dtm_font_variation.tres][font_size=51]*"
+fit_content = true
+
+[node name="Text" type="Control" parent="Dialogue"]
+anchors_preset = 0
+offset_left = 362.0
+offset_top = 63.0
+offset_right = 1094.0
+offset_bottom = 288.0
+
+[node name="Shadow" type="RichTextLabel" parent="Dialogue/Text"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="Dialogue/Text/Shadow"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_jdrsx")
+
+[node name="Text" type="RichTextLabel" parent="Dialogue/Text"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+script = ExtResource("5_nd3na")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

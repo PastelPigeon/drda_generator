@@ -1,0 +1,49 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="drda_generator"
+run/main_scene="uid://ce6dpfqbtquso"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="uid://pyyo83y3pjy2"
+
+[autoload]
+
+DictionaryMerger="*res://_global/scripts/helpers/dictionary/dictionary_merger.gd"
+BbcodeParser="*res://generator/scripts/helpers/string/bbcode_parser.gd"
+DialogueBbcodeTagsCleaner="*res://generator/scripts/helpers/string/dialogue_bbcode_tags_cleaner.gd"
+RecordingManager="*res://generator/scripts/helpers/recording/recording_manager.gd"
+ProcessManager="*res://generator/scripts/helpers/process/process_manager.gd"
+CharDurationCalculator="*res://generator/scripts/helpers/animation/schedule_calculator/char_duration_calculator.gd"
+AnimationScheduleCalculator="*res://generator/scripts/helpers/animation/schedule_calculator/animation_schedule_calculator.gd"
+AnimationMerger="*res://generator/scripts/helpers/animation/merger/animation_merger.gd"
+VisibleAnimationPathValuePairsGenerator="*res://generator/scripts/animation/visible/visible_animation_path_value_pairs_generator.gd"
+AssetFinder="*res://generator/scripts/helpers/asset/asset_finder.gd"
+VisibleAnimationGenerator="*res://generator/scripts/animation/visible/visible_animation_generator.gd"
+AudioAnimationGenerator="*res://generator/scripts/animation/audio/audio_animation_generator.gd"
+RecordingAnimationGenerator="*res://generator/scripts/animation/recording/recording_animation_generator.gd"
+ProcessAnimationGenerator="*res://generator/scripts/animation/process/process_animation_generator.gd"
+AnimationGenerator="*res://generator/scripts/animation/animation_generator.gd"
+CmdlineParser="*res://launcher/scripts/helpers/cmdline/cmdline_parser.gd"
+StringTypesChecker="*res://launcher/scripts/helpers/string/string_types_checker.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=960
+
+[editor]
+
+run/main_run_args="--dialogues C:\\Users\\prototype\\Desktop\\test_dialogue_animations\\dialogues.json --recording_mode single --recordings_output_dir C:\\Users\\prototype\\Desktop\\test_dialogue_animations --fps 24.0"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
