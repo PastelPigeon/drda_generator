@@ -17,6 +17,8 @@ class RecordingInfo:
 	var audio_file: String
 	var audio_effect_record: AudioEffectRecord
 	var audio_bus_index: int
+	var start_time: float  # 添加开始时间戳
+	var frame_times: Array[float] = []  # 记录每帧的实际时间
 
 var _state: RecordingState = RecordingState.IDLE
 var _current_recording: RecordingInfo = null
@@ -26,10 +28,14 @@ var _target_fps: float = 30.0
 var _global_output_dir: String = "user://recordings"
 var _master_bus_index: int = 0  # 主总线索引
 var _record_effect_index: int = -1  # 录制效果在总线中的位置
+var _time_since_last_frame: float = 0.0  # 跟踪帧间时间
 
 func _ready() -> void:
 	# 自动初始化音频录制
 	initialize_audio_recording()
+	
+	# 设置默认帧率
+	Engine.max_fps = 0  # 不限制最大FPS
 
 # 设置全局输出目录
 func set_output_dir(dir: String) -> void:
@@ -90,6 +96,7 @@ func start_recording(fps: float = 30.0, custom_output_dir: String = "") -> bool:
 	_current_recording.output_dir = custom_output_dir if custom_output_dir else _global_output_dir
 	_current_recording.audio_file = audio_path
 	_current_recording.audio_bus_index = _master_bus_index
+	_current_recording.start_time = Time.get_ticks_usec() / 1000000.0  # 记录精确开始时间
 	
 	# 获取音频录制效果
 	var record_effect = AudioServer.get_bus_effect(_master_bus_index, _record_effect_index) as AudioEffectRecord
@@ -103,24 +110,27 @@ func start_recording(fps: float = 30.0, custom_output_dir: String = "") -> bool:
 	
 	# 重置帧计时器
 	_frame_timer = 0.0
+	_time_since_last_frame = 0.0
 	_state = RecordingState.RECORDING
 	
 	print("Recording started. ID: ", recording_id)
 	print("Frames will be stored in: ", frames_dir)
+	print("Target FPS: ", fps)
 	set_process(true)
+	
+	# 立即捕获第一帧
+	_capture_frame()
+	
 	return true
 
-# 自动处理帧捕获
-func _process(delta):
+# 捕获一帧
+func _capture_frame():
 	if _state != RecordingState.RECORDING:
 		return
 	
-	# 控制帧率
-	_frame_timer += delta
-	if _frame_timer < 1.0 / _target_fps:
-		return
-	
-	_frame_timer = 0.0
+	# 记录当前帧的时间戳
+	var current_time = Time.get_ticks_usec() / 1000000.0
+	_current_recording.frame_times.append(current_time - _current_recording.start_time)
 	
 	# 获取视口图像
 	var viewport = get_viewport()
@@ -142,6 +152,27 @@ func _process(delta):
 		return
 	
 	_current_recording.frame_count += 1
+
+# 自动处理帧捕获
+func _process(delta):
+	if _state != RecordingState.RECORDING:
+		return
+	
+	_time_since_last_frame += delta
+	_frame_timer += delta
+	
+	# 计算目标帧间隔
+	var target_frame_interval = 1.0 / _target_fps
+	
+	# 如果距离上一帧的时间已经超过目标间隔，捕获新帧
+	if _time_since_last_frame >= target_frame_interval:
+		_capture_frame()
+		_time_since_last_frame = 0.0  # 重置计时器
+		
+		# 计算实际帧率
+		var actual_fps = 1.0 / (_frame_timer / _current_recording.frame_count)
+		if _current_recording.frame_count % 30 == 0:  # 每30帧打印一次
+			print("Actual FPS: %.1f (Target: %d)" % [actual_fps, _target_fps])
 
 # 停止录制并返回ID
 func stop_recording() -> String:
@@ -266,10 +297,12 @@ func _convert_to_mp4(recording: RecordingInfo) -> Dictionary:
 		args.append_array([
 			"-c:a", "aac",
 			"-b:a", "192k",
+			"-af", "aresample=async=1:first_pts=0",  # 添加音频同步处理
+			"-vsync", "vfr",  # 使用可变帧率
 			"-shortest"  # 确保视频长度与音频一致
 		])
 	else:
-		args.append("-an")  # 无音频
+		args.append_array(["-an", "-vsync", "vfr"])  # 无音频 + 可变帧率
 	
 	# 添加输出路径
 	args.append(absolute_output_path)
@@ -395,3 +428,17 @@ func debug_audio_system():
 		print("  ", j, ": ", effect.get_class())
 	
 	print("\nRecording effect index: ", _record_effect_index)
+	
+
+# 计算实际帧率
+func calculate_actual_fps(recording_id: String) -> float:
+	if not _recordings.has(recording_id):
+		return 0.0
+	
+	var recording = _recordings[recording_id]
+	if recording.frame_count < 2:
+		return 0.0
+	
+	# 计算总时间和平均帧间隔
+	var total_time = recording.frame_times.back() - recording.frame_times.front()
+	return (recording.frame_count - 1) / total_time
