@@ -116,6 +116,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
+scroll_active = false
 
 [node name="TextureRect" type="TextureRect" parent="Dialogue/Text/Shadow"]
 layout_mode = 1
@@ -134,6 +135,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
+scroll_active = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 script = ExtResource("5_nd3na")
