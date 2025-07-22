@@ -22,10 +22,10 @@ func _ready() -> void:
 		var cmdline_args_dict = CmdlineParser.convert_cmdline_args_array_to_dict(OS.get_cmdline_args())
 		var cmdline_status_dict = CmdlineParser.get_cmdline_args_status(OS.get_cmdline_args())
 		
-		var alert_screen_scene_res: PackedScene = load("res://ui/alert_screen/alert_screen.tscn")
-		var alert_screen_scene_ins = alert_screen_scene_res.instantiate()
+		var cmdline_alert_scene_res: PackedScene = load("res://ui/cmdline_alert/cmdline_alert.tscn")
+		var cmdline_alert_scene_ins = cmdline_alert_scene_res.instantiate()
 		
-		add_child(alert_screen_scene_ins)
+		add_child(cmdline_alert_scene_ins)
 		
-		alert_screen_scene_ins.cmdline_args_dict = cmdline_args_dict
-		alert_screen_scene_ins.cmdline_status_dict = cmdline_status_dict
+		cmdline_alert_scene_ins.cmdline_args_dict = cmdline_args_dict
+		cmdline_alert_scene_ins.cmdline_status_dict = cmdline_status_dict

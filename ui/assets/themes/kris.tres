@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=22 format=4 uid="uid://6da4wueuxixy"]
+[gd_resource type="Theme" load_steps=23 format=4 uid="uid://6da4wueuxixy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fs7p7"]
 
@@ -1723,6 +1723,18 @@ corner_radius_bottom_left = 4
 shadow_color = Color(0.388235, 0.388235, 0.388235, 1)
 shadow_size = 1
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4iyyv"]
+bg_color = Color(1, 0.326247, 0.394254, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.388235, 0.388235, 0.388235, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hr242"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x1gt8"]
@@ -1799,6 +1811,11 @@ TextEdit/icons/space = SubResource("ImageTexture_ki84d")
 TextEdit/icons/tab = SubResource("ImageTexture_olxer")
 TextEdit/styles/focus = SubResource("StyleBoxFlat_lti2u")
 TextEdit/styles/normal = SubResource("StyleBoxFlat_cw4te")
+alert_header/base_type = &"Panel"
+alert_header/styles/panel = SubResource("StyleBoxFlat_4iyyv")
+on_background_label/base_type = &"Label"
+on_background_label/colors/font_color = Color(0.317647, 0.831373, 1, 1)
+on_background_label/font_sizes/font_size = 14
 title_bar/base_type = &"Panel"
 title_bar/styles/panel = SubResource("StyleBoxEmpty_hr242")
 window/base_type = &"Panel"

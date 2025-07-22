@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://karnue55fo3l" path="res://ui/assets/icons/window/minus.svg" id="3_jjbjf"]
 [ext_resource type="Script" uid="uid://chayf1aibxppm" path="res://ui/window/scripts/window/min_button.gd" id="4_11gee"]
 [ext_resource type="Texture2D" uid="uid://cuvx15r0gqt51" path="res://ui/assets/icons/window/close.svg" id="4_fv6dx"]
-[ext_resource type="Script" uid="uid://wm565xu2a7eh" path="res://ui/window/scripts/window/max_button.gd" id="8_86q48"]
+[ext_resource type="Script" uid="uid://bxe7yjyop6g7" path="res://ui/window/scripts/window/close_button.gd" id="8_86q48"]
 
 [node name="Window" type="Panel"]
 anchors_preset = 15
@@ -26,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-split_offset = 40
+split_offset = 42
 dragging_enabled = false
 dragger_visibility = 2
 
@@ -79,7 +79,7 @@ layout_mode = 2
 icon = ExtResource("3_jjbjf")
 script = ExtResource("4_11gee")
 
-[node name="MaxButton" type="Button" parent="VSplitContainer/TitleBar/Right"]
+[node name="CloseButton" type="Button" parent="VSplitContainer/TitleBar/Right"]
 layout_mode = 2
 icon = ExtResource("4_fv6dx")
 script = ExtResource("8_86q48")

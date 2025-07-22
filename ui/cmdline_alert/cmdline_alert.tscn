@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpx8qn0yi354j"]
+
+[ext_resource type="Script" uid="uid://d3tth14wxhmgd" path="res://ui/cmdline_alert/scripts/cmdline_alert/cmdline_alert.gd" id="1_r4e56"]
+[ext_resource type="PackedScene" uid="uid://dosa85y0k8h4p" path="res://ui/window/window.tscn" id="2_ol4yv"]
+[ext_resource type="Theme" uid="uid://6da4wueuxixy" path="res://ui/assets/themes/kris.tres" id="3_ol4yv"]
+[ext_resource type="Texture2D" uid="uid://u4g38h2ujtvb" path="res://ui/assets/icons/cmdline_alert/error.svg" id="4_4rasu"]
+[ext_resource type="Script" uid="uid://cqa3a1xl13aw6" path="res://ui/cmdline_alert/scripts/cmdline_alert/ok_button.gd" id="5_b541u"]
+
+[node name="CmdlineAlert" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r4e56")
+
+[node name="Window" parent="." instance=ExtResource("2_ol4yv")]
+layout_mode = 1
+window_size = Vector2i(400, 450)
+
+[node name="MarginContainer" type="MarginContainer" parent="Window/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="AlertHeader" type="Panel" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme = ExtResource("3_ol4yv")
+theme_type_variation = &"alert_header"
+
+[node name="CenterContainer" type="CenterContainer" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/AlertHeader"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/AlertHeader/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="ErrorIcon" type="TextureRect" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/AlertHeader/CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_4rasu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/AlertHeader/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -1
+
+[node name="ErrorTitle" type="RichTextLabel" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/AlertHeader/CenterContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+bbcode_enabled = true
+text = "[font_size=20]错误的命令行参数"
+fit_content = true
+
+[node name="ErrorMessage" type="Label" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/AlertHeader/CenterContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "{errmsg_placeholder}"
+
+[node name="HelpInfo" type="Label" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_ol4yv")
+theme_type_variation = &"on_background_label"
+text = "请尝试使用  --doc  参数启动生成器以获得帮助
+"
+
+[node name="OKButton" type="Button" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "OK"
+script = ExtResource("5_b541u")
+
+[editable path="Window"]
