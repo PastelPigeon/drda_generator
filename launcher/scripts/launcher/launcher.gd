@@ -18,7 +18,11 @@ func _ready() -> void:
 			"recording_mode": cmdline_args_dict["recording_mode"],
 			"recordings_output_dir": cmdline_args_dict["recordings_output_dir"]
 		}
-	elif cmdline_args_status != CmdlineParser.CmdlineStatus.UI_MODE:
+	elif cmdline_args_status == CmdlineParser.CmdlineStatus.UI_MODE:
+		var ui_mode_scene_res: PackedScene = load("res://ui/ui_mode/ui_mode.tscn")
+		var ui_mode_scene_ins = ui_mode_scene_res.instantiate()
+		add_child(ui_mode_scene_ins)
+	else:
 		var cmdline_args_dict = CmdlineParser.convert_cmdline_args_array_to_dict(OS.get_cmdline_args())
 		var cmdline_status_dict = CmdlineParser.get_cmdline_args_status(OS.get_cmdline_args())
 		

@@ -5,4 +5,4 @@ func _ready() -> void:
 	
 func _on_properties_changed():
 	if owner.options.has("background"):
-		color = owner.options["background"]
+		color = Color(owner.options["background"])

@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://bkkkbjhpe1f7t"]
+
+[ext_resource type="Texture2D" uid="uid://qh1wsbmwxbdu" path="res://ui/assets/icons/ui_mode/delete.svg" id="1_eddij"]
+[ext_resource type="Script" uid="uid://cy5cucxwhmgpi" path="res://ui/ui_mode/scripts/dialogue_item/dialogue_item.gd" id="1_mqsc7"]
+[ext_resource type="Script" uid="uid://dcsircadnwc2s" path="res://ui/ui_mode/scripts/dialogue_item/remove_button.gd" id="3_w05i3"]
+[ext_resource type="Texture2D" uid="uid://hut0axuqeatq" path="res://ui/assets/icons/ui_mode/font-size.svg" id="4_1th3r"]
+[ext_resource type="Script" uid="uid://cvlmfanjybe55" path="res://ui/ui_mode/scripts/dialogue_item/content.gd" id="4_durl6"]
+[ext_resource type="Script" uid="uid://ulu2eigiq6jq" path="res://ui/ui_mode/scripts/dialogue_item/add_font_data_zh_button.gd" id="5_ervd0"]
+[ext_resource type="Script" uid="uid://bjhxdigsrtryt" path="res://ui/ui_mode/scripts/dialogue_item/add_font_data_en_button.gd" id="6_imv4v"]
+[ext_resource type="Script" uid="uid://bqobkk2isqvbb" path="res://ui/ui_mode/scripts/dialogue_item/add_world_state_dark_button.gd" id="7_dxvpj"]
+
+[node name="DialogueItem" type="Control"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mqsc7")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="Functions" type="HBoxContainer" parent="HSplitContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="RemoveButton" type="Button" parent="HSplitContainer/Functions"]
+layout_mode = 2
+icon = ExtResource("1_eddij")
+script = ExtResource("3_w05i3")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer/Functions"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HSplitContainer/Functions/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="QuickFunctions" type="VBoxContainer" parent="HSplitContainer/Functions/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddFontDataZHButton" type="Button" parent="HSplitContainer/Functions/ScrollContainer/MarginContainer/QuickFunctions"]
+layout_mode = 2
+text = "中文"
+icon = ExtResource("4_1th3r")
+script = ExtResource("5_ervd0")
+
+[node name="AddFontDataENButton" type="Button" parent="HSplitContainer/Functions/ScrollContainer/MarginContainer/QuickFunctions"]
+layout_mode = 2
+text = "英文"
+icon = ExtResource("4_1th3r")
+script = ExtResource("6_imv4v")
+
+[node name="AddWorldStateDarkButton" type="Button" parent="HSplitContainer/Functions/ScrollContainer/MarginContainer/QuickFunctions"]
+layout_mode = 2
+text = "暗世界"
+script = ExtResource("7_dxvpj")
+
+[node name="Content" type="TextEdit" parent="HSplitContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("4_durl6")

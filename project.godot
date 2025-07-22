@@ -32,14 +32,20 @@ AudioAnimationGenerator="*res://generator/scripts/animation/audio/audio_animatio
 RecordingAnimationGenerator="*res://generator/scripts/animation/recording/recording_animation_generator.gd"
 ProcessAnimationGenerator="*res://generator/scripts/animation/process/process_animation_generator.gd"
 AnimationGenerator="*res://generator/scripts/animation/animation_generator.gd"
-CmdlineParser="*res://launcher/scripts/helpers/cmdline/cmdline_parser.gd"
-StringTypesChecker="*res://launcher/scripts/helpers/string/string_types_checker.gd"
+CmdlineParser="*res://_global/scripts/helpers/cmdline/cmdline_parser.gd"
+StringTypesChecker="*res://_global/scripts/helpers/string/string_types_checker.gd"
+TempFilesManager="*res://ui/ui_mode/scripts/helpers/temp_file/temp_files_manager.gd"
+ArrayMerger="*res://_global/scripts/helpers/array/array_merger.gd"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=960
 window/per_pixel_transparency/allowed=true
+
+[editor]
+
+run/main_run_args="--editor_ui_mode"
 
 [rendering]
 

@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpx8qn0yi354j"]
+[gd_scene load_steps=5 format=3 uid="uid://bpx8qn0yi354j"]
 
 [ext_resource type="Script" uid="uid://d3tth14wxhmgd" path="res://ui/cmdline_alert/scripts/cmdline_alert/cmdline_alert.gd" id="1_r4e56"]
 [ext_resource type="PackedScene" uid="uid://dosa85y0k8h4p" path="res://ui/window/window.tscn" id="2_ol4yv"]
-[ext_resource type="Theme" uid="uid://6da4wueuxixy" path="res://ui/assets/themes/kris.tres" id="3_ol4yv"]
 [ext_resource type="Texture2D" uid="uid://u4g38h2ujtvb" path="res://ui/assets/icons/cmdline_alert/error.svg" id="4_4rasu"]
 [ext_resource type="Script" uid="uid://cqa3a1xl13aw6" path="res://ui/cmdline_alert/scripts/cmdline_alert/ok_button.gd" id="5_b541u"]
 
@@ -38,7 +37,6 @@ theme_override_constants/separation = 10
 [node name="AlertHeader" type="Panel" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
-theme = ExtResource("3_ol4yv")
 theme_type_variation = &"alert_header"
 
 [node name="CenterContainer" type="CenterContainer" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/AlertHeader"]
@@ -74,7 +72,6 @@ text = "{errmsg_placeholder}"
 
 [node name="HelpInfo" type="Label" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_ol4yv")
 theme_type_variation = &"on_background_label"
 text = "请尝试使用  --doc  参数启动生成器以获得帮助
 "

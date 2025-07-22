@@ -82,19 +82,33 @@ func convert_cmdline_args_dict_to_string(cmdline_args: Dictionary) -> String:
 		
 	return " ".join(cmdline_args_array)
 	
+	
+## 将dict形式的cmdline_args转换为Array形式
+func convert_cmdline_args_dict_to_array(cmdline_args: Dictionary) -> Array:
+	# 合并默认arg字典和传入的参数
+	var merged_cmdline_args = DictionaryMerger.merge_dictionaries([DEFAULT, cmdline_args])
+	
+	var cmdline_args_array = []
+	
+	for arg in merged_cmdline_args:
+		cmdline_args_array.append(_get_arg_cmdline_name(arg))
+		cmdline_args_array.append(merged_cmdline_args[arg])
+		
+	return cmdline_args_array
+	
 ## 判断传入的cmdline_args的状态
 func get_cmdline_args_status(cmdline_args: Array) -> Dictionary:
-	if Engine.is_editor_hint() and len(cmdline_args) == 0:
+	if OS.is_debug_build() and len(cmdline_args) == 0:
 		return {
 			"status": CmdlineStatus.EDITOR,
 			"user": ""
 		}
-	elif Engine.is_editor_hint() and _arg_exists_cmdline_args_array("editor_ui_mode", cmdline_args):
+	elif OS.is_debug_build() and _arg_exists_cmdline_args_array("editor_ui_mode", cmdline_args):
 		return {
 			"status": CmdlineStatus.UI_MODE,
 			"user": ""
 		}
-	elif Engine.is_editor_hint() == false and len(cmdline_args) == 0:
+	elif OS.is_debug_build() == false and len(cmdline_args) == 0:
 		return {
 			"status": CmdlineStatus.UI_MODE,
 			"user": ""
