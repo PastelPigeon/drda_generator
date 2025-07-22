@@ -66,7 +66,7 @@ text = "设置生成视频的视频帧率（默认24fps）"
 
 [node name="MarginContainer" type="MarginContainer" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/Left/Options/Fps"]
 layout_mode = 2
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 3
 
 [node name="FpsInput" type="SpinBox" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/Left/Options/Fps/MarginContainer"]
 unique_name_in_owner = true
@@ -90,7 +90,7 @@ text = "设置生成视频的背景颜色"
 
 [node name="MarginContainer" type="MarginContainer" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/Left/Options/Background"]
 layout_mode = 2
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 3
 
 [node name="BackgroundInput" type="ColorPickerButton" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/Left/Options/Background/MarginContainer"]
 unique_name_in_owner = true
@@ -114,7 +114,7 @@ autowrap_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/Left/Options/RecordingMode"]
 layout_mode = 2
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 3
 
 [node name="RecordingModeInput" type="OptionButton" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/Left/Options/RecordingMode/MarginContainer"]
 unique_name_in_owner = true
@@ -141,7 +141,7 @@ text = "设置生成视频的输出路径"
 
 [node name="MarginContainer" type="MarginContainer" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/Left/Options/RecordingsOutputDir"]
 layout_mode = 2
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 3
 
 [node name="RecordingsOutputDirInput" type="LineEdit" parent="Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/Left/Options/RecordingsOutputDir/MarginContainer"]
 unique_name_in_owner = true
