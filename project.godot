@@ -19,7 +19,7 @@ config/icon="uid://pyyo83y3pjy2"
 
 DictionaryMerger="*res://_global/scripts/helpers/dictionary/dictionary_merger.gd"
 BbcodeParser="*res://generator/scripts/helpers/string/bbcode_parser.gd"
-DialogueBbcodeTagsCleaner="*res://generator/scripts/helpers/string/dialogue_bbcode_tags_cleaner.gd"
+DialogueBbcodeTagsCleaner="*res://_global/scripts/helpers/string/dialogue_bbcode_tags_cleaner.gd"
 RecordingManager="*res://generator/scripts/helpers/recording/recording_manager.gd"
 ProcessManager="*res://generator/scripts/helpers/process/process_manager.gd"
 CharDurationCalculator="*res://generator/scripts/helpers/animation/schedule_calculator/char_duration_calculator.gd"
@@ -36,6 +36,7 @@ CmdlineParser="*res://_global/scripts/helpers/cmdline/cmdline_parser.gd"
 StringTypesChecker="*res://_global/scripts/helpers/string/string_types_checker.gd"
 TempFilesManager="*res://ui/ui_mode/scripts/helpers/temp_file/temp_files_manager.gd"
 ArrayMerger="*res://_global/scripts/helpers/array/array_merger.gd"
+EditorBbcodeParser="*res://ui/ui_mode/scripts/helpers/string/editor_bbcode_parser.gd"
 
 [display]
 

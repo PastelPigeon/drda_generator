@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=23 format=4 uid="uid://6da4wueuxixy"]
+[gd_resource type="Theme" load_steps=30 format=4 uid="uid://6da4wueuxixy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fs7p7"]
 
@@ -1735,6 +1735,90 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxedn"]
+bg_color = Color(1, 0.326247, 0.394254, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.388235, 0.388235, 0.388235, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ateni"]
+bg_color = Color(1, 0.326247, 0.394254, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.388235, 0.388235, 0.388235, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hr242"]
+bg_color = Color(2.45467e-06, 0.715093, 0.413314, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.388235, 0.388235, 0.388235, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_olxer"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ki84d"]
+bg_color = Color(0.628266, 0.893453, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.388235, 0.388235, 0.388235, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5mya5"]
+bg_color = Color(0.628266, 0.893453, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.388235, 0.388235, 0.388235, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvmaa"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.545098, 0.866667, 0.94902, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hr242"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x1gt8"]
@@ -1813,12 +1897,26 @@ TextEdit/styles/focus = SubResource("StyleBoxFlat_lti2u")
 TextEdit/styles/normal = SubResource("StyleBoxFlat_cw4te")
 alert_header/base_type = &"Panel"
 alert_header/styles/panel = SubResource("StyleBoxFlat_4iyyv")
+de_error_msg_panel/base_type = &"Panel"
+de_error_msg_panel/styles/panel = SubResource("StyleBoxFlat_lxedn")
+de_error_msg_panel_err/base_type = &"Panel"
+de_error_msg_panel_err/styles/panel = SubResource("StyleBoxFlat_ateni")
+de_error_msg_panel_ok/base_type = &"Panel"
+de_error_msg_panel_ok/styles/panel = SubResource("StyleBoxFlat_hr242")
+de_preview_panel/base_type = &"Panel"
+de_preview_panel/styles/panel = SubResource("StyleBoxFlat_olxer")
+de_unit_panel/base_type = &"Panel"
+de_unit_panel/styles/panel = SubResource("StyleBoxFlat_ki84d")
+editor_panel/base_type = &"Panel"
+editor_panel/styles/panel = SubResource("StyleBoxFlat_5mya5")
 on_background_label/base_type = &"Label"
 on_background_label/colors/font_color = Color(0.180392, 0.756863, 0.898039, 1)
 on_background_label/font_sizes/font_size = 14
 on_background_label_secondary/base_type = &"Label"
 on_background_label_secondary/colors/font_color = Color(0.103208, 0.808021, 0.999999, 1)
 on_background_label_secondary/font_sizes/font_size = 12
+preview_panel/base_type = &"Panel"
+preview_panel/styles/panel = SubResource("StyleBoxFlat_yvmaa")
 title_bar/base_type = &"Panel"
 title_bar/styles/panel = SubResource("StyleBoxEmpty_hr242")
 window/base_type = &"Panel"

@@ -1,0 +1,191 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp37afqpf6l2r"]
+
+[ext_resource type="Script" uid="uid://cjb8r0cpn22si" path="res://ui/ui_mode/scripts/dialogue_editor/dialogue_editor.gd" id="1_xyj6h"]
+[ext_resource type="Script" uid="uid://brkroc1rusvj" path="res://ui/ui_mode/scripts/dialogue_editor/content_edit.gd" id="2_sjaev"]
+[ext_resource type="Script" uid="uid://n5b352oxdciq" path="res://ui/ui_mode/scripts/dialogue_editor/preview.gd" id="3_4hse5"]
+
+[node name="DialogueEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xyj6h")
+
+[node name="Normal" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Editor" type="VBoxContainer" parent="Normal"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Title" type="Label" parent="Normal/Editor"]
+layout_mode = 2
+theme_type_variation = &"on_background_label"
+text = "编辑器"
+
+[node name="DEUnitPanel" type="Panel" parent="Normal/Editor"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_type_variation = &"de_unit_panel"
+
+[node name="MarginContainer" type="MarginContainer" parent="Normal/Editor/DEUnitPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Normal/Editor/DEUnitPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+split_offset = 30
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="QuickFunctions" type="Control" parent="Normal/Editor/DEUnitPanel/MarginContainer/VSplitContainer"]
+layout_mode = 2
+
+[node name="Left" type="HBoxContainer" parent="Normal/Editor/DEUnitPanel/MarginContainer/VSplitContainer/QuickFunctions"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="FZButton" type="Button" parent="Normal/Editor/DEUnitPanel/MarginContainer/VSplitContainer/QuickFunctions/Left"]
+layout_mode = 2
+text = "fz"
+
+[node name="FEButton" type="Button" parent="Normal/Editor/DEUnitPanel/MarginContainer/VSplitContainer/QuickFunctions/Left"]
+layout_mode = 2
+text = "fe"
+
+[node name="Right" type="HBoxContainer" parent="Normal/Editor/DEUnitPanel/MarginContainer/VSplitContainer/QuickFunctions"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ETButton" type="Button" parent="Normal/Editor/DEUnitPanel/MarginContainer/VSplitContainer/QuickFunctions/Right"]
+layout_mode = 2
+text = "[/]"
+
+[node name="ContentEdit" type="CodeEdit" parent="Normal/Editor/DEUnitPanel/MarginContainer/VSplitContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+gutters_draw_line_numbers = true
+script = ExtResource("2_sjaev")
+
+[node name="Preview" type="VBoxContainer" parent="Normal"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 7
+script = ExtResource("3_4hse5")
+
+[node name="Title" type="Label" parent="Normal/Preview"]
+layout_mode = 2
+theme_type_variation = &"on_background_label"
+text = "预览"
+
+[node name="DEUnitPanel" type="Panel" parent="Normal/Preview"]
+custom_minimum_size = Vector2(0, 218)
+layout_mode = 2
+theme_type_variation = &"de_unit_panel"
+
+[node name="MarginContainer" type="MarginContainer" parent="Normal/Preview/DEUnitPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Normal/Preview/DEUnitPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+split_offset = 40
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="DEErrorMsgPanel" type="Panel" parent="Normal/Preview/DEUnitPanel/MarginContainer/VSplitContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"de_error_msg_panel_err"
+
+[node name="ErrorMsg" type="Label" parent="Normal/Preview/DEUnitPanel/MarginContainer/VSplitContainer/DEErrorMsgPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = -11.5
+offset_right = 51.0
+offset_bottom = 11.5
+grow_vertical = 2
+
+[node name="DEPreviewPanel" type="Panel" parent="Normal/Preview/DEUnitPanel/MarginContainer/VSplitContainer"]
+layout_mode = 2
+theme_type_variation = &"de_preview_panel"
+
+[node name="MarginContainer" type="MarginContainer" parent="Normal/Preview/DEUnitPanel/MarginContainer/VSplitContainer/DEPreviewPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="PreviewLabel" type="RichTextLabel" parent="Normal/Preview/DEUnitPanel/MarginContainer/VSplitContainer/DEPreviewPanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+
+[node name="NoSelectedDialogueAlert" type="CenterContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NoSelectedDialogueAlert"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="AlertIcon" type="TextureRect" parent="NoSelectedDialogueAlert/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="AlertMsg" type="Label" parent="NoSelectedDialogueAlert/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"on_background_label"
+text = "没有选中的对话"
