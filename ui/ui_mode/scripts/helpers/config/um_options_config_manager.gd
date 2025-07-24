@@ -12,11 +12,11 @@ enum Option {
 const OPTIONS_CONFIG_FILE_PATH = "user://options.json"
 
 ## 默认选项
-const DEFAULT_OPTIONS = {
+var DEFAULT_OPTIONS = {
 	"fps": 24.0,
 	"background": "green",
 	"recording_mode": "single",
-	"recordings_output_dir": ""
+	"recordings_output_dir": OS.get_system_dir(OS.SYSTEM_DIR_MOVIES)
 }
 
 ## 读取选项

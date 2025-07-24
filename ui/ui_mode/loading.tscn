@@ -9,6 +9,21 @@
 [ext_resource type="Texture2D" uid="uid://bqy2ivh5mjs7b" path="res://ui/assets/icons/ui_mode/loading/spr_tenna_jumpscare_5.png" id="7_m2a6v"]
 [ext_resource type="Script" uid="uid://dd8sxhcqtdmj2" path="res://ui/ui_mode/scripts/loading/animation_player.gd" id="8_sxjg2"]
 
+[sub_resource type="Animation" id="Animation_wn5a4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_sufb3")]
+}
+
 [sub_resource type="Animation" id="Animation_tmosg"]
 resource_name = "loading"
 length = 0.500003
@@ -24,21 +39,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("2_sufb3"), ExtResource("3_u204s"), ExtResource("4_18jah"), ExtResource("5_y2xpe"), ExtResource("6_nr28w"), ExtResource("7_m2a6v")]
-}
-
-[sub_resource type="Animation" id="Animation_wn5a4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_sufb3")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gu5ai"]

@@ -2,7 +2,7 @@ extends Button
 
 func _pressed() -> void:
 	# 打开文件选择对话框
-	DisplayServer.file_dialog_show("选择输出路径", "", "", true, DisplayServer.FILE_DIALOG_MODE_OPEN_DIR, [], _on_dir_selected)
+	DisplayServer.file_dialog_show("选择输出路径", UmOptionsConfigManager.get_options()["recordings_output_dir"], "", true, DisplayServer.FILE_DIALOG_MODE_OPEN_DIR, [], _on_dir_selected)
 
 ## 处理文件选择器的回调函数
 func _on_dir_selected(status:bool, selected_paths:PackedStringArray, _selected_filter_index:int):
