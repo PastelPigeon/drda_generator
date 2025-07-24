@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=30 format=4 uid="uid://6da4wueuxixy"]
+[gd_resource type="Theme" load_steps=31 format=4 uid="uid://6da4wueuxixy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fs7p7"]
 
@@ -1807,6 +1807,9 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bt0la"]
+bg_color = Color(0, 0, 0, 0.407843)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvmaa"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 3
@@ -1909,6 +1912,8 @@ de_unit_panel/base_type = &"Panel"
 de_unit_panel/styles/panel = SubResource("StyleBoxFlat_ki84d")
 editor_panel/base_type = &"Panel"
 editor_panel/styles/panel = SubResource("StyleBoxFlat_5mya5")
+mask/base_type = &"Panel"
+mask/styles/panel = SubResource("StyleBoxFlat_bt0la")
 on_background_label/base_type = &"Label"
 on_background_label/colors/font_color = Color(0.180392, 0.756863, 0.898039, 1)
 on_background_label/font_sizes/font_size = 14
