@@ -20,7 +20,7 @@ const DEFAULT_OPTIONS = {
 }
 
 ## 读取选项
-func get_options():
+func get_options() -> Dictionary:
 	# 判断存储文件是否存在
 	if FileAccess.file_exists(OPTIONS_CONFIG_FILE_PATH):
 		# 存在返回存储文件内容

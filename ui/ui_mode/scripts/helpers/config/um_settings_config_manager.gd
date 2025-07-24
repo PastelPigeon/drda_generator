@@ -14,7 +14,7 @@ const DEFAULT_SETTINGS = {
 }
 
 ## 读取设置
-func get_settings():
+func get_settings() -> Dictionary:
 	# 判断存储文件是否存在
 	if FileAccess.file_exists(SETTINGS_CONFIG_FILE_PATH):
 		# 存在返回存储文件中的内容
