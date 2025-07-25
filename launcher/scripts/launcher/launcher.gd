@@ -12,12 +12,10 @@ func _ready() -> void:
 		add_child(dialogue_scene_ins)
 		
 		dialogue_scene_ins.dialogues = JSON.parse_string(FileAccess.open(cmdline_args_dict["dialogues"], FileAccess.READ).get_as_text())
-		dialogue_scene_ins.options = {
-			"fps": cmdline_args_dict["fps"],
-			"background": cmdline_args_dict["background"],
-			"recording_mode": cmdline_args_dict["recording_mode"],
-			"recordings_output_dir": cmdline_args_dict["recordings_output_dir"]
-		}
+		
+		var options = cmdline_args_dict.duplicate()
+		options.erase("dialogues")
+		dialogue_scene_ins.options = cmdline_args_dict
 	elif cmdline_args_status == CmdlineParser.CmdlineStatus.UI_MODE:
 		var ui_mode_scene_res: PackedScene = load("res://ui/ui_mode/ui_mode.tscn")
 		var ui_mode_scene_ins = ui_mode_scene_res.instantiate()

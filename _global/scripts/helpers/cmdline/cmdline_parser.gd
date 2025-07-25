@@ -5,7 +5,9 @@ const DEFAULT = {
 	"fps": 24.0,
 	"background": "green",
 	"recording_mode": "single",
-	"recordings_output_dir": ""
+	"recordings_output_dir": "",
+	"recording_format": "mp4",
+	"recording_enable_transparent": false
 }
 
 enum CmdlineStatus {
@@ -20,7 +22,10 @@ enum CmdlineStatus {
 	INVAILD_BACKGROUND,
 	INVAILD_RECORDING_MODE,
 	NO_RECORDINGS_OUTPUT_DIR,
-	INVAILD_RECORDINGS_OUTPUT_DIR
+	INVAILD_RECORDINGS_OUTPUT_DIR,
+	INVAILD_RECORDING_FORMAT,
+	INVAILD_RECORDING_ENABLE_TRANSPARENT,
+	RECORDING_ENABLE_TRANSPARENT_NOT_SUPPORTED
 }
 
 ## 获取某一参数在命令行中的名称
@@ -66,6 +71,18 @@ func convert_cmdline_args_array_to_dict(cmdline_args: Array) -> Dictionary:
 	if _arg_exists_cmdline_args_array("recordings_output_dir", cmdline_args):
 		if DirAccess.dir_exists_absolute(_get_arg_value_cmdline_args_array("recordings_output_dir", cmdline_args)):
 			cmdline_args_dict["recordings_output_dir"] = _get_arg_value_cmdline_args_array("recordings_output_dir", cmdline_args)
+			
+	# 处理recording_format参数
+	if _arg_exists_cmdline_args_array("recording_format", cmdline_args):
+		if _get_arg_value_cmdline_args_array("recording_format", cmdline_args) == "mp4" or _get_arg_value_cmdline_args_array("recording_format", cmdline_args) == "mov" or _get_arg_value_cmdline_args_array("recording_format", cmdline_args) == "gif":
+			cmdline_args_dict["recording_format"] = _get_arg_value_cmdline_args_array("recording_format", cmdline_args)
+			
+	# 处理recording_enable_transparent参数
+	if _arg_exists_cmdline_args_array("recording_enable_transparent", cmdline_args):
+		if _get_arg_value_cmdline_args_array("recording_enable_transparent", cmdline_args) == "true" or _get_arg_value_cmdline_args_array("recording_enable_transparent", cmdline_args) == "false":
+			if _arg_exists_cmdline_args_array("recording_format", cmdline_args):
+				if _get_arg_value_cmdline_args_array("recording_format", cmdline_args) == "mov" or _get_arg_value_cmdline_args_array("recording_format", cmdline_args) == "gif":
+					cmdline_args_dict["recording_enable_transparent"] = true if _get_arg_value_cmdline_args_array("recording_enable_transparent", cmdline_args) == "true" else false
 			
 	return cmdline_args_dict
 	
@@ -163,6 +180,32 @@ func get_cmdline_args_status(cmdline_args: Array) -> Dictionary:
 				"status": CmdlineStatus.INVAILD_RECORDINGS_OUTPUT_DIR,
 				"user": "指定的输出路径不存在"
 			}
+	elif _arg_exists_cmdline_args_array("recording_format", cmdline_args):
+		if _get_arg_value_cmdline_args_array("recording_format", cmdline_args) != "mp4" and _get_arg_value_cmdline_args_array("recording_format", cmdline_args) != "mov" and _get_arg_value_cmdline_args_array("recording_format", cmdline_args) != "gif":
+			return {
+				"status": CmdlineStatus.INVAILD_RECORDING_FORMAT,
+				"user": "给出的格式不支持"
+			}
+	elif _arg_exists_cmdline_args_array("recording_enable_transparent", cmdline_args):
+		if _get_arg_value_cmdline_args_array("recording_enable_transparent", cmdline_args) != "true" and _get_arg_value_cmdline_args_array("recording_enable_transparent", cmdline_args) != "false":
+			return {
+				"status": CmdlineStatus.INVAILD_RECORDING_ENABLE_TRANSPARENT,
+				"user": "开启透明选项值错误，应为true或者false"
+			}
+			
+		if _get_arg_value_cmdline_args_array("recording_enable_transparent", cmdline_args) == "true" or _get_arg_value_cmdline_args_array("recording_enable_transparent", cmdline_args) == "false":
+			if _arg_exists_cmdline_args_array("recording_format", cmdline_args):
+				if _get_arg_value_cmdline_args_array("recording_format", cmdline_args) != "mov" and _get_arg_value_cmdline_args_array("recording_format", cmdline_args) != "gif":
+					return {
+						"status": CmdlineStatus.RECORDING_ENABLE_TRANSPARENT_NOT_SUPPORTED,
+						"user": "您所选用的输出格式不支持启用透明选项，请尝试将输出格式更改为mov或gif"
+					}
+			else:
+				return {
+					"status": CmdlineStatus.RECORDING_ENABLE_TRANSPARENT_NOT_SUPPORTED,
+					"user": "您所选用的输出格式不支持启用透明选项，请尝试将输出格式更改为mov或gif"
+				}
+
 
 	return {
 		"status": CmdlineStatus.OK,

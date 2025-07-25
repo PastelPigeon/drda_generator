@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cg7oglyocv535"]
+[gd_scene load_steps=12 format=3 uid="uid://cg7oglyocv535"]
 
 [ext_resource type="Script" uid="uid://c6ndo2vusjfrc" path="res://ui/ui_mode/scripts/options_manager/options_manager.gd" id="1_gn2n6"]
 [ext_resource type="PackedScene" uid="uid://dosa85y0k8h4p" path="res://ui/window/window.tscn" id="1_lfqxq"]
@@ -8,6 +8,9 @@
 [ext_resource type="Script" uid="uid://cb2drvfqt310o" path="res://ui/ui_mode/scripts/options_manager/recording_mode_input.gd" id="6_b6x35"]
 [ext_resource type="Script" uid="uid://be6ybkp7ji7gm" path="res://ui/ui_mode/scripts/options_manager/recordings_output_dir_input.gd" id="7_oigby"]
 [ext_resource type="Script" uid="uid://cxt844hf5yrq" path="res://ui/ui_mode/scripts/options_manager/recordings_output_dir_quick_pick_button.gd" id="8_he8m5"]
+[ext_resource type="Script" uid="uid://dw0yw5j40bo1l" path="res://ui/ui_mode/scripts/options_manager/recording_format_input.gd" id="9_clovq"]
+[ext_resource type="Script" uid="uid://cr4lo6e1njk5a" path="res://ui/ui_mode/scripts/options_manager/recording_enable_transparent_input.gd" id="10_cvavm"]
+[ext_resource type="Texture2D" uid="uid://c6e8vpjm6c8eh" path="res://ui/assets/icons/ui_mode/caution.svg" id="11_hwrrf"]
 
 [node name="OptionsManager" type="Control"]
 layout_mode = 3
@@ -196,5 +199,80 @@ layout_mode = 2
 size_flags_horizontal = 8
 text = "..."
 script = ExtResource("8_he8m5")
+
+[node name="DebugAlert" type="HBoxContainer" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Icon" type="TextureRect" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options/DebugAlert"]
+layout_mode = 2
+texture = ExtResource("11_hwrrf")
+
+[node name="Msg" type="Label" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options/DebugAlert"]
+layout_mode = 2
+theme_type_variation = &"on_background_label_warning"
+text = "请注意，以下功能处于调试阶段，可能会出现一些问题"
+
+[node name="RecordingFormat" type="VBoxContainer" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options/RecordingFormat"]
+layout_mode = 2
+theme_type_variation = &"on_background_label"
+text = "生成内容格式"
+
+[node name="Description" type="Label" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options/RecordingFormat"]
+layout_mode = 2
+theme_type_variation = &"on_background_label_secondary"
+text = "选择生成出内容的格式，MP4，MOV，GIF，MP4格式不支持透明，您需要稍后在剪辑软件中手动扣除背景"
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options/RecordingFormat"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="RecordingFormatInput" type="OptionButton" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options/RecordingFormat/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "MP4"
+popup/item_0/id = 0
+popup/item_1/text = "MOV"
+popup/item_1/id = 1
+popup/item_2/text = "GIF"
+popup/item_2/id = 2
+script = ExtResource("9_clovq")
+
+[node name="RecordingEnableTransparent" type="VBoxContainer" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options/RecordingEnableTransparent"]
+layout_mode = 2
+theme_type_variation = &"on_background_label"
+text = "启用透明背景"
+
+[node name="Description" type="Label" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options/RecordingEnableTransparent"]
+layout_mode = 2
+theme_type_variation = &"on_background_label_secondary"
+text = "在输出格式为mov或gif时，你可以选择是否启用透明背景，程序会自动扣除您选择的背景颜色"
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options/RecordingEnableTransparent"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="RecordingEnableTransparentInput" type="OptionButton" parent="Mask/CenterContainer/Window/VSplitContainer/MarginContainer/WindowContent/MarginContainer/ScrollContainer/MarginContainer/Options/RecordingEnableTransparent/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "禁用"
+popup/item_0/id = 0
+popup/item_1/text = "启用"
+popup/item_1/id = 1
+script = ExtResource("10_cvavm")
 
 [editable path="Mask/CenterContainer/Window"]

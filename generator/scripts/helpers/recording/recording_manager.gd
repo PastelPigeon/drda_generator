@@ -6,6 +6,13 @@ enum RecordingState {
 	RECORDING
 }
 
+# 输出格式枚举
+enum RecordingFormat {
+	MP4,    # 标准MP4格式（带音频）
+	MOV,    # QuickTime格式（支持透明背景）
+	GIF     # GIF动画格式（支持透明背景）
+}
+
 # 录制信息结构
 class RecordingInfo:
 	var id: String
@@ -17,7 +24,7 @@ class RecordingInfo:
 	var audio_file: String
 	var audio_effect_record: AudioEffectRecord
 	var audio_bus_index: int
-	var start_time: float  # 添加开始时间戳
+	var start_time: float  # 开始时间戳
 	var frame_times: Array[float] = []  # 记录每帧的实际时间
 
 var _state: RecordingState = RecordingState.IDLE
@@ -209,8 +216,8 @@ func stop_recording() -> String:
 	print("Captured frames: ", _recordings[recording_id].frame_count)
 	return recording_id
 
-# 保存指定录制为MP4（带音频）
-func save_recordings(recording_ids: Array) -> Dictionary:
+# 保存指定录制为指定格式
+func save_recordings(recording_ids: Array, format: RecordingFormat = RecordingFormat.MP4, transparent_color = null) -> Dictionary:
 	var results = {}
 	
 	for id in recording_ids:
@@ -219,21 +226,21 @@ func save_recordings(recording_ids: Array) -> Dictionary:
 			continue
 		
 		var recording = _recordings[id]
-		results[id] = _convert_to_mp4(recording)
+		results[id] = _convert_recording(recording, format, transparent_color)
 	
 	return results
 	
 ## 保存所有录制
-func save_all_recordings():
+func save_all_recordings(format: RecordingFormat = RecordingFormat.MP4, transparent_color = null):
 	# 保存录制
-	save_recordings(get_all_recording_ids())
+	save_recordings(get_all_recording_ids(), format, transparent_color)
 	
 	# 删除缓存数据
 	for recording_id in get_all_recording_ids():
 		clean_temp_frames(recording_id)
 
-# 内部方法：使用FFmpeg转换（带音频）
-func _convert_to_mp4(recording: RecordingInfo) -> Dictionary:
+# 内部方法：转换录制内容为指定格式
+func _convert_recording(recording: RecordingInfo, format: RecordingFormat = RecordingFormat.MP4, transparent_color = null) -> Dictionary:
 	# 获取FFmpeg路径 - 使用绝对路径
 	var ffmpeg_path = ""
 	
@@ -263,8 +270,18 @@ func _convert_to_mp4(recording: RecordingInfo) -> Dictionary:
 	if (!DirAccess.dir_exists_absolute(output_dir)):
 		DirAccess.make_dir_recursive_absolute(output_dir)
 	
+	# 根据格式确定文件扩展名
+	var file_extension = ""
+	match format:
+		RecordingFormat.MP4:
+			file_extension = "mp4"
+		RecordingFormat.MOV:
+			file_extension = "mov"
+		RecordingFormat.GIF:
+			file_extension = "gif"
+	
 	# 输出文件路径
-	var output_path = "%s/%s.mp4" % [output_dir, recording.created_at]
+	var output_path = "%s/%s.%s" % [output_dir, recording.created_at, file_extension]
 	
 	# 构建FFmpeg命令 - 确保所有路径都是绝对路径
 	var input_path = ProjectSettings.globalize_path(recording.frames_path + "frame_%08d.png")
@@ -272,37 +289,104 @@ func _convert_to_mp4(recording: RecordingInfo) -> Dictionary:
 	var absolute_output_path = ProjectSettings.globalize_path(output_path)
 	
 	# 检查音频文件是否存在
-	var has_audio = FileAccess.file_exists(audio_path)
+	var has_audio = FileAccess.file_exists(audio_path) && format != RecordingFormat.GIF
 	
 	# 构建FFmpeg命令
-	var args = [
-		"-y",  # 覆盖现有文件
+	var args = ["-y"]  # 覆盖现有文件
+	
+	# 添加输入帧序列
+	args.append_array([
 		"-framerate", str(recording.fps),
 		"-i", input_path
-	]
+	])
 	
-	# 添加音频输入（如果存在）
+	# 添加音频输入（如果存在且格式支持音频）
 	if has_audio:
 		args.append_array(["-i", audio_path])
 	
-	# 添加视频编码参数
-	args.append_array([
-		"-c:v", "libx264",
-		"-pix_fmt", "yuv420p",
-		"-crf", "18"  # 中等质量
-	])
+	# 处理透明颜色（如果指定）
+	var transparency_filter = ""
+	if transparent_color != null:
+		# 将Godot颜色转换为FFmpeg颜色格式 (0xRRGGBB)
+		var hex_color = "#%02x%02x%02x" % [
+			int(transparent_color.r8),
+			int(transparent_color.g8),
+			int(transparent_color.b8)
+		]
+		
+		# 创建颜色键滤镜 - 使用与MOV相同的参数
+		transparency_filter = "colorkey=%s:0.3:0.1" % hex_color
 	
-	# 添加音频编码参数（如果存在）
-	if has_audio:
-		args.append_array([
-			"-c:a", "aac",
-			"-b:a", "192k",
-			"-af", "aresample=async=1:first_pts=0",  # 添加音频同步处理
-			"-vsync", "vfr",  # 使用可变帧率
-			"-shortest"  # 确保视频长度与音频一致
-		])
-	else:
-		args.append_array(["-an", "-vsync", "vfr"])  # 无音频 + 可变帧率
+	# 根据格式添加特定参数
+	match format:
+		RecordingFormat.MP4:
+			args.append_array([
+				"-c:v", "libx264",
+				"-pix_fmt", "yuv420p",
+				"-crf", "18"  # 中等质量
+			])
+			
+			# 添加音频编码参数（如果存在）
+			if has_audio:
+				args.append_array([
+					"-c:a", "aac",
+					"-b:a", "192k",
+					"-af", "aresample=async=1:first_pts=0",  # 音频同步处理
+					"-vsync", "vfr",  # 使用可变帧率
+					"-shortest"  # 确保视频长度与音频一致
+				])
+			else:
+				args.append_array(["-an", "-vsync", "vfr"])  # 无音频 + 可变帧率
+			
+			# 如果指定了透明色，添加颜色键滤镜
+			if transparency_filter != "":
+				args.append_array(["-vf", transparency_filter])
+		
+		RecordingFormat.MOV:
+			# 支持透明背景的ProRes编码
+			args.append_array([
+				"-c:v", "prores_ks",
+				"-profile:v", "4",  # ProRes 4444 (支持Alpha通道)
+				"-pix_fmt", "yuva444p10le",  # 支持Alpha通道的像素格式
+				"-vendor", "apl0",  # Apple ProRes四字符代码
+				"-qscale:v", "9"  # 质量级别（1-31，值越低质量越高）
+			])
+			
+			# 添加音频编码参数（如果存在）
+			if has_audio:
+				args.append_array([
+					"-c:a", "pcm_s16le",  # MOV格式常用无损音频编码
+					"-af", "aresample=async=1:first_pts=0",  # 音频同步处理
+					"-vsync", "vfr",  # 使用可变帧率
+					"-shortest"  # 确保视频长度与音频一致
+				])
+			else:
+				args.append_array(["-an", "-vsync", "vfr"])  # 无音频 + 可变帧率
+			
+			# 如果指定了透明色，添加颜色键滤镜
+			if transparency_filter != "":
+				args.append_array(["-vf", transparency_filter])
+		
+		RecordingFormat.GIF:
+			# GIF编码参数（无音频）
+			args.append_array(["-an"])  # 无音频
+			
+			# 基础GIF滤镜链
+			var gif_filter = "fps=%d" % recording.fps
+			
+			# 如果指定了透明色，添加到滤镜链
+			if transparency_filter != "":
+				gif_filter += "," + transparency_filter
+			
+			# 确保透明背景正确处理
+			gif_filter += ",split[s0][s1];[s0]palettegen=reserve_transparent=1:transparency_color=ffffff[p];[s1][p]paletteuse=alpha_threshold=128"
+			
+			args.append_array([
+				"-vf", gif_filter,
+				"-loop", "0",  # 无限循环
+				"-gifflags", "+transdiff",  # 优化透明帧
+				"-vsync", "vfr"  # 使用可变帧率
+			])
 	
 	# 添加输出路径
 	args.append(absolute_output_path)
@@ -326,7 +410,7 @@ func _convert_to_mp4(recording: RecordingInfo) -> Dictionary:
 	
 	return {
 		"success": true,
-		"message": "Video saved successfully" + (" with audio" if has_audio else " without audio"),
+		"message": "%s saved successfully" % file_extension.to_upper(),
 		"output_path": absolute_output_path
 	}
 
@@ -442,3 +526,13 @@ func calculate_actual_fps(recording_id: String) -> float:
 	# 计算总时间和平均帧间隔
 	var total_time = recording.frame_times.back() - recording.frame_times.front()
 	return (recording.frame_count - 1) / total_time
+
+# 获取当前录制状态
+func is_recording() -> bool:
+	return _state == RecordingState.RECORDING
+
+# 获取当前录制ID
+func get_current_recording_id() -> String:
+	if _current_recording:
+		return _current_recording.id
+	return ""

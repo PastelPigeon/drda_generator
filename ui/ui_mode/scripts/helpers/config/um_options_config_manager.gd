@@ -5,7 +5,9 @@ enum Option {
 	FPS,
 	BACKGROUND,
 	RECORDING_MODE,
-	RECORDINGS_OUTPUT_DIR
+	RECORDINGS_OUTPUT_DIR,
+	RECORDING_FORMAT,
+	RECORDING_ENABLE_TRANSPARENT
 }
 
 ## options存储文件位置
@@ -16,7 +18,9 @@ var DEFAULT_OPTIONS = {
 	"fps": 24.0,
 	"background": "green",
 	"recording_mode": "single",
-	"recordings_output_dir": OS.get_system_dir(OS.SYSTEM_DIR_MOVIES)
+	"recordings_output_dir": OS.get_system_dir(OS.SYSTEM_DIR_MOVIES),
+	"recording_format": "mp4",
+	"recording_enable_transparent": false
 }
 
 ## 读取选项
@@ -54,6 +58,10 @@ func set_option(option: Option, value: Variant):
 			option_key_name = "recording_mode"
 		Option.RECORDINGS_OUTPUT_DIR:
 			option_key_name = "recordings_output_dir"
+		Option.RECORDING_FORMAT:
+			option_key_name = "recording_format"
+		Option.RECORDING_ENABLE_TRANSPARENT:
+			option_key_name = "recording_enable_transparent"
 			
 	# 获取现有配置
 	var options = get_options()

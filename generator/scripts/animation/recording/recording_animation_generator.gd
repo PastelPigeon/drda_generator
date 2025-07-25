@@ -57,7 +57,7 @@ func generate_recording_animation(dialogues: Array, options: Dictionary) -> Anim
 	# 输出录制
 	recording_animation.track_insert_key(track_index, animation_schedule["duration"] + (1 / options["fps"]) * 2, {
 		"method": "save_all_recordings",
-		"args": []
+		"args": [RecordingManager.RecordingFormat.MP4 if options["recording_format"] == "mp4" else RecordingManager.RecordingFormat.MOV if options["recording_format"] == "mov" else RecordingManager.RecordingFormat.GIF, Color(options["background"]) if options["recording_enable_transparent"] else null]
 	})
 	
 	return recording_animation
