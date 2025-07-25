@@ -22,8 +22,8 @@ func generate_recording_animation(dialogues: Array, options: Dictionary) -> Anim
 				# 获取当前对话的时间表
 				var dialogue_schedule = animation_schedule["dialogue_schedules"][dialogue_index]
 				
-				# 开始录制
-				recording_animation.track_insert_key(track_index, dialogue_schedule["absolute_start_time"], {
+				# 开始录制（第一个对话在开始一帧后再开始录制，避免黑屏问题）
+				recording_animation.track_insert_key(track_index, dialogue_schedule["absolute_start_time"] if dialogue_index != 0 else 1 / options["fps"], {
 					"method": "start_recording",
 					"args": [options["fps"], options["recordings_output_dir"].path_join(DialogueBbcodeTagsCleaner.clean_bbcode_tags_from_dialogue(dialogues[dialogue_index]))]
 				})
@@ -36,8 +36,8 @@ func generate_recording_animation(dialogues: Array, options: Dictionary) -> Anim
 		"single":
 			# 单录制模式，所有对话录制到单个视频文件中
 			
-			# 开始录制
-			recording_animation.track_insert_key(track_index, 0, {
+			# 开始录制（在开始一帧后再开始录制，避免黑屏问题）
+			recording_animation.track_insert_key(track_index, 1 / options["fps"], {
 				"method": "start_recording",
 				"args": [options["fps"], options["recordings_output_dir"].path_join("对话")]
 			})
