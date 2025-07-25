@@ -1,6 +1,6 @@
 extends TextureRect
 
-var _next_texture_delay = 0.3
+var _next_texture_delay = 0.1
 var _time_to_next_texture = 0
 var _current_texture_index = 0
 

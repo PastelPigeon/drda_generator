@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dp37afqpf6l2r"]
+[gd_scene load_steps=8 format=3 uid="uid://dp37afqpf6l2r"]
 
 [ext_resource type="Script" uid="uid://cjb8r0cpn22si" path="res://ui/ui_mode/scripts/dialogue_editor/dialogue_editor.gd" id="1_xyj6h"]
 [ext_resource type="Script" uid="uid://cr14jktphu3y2" path="res://ui/ui_mode/scripts/dialogue_editor/quick_functions/fz_button.gd" id="2_jmiqm"]
 [ext_resource type="Script" uid="uid://brkroc1rusvj" path="res://ui/ui_mode/scripts/dialogue_editor/content_edit.gd" id="2_sjaev"]
 [ext_resource type="Script" uid="uid://n5b352oxdciq" path="res://ui/ui_mode/scripts/dialogue_editor/preview.gd" id="3_4hse5"]
 [ext_resource type="Script" uid="uid://6ins4meyblds" path="res://ui/ui_mode/scripts/dialogue_editor/quick_functions/fe_button.gd" id="3_5dke5"]
+[ext_resource type="Script" uid="uid://cvnv6eowsn6h8" path="res://ui/ui_mode/scripts/dialogue_editor/quick_functions/wsd_button.gd" id="4_le77l"]
 [ext_resource type="Script" uid="uid://d3skuubbv6a1f" path="res://ui/ui_mode/scripts/dialogue_editor/quick_functions/et_button.gd" id="4_qkm71"]
 
 [node name="DialogueEditor" type="Control"]
@@ -77,6 +78,11 @@ script = ExtResource("2_jmiqm")
 layout_mode = 2
 text = "fe"
 script = ExtResource("3_5dke5")
+
+[node name="WSDButton" type="Button" parent="Normal/Editor/DEUnitPanel/MarginContainer/VSplitContainer/QuickFunctions/Left"]
+layout_mode = 2
+text = "wsd"
+script = ExtResource("4_le77l")
 
 [node name="Right" type="HBoxContainer" parent="Normal/Editor/DEUnitPanel/MarginContainer/VSplitContainer/QuickFunctions"]
 layout_mode = 1

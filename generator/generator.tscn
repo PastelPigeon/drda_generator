@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdek1m6ysenjg"]
+[gd_scene load_steps=9 format=3 uid="uid://cdek1m6ysenjg"]
 
 [ext_resource type="Script" uid="uid://cmijniia7p5ab" path="res://generator/scripts/generator/generator.gd" id="1_n178k"]
 [ext_resource type="Script" uid="uid://jqtk34kfuj22" path="res://generator/scripts/generator/background.gd" id="2_rcwul"]
 [ext_resource type="Script" uid="uid://df1dqpi4c4jxh" path="res://generator/scripts/generator/dialogue_texture_dark.gd" id="3_jdrsx"]
 [ext_resource type="Script" uid="uid://ch0xc8bhtmyva" path="res://generator/scripts/generator/dialogue_texture_light.gd" id="4_xmo7a"]
+[ext_resource type="Texture2D" uid="uid://bjxut1luka633" path="res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_1.png" id="5_1rbap"]
 [ext_resource type="Script" uid="uid://wdxffr1yusu0" path="res://generator/scripts/generator/animation_player.gd" id="5_nd3na"]
 
 [sub_resource type="Gradient" id="Gradient_rcwul"]
@@ -49,6 +50,7 @@ stretch_mode = 4
 script = ExtResource("3_jdrsx")
 
 [node name="DialogueTextureLight" type="TextureRect" parent="Dialogue"]
+visible = false
 layout_mode = 0
 offset_right = 1232.0
 offset_bottom = 332.0
@@ -62,6 +64,7 @@ offset_left = 88.0
 offset_top = 76.0
 offset_right = 278.0
 offset_bottom = 272.0
+texture = ExtResource("5_1rbap")
 expand_mode = 1
 stretch_mode = 4
 
@@ -116,7 +119,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
+text = "[font=res://assets/fonts/fzb_font_variation.tres][font_size=48]苏西，我喜欢你"
 scroll_active = false
+visible_characters = 1
+visible_ratio = 0.142857
 
 [node name="TextureRect" type="TextureRect" parent="Dialogue/Text/Shadow"]
 layout_mode = 1
@@ -135,7 +141,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
+text = "[font=res://assets/fonts/fzb_font_variation.tres][font_size=48]苏西，我喜欢你"
 scroll_active = false
+visible_characters = 1
+visible_ratio = 0.142857
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 script = ExtResource("5_nd3na")

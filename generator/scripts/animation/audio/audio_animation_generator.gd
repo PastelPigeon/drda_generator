@@ -34,10 +34,10 @@ func generate_audio_animation(dialogues: Array, options: Dictionary) -> Animatio
 			# 如果当前帧有音频播放，则跳过
 			var last_audio_key_index = audio_animation.track_find_key(track_index, char_schedule["absolute_start_time"], Animation.FIND_MODE_NEAREST)
 			if last_audio_key_index != -1:
-				var last_audio_key_end_time = audio_animation.audio_track_get_key_end_offset(track_index, last_audio_key_index)
+				var last_audio_key_end_time = audio_animation.track_get_key_time(track_index, last_audio_key_index) + audio_animation.audio_track_get_key_stream(track_index, last_audio_key_index).get_length()
 				
-				# 当前帧的时间处于上个音频帧的播放时间内，跳过
-				if char_schedule["absolute_start_time"] <= last_audio_key_end_time:
+				# 当前帧的时间处于上个音频帧的播放时间内，跳过(位于上个音频播放时间内但上个音频时长已不满一帧，不跳过)
+				if char_schedule["absolute_start_time"] <= last_audio_key_end_time and last_audio_key_end_time - char_schedule["absolute_start_time"] >= 1 / options["fps"]:
 					continue
 			
 			var sound_stream = null
