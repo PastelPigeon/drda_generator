@@ -2,7 +2,7 @@
 
 **轻松创建《DELTARUNE》风格的对话动画！**
 
-![drda_generator](https://socialify.git.ci/PastelPigeon/drda_generator/image?language=1&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgo...省略...SuQmCC&name=1&owner=1&stargazers=1&theme=Auto)
+![drda_generator](https://socialify.git.ci/PastelPigeon/drda_generator/image?language=1&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAACYAAAAsCAYAAAAJpsrIAAAAAXNSR0IArs4c6QAAAplJREFUWIXtmLtq40AUhn8HddPkEVI6TfYB3Lpxsw9gMOqMcRM1xkUIyRZbiDR2s4R0JpAHSKMUhkCI2S5h3cSlYV8gLEytLcTxjqS5HFkjAkt%2BCNie0ZlP5zYzAf5HCdFJm7J9UBeCfm8S0iobQBNQrSpQVSTlimXbJOfDPrwh5aolRCetAmud6DtEXsCaSmYunHZS0xXGgdu1iw8rd4NKfYwLGEaxfxpFO5e6gAhkMZvmvquiMZu4Ocbq%2FEUIk7fCKPbmyaBqbjUdQlILsIcxjGKIy2O2wR%2BHX41jVfqYM5S%2BoEp2HZt%2FQB9o29AtNn6%2Fdy5Mc0xSvSVEJ11uEkyG8%2FTq5hTddq%2B0XQXFh3SABOda3CbVZhjFmAzn1vm5tyBATkGoRWBqE8X8lJdvGIxOAAC312sAwPrlEc%2FJeSn3djlmgpJy1aIxagdb2cdiNtUCLTcJlpskB6PTYHSC9csjrm5OtY5gV4kQnTSMYnz7%2Fiv3%2B5G4K4F12z2EUYzFbFpqzLq5QLli2QfFrewbxy%2FOvjgXJtBiEZhaSG0w8piaT2ouqeq2e363JCDzShHoSNwhjGKM3%2B%2Bt%2Fe72eo3JcJ7BM3ca1tFa9ZbqIdumrRaAClgMpxcw8pBNtDB5hgAnwzlenx7YoQxsg0UoVbocysDySd1t91Ig8%2FDr0wOHCQDjMrKVfW1L0IlCReJWoE7O5C9CAVl1Uec2QRGMDpKj2tc3tVfZ5A2sicuJ11D6VJWX3fteaXr7Os%2FWAuOGwwXoslPpXlklR%2Br%2BtycHRkdeXXffZ6G6cDmwn7%2F%2F7P7GZ89p3erU2eTYPaCH6SBI0jXMfaCKNoF%2Fh0YbXEDhM6luONQ9lT4PRokKqd2qtFc2X2DcNPCWi5%2F6VAX9BUskp5l8scTEAAAAAElFTkSuQmCC&name=1&owner=1&stargazers=1&theme=Auto)  
 
 ## 🔍 这是什么？
 
@@ -17,43 +17,43 @@
 软件界面主要分为两部分：
 
 1.  **编辑器** (主工作区):
-    *   **左侧：对话管理器** - 方便地添加、删除、选择和排序你的对话段落。
-    *   **右侧：对话编辑器** - 在这里编写具体对话内容（使用 `BBcode` 语法，下面会详细介绍）。
-    *   **下方：预览区** - 实时查看当前对话的动画效果！
-    *   **编辑器上方按钮**:
-        *   `fz`：快速插入**中文字体样式标签**。
-        *   `fe`：快速插入**英文字体样式标签**。
-        *   `wsd`：快速插入**暗世界对话框样式标签**。善用这些按钮能更快完成动画！
+	*   **左侧：对话管理器** - 方便地添加、删除、选择和排序你的对话段落。
+	*   **右侧：对话编辑器** - 在这里编写具体对话内容（使用 `BBcode` 语法，下面会详细介绍）。
+	*   **下方：预览区** - 实时查看当前对话的动画效果！
+	*   **编辑器上方按钮**:
+		*   `fz`：快速插入**中文字体样式标签**。
+		*   `fe`：快速插入**英文字体样式标签**。
+		*   `wsd`：快速插入**暗世界对话框样式标签**。善用这些按钮能更快完成动画！
 
 2.  **选项管理器** ⚙️:
-    *   在这里配置生成动画的各种设置：
-        *   **帧率 (FPS)**：动画流畅度（默认24）。
-        *   **背景颜色**：动画的背景色。
-        *   **生成模式**：将所有对话合并成一个视频，还是拆分成多个单独视频？
-        *   **输出路径**：生成的动画文件保存在哪里？
-        *   **生成格式**：选择视频格式 (MP4, MOV) 或动图 (GIF)。
-        *   **启用透明背景**：是否让背景透明？（注意：MP4格式不支持透明）。
+	*   在这里配置生成动画的各种设置：
+		*   **帧率 (FPS)**：动画流畅度（默认24）。
+		*   **背景颜色**：动画的背景色。
+		*   **生成模式**：将所有对话合并成一个视频，还是拆分成多个单独视频？
+		*   **输出路径**：生成的动画文件保存在哪里？
+		*   **生成格式**：选择视频格式 (MP4, MOV) 或动图 (GIF)。
+		*   **启用透明背景**：是否让背景透明？（注意：MP4格式不支持透明）。
 
 ## 📖 必学：BBCODE 语法
 
 `BBcode` 是一种用方括号 `[ ]` 标记文本的简单语言（类似HTML），它能让你在对话里添加各种炫酷效果！在 `drda_generator` 中，主要使用两种标签：
 
 1.  **包裹型标签** (最常见):
-    *   格式：`[标签名=参数]你的文本[/标签名]` 或 `[标签名=参数]你的文本[/]` (简便写法)。
-    *   **作用**：改变被包裹文本的样式或添加动画。
-    *   **效果可以叠加**！例如：
-        ```bbcode
-        [shake level=20][rainbow]酷炫文字！[/][/shake]
-        ```
-        *这段文字会同时抖动和显示彩虹效果。*
-    *   **重要提示**：
-        *   标签必须正确嵌套，不能交叉！像 `[b]粗体[i]粗斜体[/b]斜体[/i]` 是**错误**的。
-        *   简便写法 `[/]` 虽然省事，但用多了会让文本难以阅读，建议只在简单标签时使用。
+	*   格式：`[标签名=参数]你的文本[/标签名]` 或 `[标签名=参数]你的文本[/]` (简便写法)。
+	*   **作用**：改变被包裹文本的样式或添加动画。
+	*   **效果可以叠加**！例如：
+		```bbcode
+		[shake level=20][rainbow]酷炫文字！[/][/shake]
+		```
+		*这段文字会同时抖动和显示彩虹效果。*
+	*   **重要提示**：
+		*   标签必须正确嵌套，不能交叉！像 `[b]粗体[i]粗斜体[/b]斜体[/i]` 是**错误**的。
+		*   简便写法 `[/]` 虽然省事，但用多了会让文本难以阅读，建议只在简单标签时使用。
 
 2.  **自闭合型标签**:
-    *   格式：`[标签名=参数/]`
-    *   **作用**：本身像一个特殊指令，不包裹文本，常用于添加停顿。
-    *   例如：`[wait=2/]` 会让对话停顿 2 秒再继续。
+	*   格式：`[标签名=参数/]`
+	*   **作用**：本身像一个特殊指令，不包裹文本，常用于添加停顿。
+	*   例如：`[wait=2/]` 会让对话停顿 2 秒再继续。
 
 ### ✨ 支持的 BBCode 特效标签
 
@@ -80,30 +80,30 @@
 选项让你能精细控制生成动画的方式：
 
 *   **`--fps` (帧率)**:
-    *   **作用**：决定动画每秒播放多少帧，影响流畅度。
-    *   **默认**：`24` (电影常用帧率)。
-    *   **建议**：一般 `24` 或 `30` 帧率就足够流畅，过高的帧率可能引起问题。
+	*   **作用**：决定动画每秒播放多少帧，影响流畅度。
+	*   **默认**：`24` (电影常用帧率)。
+	*   **建议**：一般 `24` 或 `30` 帧率就足够流畅，过高的帧率可能引起问题。
 *   **`--background` (背景颜色)**:
-    *   **作用**：设置生成动画的背景颜色。
-    *   **注意**：如果你打算在剪辑软件里抠掉背景（换场景），选一个**不会**和文字颜色冲突的背景色（比如亮绿或亮蓝），方便后期抠像。
+	*   **作用**：设置生成动画的背景颜色。
+	*   **注意**：如果你打算在剪辑软件里抠掉背景（换场景），选一个**不会**和文字颜色冲突的背景色（比如亮绿或亮蓝），方便后期抠像。
 *   **`--recording_mode` (生成/录制模式)**:
-    *   **作用**：控制如何输出对话。
-        *   将所有对话**合并**成一个长视频。
-        *   将每个对话**拆分**成单独的短视频。
+	*   **作用**：控制如何输出对话。
+		*   将所有对话**合并**成一个长视频。
+		*   将每个对话**拆分**成单独的短视频。
 *   **`--recordings_output_dir` (输出路径)**:
-    *   **作用**：生成的动画文件保存到哪个文件夹。
-    *   **默认**：首次启动时通常是你的系统“视频”文件夹。
+	*   **作用**：生成的动画文件保存到哪个文件夹。
+	*   **默认**：首次启动时通常是你的系统“视频”文件夹。
 *   **`--recording_format` (生成内容格式)**:
-    *   **作用**：选择生成的动画文件格式。
-    *   **对比**：
-        | 格式 | 文件大小 | 支持透明背景? | 支持对话音效? | 适用场景                     |
-        | :--- | :------- | :------------- | :------------- | :--------------------------- |
-        | MP4  | 小       | ❌ 不支持       | ✔️ 支持        | 标准视频，带声音，文件小     |
-        | MOV  | 大       | ✔️ 支持        | ✔️ 支持        | 需要透明背景+声音的高质量视频 |
-        | GIF  | 小       | ✔️ 支持        | ❌ 不支持      | 网页动图、表情包，无声音     |
+	*   **作用**：选择生成的动画文件格式。
+	*   **对比**：
+		| 格式 | 文件大小 | 支持透明背景? | 支持对话音效? | 适用场景                     |
+		| :--- | :------- | :------------- | :------------- | :--------------------------- |
+		| MP4  | 小       | ❌ 不支持       | ✔️ 支持        | 标准视频，带声音，文件小     |
+		| MOV  | 大       | ✔️ 支持        | ✔️ 支持        | 需要透明背景+声音的高质量视频 |
+		| GIF  | 小       | ✔️ 支持        | ❌ 不支持      | 网页动图、表情包，无声音     |
 *   **`--recording_enable_transparent` (启用透明背景)**:
-    *   **作用**：开启后，生成的动画背景将是透明的（方便叠加到其他画面上）。
-    *   **重要限制**：此选项**仅对 MOV 和 GIF 格式有效**。选择 MP4 格式时无法启用透明背景。
+	*   **作用**：开启后，生成的动画背景将是透明的（方便叠加到其他画面上）。
+	*   **重要限制**：此选项**仅对 MOV 和 GIF 格式有效**。选择 MP4 格式时无法启用透明背景。
 
 ---
 
