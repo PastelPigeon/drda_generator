@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdek1m6ysenjg"]
+[gd_scene load_steps=10 format=3 uid="uid://cdek1m6ysenjg"]
 
 [ext_resource type="Script" uid="uid://cmijniia7p5ab" path="res://generator/scripts/generator/generator.gd" id="1_n178k"]
 [ext_resource type="Script" uid="uid://jqtk34kfuj22" path="res://generator/scripts/generator/background.gd" id="2_rcwul"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://ch0xc8bhtmyva" path="res://generator/scripts/generator/dialogue_texture_light.gd" id="4_xmo7a"]
 [ext_resource type="Texture2D" uid="uid://bjxut1luka633" path="res://assets/character_faces/spr_face_r_nohat/spr_face_r_nohat_1.png" id="5_1rbap"]
 [ext_resource type="Script" uid="uid://wdxffr1yusu0" path="res://generator/scripts/generator/animation_player.gd" id="5_nd3na"]
+[ext_resource type="Script" uid="uid://2kq61vut1ivv" path="res://generator/scripts/generator/off_screen_items_container.gd" id="6_bevll"]
 
 [sub_resource type="Gradient" id="Gradient_rcwul"]
 offsets = PackedFloat32Array(0, 0.974026)
@@ -121,7 +122,7 @@ grow_vertical = 2
 bbcode_enabled = true
 text = "[font=res://assets/fonts/fzb_font_variation.tres][font_size=48]苏西，我喜欢你"
 scroll_active = false
-visible_characters = 1
+visible_characters = 0
 visible_ratio = 0.142857
 
 [node name="TextureRect" type="TextureRect" parent="Dialogue/Text/Shadow"]
@@ -143,8 +144,23 @@ grow_vertical = 2
 bbcode_enabled = true
 text = "[font=res://assets/fonts/fzb_font_variation.tres][font_size=48]苏西，我喜欢你"
 scroll_active = false
-visible_characters = 1
+visible_characters = 0
 visible_ratio = 0.142857
+
+[node name="OffScreenItemsContainer" type="HBoxContainer" parent="Dialogue"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -178.0
+offset_top = -84.0
+offset_right = -138.0
+offset_bottom = -44.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("6_bevll")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 script = ExtResource("5_nd3na")

@@ -4,5 +4,11 @@
 	],
 	"fzb": [
 		"res://assets/fonts/fzb_font_variation.tres"
+	],
+	"dtm_original": [
+		"res://assets/fonts/DTM-Mono-1.otf"
+	],
+	"fzb_original": [
+		"res://assets/fonts/FZBitmap-GBK-11X12-2.ttf"
 	]
 }

@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0suiqrgfnhrn"]
+
+[ext_resource type="Script" uid="uid://ujcslv3lbaw0" path="res://generator/scripts/off_screen_item/off_screen_item.gd" id="1_011x0"]
+
+[node name="OffScreenItem" type="MarginContainer"]
+script = ExtResource("1_011x0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="CharacterFace" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 16
+
+[node name="Text" type="RichTextLabel" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
