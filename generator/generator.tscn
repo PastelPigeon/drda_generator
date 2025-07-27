@@ -117,6 +117,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
@@ -125,14 +129,31 @@ scroll_active = false
 visible_characters = 0
 visible_ratio = 0.142857
 
-[node name="TextureRect" type="TextureRect" parent="Dialogue/Text/Shadow"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue/Text/Shadow"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Dialogue/Text/Shadow/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
 texture = SubResource("GradientTexture2D_jdrsx")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Dialogue/Text/Shadow/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+texture = SubResource("GradientTexture2D_jdrsx")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Dialogue/Text/Shadow/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+texture = SubResource("GradientTexture2D_jdrsx")
+expand_mode = 1
 
 [node name="Text" type="RichTextLabel" parent="Dialogue/Text"]
 layout_mode = 1
