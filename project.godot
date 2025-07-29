@@ -34,11 +34,7 @@ ProcessAnimationGenerator="*res://generator/scripts/animation/process/process_an
 AnimationGenerator="*res://generator/scripts/animation/animation_generator.gd"
 CmdlineParser="*res://_global/scripts/helpers/cmdline/cmdline_parser.gd"
 StringTypesChecker="*res://_global/scripts/helpers/string/string_types_checker.gd"
-TempFilesManager="*res://ui/ui_mode/scripts/helpers/temp_file/temp_files_manager.gd"
 ArrayMerger="*res://_global/scripts/helpers/array/array_merger.gd"
-EditorBbcodeParser="*res://ui/ui_mode/scripts/helpers/string/editor_bbcode_parser.gd"
-UmOptionsConfigManager="*res://ui/ui_mode/scripts/helpers/config/um_options_config_manager.gd"
-UmSettingsConfigManager="*res://ui/ui_mode/scripts/helpers/config/um_settings_config_manager.gd"
 OffScreenAnimationGenerator="*res://generator/scripts/animation/off_screen/off_screen_animation_generator.gd"
 
 [display]

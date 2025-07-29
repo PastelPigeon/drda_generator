@@ -17,17 +17,13 @@ func _ready() -> void:
 		options.erase("dialogues")
 		dialogue_scene_ins.options = cmdline_args_dict
 	elif cmdline_args_status == CmdlineParser.CmdlineStatus.UI_MODE:
-		var ui_mode_scene_res: PackedScene = load("res://ui/ui_mode/ui_mode.tscn")
+		var ui_mode_scene_res: PackedScene = load("res://ui/ui.tscn")
 		var ui_mode_scene_ins = ui_mode_scene_res.instantiate()
 		add_child(ui_mode_scene_ins)
 	else:
 		var cmdline_args_dict = CmdlineParser.convert_cmdline_args_array_to_dict(OS.get_cmdline_args())
 		var cmdline_status_dict = CmdlineParser.get_cmdline_args_status(OS.get_cmdline_args())
 		
-		var cmdline_alert_scene_res: PackedScene = load("res://ui/cmdline_alert/cmdline_alert.tscn")
-		var cmdline_alert_scene_ins = cmdline_alert_scene_res.instantiate()
-		
-		add_child(cmdline_alert_scene_ins)
-		
-		cmdline_alert_scene_ins.cmdline_args_dict = cmdline_args_dict
-		cmdline_alert_scene_ins.cmdline_status_dict = cmdline_status_dict
+		print("drda_generator 命令行错误")
+		print(cmdline_status_dict["user"])
+		print("请尝试访问帮助文档（https://github.com/PastelPigeon/drda_generator/blob/master/readme.md）来解决您的问题")
