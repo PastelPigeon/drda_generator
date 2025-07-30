@@ -36,6 +36,11 @@ CmdlineParser="*res://_global/scripts/helpers/cmdline/cmdline_parser.gd"
 StringTypesChecker="*res://_global/scripts/helpers/string/string_types_checker.gd"
 ArrayMerger="*res://_global/scripts/helpers/array/array_merger.gd"
 OffScreenAnimationGenerator="*res://generator/scripts/animation/off_screen/off_screen_animation_generator.gd"
+EditorDialoguesManager="*res://ui/scripts/helpers/data/editor_dialogues_manager.gd"
+EditorBbcodeParser="*res://ui/scripts/helpers/string/editor_bbcode_parser.gd"
+OptionsConfigManager="*res://ui/scripts/helpers/config/options_config_manager.gd"
+SettingsConfigManager="*res://ui/scripts/helpers/config/settings_config_manager.gd"
+TempFilesManager="*res://ui/scripts/helpers/temp_file/temp_files_manager.gd"
 
 [display]
 

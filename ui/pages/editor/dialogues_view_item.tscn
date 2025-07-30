@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://ch21vyc22p14c"]
+
+[ext_resource type="Texture2D" uid="uid://co13lu27yypv0" path="res://ui/assets/icons/pencil.svg" id="1_ibng3"]
+[ext_resource type="Script" uid="uid://drfgk6sccyors" path="res://ui/scripts/pages/editor/dialogues_view_item/dialogues_view_item.gd" id="1_kkh5s"]
+[ext_resource type="Texture2D" uid="uid://d3ttl0brxlnb3" path="res://ui/assets/icons/delete.svg" id="2_kkh5s"]
+[ext_resource type="Script" uid="uid://cdqggsko3uhaj" path="res://ui/scripts/pages/editor/dialogues_view_item/content.gd" id="2_w1j5y"]
+[ext_resource type="Script" uid="uid://dyosjuga2yket" path="res://ui/scripts/pages/editor/dialogues_view_item/edit_button.gd" id="4_ullyl"]
+[ext_resource type="Script" uid="uid://0vfs63ybbsov" path="res://ui/scripts/pages/editor/dialogues_view_item/remove_button.gd" id="6_lxtlj"]
+
+[node name="DialoguesViewItem" type="Control"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kkh5s")
+
+[node name="Content" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_vertical = 2
+theme_type_variation = &"dialogues_view_item_content_label"
+vertical_alignment = 1
+script = ExtResource("2_w1j5y")
+
+[node name="Functions" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="EditButton" type="Button" parent="Functions"]
+layout_mode = 2
+icon = ExtResource("1_ibng3")
+script = ExtResource("4_ullyl")
+
+[node name="RemoveButton" type="Button" parent="Functions"]
+layout_mode = 2
+icon = ExtResource("2_kkh5s")
+script = ExtResource("6_lxtlj")

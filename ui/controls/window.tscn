@@ -1,0 +1,108 @@
+[gd_scene load_steps=7 format=3 uid="uid://df01ectyjal4f"]
+
+[ext_resource type="Script" uid="uid://c1kk2j4ovvd7v" path="res://ui/scripts/controls/window/window.gd" id="1_1svcy"]
+[ext_resource type="Texture2D" uid="uid://cabkh6plgt0h3" path="res://ui/assets/icons/minus.svg" id="1_rk43w"]
+[ext_resource type="Script" uid="uid://3uqhocmwfc4v" path="res://ui/scripts/controls/window/title_bar.gd" id="2_bqpar"]
+[ext_resource type="Texture2D" uid="uid://btdngmxqqgqs" path="res://ui/assets/icons/close.svg" id="2_tykdx"]
+[ext_resource type="Script" uid="uid://drbalm0ycy8sd" path="res://ui/scripts/controls/window/min_button.gd" id="4_fscmv"]
+[ext_resource type="Script" uid="uid://bgqswculbh6ao" path="res://ui/scripts/controls/window/close_button.gd" id="6_ygx3y"]
+
+[node name="Window" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"window"
+script = ExtResource("1_1svcy")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Top" type="VBoxContainer" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="TitleBar" type="Panel" parent="MarginContainer/VSplitContainer/Top"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_type_variation = &"title_bar"
+script = ExtResource("2_bqpar")
+
+[node name="Left" type="HBoxContainer" parent="MarginContainer/VSplitContainer/Top/TitleBar"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -10.0
+offset_right = 5.0
+offset_bottom = 10.0
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/VSplitContainer/Top/TitleBar/Left"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="MarginContainer/VSplitContainer/Top/TitleBar/Left"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"window_title_bar_title"
+vertical_alignment = 1
+
+[node name="Right" type="HBoxContainer" parent="MarginContainer/VSplitContainer/Top/TitleBar"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -10.0
+offset_right = -5.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="MinButton" type="Button" parent="MarginContainer/VSplitContainer/Top/TitleBar/Right"]
+layout_mode = 2
+icon = ExtResource("1_rk43w")
+script = ExtResource("4_fscmv")
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VSplitContainer/Top/TitleBar/Right"]
+layout_mode = 2
+icon = ExtResource("2_tykdx")
+script = ExtResource("6_ygx3y")
+
+[node name="ExtendedBar" type="Panel" parent="MarginContainer/VSplitContainer/Top"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_type_variation = &"extended_bar"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 3
+
+[node name="WindowContent" type="Panel" parent="MarginContainer/VSplitContainer/MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"window_content"

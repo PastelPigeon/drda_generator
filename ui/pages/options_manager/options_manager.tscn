@@ -1,0 +1,216 @@
+[gd_scene load_steps=8 format=3 uid="uid://lynxwb1j8v5e"]
+
+[ext_resource type="Texture2D" uid="uid://q6aqeeu11krm" path="res://ui/assets/icons/warning.png" id="1_3rmeg"]
+[ext_resource type="Script" uid="uid://d3vsidcwmqqpd" path="res://ui/scripts/pages/options_manager/options_manager/fps_input.gd" id="1_y2lrp"]
+[ext_resource type="Script" uid="uid://g3836bb3cnph" path="res://ui/scripts/pages/options_manager/options_manager/background_input.gd" id="2_q16br"]
+[ext_resource type="Script" uid="uid://db3h1gxko3ius" path="res://ui/scripts/pages/options_manager/options_manager/recording_mode_input.gd" id="3_4u81q"]
+[ext_resource type="Script" uid="uid://bxp6vyomo6opw" path="res://ui/scripts/pages/options_manager/options_manager/recordings_output_dir_input.gd" id="4_or0o7"]
+[ext_resource type="Script" uid="uid://spayigcge2qi" path="res://ui/scripts/pages/options_manager/options_manager/recording_format_input.gd" id="6_g0gnn"]
+[ext_resource type="Script" uid="uid://c3i54y0ihgpv6" path="res://ui/scripts/pages/options_manager/options_manager/recording_enable_transparent_input.gd" id="7_4qyp4"]
+
+[node name="OptionsManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 75
+
+[node name="Options" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Fps" type="VBoxContainer" parent="ScrollContainer/MarginContainer/Options"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/MarginContainer/Options/Fps"]
+layout_mode = 2
+text = "帧率"
+
+[node name="Description" type="Label" parent="ScrollContainer/MarginContainer/Options/Fps"]
+layout_mode = 2
+theme_type_variation = &"options_description_lable"
+text = "设置生成视频的帧率，默认为24帧，过高的帧率可能会引发问题"
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/Options/Fps"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="FpsInput" type="SpinBox" parent="ScrollContainer/MarginContainer/Options/Fps/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+min_value = 10.0
+max_value = 60.0
+value = 24.0
+script = ExtResource("1_y2lrp")
+
+[node name="Background" type="VBoxContainer" parent="ScrollContainer/MarginContainer/Options"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/MarginContainer/Options/Background"]
+layout_mode = 2
+text = "背景"
+
+[node name="Description" type="Label" parent="ScrollContainer/MarginContainer/Options/Background"]
+layout_mode = 2
+theme_type_variation = &"options_description_lable"
+text = "设置生成视频的背景颜色，用于在剪辑软件中抠像"
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/Options/Background"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="BackgroundInput" type="ColorPickerButton" parent="ScrollContainer/MarginContainer/Options/Background/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+script = ExtResource("2_q16br")
+
+[node name="RecordingMode" type="VBoxContainer" parent="ScrollContainer/MarginContainer/Options"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/MarginContainer/Options/RecordingMode"]
+layout_mode = 2
+text = "生成模式（录制模式）"
+
+[node name="Description" type="Label" parent="ScrollContainer/MarginContainer/Options/RecordingMode"]
+layout_mode = 2
+theme_type_variation = &"options_description_lable"
+text = "设置生成视频的模式，将多个对话合并到同一视频或是拆分多个对话到不同的视频中"
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/Options/RecordingMode"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="RecordingModeInput" type="OptionButton" parent="ScrollContainer/MarginContainer/Options/RecordingMode/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "合并"
+popup/item_0/id = 0
+popup/item_1/text = "拆分"
+popup/item_1/id = 1
+script = ExtResource("3_4u81q")
+
+[node name="RecordingsOutputDir" type="VBoxContainer" parent="ScrollContainer/MarginContainer/Options"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/MarginContainer/Options/RecordingsOutputDir"]
+layout_mode = 2
+text = "生成路径"
+
+[node name="Description" type="Label" parent="ScrollContainer/MarginContainer/Options/RecordingsOutputDir"]
+layout_mode = 2
+theme_type_variation = &"options_description_lable"
+text = "设置生成视频的路径"
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/Options/RecordingsOutputDir"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="RecordingsOutputDirInput" type="LineEdit" parent="ScrollContainer/MarginContainer/Options/RecordingsOutputDir/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+script = ExtResource("4_or0o7")
+
+[node name="AlertSeparator" type="HBoxContainer" parent="ScrollContainer/MarginContainer/Options"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Icon" type="TextureRect" parent="ScrollContainer/MarginContainer/Options/AlertSeparator"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("1_3rmeg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Msg" type="Label" parent="ScrollContainer/MarginContainer/Options/AlertSeparator"]
+layout_mode = 2
+text = "以下选项为实验性功能，可能无法正常使用"
+
+[node name="RecordingFormat" type="VBoxContainer" parent="ScrollContainer/MarginContainer/Options"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/MarginContainer/Options/RecordingFormat"]
+layout_mode = 2
+text = "生成内容格式"
+
+[node name="Description" type="Label" parent="ScrollContainer/MarginContainer/Options/RecordingFormat"]
+layout_mode = 2
+theme_type_variation = &"options_description_lable"
+text = "设置生成内容的格式"
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/Options/RecordingFormat"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="RecordingFormatInput" type="OptionButton" parent="ScrollContainer/MarginContainer/Options/RecordingFormat/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "MP4"
+popup/item_0/id = 0
+popup/item_1/text = "MOV"
+popup/item_1/id = 1
+popup/item_2/text = "GIF"
+popup/item_2/id = 2
+script = ExtResource("6_g0gnn")
+
+[node name="RecordingEnableTransparent" type="VBoxContainer" parent="ScrollContainer/MarginContainer/Options"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/MarginContainer/Options/RecordingEnableTransparent"]
+layout_mode = 2
+text = "启用透明背景"
+
+[node name="Description" type="Label" parent="ScrollContainer/MarginContainer/Options/RecordingEnableTransparent"]
+layout_mode = 2
+theme_type_variation = &"options_description_lable"
+text = "设置是否启用透明背景，该选项启用后，软件会根据您所选的背景颜色自动抠像，只有MOV和GIF格式支持此功能"
+autowrap_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/Options/RecordingEnableTransparent"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="RecordingEnableTransparentInput" type="OptionButton" parent="ScrollContainer/MarginContainer/Options/RecordingEnableTransparent/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "禁用"
+popup/item_0/id = 0
+popup/item_1/text = "启用"
+popup/item_1/id = 1
+script = ExtResource("7_4qyp4")

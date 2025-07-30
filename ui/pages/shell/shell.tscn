@@ -1,0 +1,106 @@
+[gd_scene load_steps=16 format=3 uid="uid://drmcj4setiipp"]
+
+[ext_resource type="Script" uid="uid://ctvt16jnigdss" path="res://ui/scripts/pages/shell/shell/shell.gd" id="1_83ih7"]
+[ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="1_sqfqq"]
+[ext_resource type="Texture2D" uid="uid://pyyo83y3pjy2" path="res://icon.png" id="2_7wo7p"]
+[ext_resource type="Texture2D" uid="uid://dx3e1t2v7nsvr" path="res://ui/assets/icons/Kris_face_partymenu.png" id="3_nx5be"]
+[ext_resource type="Texture2D" uid="uid://4sn1f4b4wuac" path="res://ui/assets/icons/Susie_face_partymenu.png" id="4_ly7jd"]
+[ext_resource type="Texture2D" uid="uid://cfsfbuxorn21o" path="res://ui/assets/icons/Ralsei_face_partymenu.png" id="5_83ih7"]
+[ext_resource type="Script" uid="uid://btad3sedk3w7i" path="res://ui/scripts/pages/shell/shell/editor_nav_button.gd" id="5_svyic"]
+[ext_resource type="Script" uid="uid://cmnigfv7jcfgv" path="res://ui/scripts/pages/shell/shell/options_manager_nav_button.gd" id="7_tb36v"]
+[ext_resource type="Script" uid="uid://m5udil86bi8p" path="res://ui/scripts/pages/shell/shell/assets_manager_nav_button.gd" id="9_n2gva"]
+[ext_resource type="Script" uid="uid://8ekeff528b3v" path="res://ui/scripts/pages/shell/shell/page_container.gd" id="10_8ap4h"]
+[ext_resource type="PackedScene" uid="uid://333da4qf700w" path="res://ui/pages/editor/editor.tscn" id="11_g5tn6"]
+[ext_resource type="PackedScene" uid="uid://lynxwb1j8v5e" path="res://ui/pages/options_manager/options_manager.tscn" id="12_0k1ap"]
+[ext_resource type="Shader" uid="uid://dxqcqk6orwlyx" path="res://ui/assets/shaders/chromatic_chaos_distortion.gdshader" id="12_buvc6"]
+[ext_resource type="PackedScene" uid="uid://r8idrhxm4e1k" path="res://ui/pages/assets_manager/assets_manager.tscn" id="13_wwttj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0k1ap"]
+shader = ExtResource("12_buvc6")
+shader_parameter/chaos = 32.0
+shader_parameter/radius = 1.0
+shader_parameter/attenuation = 5.0
+
+[node name="Shell" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_83ih7")
+
+[node name="MainWindow" parent="." instance=ExtResource("1_sqfqq")]
+layout_mode = 1
+is_dialog = false
+title = "drda_generator"
+icon = ExtResource("2_7wo7p")
+is_extended_bar_enabled = true
+
+[node name="CenterContainer" type="CenterContainer" parent="MainWindow/MarginContainer/VSplitContainer/Top/ExtendedBar" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PagesNav" type="HBoxContainer" parent="MainWindow/MarginContainer/VSplitContainer/Top/ExtendedBar/CenterContainer"]
+layout_mode = 2
+
+[node name="EditorNavButton" type="Button" parent="MainWindow/MarginContainer/VSplitContainer/Top/ExtendedBar/CenterContainer/PagesNav"]
+layout_mode = 2
+theme_override_constants/icon_max_width = 25
+text = "编辑"
+icon = ExtResource("3_nx5be")
+flat = true
+script = ExtResource("5_svyic")
+
+[node name="OptionsManagerNavButton" type="Button" parent="MainWindow/MarginContainer/VSplitContainer/Top/ExtendedBar/CenterContainer/PagesNav"]
+layout_mode = 2
+theme_override_constants/icon_max_width = 25
+text = "选项"
+icon = ExtResource("4_ly7jd")
+flat = true
+script = ExtResource("7_tb36v")
+
+[node name="AssetsManagerNavButton" type="Button" parent="MainWindow/MarginContainer/VSplitContainer/Top/ExtendedBar/CenterContainer/PagesNav"]
+layout_mode = 2
+theme_override_constants/icon_max_width = 25
+text = "资产"
+icon = ExtResource("5_83ih7")
+flat = true
+script = ExtResource("9_n2gva")
+
+[node name="PageContainer" type="Control" parent="MainWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_8ap4h")
+
+[node name="Editor" parent="MainWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/PageContainer" instance=ExtResource("11_g5tn6")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="OptionsManager" parent="MainWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/PageContainer" instance=ExtResource("12_0k1ap")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="AssetsManager" parent="MainWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/PageContainer" instance=ExtResource("13_wwttj")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="ShaderMask" type="ColorRect" parent="MainWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="1"]
+visible = false
+material = SubResource("ShaderMaterial_0k1ap")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[editable path="MainWindow"]

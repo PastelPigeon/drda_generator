@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://by2ki1g8fkyav"]
+[gd_scene load_steps=3 format=3 uid="uid://by2ki1g8fkyav"]
+
+[ext_resource type="Theme" uid="uid://226iil5wgiep" path="res://ui/assets/themes/default.tres" id="1_ks8t7"]
+[ext_resource type="PackedScene" uid="uid://drmcj4setiipp" path="res://ui/pages/shell/shell.tscn" id="1_nb4k0"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -7,3 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ks8t7")
+
+[node name="Shell" parent="." instance=ExtResource("1_nb4k0")]
+layout_mode = 1

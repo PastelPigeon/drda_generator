@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://333da4qf700w"]
+
+[ext_resource type="PackedScene" uid="uid://dsbnblavs2fiy" path="res://ui/pages/editor/dialogues_view.tscn" id="1_oiuug"]
+[ext_resource type="PackedScene" uid="uid://bgr47cd65r2lq" path="res://ui/pages/editor/dialogue_editor.tscn" id="2_swlvm"]
+[ext_resource type="Script" uid="uid://c6b72tf2apqf0" path="res://ui/scripts/pages/editor/editor/generate_button.gd" id="2_xeoy1"]
+[ext_resource type="PackedScene" uid="uid://dsef32iw4me8x" path="res://ui/pages/editor/loading.tscn" id="4_0hrba"]
+
+[node name="Editor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+split_offset = 250
+
+[node name="Left" type="Control" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="DialoguesView" parent="MarginContainer/HSplitContainer/Left" instance=ExtResource("1_oiuug")]
+layout_mode = 1
+
+[node name="GenerateButton" type="Button" parent="MarginContainer/HSplitContainer/Left"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "生成"
+script = ExtResource("2_xeoy1")
+
+[node name="DialogueEditor" parent="MarginContainer/HSplitContainer" instance=ExtResource("2_swlvm")]
+layout_mode = 2
+
+[node name="Loading" parent="." instance=ExtResource("4_0hrba")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1

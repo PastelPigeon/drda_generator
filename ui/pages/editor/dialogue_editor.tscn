@@ -1,0 +1,200 @@
+[gd_scene load_steps=11 format=3 uid="uid://bgr47cd65r2lq"]
+
+[ext_resource type="Script" uid="uid://biw4wkgrdsycw" path="res://ui/scripts/pages/editor/dialogue_editor/normal.gd" id="1_c71x3"]
+[ext_resource type="Texture2D" uid="uid://mwqhhyj54gvb" path="res://ui/assets/icons/notepad.png" id="1_qugqf"]
+[ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="2_ph81u"]
+[ext_resource type="Script" uid="uid://b52d3264yb35c" path="res://ui/scripts/pages/editor/dialogue_editor/content_edit.gd" id="3_5ck3i"]
+[ext_resource type="Script" uid="uid://c8dh4oq07v05x" path="res://ui/scripts/pages/editor/dialogue_editor/content_err_msg.gd" id="3_eh6ha"]
+[ext_resource type="Texture2D" uid="uid://cmymkyjqoy6l3" path="res://ui/assets/icons/preview.png" id="3_srfkx"]
+[ext_resource type="Script" uid="uid://1qb8hu67v5bq" path="res://ui/scripts/pages/editor/dialogue_editor/preview_label.gd" id="6_diejw"]
+[ext_resource type="Texture2D" uid="uid://q6aqeeu11krm" path="res://ui/assets/icons/warning.png" id="8_34kkw"]
+[ext_resource type="Script" uid="uid://dvfj477l5nv80" path="res://ui/scripts/pages/editor/dialogue_editor/no_selected_dialogue_alert.gd" id="8_bkp6b"]
+[ext_resource type="Script" uid="uid://bgawt0hqj06jo" path="res://ui/scripts/pages/editor/dialogue_editor/add_button.gd" id="9_dsilc"]
+
+[node name="DialogueEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Normal" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c71x3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Normal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Editor" type="VBoxContainer" parent="Normal/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="UnitTitleBar" type="HBoxContainer" parent="Normal/VBoxContainer/Editor"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="Normal/VBoxContainer/Editor/UnitTitleBar"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+texture = ExtResource("1_qugqf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="Normal/VBoxContainer/Editor/UnitTitleBar"]
+layout_mode = 2
+text = "记事本"
+
+[node name="Window" parent="Normal/VBoxContainer/Editor" instance=ExtResource("2_ph81u")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+is_extended_bar_enabled = true
+
+[node name="TitleBar" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top" index="0"]
+visible = false
+
+[node name="CenterContainer" type="CenterContainer" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContentErrMsg" type="Label" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/CenterContainer"]
+layout_mode = 2
+text = "{ERRMSGPLACEHOLDER}"
+script = ExtResource("3_eh6ha")
+
+[node name="MarginContainer" type="MarginContainer" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ContentEdit" type="CodeEdit" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+layout_mode = 2
+placeholder_text = "输入对话内容"
+gutters_draw_line_numbers = true
+auto_brace_completion_enabled = true
+script = ExtResource("3_5ck3i")
+
+[node name="Preview" type="VBoxContainer" parent="Normal/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="UnitTitleBar" type="HBoxContainer" parent="Normal/VBoxContainer/Preview"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="Normal/VBoxContainer/Preview/UnitTitleBar"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+texture = ExtResource("3_srfkx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="Normal/VBoxContainer/Preview/UnitTitleBar"]
+layout_mode = 2
+text = "预览"
+
+[node name="Window" parent="Normal/VBoxContainer/Preview" instance=ExtResource("2_ph81u")]
+custom_minimum_size = Vector2(0, 240)
+layout_mode = 2
+
+[node name="TitleBar" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top" index="0"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="PreviewLabel" type="RichTextLabel" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+script = ExtResource("6_diejw")
+
+[node name="NoSelectedDialogueAlert" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_bkp6b")
+
+[node name="CenterContainer" type="CenterContainer" parent="NoSelectedDialogueAlert"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AlertWindow" parent="NoSelectedDialogueAlert/CenterContainer" instance=ExtResource("2_ph81u")]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+title = "警告"
+icon = ExtResource("8_34kkw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NoSelectedDialogueAlert/CenterContainer/AlertWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 70.0
+offset_bottom = 70.0
+theme_override_constants/separation = 20
+
+[node name="Icon" type="TextureRect" parent="NoSelectedDialogueAlert/CenterContainer/AlertWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_34kkw")
+stretch_mode = 5
+
+[node name="Msg" type="Label" parent="NoSelectedDialogueAlert/CenterContainer/AlertWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/HBoxContainer"]
+layout_mode = 2
+text = "没有选中的对话"
+
+[node name="AddButton" type="Button" parent="NoSelectedDialogueAlert/CenterContainer/AlertWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="1"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -36.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "创建新的对话"
+script = ExtResource("9_dsilc")
+
+[editable path="Normal/VBoxContainer/Editor/Window"]
+[editable path="Normal/VBoxContainer/Preview/Window"]
+[editable path="NoSelectedDialogueAlert/CenterContainer/AlertWindow"]
