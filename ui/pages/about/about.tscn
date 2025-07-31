@@ -1,0 +1,314 @@
+[gd_scene load_steps=11 format=3 uid="uid://ckraucf2pmg1w"]
+
+[ext_resource type="VideoStream" uid="uid://dp8e3xjr0wv8d" path="res://ui/assets/videos/about_header.ogv" id="1_6u7f4"]
+[ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="2_x4vr7"]
+[ext_resource type="Texture2D" uid="uid://pyyo83y3pjy2" path="res://icon.png" id="3_xgotf"]
+[ext_resource type="Texture2D" uid="uid://wivjy1whig6b" path="res://ui/assets/icons/more_info.png" id="4_soajv"]
+[ext_resource type="Texture2D" uid="uid://cyf0lfryfl1by" path="res://ui/assets/icons/loading.png" id="5_1n2wf"]
+[ext_resource type="Texture2D" uid="uid://mwqhhyj54gvb" path="res://ui/assets/icons/notepad.png" id="6_o40ct"]
+[ext_resource type="Texture2D" uid="uid://uimupoeqwbme" path="res://ui/assets/icons/github-mark.png" id="7_i1mvd"]
+[ext_resource type="Script" uid="uid://ca1yu17fwin48" path="res://ui/scripts/pages/about/about/license_nav_button.gd" id="7_oqxg7"]
+[ext_resource type="Script" uid="uid://6lhefdj7jrtd" path="res://ui/scripts/pages/about/about/repo_nav_button.gd" id="9_gmfn2"]
+[ext_resource type="Script" uid="uid://cnt1hjyl30enr" path="res://ui/scripts/pages/about/about/readme_nav_button.gd" id="10_grm5w"]
+
+[node name="About" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 200
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="HeaderVideoStreamPlayer" type="VideoStreamPlayer" parent="VSplitContainer"]
+layout_mode = 2
+stream = ExtResource("1_6u7f4")
+autoplay = true
+loop = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VSplitContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 75
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="AboutWindow" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_x4vr7")]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+title = "关于"
+icon = ExtResource("3_xgotf")
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("3_xgotf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "DRDA_GENERATOR"
+
+[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"about_secondary_label"
+text = "轻松创建《DELTARUNE》风格的对话动画！"
+
+[node name="MoreInfo" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="UnitTitleBar" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/UnitTitleBar"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("4_soajv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/UnitTitleBar"]
+layout_mode = 2
+text = "更多信息"
+
+[node name="Window" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo" instance=ExtResource("2_x4vr7")]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="TitleBar" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/Top" index="0"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+layout_mode = 2
+
+[node name="MoreInfoItem" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_type_variation = &"about_more_info_item"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+texture = ExtResource("5_1n2wf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "版本"
+
+[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"about_secondary_label"
+text = "v1.1.0"
+
+[node name="MoreInfoItem2" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_type_variation = &"about_more_info_item"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+texture = ExtResource("6_o40ct")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "开源协议"
+
+[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"about_secondary_label"
+text = "基于MIT协议开放源代码"
+
+[node name="LicenseNavButton" type="Button" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "查看"
+script = ExtResource("7_oqxg7")
+
+[node name="MoreInfoItem3" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_type_variation = &"about_more_info_item"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+texture = ExtResource("7_i1mvd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Github链接"
+
+[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"about_secondary_label"
+text = "查看在线代码存储库"
+
+[node name="RepoNavButton" type="Button" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "查看"
+script = ExtResource("9_gmfn2")
+
+[node name="MoreInfoItem4" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_type_variation = &"about_more_info_item"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+texture = ExtResource("4_soajv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "遇到了软件使用上的困难？"
+
+[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"about_secondary_label"
+text = "查看在线帮助文档"
+
+[node name="ReadmeNavButton" type="Button" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "查看"
+script = ExtResource("10_grm5w")
+
+[editable path="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow"]
+[editable path="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window"]

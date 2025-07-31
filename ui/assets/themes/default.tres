@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=14 format=3 uid="uid://226iil5wgiep"]
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://226iil5wgiep"]
 
 [ext_resource type="FontFile" uid="uid://coywg1yikumhu" path="res://ui/assets/fonts/ark-pixel-12px-monospaced-zh_cn.otf" id="1_m31k4"]
 
@@ -80,6 +80,11 @@ corner_radius_bottom_left = 4
 shadow_color = Color(0.376471, 0.376471, 0.376471, 1)
 shadow_size = 1
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etngc"]
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 1
+border_color = Color(0.501961, 0.501961, 0.501961, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7uojx"]
 bg_color = Color(0.752941, 0.752941, 0.752941, 1)
 border_width_top = 1
@@ -143,6 +148,11 @@ LineEdit/fonts/font = ExtResource("1_m31k4")
 LineEdit/styles/focus = SubResource("StyleBoxFlat_2r6kn")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_2r42l")
 RichTextLabel/colors/default_color = Color(0.12549, 0.12549, 0.12549, 1)
+about_more_info_item/base_type = &"Panel"
+about_more_info_item/styles/panel = SubResource("StyleBoxFlat_etngc")
+about_secondary_label/base_type = &"Label"
+about_secondary_label/colors/font_color = Color(0.25098, 0.25098, 0.25098, 1)
+about_secondary_label/font_sizes/font_size = 12
 content_err_msg_label_err/base_type = &"Label"
 content_err_msg_label_err/colors/font_color = Color(1, 0, 0, 1)
 content_err_msg_label_err/colors/font_shadow_color = Color(0, 0, 0, 1)

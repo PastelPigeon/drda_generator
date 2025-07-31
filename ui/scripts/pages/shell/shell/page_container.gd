@@ -13,6 +13,10 @@ const REGISTERED_PAGES = [
 	{
 		"index": 2,
 		"node": "AssetsManager"
+	},
+	{
+		"index": 3,
+		"node": "About"
 	}
 ]
 
