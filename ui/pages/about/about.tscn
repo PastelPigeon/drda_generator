@@ -38,6 +38,7 @@ loop = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VSplitContainer"]
 layout_mode = 2
+vertical_scroll_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer"]
 layout_mode = 2
