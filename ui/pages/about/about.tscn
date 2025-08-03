@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://ckraucf2pmg1w"]
 
-[ext_resource type="VideoStream" uid="uid://dp8e3xjr0wv8d" path="res://ui/assets/videos/about_header.ogv" id="1_6u7f4"]
+[ext_resource type="PackedScene" uid="uid://cefpdn618h3a2" path="res://ui/assets/about_header/imported_animation.tscn" id="1_grm5w"]
 [ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="2_x4vr7"]
 [ext_resource type="Texture2D" uid="uid://pyyo83y3pjy2" path="res://icon.png" id="3_xgotf"]
 [ext_resource type="Texture2D" uid="uid://wivjy1whig6b" path="res://ui/assets/icons/more_info.png" id="4_soajv"]
@@ -30,11 +30,15 @@ split_offset = 200
 dragging_enabled = false
 dragger_visibility = 2
 
-[node name="HeaderVideoStreamPlayer" type="VideoStreamPlayer" parent="VSplitContainer"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VSplitContainer"]
 layout_mode = 2
-stream = ExtResource("1_6u7f4")
-autoplay = true
-loop = true
+
+[node name="SubViewport" type="SubViewport" parent="VSplitContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(992, 200)
+render_target_update_mode = 4
+
+[node name="ImportedAnimation" parent="VSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_grm5w")]
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VSplitContainer"]
 layout_mode = 2
@@ -168,7 +172,7 @@ text = "版本"
 [node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"about_secondary_label"
-text = "v1.1.0"
+text = "v1.1.1"
 
 [node name="MoreInfoItem2" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 60)
