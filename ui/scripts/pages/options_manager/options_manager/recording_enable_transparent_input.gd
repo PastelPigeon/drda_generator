@@ -31,7 +31,7 @@ func _convert_uv_to_cv(value: Variant):
 
 ## 将存储值转为ui值
 func _convert_cv_to_uv(value: Variant):
-	return 0 if value else 1
+	return 0 if value == false else 1
 	
 ## 更新存储值
 func _update_cv(new_value: Variant):
