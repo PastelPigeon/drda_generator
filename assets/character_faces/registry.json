@@ -1,1253 +1,1253 @@
 {
-    "alphys_0": [
-        "res://assets/character_faces/alphys/alphys_0.png"
-    ],
-    "alphys_1": [
-        "res://assets/character_faces/alphys/alphys_1.png"
-    ],
-    "alphys_2": [
-        "res://assets/character_faces/alphys/alphys_2.png"
-    ],
-    "alphys_3": [
-        "res://assets/character_faces/alphys/alphys_3.png"
-    ],
-    "alphys_4": [
-        "res://assets/character_faces/alphys/alphys_4.png"
-    ],
-    "alphys_5": [
-        "res://assets/character_faces/alphys/alphys_5.png"
-    ],
-    "alphys_6": [
-        "res://assets/character_faces/alphys/alphys_6.png"
-    ],
-    "alphys_7": [
-        "res://assets/character_faces/alphys/alphys_7.png"
-    ],
-    "alphys_8": [
-        "res://assets/character_faces/alphys/alphys_8.png"
-    ],
-    "alphys_9": [
-        "res://assets/character_faces/alphys/alphys_9.png"
-    ],
-    "alphys_10": [
-        "res://assets/character_faces/alphys/alphys_10.png"
-    ],
-    "alphys_11": [
-        "res://assets/character_faces/alphys/alphys_11.png"
-    ],
-    "alphys_12": [
-        "res://assets/character_faces/alphys/alphys_12.png"
-    ],
-    "asgore_0": [
-        "res://assets/character_faces/asgore/asgore_0.png"
-    ],
-    "asgore_1": [
-        "res://assets/character_faces/asgore/asgore_1.png"
-    ],
-    "asgore_2": [
-        "res://assets/character_faces/asgore/asgore_2.png"
-    ],
-    "asgore_3": [
-        "res://assets/character_faces/asgore/asgore_3.png"
-    ],
-    "asgore_4": [
-        "res://assets/character_faces/asgore/asgore_4.png"
-    ],
-    "asgore_5": [
-        "res://assets/character_faces/asgore/asgore_5.png"
-    ],
-    "asgore_6": [
-        "res://assets/character_faces/asgore/asgore_6.png"
-    ],
-    "asgore_7": [
-        "res://assets/character_faces/asgore/asgore_7.png"
-    ],
-    "asgore_8": [
-        "res://assets/character_faces/asgore/asgore_8.png"
-    ],
-    "berdly_0": [
-        "res://assets/character_faces/berdly/berdly_0.png"
-    ],
-    "berdly_1": [
-        "res://assets/character_faces/berdly/berdly_1.png"
-    ],
-    "berdly_2": [
-        "res://assets/character_faces/berdly/berdly_2.png"
-    ],
-    "berdly_3": [
-        "res://assets/character_faces/berdly/berdly_3.png"
-    ],
-    "berdly_4": [
-        "res://assets/character_faces/berdly/berdly_4.png"
-    ],
-    "berdly_5": [
-        "res://assets/character_faces/berdly/berdly_5.png"
-    ],
-    "berdly_6": [
-        "res://assets/character_faces/berdly/berdly_6.png"
-    ],
-    "berdly_7": [
-        "res://assets/character_faces/berdly/berdly_7.png"
-    ],
-    "berdly_8": [
-        "res://assets/character_faces/berdly/berdly_8.png"
-    ],
-    "berdly_9": [
-        "res://assets/character_faces/berdly/berdly_9.png"
-    ],
-    "berdly_10": [
-        "res://assets/character_faces/berdly/berdly_10.png"
-    ],
-    "berdly_11": [
-        "res://assets/character_faces/berdly/berdly_11.png"
-    ],
-    "berdly_12": [
-        "res://assets/character_faces/berdly/berdly_12.png"
-    ],
-    "berdly_13": [
-        "res://assets/character_faces/berdly/berdly_13.png"
-    ],
-    "berdly_14": [
-        "res://assets/character_faces/berdly/berdly_14.png"
-    ],
-    "berdly_15": [
-        "res://assets/character_faces/berdly/berdly_15.png"
-    ],
-    "berdly_16": [
-        "res://assets/character_faces/berdly/berdly_16.png"
-    ],
-    "berdly_17": [
-        "res://assets/character_faces/berdly/berdly_17.png"
-    ],
-    "berdly_18": [
-        "res://assets/character_faces/berdly/berdly_18.png"
-    ],
-    "berdly_19": [
-        "res://assets/character_faces/berdly/berdly_19.png"
-    ],
-    "berdly_20": [
-        "res://assets/character_faces/berdly/berdly_20.png"
-    ],
-    "berdly_21": [
-        "res://assets/character_faces/berdly/berdly_21.png"
-    ],
-    "berdly_22": [
-        "res://assets/character_faces/berdly/berdly_22.png"
-    ],
-    "berdly_23": [
-        "res://assets/character_faces/berdly/berdly_23.png"
-    ],
-    "berdly_24": [
-        "res://assets/character_faces/berdly/berdly_24.png"
-    ],
-    "berdly_dark_0": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_0.png"
-    ],
-    "berdly_dark_1": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_1.png"
-    ],
-    "berdly_dark_2": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_2.png"
-    ],
-    "berdly_dark_3": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_3.png"
-    ],
-    "berdly_dark_4": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_4.png"
-    ],
-    "berdly_dark_5": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_5.png"
-    ],
-    "berdly_dark_6": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_6.png"
-    ],
-    "berdly_dark_7": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_7.png"
-    ],
-    "berdly_dark_8": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_8.png"
-    ],
-    "berdly_dark_9": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_9.png"
-    ],
-    "berdly_dark_10": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_10.png"
-    ],
-    "berdly_dark_11": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_11.png"
-    ],
-    "berdly_dark_12": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_12.png"
-    ],
-    "berdly_dark_13": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_13.png"
-    ],
-    "berdly_dark_14": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_14.png"
-    ],
-    "berdly_dark_15": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_15.png"
-    ],
-    "berdly_dark_16": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_16.png"
-    ],
-    "berdly_dark_17": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_17.png"
-    ],
-    "berdly_dark_18": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_18.png"
-    ],
-    "berdly_dark_19": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_19.png"
-    ],
-    "berdly_dark_20": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_20.png"
-    ],
-    "berdly_dark_21": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_21.png"
-    ],
-    "berdly_dark_22": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_22.png"
-    ],
-    "berdly_dark_23": [
-        "res://assets/character_faces/berdly_dark/berdly_dark_23.png"
-    ],
-    "bratty_0": [
-        "res://assets/character_faces/bratty/bratty_0.png"
-    ],
-    "bratty_1": [
-        "res://assets/character_faces/bratty/bratty_1.png"
-    ],
-    "bratty_2": [
-        "res://assets/character_faces/bratty/bratty_2.png"
-    ],
-    "bratty_3": [
-        "res://assets/character_faces/bratty/bratty_3.png"
-    ],
-    "bratty_4": [
-        "res://assets/character_faces/bratty/bratty_4.png"
-    ],
-    "bratty_5": [
-        "res://assets/character_faces/bratty/bratty_5.png"
-    ],
-    "bratty_6": [
-        "res://assets/character_faces/bratty/bratty_6.png"
-    ],
-    "burgerpants_0": [
-        "res://assets/character_faces/burgerpants/burgerpants_0.png"
-    ],
-    "burgerpants_1": [
-        "res://assets/character_faces/burgerpants/burgerpants_1.png"
-    ],
-    "burgerpants_2": [
-        "res://assets/character_faces/burgerpants/burgerpants_2.png"
-    ],
-    "burgerpants_3": [
-        "res://assets/character_faces/burgerpants/burgerpants_3.png"
-    ],
-    "burgerpants_4": [
-        "res://assets/character_faces/burgerpants/burgerpants_4.png"
-    ],
-    "burgerpants_5": [
-        "res://assets/character_faces/burgerpants/burgerpants_5.png"
-    ],
-    "burgerpants_6": [
-        "res://assets/character_faces/burgerpants/burgerpants_6.png"
-    ],
-    "burgerpants_7": [
-        "res://assets/character_faces/burgerpants/burgerpants_7.png"
-    ],
-    "burgerpants_8": [
-        "res://assets/character_faces/burgerpants/burgerpants_8.png"
-    ],
-    "burgerpants_9": [
-        "res://assets/character_faces/burgerpants/burgerpants_9.png"
-    ],
-    "burgerpants_10": [
-        "res://assets/character_faces/burgerpants/burgerpants_10.png"
-    ],
-    "burgerpants_11": [
-        "res://assets/character_faces/burgerpants/burgerpants_11.png"
-    ],
-    "burgerpants_12": [
-        "res://assets/character_faces/burgerpants/burgerpants_12.png"
-    ],
-    "burgerpants_13": [
-        "res://assets/character_faces/burgerpants/burgerpants_13.png"
-    ],
-    "burgerpants_14": [
-        "res://assets/character_faces/burgerpants/burgerpants_14.png"
-    ],
-    "burgerpants_15": [
-        "res://assets/character_faces/burgerpants/burgerpants_15.png"
-    ],
-    "carol_0": [
-        "res://assets/character_faces/carol/carol_0.png"
-    ],
-    "carol_1": [
-        "res://assets/character_faces/carol/carol_1.png"
-    ],
-    "carol_2": [
-        "res://assets/character_faces/carol/carol_2.png"
-    ],
-    "carol_3": [
-        "res://assets/character_faces/carol/carol_3.png"
-    ],
-    "carol_4": [
-        "res://assets/character_faces/carol/carol_4.png"
-    ],
-    "carol_5": [
-        "res://assets/character_faces/carol/carol_5.png"
-    ],
-    "carol_6": [
-        "res://assets/character_faces/carol/carol_6.png"
-    ],
-    "carol_7": [
-        "res://assets/character_faces/carol/carol_7.png"
-    ],
-    "carol_8": [
-        "res://assets/character_faces/carol/carol_8.png"
-    ],
-    "carol_9": [
-        "res://assets/character_faces/carol/carol_9.png"
-    ],
-    "catti_0": [
-        "res://assets/character_faces/catti/catti_0.png"
-    ],
-    "catti_1": [
-        "res://assets/character_faces/catti/catti_1.png"
-    ],
-    "catti_2": [
-        "res://assets/character_faces/catti/catti_2.png"
-    ],
-    "catti_3": [
-        "res://assets/character_faces/catti/catti_3.png"
-    ],
-    "catti_4": [
-        "res://assets/character_faces/catti/catti_4.png"
-    ],
-    "catti_5": [
-        "res://assets/character_faces/catti/catti_5.png"
-    ],
-    "catti_6": [
-        "res://assets/character_faces/catti/catti_6.png"
-    ],
-    "catti_7": [
-        "res://assets/character_faces/catti/catti_7.png"
-    ],
-    "catty_0": [
-        "res://assets/character_faces/catty/catty_0.png"
-    ],
-    "catty_1": [
-        "res://assets/character_faces/catty/catty_1.png"
-    ],
-    "catty_2": [
-        "res://assets/character_faces/catty/catty_2.png"
-    ],
-    "catty_3": [
-        "res://assets/character_faces/catty/catty_3.png"
-    ],
-    "catty_4": [
-        "res://assets/character_faces/catty/catty_4.png"
-    ],
-    "catty_5": [
-        "res://assets/character_faces/catty/catty_5.png"
-    ],
-    "catty_6": [
-        "res://assets/character_faces/catty/catty_6.png"
-    ],
-    "catty_7": [
-        "res://assets/character_faces/catty/catty_7.png"
-    ],
-    "catty_8": [
-        "res://assets/character_faces/catty/catty_8.png"
-    ],
-    "jockington_0": [
-        "res://assets/character_faces/jockington/jockington_0.png"
-    ],
-    "jockington_1": [
-        "res://assets/character_faces/jockington/jockington_1.png"
-    ],
-    "jockington_2": [
-        "res://assets/character_faces/jockington/jockington_2.png"
-    ],
-    "jockington_3": [
-        "res://assets/character_faces/jockington/jockington_3.png"
-    ],
-    "jockington_4": [
-        "res://assets/character_faces/jockington/jockington_4.png"
-    ],
-    "jockington_5": [
-        "res://assets/character_faces/jockington/jockington_5.png"
-    ],
-    "jockington_6": [
-        "res://assets/character_faces/jockington/jockington_6.png"
-    ],
-    "jockington_7": [
-        "res://assets/character_faces/jockington/jockington_7.png"
-    ],
-    "jockington_8": [
-        "res://assets/character_faces/jockington/jockington_8.png"
-    ],
-    "jockington_9": [
-        "res://assets/character_faces/jockington/jockington_9.png"
-    ],
-    "king_0": [
-        "res://assets/character_faces/king/king_0.png"
-    ],
-    "king_1": [
-        "res://assets/character_faces/king/king_1.png"
-    ],
-    "king_2": [
-        "res://assets/character_faces/king/king_2.png"
-    ],
-    "king_3": [
-        "res://assets/character_faces/king/king_3.png"
-    ],
-    "king_4": [
-        "res://assets/character_faces/king/king_4.png"
-    ],
-    "king_5": [
-        "res://assets/character_faces/king/king_5.png"
-    ],
-    "king_6": [
-        "res://assets/character_faces/king/king_6.png"
-    ],
-    "king_7": [
-        "res://assets/character_faces/king/king_7.png"
-    ],
-    "king_8": [
-        "res://assets/character_faces/king/king_8.png"
-    ],
-    "king_9": [
-        "res://assets/character_faces/king/king_9.png"
-    ],
-    "king_10": [
-        "res://assets/character_faces/king/king_10.png"
-    ],
-    "king_11": [
-        "res://assets/character_faces/king/king_11.png"
-    ],
-    "king_12": [
-        "res://assets/character_faces/king/king_12.png"
-    ],
-    "king_13": [
-        "res://assets/character_faces/king/king_13.png"
-    ],
-    "lancer_0": [
-        "res://assets/character_faces/lancer/lancer_0.png"
-    ],
-    "lancer_1": [
-        "res://assets/character_faces/lancer/lancer_1.png"
-    ],
-    "lancer_2": [
-        "res://assets/character_faces/lancer/lancer_2.png"
-    ],
-    "lancer_3": [
-        "res://assets/character_faces/lancer/lancer_3.png"
-    ],
-    "lancer_4": [
-        "res://assets/character_faces/lancer/lancer_4.png"
-    ],
-    "lancer_5": [
-        "res://assets/character_faces/lancer/lancer_5.png"
-    ],
-    "lancer_6": [
-        "res://assets/character_faces/lancer/lancer_6.png"
-    ],
-    "lancer_7": [
-        "res://assets/character_faces/lancer/lancer_7.png"
-    ],
-    "lancer_8": [
-        "res://assets/character_faces/lancer/lancer_8.png"
-    ],
-    "lancer_9": [
-        "res://assets/character_faces/lancer/lancer_9.png"
-    ],
-    "lancer_10": [
-        "res://assets/character_faces/lancer/lancer_10.png"
-    ],
-    "lancer_11": [
-        "res://assets/character_faces/lancer/lancer_11.png"
-    ],
-    "lancer_12": [
-        "res://assets/character_faces/lancer/lancer_12.png"
-    ],
-    "lancer_13": [
-        "res://assets/character_faces/lancer/lancer_13.png"
-    ],
-    "lancer_14": [
-        "res://assets/character_faces/lancer/lancer_14.png"
-    ],
-    "noelle_0": [
-        "res://assets/character_faces/noelle/noelle_0.png"
-    ],
-    "noelle_1": [
-        "res://assets/character_faces/noelle/noelle_1.png"
-    ],
-    "noelle_2": [
-        "res://assets/character_faces/noelle/noelle_2.png"
-    ],
-    "noelle_3": [
-        "res://assets/character_faces/noelle/noelle_3.png"
-    ],
-    "noelle_4": [
-        "res://assets/character_faces/noelle/noelle_4.png"
-    ],
-    "noelle_5": [
-        "res://assets/character_faces/noelle/noelle_5.png"
-    ],
-    "noelle_6": [
-        "res://assets/character_faces/noelle/noelle_6.png"
-    ],
-    "noelle_7": [
-        "res://assets/character_faces/noelle/noelle_7.png"
-    ],
-    "noelle_8": [
-        "res://assets/character_faces/noelle/noelle_8.png"
-    ],
-    "noelle_9": [
-        "res://assets/character_faces/noelle/noelle_9.png"
-    ],
-    "noelle_10": [
-        "res://assets/character_faces/noelle/noelle_10.png"
-    ],
-    "noelle_11": [
-        "res://assets/character_faces/noelle/noelle_11.png"
-    ],
-    "noelle_12": [
-        "res://assets/character_faces/noelle/noelle_12.png"
-    ],
-    "noelle_13": [
-        "res://assets/character_faces/noelle/noelle_13.png"
-    ],
-    "noelle_14": [
-        "res://assets/character_faces/noelle/noelle_14.png"
-    ],
-    "noelle_15": [
-        "res://assets/character_faces/noelle/noelle_15.png"
-    ],
-    "noelle_16": [
-        "res://assets/character_faces/noelle/noelle_16.png"
-    ],
-    "noelle_17": [
-        "res://assets/character_faces/noelle/noelle_17.png"
-    ],
-    "noelle_18": [
-        "res://assets/character_faces/noelle/noelle_18.png"
-    ],
-    "noelle_19": [
-        "res://assets/character_faces/noelle/noelle_19.png"
-    ],
-    "noelle_20": [
-        "res://assets/character_faces/noelle/noelle_20.png"
-    ],
-    "noelle_21": [
-        "res://assets/character_faces/noelle/noelle_21.png"
-    ],
-    "noelle_22": [
-        "res://assets/character_faces/noelle/noelle_22.png"
-    ],
-    "noelle_23": [
-        "res://assets/character_faces/noelle/noelle_23.png"
-    ],
-    "noelle_24": [
-        "res://assets/character_faces/noelle/noelle_24.png"
-    ],
-    "noelle_25": [
-        "res://assets/character_faces/noelle/noelle_25.png"
-    ],
-    "noelle_26": [
-        "res://assets/character_faces/noelle/noelle_26.png"
-    ],
-    "noelle_27": [
-        "res://assets/character_faces/noelle/noelle_27.png"
-    ],
-    "noelle_28": [
-        "res://assets/character_faces/noelle/noelle_28.png"
-    ],
-    "noelle_29": [
-        "res://assets/character_faces/noelle/noelle_29.png"
-    ],
-    "noelle_30": [
-        "res://assets/character_faces/noelle/noelle_30.png"
-    ],
-    "noelle_31": [
-        "res://assets/character_faces/noelle/noelle_31.png"
-    ],
-    "noelle_32": [
-        "res://assets/character_faces/noelle/noelle_32.png"
-    ],
-    "noelle_33": [
-        "res://assets/character_faces/noelle/noelle_33.png"
-    ],
-    "noelle_34": [
-        "res://assets/character_faces/noelle/noelle_34.png"
-    ],
-    "noelle_35": [
-        "res://assets/character_faces/noelle/noelle_35.png"
-    ],
-    "noelle_36": [
-        "res://assets/character_faces/noelle/noelle_36.png"
-    ],
-    "noelle_37": [
-        "res://assets/character_faces/noelle/noelle_37.png"
-    ],
-    "noelle_38": [
-        "res://assets/character_faces/noelle/noelle_38.png"
-    ],
-    "noelle_39": [
-        "res://assets/character_faces/noelle/noelle_39.png"
-    ],
-    "noelle_40": [
-        "res://assets/character_faces/noelle/noelle_40.png"
-    ],
-    "noelle_41": [
-        "res://assets/character_faces/noelle/noelle_41.png"
-    ],
-    "noelle_42": [
-        "res://assets/character_faces/noelle/noelle_42.png"
-    ],
-    "noelle_43": [
-        "res://assets/character_faces/noelle/noelle_43.png"
-    ],
-    "noelle_44": [
-        "res://assets/character_faces/noelle/noelle_44.png"
-    ],
-    "noelle_45": [
-        "res://assets/character_faces/noelle/noelle_45.png"
-    ],
-    "noelle_46": [
-        "res://assets/character_faces/noelle/noelle_46.png"
-    ],
-    "noelle_47": [
-        "res://assets/character_faces/noelle/noelle_47.png"
-    ],
-    "noelle_48": [
-        "res://assets/character_faces/noelle/noelle_48.png"
-    ],
-    "noelle_49": [
-        "res://assets/character_faces/noelle/noelle_49.png"
-    ],
-    "noelle_50": [
-        "res://assets/character_faces/noelle/noelle_50.png"
-    ],
-    "queen_0": [
-        "res://assets/character_faces/queen/queen_0.png"
-    ],
-    "queen_1": [
-        "res://assets/character_faces/queen/queen_1.png"
-    ],
-    "queen_2": [
-        "res://assets/character_faces/queen/queen_2.png"
-    ],
-    "queen_3": [
-        "res://assets/character_faces/queen/queen_3.png"
-    ],
-    "queen_4": [
-        "res://assets/character_faces/queen/queen_4.png"
-    ],
-    "queen_5": [
-        "res://assets/character_faces/queen/queen_5.png"
-    ],
-    "queen_6": [
-        "res://assets/character_faces/queen/queen_6.png"
-    ],
-    "queen_7": [
-        "res://assets/character_faces/queen/queen_7.png"
-    ],
-    "queen_8": [
-        "res://assets/character_faces/queen/queen_8.png"
-    ],
-    "queen_9": [
-        "res://assets/character_faces/queen/queen_9.png"
-    ],
-    "queen_10": [
-        "res://assets/character_faces/queen/queen_10.png"
-    ],
-    "queen_11": [
-        "res://assets/character_faces/queen/queen_11.png"
-    ],
-    "queen_12": [
-        "res://assets/character_faces/queen/queen_12.png"
-    ],
-    "queen_13": [
-        "res://assets/character_faces/queen/queen_13.png"
-    ],
-    "queen_14": [
-        "res://assets/character_faces/queen/queen_14.png"
-    ],
-    "queen_15": [
-        "res://assets/character_faces/queen/queen_15.png"
-    ],
-    "queen_16": [
-        "res://assets/character_faces/queen/queen_16.png"
-    ],
-    "queen_17": [
-        "res://assets/character_faces/queen/queen_17.png"
-    ],
-    "queen_18": [
-        "res://assets/character_faces/queen/queen_18.png"
-    ],
-    "queen_19": [
-        "res://assets/character_faces/queen/queen_19.png"
-    ],
-    "queen_20": [
-        "res://assets/character_faces/queen/queen_20.png"
-    ],
-    "queen_21": [
-        "res://assets/character_faces/queen/queen_21.png"
-    ],
-    "queen_22": [
-        "res://assets/character_faces/queen/queen_22.png"
-    ],
-    "queen_23": [
-        "res://assets/character_faces/queen/queen_23.png"
-    ],
-    "queen_24": [
-        "res://assets/character_faces/queen/queen_24.png"
-    ],
-    "queen_25": [
-        "res://assets/character_faces/queen/queen_25.png"
-    ],
-    "queen_26": [
-        "res://assets/character_faces/queen/queen_26.png"
-    ],
-    "queen_27": [
-        "res://assets/character_faces/queen/queen_27.png"
-    ],
-    "queen_28": [
-        "res://assets/character_faces/queen/queen_28.png"
-    ],
-    "ralsei_0": [
-        "res://assets/character_faces/ralsei/ralsei_0.png"
-    ],
-    "ralsei_1": [
-        "res://assets/character_faces/ralsei/ralsei_1.png"
-    ],
-    "ralsei_2": [
-        "res://assets/character_faces/ralsei/ralsei_2.png"
-    ],
-    "ralsei_3": [
-        "res://assets/character_faces/ralsei/ralsei_3.png"
-    ],
-    "ralsei_4": [
-        "res://assets/character_faces/ralsei/ralsei_4.png"
-    ],
-    "ralsei_5": [
-        "res://assets/character_faces/ralsei/ralsei_5.png"
-    ],
-    "ralsei_6": [
-        "res://assets/character_faces/ralsei/ralsei_6.png"
-    ],
-    "ralsei_7": [
-        "res://assets/character_faces/ralsei/ralsei_7.png"
-    ],
-    "ralsei_8": [
-        "res://assets/character_faces/ralsei/ralsei_8.png"
-    ],
-    "ralsei_9": [
-        "res://assets/character_faces/ralsei/ralsei_9.png"
-    ],
-    "ralsei_10": [
-        "res://assets/character_faces/ralsei/ralsei_10.png"
-    ],
-    "ralsei_11": [
-        "res://assets/character_faces/ralsei/ralsei_11.png"
-    ],
-    "ralsei_12": [
-        "res://assets/character_faces/ralsei/ralsei_12.png"
-    ],
-    "ralsei_13": [
-        "res://assets/character_faces/ralsei/ralsei_13.png"
-    ],
-    "ralsei_14": [
-        "res://assets/character_faces/ralsei/ralsei_14.png"
-    ],
-    "ralsei_15": [
-        "res://assets/character_faces/ralsei/ralsei_15.png"
-    ],
-    "ralsei_16": [
-        "res://assets/character_faces/ralsei/ralsei_16.png"
-    ],
-    "ralsei_17": [
-        "res://assets/character_faces/ralsei/ralsei_17.png"
-    ],
-    "ralsei_18": [
-        "res://assets/character_faces/ralsei/ralsei_18.png"
-    ],
-    "ralsei_19": [
-        "res://assets/character_faces/ralsei/ralsei_19.png"
-    ],
-    "ralsei_20": [
-        "res://assets/character_faces/ralsei/ralsei_20.png"
-    ],
-    "ralsei_21": [
-        "res://assets/character_faces/ralsei/ralsei_21.png"
-    ],
-    "ralsei_22": [
-        "res://assets/character_faces/ralsei/ralsei_22.png"
-    ],
-    "ralsei_23": [
-        "res://assets/character_faces/ralsei/ralsei_23.png"
-    ],
-    "ralsei_24": [
-        "res://assets/character_faces/ralsei/ralsei_24.png"
-    ],
-    "ralsei_25": [
-        "res://assets/character_faces/ralsei/ralsei_25.png"
-    ],
-    "ralsei_26": [
-        "res://assets/character_faces/ralsei/ralsei_26.png"
-    ],
-    "ralsei_27": [
-        "res://assets/character_faces/ralsei/ralsei_27.png"
-    ],
-    "ralsei_28": [
-        "res://assets/character_faces/ralsei/ralsei_28.png"
-    ],
-    "ralsei_29": [
-        "res://assets/character_faces/ralsei/ralsei_29.png"
-    ],
-    "ralsei_30": [
-        "res://assets/character_faces/ralsei/ralsei_30.png"
-    ],
-    "ralsei_31": [
-        "res://assets/character_faces/ralsei/ralsei_31.png"
-    ],
-    "ralsei_32": [
-        "res://assets/character_faces/ralsei/ralsei_32.png"
-    ],
-    "ralsei_33": [
-        "res://assets/character_faces/ralsei/ralsei_33.png"
-    ],
-    "ralsei_34": [
-        "res://assets/character_faces/ralsei/ralsei_34.png"
-    ],
-    "ralsei_35": [
-        "res://assets/character_faces/ralsei/ralsei_35.png"
-    ],
-    "ralsei_36": [
-        "res://assets/character_faces/ralsei/ralsei_36.png"
-    ],
-    "ralsei_37": [
-        "res://assets/character_faces/ralsei/ralsei_37.png"
-    ],
-    "ralsei_38": [
-        "res://assets/character_faces/ralsei/ralsei_38.png"
-    ],
-    "ralsei_39": [
-        "res://assets/character_faces/ralsei/ralsei_39.png"
-    ],
-    "ralsei_40": [
-        "res://assets/character_faces/ralsei/ralsei_40.png"
-    ],
-    "ralsei_41": [
-        "res://assets/character_faces/ralsei/ralsei_41.png"
-    ],
-    "ralsei_42": [
-        "res://assets/character_faces/ralsei/ralsei_42.png"
-    ],
-    "ralsei_43": [
-        "res://assets/character_faces/ralsei/ralsei_43.png"
-    ],
-    "ralsei_44": [
-        "res://assets/character_faces/ralsei/ralsei_44.png"
-    ],
-    "ralsei_45": [
-        "res://assets/character_faces/ralsei/ralsei_45.png"
-    ],
-    "ralsei_46": [
-        "res://assets/character_faces/ralsei/ralsei_46.png"
-    ],
-    "ralsei_47": [
-        "res://assets/character_faces/ralsei/ralsei_47.png"
-    ],
-    "ralsei_48": [
-        "res://assets/character_faces/ralsei/ralsei_48.png"
-    ],
-    "ralsei_49": [
-        "res://assets/character_faces/ralsei/ralsei_49.png"
-    ],
-    "ralsei_50": [
-        "res://assets/character_faces/ralsei/ralsei_50.png"
-    ],
-    "ralsei_51": [
-        "res://assets/character_faces/ralsei/ralsei_51.png"
-    ],
-    "ralsei_52": [
-        "res://assets/character_faces/ralsei/ralsei_52.png"
-    ],
-    "ralsei_dark_0": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_0.png"
-    ],
-    "ralsei_dark_1": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_1.png"
-    ],
-    "ralsei_dark_2": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_2.png"
-    ],
-    "ralsei_dark_3": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_3.png"
-    ],
-    "ralsei_dark_4": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_4.png"
-    ],
-    "ralsei_dark_5": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_5.png"
-    ],
-    "ralsei_dark_6": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_6.png"
-    ],
-    "ralsei_dark_7": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_7.png"
-    ],
-    "ralsei_dark_8": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_8.png"
-    ],
-    "ralsei_dark_9": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_9.png"
-    ],
-    "ralsei_dark_10": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_10.png"
-    ],
-    "ralsei_dark_11": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_11.png"
-    ],
-    "ralsei_dark_12": [
-        "res://assets/character_faces/ralsei_dark/ralsei_dark_12.png"
-    ],
-    "ralsei_hood_0": [
-        "res://assets/character_faces/ralsei_hood/ralsei_hood_0.png"
-    ],
-    "ralsei_hood_1": [
-        "res://assets/character_faces/ralsei_hood/ralsei_hood_1.png"
-    ],
-    "rudy_0": [
-        "res://assets/character_faces/rudy/rudy_0.png"
-    ],
-    "rudy_1": [
-        "res://assets/character_faces/rudy/rudy_1.png"
-    ],
-    "rudy_2": [
-        "res://assets/character_faces/rudy/rudy_2.png"
-    ],
-    "rudy_3": [
-        "res://assets/character_faces/rudy/rudy_3.png"
-    ],
-    "rudy_4": [
-        "res://assets/character_faces/rudy/rudy_4.png"
-    ],
-    "rudy_5": [
-        "res://assets/character_faces/rudy/rudy_5.png"
-    ],
-    "rudy_6": [
-        "res://assets/character_faces/rudy/rudy_6.png"
-    ],
-    "rudy_7": [
-        "res://assets/character_faces/rudy/rudy_7.png"
-    ],
-    "rurus_0": [
-        "res://assets/character_faces/rurus/rurus_0.png"
-    ],
-    "rurus_1": [
-        "res://assets/character_faces/rurus/rurus_1.png"
-    ],
-    "rurus_2": [
-        "res://assets/character_faces/rurus/rurus_2.png"
-    ],
-    "rurus_3": [
-        "res://assets/character_faces/rurus/rurus_3.png"
-    ],
-    "rurus_4": [
-        "res://assets/character_faces/rurus/rurus_4.png"
-    ],
-    "rurus_5": [
-        "res://assets/character_faces/rurus/rurus_5.png"
-    ],
-    "rurus_6": [
-        "res://assets/character_faces/rurus/rurus_6.png"
-    ],
-    "sans_0": [
-        "res://assets/character_faces/sans/sans_0.png"
-    ],
-    "sans_1": [
-        "res://assets/character_faces/sans/sans_1.png"
-    ],
-    "sans_2": [
-        "res://assets/character_faces/sans/sans_2.png"
-    ],
-    "sans_3": [
-        "res://assets/character_faces/sans/sans_3.png"
-    ],
-    "sans_4": [
-        "res://assets/character_faces/sans/sans_4.png"
-    ],
-    "sans_5": [
-        "res://assets/character_faces/sans/sans_5.png"
-    ],
-    "susie_0": [
-        "res://assets/character_faces/susie/susie_0.png"
-    ],
-    "susie_1": [
-        "res://assets/character_faces/susie/susie_1.png"
-    ],
-    "susie_2": [
-        "res://assets/character_faces/susie/susie_2.png"
-    ],
-    "susie_3": [
-        "res://assets/character_faces/susie/susie_3.png"
-    ],
-    "susie_4": [
-        "res://assets/character_faces/susie/susie_4.png"
-    ],
-    "susie_5": [
-        "res://assets/character_faces/susie/susie_5.png"
-    ],
-    "susie_6": [
-        "res://assets/character_faces/susie/susie_6.png"
-    ],
-    "susie_7": [
-        "res://assets/character_faces/susie/susie_7.png"
-    ],
-    "susie_8": [
-        "res://assets/character_faces/susie/susie_8.png"
-    ],
-    "susie_9": [
-        "res://assets/character_faces/susie/susie_9.png"
-    ],
-    "susie_10": [
-        "res://assets/character_faces/susie/susie_10.png"
-    ],
-    "susie_11": [
-        "res://assets/character_faces/susie/susie_11.png"
-    ],
-    "susie_12": [
-        "res://assets/character_faces/susie/susie_12.png"
-    ],
-    "susie_13": [
-        "res://assets/character_faces/susie/susie_13.png"
-    ],
-    "susie_14": [
-        "res://assets/character_faces/susie/susie_14.png"
-    ],
-    "susie_15": [
-        "res://assets/character_faces/susie/susie_15.png"
-    ],
-    "susie_16": [
-        "res://assets/character_faces/susie/susie_16.png"
-    ],
-    "susie_17": [
-        "res://assets/character_faces/susie/susie_17.png"
-    ],
-    "susie_18": [
-        "res://assets/character_faces/susie/susie_18.png"
-    ],
-    "susie_19": [
-        "res://assets/character_faces/susie/susie_19.png"
-    ],
-    "susie_20": [
-        "res://assets/character_faces/susie/susie_20.png"
-    ],
-    "susie_21": [
-        "res://assets/character_faces/susie/susie_21.png"
-    ],
-    "susie_22": [
-        "res://assets/character_faces/susie/susie_22.png"
-    ],
-    "susie_23": [
-        "res://assets/character_faces/susie/susie_23.png"
-    ],
-    "susie_24": [
-        "res://assets/character_faces/susie/susie_24.png"
-    ],
-    "susie_25": [
-        "res://assets/character_faces/susie/susie_25.png"
-    ],
-    "susie_26": [
-        "res://assets/character_faces/susie/susie_26.png"
-    ],
-    "susie_27": [
-        "res://assets/character_faces/susie/susie_27.png"
-    ],
-    "susie_28": [
-        "res://assets/character_faces/susie/susie_28.png"
-    ],
-    "susie_29": [
-        "res://assets/character_faces/susie/susie_29.png"
-    ],
-    "susie_30": [
-        "res://assets/character_faces/susie/susie_30.png"
-    ],
-    "susie_31": [
-        "res://assets/character_faces/susie/susie_31.png"
-    ],
-    "susie_32": [
-        "res://assets/character_faces/susie/susie_32.png"
-    ],
-    "susie_33": [
-        "res://assets/character_faces/susie/susie_33.png"
-    ],
-    "susie_34": [
-        "res://assets/character_faces/susie/susie_34.png"
-    ],
-    "susie_35": [
-        "res://assets/character_faces/susie/susie_35.png"
-    ],
-    "susie_36": [
-        "res://assets/character_faces/susie/susie_36.png"
-    ],
-    "susie_37": [
-        "res://assets/character_faces/susie/susie_37.png"
-    ],
-    "susie_38": [
-        "res://assets/character_faces/susie/susie_38.png"
-    ],
-    "susie_39": [
-        "res://assets/character_faces/susie/susie_39.png"
-    ],
-    "susie_40": [
-        "res://assets/character_faces/susie/susie_40.png"
-    ],
-    "susie_41": [
-        "res://assets/character_faces/susie/susie_41.png"
-    ],
-    "susie_42": [
-        "res://assets/character_faces/susie/susie_42.png"
-    ],
-    "susie_43": [
-        "res://assets/character_faces/susie/susie_43.png"
-    ],
-    "susie_44": [
-        "res://assets/character_faces/susie/susie_44.png"
-    ],
-    "susie_45": [
-        "res://assets/character_faces/susie/susie_45.png"
-    ],
-    "susie_46": [
-        "res://assets/character_faces/susie/susie_46.png"
-    ],
-    "susie_47": [
-        "res://assets/character_faces/susie/susie_47.png"
-    ],
-    "susie_48": [
-        "res://assets/character_faces/susie/susie_48.png"
-    ],
-    "susie_49": [
-        "res://assets/character_faces/susie/susie_49.png"
-    ],
-    "susie_50": [
-        "res://assets/character_faces/susie/susie_50.png"
-    ],
-    "susie_51": [
-        "res://assets/character_faces/susie/susie_51.png"
-    ],
-    "susie_52": [
-        "res://assets/character_faces/susie/susie_52.png"
-    ],
-    "susie_53": [
-        "res://assets/character_faces/susie/susie_53.png"
-    ],
-    "susie_ch1_0": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_0.png"
-    ],
-    "susie_ch1_1": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_1.png"
-    ],
-    "susie_ch1_2": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_2.png"
-    ],
-    "susie_ch1_3": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_3.png"
-    ],
-    "susie_ch1_4": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_4.png"
-    ],
-    "susie_ch1_5": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_5.png"
-    ],
-    "susie_ch1_6": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_6.png"
-    ],
-    "susie_ch1_7": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_7.png"
-    ],
-    "susie_ch1_8": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_8.png"
-    ],
-    "susie_ch1_9": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_9.png"
-    ],
-    "susie_ch1_10": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_10.png"
-    ],
-    "susie_ch1_11": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_11.png"
-    ],
-    "susie_ch1_12": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_12.png"
-    ],
-    "susie_ch1_13": [
-        "res://assets/character_faces/susie_ch1/susie_ch1_13.png"
-    ],
-    "toriel_0": [
-        "res://assets/character_faces/toriel/toriel_0.png"
-    ],
-    "toriel_1": [
-        "res://assets/character_faces/toriel/toriel_1.png"
-    ],
-    "toriel_2": [
-        "res://assets/character_faces/toriel/toriel_2.png"
-    ],
-    "toriel_3": [
-        "res://assets/character_faces/toriel/toriel_3.png"
-    ],
-    "toriel_4": [
-        "res://assets/character_faces/toriel/toriel_4.png"
-    ],
-    "toriel_5": [
-        "res://assets/character_faces/toriel/toriel_5.png"
-    ],
-    "toriel_6": [
-        "res://assets/character_faces/toriel/toriel_6.png"
-    ],
-    "toriel_7": [
-        "res://assets/character_faces/toriel/toriel_7.png"
-    ],
-    "toriel_8": [
-        "res://assets/character_faces/toriel/toriel_8.png"
-    ],
-    "toriel_9": [
-        "res://assets/character_faces/toriel/toriel_9.png"
-    ],
-    "undyne_0": [
-        "res://assets/character_faces/undyne/undyne_0.png"
-    ],
-    "undyne_1": [
-        "res://assets/character_faces/undyne/undyne_1.png"
-    ],
-    "undyne_2": [
-        "res://assets/character_faces/undyne/undyne_2.png"
-    ],
-    "undyne_3": [
-        "res://assets/character_faces/undyne/undyne_3.png"
-    ],
-    "undyne_4": [
-        "res://assets/character_faces/undyne/undyne_4.png"
-    ],
-    "undyne_5": [
-        "res://assets/character_faces/undyne/undyne_5.png"
-    ],
-    "undyne_6": [
-        "res://assets/character_faces/undyne/undyne_6.png"
-    ],
-    "undyne_7": [
-        "res://assets/character_faces/undyne/undyne_7.png"
-    ],
-    "undyne_8": [
-        "res://assets/character_faces/undyne/undyne_8.png"
-    ],
-    "undyne_9": [
-        "res://assets/character_faces/undyne/undyne_9.png"
-    ]
+	"alphys_0": [
+		"res://assets/character_faces/alphys/alphys_0.png"
+	],
+	"alphys_1": [
+		"res://assets/character_faces/alphys/alphys_1.png"
+	],
+	"alphys_2": [
+		"res://assets/character_faces/alphys/alphys_2.png"
+	],
+	"alphys_3": [
+		"res://assets/character_faces/alphys/alphys_3.png"
+	],
+	"alphys_4": [
+		"res://assets/character_faces/alphys/alphys_4.png"
+	],
+	"alphys_5": [
+		"res://assets/character_faces/alphys/alphys_5.png"
+	],
+	"alphys_6": [
+		"res://assets/character_faces/alphys/alphys_6.png"
+	],
+	"alphys_7": [
+		"res://assets/character_faces/alphys/alphys_7.png"
+	],
+	"alphys_8": [
+		"res://assets/character_faces/alphys/alphys_8.png"
+	],
+	"alphys_9": [
+		"res://assets/character_faces/alphys/alphys_9.png"
+	],
+	"alphys_10": [
+		"res://assets/character_faces/alphys/alphys_10.png"
+	],
+	"alphys_11": [
+		"res://assets/character_faces/alphys/alphys_11.png"
+	],
+	"alphys_12": [
+		"res://assets/character_faces/alphys/alphys_12.png"
+	],
+	"asgore_0": [
+		"res://assets/character_faces/asgore/asgore_0.png"
+	],
+	"asgore_1": [
+		"res://assets/character_faces/asgore/asgore_1.png"
+	],
+	"asgore_2": [
+		"res://assets/character_faces/asgore/asgore_2.png"
+	],
+	"asgore_3": [
+		"res://assets/character_faces/asgore/asgore_3.png"
+	],
+	"asgore_4": [
+		"res://assets/character_faces/asgore/asgore_4.png"
+	],
+	"asgore_5": [
+		"res://assets/character_faces/asgore/asgore_5.png"
+	],
+	"asgore_6": [
+		"res://assets/character_faces/asgore/asgore_6.png"
+	],
+	"asgore_7": [
+		"res://assets/character_faces/asgore/asgore_7.png"
+	],
+	"asgore_8": [
+		"res://assets/character_faces/asgore/asgore_8.png"
+	],
+	"berdly_0": [
+		"res://assets/character_faces/berdly/berdly_0.png"
+	],
+	"berdly_1": [
+		"res://assets/character_faces/berdly/berdly_1.png"
+	],
+	"berdly_2": [
+		"res://assets/character_faces/berdly/berdly_2.png"
+	],
+	"berdly_3": [
+		"res://assets/character_faces/berdly/berdly_3.png"
+	],
+	"berdly_4": [
+		"res://assets/character_faces/berdly/berdly_4.png"
+	],
+	"berdly_5": [
+		"res://assets/character_faces/berdly/berdly_5.png"
+	],
+	"berdly_6": [
+		"res://assets/character_faces/berdly/berdly_6.png"
+	],
+	"berdly_7": [
+		"res://assets/character_faces/berdly/berdly_7.png"
+	],
+	"berdly_8": [
+		"res://assets/character_faces/berdly/berdly_8.png"
+	],
+	"berdly_9": [
+		"res://assets/character_faces/berdly/berdly_9.png"
+	],
+	"berdly_10": [
+		"res://assets/character_faces/berdly/berdly_10.png"
+	],
+	"berdly_11": [
+		"res://assets/character_faces/berdly/berdly_11.png"
+	],
+	"berdly_12": [
+		"res://assets/character_faces/berdly/berdly_12.png"
+	],
+	"berdly_13": [
+		"res://assets/character_faces/berdly/berdly_13.png"
+	],
+	"berdly_14": [
+		"res://assets/character_faces/berdly/berdly_14.png"
+	],
+	"berdly_15": [
+		"res://assets/character_faces/berdly/berdly_15.png"
+	],
+	"berdly_16": [
+		"res://assets/character_faces/berdly/berdly_16.png"
+	],
+	"berdly_17": [
+		"res://assets/character_faces/berdly/berdly_17.png"
+	],
+	"berdly_18": [
+		"res://assets/character_faces/berdly/berdly_18.png"
+	],
+	"berdly_19": [
+		"res://assets/character_faces/berdly/berdly_19.png"
+	],
+	"berdly_20": [
+		"res://assets/character_faces/berdly/berdly_20.png"
+	],
+	"berdly_21": [
+		"res://assets/character_faces/berdly/berdly_21.png"
+	],
+	"berdly_22": [
+		"res://assets/character_faces/berdly/berdly_22.png"
+	],
+	"berdly_23": [
+		"res://assets/character_faces/berdly/berdly_23.png"
+	],
+	"berdly_24": [
+		"res://assets/character_faces/berdly/berdly_24.png"
+	],
+	"berdly_dark_0": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_0.png"
+	],
+	"berdly_dark_1": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_1.png"
+	],
+	"berdly_dark_2": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_2.png"
+	],
+	"berdly_dark_3": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_3.png"
+	],
+	"berdly_dark_4": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_4.png"
+	],
+	"berdly_dark_5": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_5.png"
+	],
+	"berdly_dark_6": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_6.png"
+	],
+	"berdly_dark_7": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_7.png"
+	],
+	"berdly_dark_8": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_8.png"
+	],
+	"berdly_dark_9": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_9.png"
+	],
+	"berdly_dark_10": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_10.png"
+	],
+	"berdly_dark_11": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_11.png"
+	],
+	"berdly_dark_12": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_12.png"
+	],
+	"berdly_dark_13": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_13.png"
+	],
+	"berdly_dark_14": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_14.png"
+	],
+	"berdly_dark_15": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_15.png"
+	],
+	"berdly_dark_16": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_16.png"
+	],
+	"berdly_dark_17": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_17.png"
+	],
+	"berdly_dark_18": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_18.png"
+	],
+	"berdly_dark_19": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_19.png"
+	],
+	"berdly_dark_20": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_20.png"
+	],
+	"berdly_dark_21": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_21.png"
+	],
+	"berdly_dark_22": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_22.png"
+	],
+	"berdly_dark_23": [
+		"res://assets/character_faces/berdly_dark/berdly_dark_23.png"
+	],
+	"bratty_0": [
+		"res://assets/character_faces/bratty/bratty_0.png"
+	],
+	"bratty_1": [
+		"res://assets/character_faces/bratty/bratty_1.png"
+	],
+	"bratty_2": [
+		"res://assets/character_faces/bratty/bratty_2.png"
+	],
+	"bratty_3": [
+		"res://assets/character_faces/bratty/bratty_3.png"
+	],
+	"bratty_4": [
+		"res://assets/character_faces/bratty/bratty_4.png"
+	],
+	"bratty_5": [
+		"res://assets/character_faces/bratty/bratty_5.png"
+	],
+	"bratty_6": [
+		"res://assets/character_faces/bratty/bratty_6.png"
+	],
+	"burgerpants_0": [
+		"res://assets/character_faces/burgerpants/burgerpants_0.png"
+	],
+	"burgerpants_1": [
+		"res://assets/character_faces/burgerpants/burgerpants_1.png"
+	],
+	"burgerpants_2": [
+		"res://assets/character_faces/burgerpants/burgerpants_2.png"
+	],
+	"burgerpants_3": [
+		"res://assets/character_faces/burgerpants/burgerpants_3.png"
+	],
+	"burgerpants_4": [
+		"res://assets/character_faces/burgerpants/burgerpants_4.png"
+	],
+	"burgerpants_5": [
+		"res://assets/character_faces/burgerpants/burgerpants_5.png"
+	],
+	"burgerpants_6": [
+		"res://assets/character_faces/burgerpants/burgerpants_6.png"
+	],
+	"burgerpants_7": [
+		"res://assets/character_faces/burgerpants/burgerpants_7.png"
+	],
+	"burgerpants_8": [
+		"res://assets/character_faces/burgerpants/burgerpants_8.png"
+	],
+	"burgerpants_9": [
+		"res://assets/character_faces/burgerpants/burgerpants_9.png"
+	],
+	"burgerpants_10": [
+		"res://assets/character_faces/burgerpants/burgerpants_10.png"
+	],
+	"burgerpants_11": [
+		"res://assets/character_faces/burgerpants/burgerpants_11.png"
+	],
+	"burgerpants_12": [
+		"res://assets/character_faces/burgerpants/burgerpants_12.png"
+	],
+	"burgerpants_13": [
+		"res://assets/character_faces/burgerpants/burgerpants_13.png"
+	],
+	"burgerpants_14": [
+		"res://assets/character_faces/burgerpants/burgerpants_14.png"
+	],
+	"burgerpants_15": [
+		"res://assets/character_faces/burgerpants/burgerpants_15.png"
+	],
+	"carol_0": [
+		"res://assets/character_faces/carol/carol_0.png"
+	],
+	"carol_1": [
+		"res://assets/character_faces/carol/carol_1.png"
+	],
+	"carol_2": [
+		"res://assets/character_faces/carol/carol_2.png"
+	],
+	"carol_3": [
+		"res://assets/character_faces/carol/carol_3.png"
+	],
+	"carol_4": [
+		"res://assets/character_faces/carol/carol_4.png"
+	],
+	"carol_5": [
+		"res://assets/character_faces/carol/carol_5.png"
+	],
+	"carol_6": [
+		"res://assets/character_faces/carol/carol_6.png"
+	],
+	"carol_7": [
+		"res://assets/character_faces/carol/carol_7.png"
+	],
+	"carol_8": [
+		"res://assets/character_faces/carol/carol_8.png"
+	],
+	"carol_9": [
+		"res://assets/character_faces/carol/carol_9.png"
+	],
+	"catti_0": [
+		"res://assets/character_faces/catti/catti_0.png"
+	],
+	"catti_1": [
+		"res://assets/character_faces/catti/catti_1.png"
+	],
+	"catti_2": [
+		"res://assets/character_faces/catti/catti_2.png"
+	],
+	"catti_3": [
+		"res://assets/character_faces/catti/catti_3.png"
+	],
+	"catti_4": [
+		"res://assets/character_faces/catti/catti_4.png"
+	],
+	"catti_5": [
+		"res://assets/character_faces/catti/catti_5.png"
+	],
+	"catti_6": [
+		"res://assets/character_faces/catti/catti_6.png"
+	],
+	"catti_7": [
+		"res://assets/character_faces/catti/catti_7.png"
+	],
+	"catty_0": [
+		"res://assets/character_faces/catty/catty_0.png"
+	],
+	"catty_1": [
+		"res://assets/character_faces/catty/catty_1.png"
+	],
+	"catty_2": [
+		"res://assets/character_faces/catty/catty_2.png"
+	],
+	"catty_3": [
+		"res://assets/character_faces/catty/catty_3.png"
+	],
+	"catty_4": [
+		"res://assets/character_faces/catty/catty_4.png"
+	],
+	"catty_5": [
+		"res://assets/character_faces/catty/catty_5.png"
+	],
+	"catty_6": [
+		"res://assets/character_faces/catty/catty_6.png"
+	],
+	"catty_7": [
+		"res://assets/character_faces/catty/catty_7.png"
+	],
+	"catty_8": [
+		"res://assets/character_faces/catty/catty_8.png"
+	],
+	"jockington_0": [
+		"res://assets/character_faces/jockington/jockington_0.png"
+	],
+	"jockington_1": [
+		"res://assets/character_faces/jockington/jockington_1.png"
+	],
+	"jockington_2": [
+		"res://assets/character_faces/jockington/jockington_2.png"
+	],
+	"jockington_3": [
+		"res://assets/character_faces/jockington/jockington_3.png"
+	],
+	"jockington_4": [
+		"res://assets/character_faces/jockington/jockington_4.png"
+	],
+	"jockington_5": [
+		"res://assets/character_faces/jockington/jockington_5.png"
+	],
+	"jockington_6": [
+		"res://assets/character_faces/jockington/jockington_6.png"
+	],
+	"jockington_7": [
+		"res://assets/character_faces/jockington/jockington_7.png"
+	],
+	"jockington_8": [
+		"res://assets/character_faces/jockington/jockington_8.png"
+	],
+	"jockington_9": [
+		"res://assets/character_faces/jockington/jockington_9.png"
+	],
+	"king_0": [
+		"res://assets/character_faces/king/king_0.png"
+	],
+	"king_1": [
+		"res://assets/character_faces/king/king_1.png"
+	],
+	"king_2": [
+		"res://assets/character_faces/king/king_2.png"
+	],
+	"king_3": [
+		"res://assets/character_faces/king/king_3.png"
+	],
+	"king_4": [
+		"res://assets/character_faces/king/king_4.png"
+	],
+	"king_5": [
+		"res://assets/character_faces/king/king_5.png"
+	],
+	"king_6": [
+		"res://assets/character_faces/king/king_6.png"
+	],
+	"king_7": [
+		"res://assets/character_faces/king/king_7.png"
+	],
+	"king_8": [
+		"res://assets/character_faces/king/king_8.png"
+	],
+	"king_9": [
+		"res://assets/character_faces/king/king_9.png"
+	],
+	"king_10": [
+		"res://assets/character_faces/king/king_10.png"
+	],
+	"king_11": [
+		"res://assets/character_faces/king/king_11.png"
+	],
+	"king_12": [
+		"res://assets/character_faces/king/king_12.png"
+	],
+	"king_13": [
+		"res://assets/character_faces/king/king_13.png"
+	],
+	"lancer_0": [
+		"res://assets/character_faces/lancer/lancer_0.png"
+	],
+	"lancer_1": [
+		"res://assets/character_faces/lancer/lancer_1.png"
+	],
+	"lancer_2": [
+		"res://assets/character_faces/lancer/lancer_2.png"
+	],
+	"lancer_3": [
+		"res://assets/character_faces/lancer/lancer_3.png"
+	],
+	"lancer_4": [
+		"res://assets/character_faces/lancer/lancer_4.png"
+	],
+	"lancer_5": [
+		"res://assets/character_faces/lancer/lancer_5.png"
+	],
+	"lancer_6": [
+		"res://assets/character_faces/lancer/lancer_6.png"
+	],
+	"lancer_7": [
+		"res://assets/character_faces/lancer/lancer_7.png"
+	],
+	"lancer_8": [
+		"res://assets/character_faces/lancer/lancer_8.png"
+	],
+	"lancer_9": [
+		"res://assets/character_faces/lancer/lancer_9.png"
+	],
+	"lancer_10": [
+		"res://assets/character_faces/lancer/lancer_10.png"
+	],
+	"lancer_11": [
+		"res://assets/character_faces/lancer/lancer_11.png"
+	],
+	"lancer_12": [
+		"res://assets/character_faces/lancer/lancer_12.png"
+	],
+	"lancer_13": [
+		"res://assets/character_faces/lancer/lancer_13.png"
+	],
+	"lancer_14": [
+		"res://assets/character_faces/lancer/lancer_14.png"
+	],
+	"noelle_0": [
+		"res://assets/character_faces/noelle/noelle_0.png"
+	],
+	"noelle_1": [
+		"res://assets/character_faces/noelle/noelle_1.png"
+	],
+	"noelle_2": [
+		"res://assets/character_faces/noelle/noelle_2.png"
+	],
+	"noelle_3": [
+		"res://assets/character_faces/noelle/noelle_3.png"
+	],
+	"noelle_4": [
+		"res://assets/character_faces/noelle/noelle_4.png"
+	],
+	"noelle_5": [
+		"res://assets/character_faces/noelle/noelle_5.png"
+	],
+	"noelle_6": [
+		"res://assets/character_faces/noelle/noelle_6.png"
+	],
+	"noelle_7": [
+		"res://assets/character_faces/noelle/noelle_7.png"
+	],
+	"noelle_8": [
+		"res://assets/character_faces/noelle/noelle_8.png"
+	],
+	"noelle_9": [
+		"res://assets/character_faces/noelle/noelle_9.png"
+	],
+	"noelle_10": [
+		"res://assets/character_faces/noelle/noelle_10.png"
+	],
+	"noelle_11": [
+		"res://assets/character_faces/noelle/noelle_11.png"
+	],
+	"noelle_12": [
+		"res://assets/character_faces/noelle/noelle_12.png"
+	],
+	"noelle_13": [
+		"res://assets/character_faces/noelle/noelle_13.png"
+	],
+	"noelle_14": [
+		"res://assets/character_faces/noelle/noelle_14.png"
+	],
+	"noelle_15": [
+		"res://assets/character_faces/noelle/noelle_15.png"
+	],
+	"noelle_16": [
+		"res://assets/character_faces/noelle/noelle_16.png"
+	],
+	"noelle_17": [
+		"res://assets/character_faces/noelle/noelle_17.png"
+	],
+	"noelle_18": [
+		"res://assets/character_faces/noelle/noelle_18.png"
+	],
+	"noelle_19": [
+		"res://assets/character_faces/noelle/noelle_19.png"
+	],
+	"noelle_20": [
+		"res://assets/character_faces/noelle/noelle_20.png"
+	],
+	"noelle_21": [
+		"res://assets/character_faces/noelle/noelle_21.png"
+	],
+	"noelle_22": [
+		"res://assets/character_faces/noelle/noelle_22.png"
+	],
+	"noelle_23": [
+		"res://assets/character_faces/noelle/noelle_23.png"
+	],
+	"noelle_24": [
+		"res://assets/character_faces/noelle/noelle_24.png"
+	],
+	"noelle_25": [
+		"res://assets/character_faces/noelle/noelle_25.png"
+	],
+	"noelle_26": [
+		"res://assets/character_faces/noelle/noelle_26.png"
+	],
+	"noelle_27": [
+		"res://assets/character_faces/noelle/noelle_27.png"
+	],
+	"noelle_28": [
+		"res://assets/character_faces/noelle/noelle_28.png"
+	],
+	"noelle_29": [
+		"res://assets/character_faces/noelle/noelle_29.png"
+	],
+	"noelle_30": [
+		"res://assets/character_faces/noelle/noelle_30.png"
+	],
+	"noelle_31": [
+		"res://assets/character_faces/noelle/noelle_31.png"
+	],
+	"noelle_32": [
+		"res://assets/character_faces/noelle/noelle_32.png"
+	],
+	"noelle_33": [
+		"res://assets/character_faces/noelle/noelle_33.png"
+	],
+	"noelle_34": [
+		"res://assets/character_faces/noelle/noelle_34.png"
+	],
+	"noelle_35": [
+		"res://assets/character_faces/noelle/noelle_35.png"
+	],
+	"noelle_36": [
+		"res://assets/character_faces/noelle/noelle_36.png"
+	],
+	"noelle_37": [
+		"res://assets/character_faces/noelle/noelle_37.png"
+	],
+	"noelle_38": [
+		"res://assets/character_faces/noelle/noelle_38.png"
+	],
+	"noelle_39": [
+		"res://assets/character_faces/noelle/noelle_39.png"
+	],
+	"noelle_40": [
+		"res://assets/character_faces/noelle/noelle_40.png"
+	],
+	"noelle_41": [
+		"res://assets/character_faces/noelle/noelle_41.png"
+	],
+	"noelle_42": [
+		"res://assets/character_faces/noelle/noelle_42.png"
+	],
+	"noelle_43": [
+		"res://assets/character_faces/noelle/noelle_43.png"
+	],
+	"noelle_44": [
+		"res://assets/character_faces/noelle/noelle_44.png"
+	],
+	"noelle_45": [
+		"res://assets/character_faces/noelle/noelle_45.png"
+	],
+	"noelle_46": [
+		"res://assets/character_faces/noelle/noelle_46.png"
+	],
+	"noelle_47": [
+		"res://assets/character_faces/noelle/noelle_47.png"
+	],
+	"noelle_48": [
+		"res://assets/character_faces/noelle/noelle_48.png"
+	],
+	"noelle_49": [
+		"res://assets/character_faces/noelle/noelle_49.png"
+	],
+	"noelle_50": [
+		"res://assets/character_faces/noelle/noelle_50.png"
+	],
+	"queen_0": [
+		"res://assets/character_faces/queen/queen_0.png"
+	],
+	"queen_1": [
+		"res://assets/character_faces/queen/queen_1.png"
+	],
+	"queen_2": [
+		"res://assets/character_faces/queen/queen_2.png"
+	],
+	"queen_3": [
+		"res://assets/character_faces/queen/queen_3.png"
+	],
+	"queen_4": [
+		"res://assets/character_faces/queen/queen_4.png"
+	],
+	"queen_5": [
+		"res://assets/character_faces/queen/queen_5.png"
+	],
+	"queen_6": [
+		"res://assets/character_faces/queen/queen_6.png"
+	],
+	"queen_7": [
+		"res://assets/character_faces/queen/queen_7.png"
+	],
+	"queen_8": [
+		"res://assets/character_faces/queen/queen_8.png"
+	],
+	"queen_9": [
+		"res://assets/character_faces/queen/queen_9.png"
+	],
+	"queen_10": [
+		"res://assets/character_faces/queen/queen_10.png"
+	],
+	"queen_11": [
+		"res://assets/character_faces/queen/queen_11.png"
+	],
+	"queen_12": [
+		"res://assets/character_faces/queen/queen_12.png"
+	],
+	"queen_13": [
+		"res://assets/character_faces/queen/queen_13.png"
+	],
+	"queen_14": [
+		"res://assets/character_faces/queen/queen_14.png"
+	],
+	"queen_15": [
+		"res://assets/character_faces/queen/queen_15.png"
+	],
+	"queen_16": [
+		"res://assets/character_faces/queen/queen_16.png"
+	],
+	"queen_17": [
+		"res://assets/character_faces/queen/queen_17.png"
+	],
+	"queen_18": [
+		"res://assets/character_faces/queen/queen_18.png"
+	],
+	"queen_19": [
+		"res://assets/character_faces/queen/queen_19.png"
+	],
+	"queen_20": [
+		"res://assets/character_faces/queen/queen_20.png"
+	],
+	"queen_21": [
+		"res://assets/character_faces/queen/queen_21.png"
+	],
+	"queen_22": [
+		"res://assets/character_faces/queen/queen_22.png"
+	],
+	"queen_23": [
+		"res://assets/character_faces/queen/queen_23.png"
+	],
+	"queen_24": [
+		"res://assets/character_faces/queen/queen_24.png"
+	],
+	"queen_25": [
+		"res://assets/character_faces/queen/queen_25.png"
+	],
+	"queen_26": [
+		"res://assets/character_faces/queen/queen_26.png"
+	],
+	"queen_27": [
+		"res://assets/character_faces/queen/queen_27.png"
+	],
+	"queen_28": [
+		"res://assets/character_faces/queen/queen_28.png"
+	],
+	"ralsei_0": [
+		"res://assets/character_faces/ralsei/ralsei_0.png"
+	],
+	"ralsei_1": [
+		"res://assets/character_faces/ralsei/ralsei_1.png"
+	],
+	"ralsei_2": [
+		"res://assets/character_faces/ralsei/ralsei_2.png"
+	],
+	"ralsei_3": [
+		"res://assets/character_faces/ralsei/ralsei_3.png"
+	],
+	"ralsei_4": [
+		"res://assets/character_faces/ralsei/ralsei_4.png"
+	],
+	"ralsei_5": [
+		"res://assets/character_faces/ralsei/ralsei_5.png"
+	],
+	"ralsei_6": [
+		"res://assets/character_faces/ralsei/ralsei_6.png"
+	],
+	"ralsei_7": [
+		"res://assets/character_faces/ralsei/ralsei_7.png"
+	],
+	"ralsei_8": [
+		"res://assets/character_faces/ralsei/ralsei_8.png"
+	],
+	"ralsei_9": [
+		"res://assets/character_faces/ralsei/ralsei_9.png"
+	],
+	"ralsei_10": [
+		"res://assets/character_faces/ralsei/ralsei_10.png"
+	],
+	"ralsei_11": [
+		"res://assets/character_faces/ralsei/ralsei_11.png"
+	],
+	"ralsei_12": [
+		"res://assets/character_faces/ralsei/ralsei_12.png"
+	],
+	"ralsei_13": [
+		"res://assets/character_faces/ralsei/ralsei_13.png"
+	],
+	"ralsei_14": [
+		"res://assets/character_faces/ralsei/ralsei_14.png"
+	],
+	"ralsei_15": [
+		"res://assets/character_faces/ralsei/ralsei_15.png"
+	],
+	"ralsei_16": [
+		"res://assets/character_faces/ralsei/ralsei_16.png"
+	],
+	"ralsei_17": [
+		"res://assets/character_faces/ralsei/ralsei_17.png"
+	],
+	"ralsei_18": [
+		"res://assets/character_faces/ralsei/ralsei_18.png"
+	],
+	"ralsei_19": [
+		"res://assets/character_faces/ralsei/ralsei_19.png"
+	],
+	"ralsei_20": [
+		"res://assets/character_faces/ralsei/ralsei_20.png"
+	],
+	"ralsei_21": [
+		"res://assets/character_faces/ralsei/ralsei_21.png"
+	],
+	"ralsei_22": [
+		"res://assets/character_faces/ralsei/ralsei_22.png"
+	],
+	"ralsei_23": [
+		"res://assets/character_faces/ralsei/ralsei_23.png"
+	],
+	"ralsei_24": [
+		"res://assets/character_faces/ralsei/ralsei_24.png"
+	],
+	"ralsei_25": [
+		"res://assets/character_faces/ralsei/ralsei_25.png"
+	],
+	"ralsei_26": [
+		"res://assets/character_faces/ralsei/ralsei_26.png"
+	],
+	"ralsei_27": [
+		"res://assets/character_faces/ralsei/ralsei_27.png"
+	],
+	"ralsei_28": [
+		"res://assets/character_faces/ralsei/ralsei_28.png"
+	],
+	"ralsei_29": [
+		"res://assets/character_faces/ralsei/ralsei_29.png"
+	],
+	"ralsei_30": [
+		"res://assets/character_faces/ralsei/ralsei_30.png"
+	],
+	"ralsei_31": [
+		"res://assets/character_faces/ralsei/ralsei_31.png"
+	],
+	"ralsei_32": [
+		"res://assets/character_faces/ralsei/ralsei_32.png"
+	],
+	"ralsei_33": [
+		"res://assets/character_faces/ralsei/ralsei_33.png"
+	],
+	"ralsei_34": [
+		"res://assets/character_faces/ralsei/ralsei_34.png"
+	],
+	"ralsei_35": [
+		"res://assets/character_faces/ralsei/ralsei_35.png"
+	],
+	"ralsei_36": [
+		"res://assets/character_faces/ralsei/ralsei_36.png"
+	],
+	"ralsei_37": [
+		"res://assets/character_faces/ralsei/ralsei_37.png"
+	],
+	"ralsei_38": [
+		"res://assets/character_faces/ralsei/ralsei_38.png"
+	],
+	"ralsei_39": [
+		"res://assets/character_faces/ralsei/ralsei_39.png"
+	],
+	"ralsei_40": [
+		"res://assets/character_faces/ralsei/ralsei_40.png"
+	],
+	"ralsei_41": [
+		"res://assets/character_faces/ralsei/ralsei_41.png"
+	],
+	"ralsei_42": [
+		"res://assets/character_faces/ralsei/ralsei_42.png"
+	],
+	"ralsei_43": [
+		"res://assets/character_faces/ralsei/ralsei_43.png"
+	],
+	"ralsei_44": [
+		"res://assets/character_faces/ralsei/ralsei_44.png"
+	],
+	"ralsei_45": [
+		"res://assets/character_faces/ralsei/ralsei_45.png"
+	],
+	"ralsei_46": [
+		"res://assets/character_faces/ralsei/ralsei_46.png"
+	],
+	"ralsei_47": [
+		"res://assets/character_faces/ralsei/ralsei_47.png"
+	],
+	"ralsei_48": [
+		"res://assets/character_faces/ralsei/ralsei_48.png"
+	],
+	"ralsei_49": [
+		"res://assets/character_faces/ralsei/ralsei_49.png"
+	],
+	"ralsei_50": [
+		"res://assets/character_faces/ralsei/ralsei_50.png"
+	],
+	"ralsei_51": [
+		"res://assets/character_faces/ralsei/ralsei_51.png"
+	],
+	"ralsei_52": [
+		"res://assets/character_faces/ralsei/ralsei_52.png"
+	],
+	"ralsei_dark_0": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_0.png"
+	],
+	"ralsei_dark_1": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_1.png"
+	],
+	"ralsei_dark_2": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_2.png"
+	],
+	"ralsei_dark_3": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_3.png"
+	],
+	"ralsei_dark_4": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_4.png"
+	],
+	"ralsei_dark_5": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_5.png"
+	],
+	"ralsei_dark_6": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_6.png"
+	],
+	"ralsei_dark_7": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_7.png"
+	],
+	"ralsei_dark_8": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_8.png"
+	],
+	"ralsei_dark_9": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_9.png"
+	],
+	"ralsei_dark_10": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_10.png"
+	],
+	"ralsei_dark_11": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_11.png"
+	],
+	"ralsei_dark_12": [
+		"res://assets/character_faces/ralsei_dark/ralsei_dark_12.png"
+	],
+	"ralsei_hood_0": [
+		"res://assets/character_faces/ralsei_hood/ralsei_hood_0.png"
+	],
+	"ralsei_hood_1": [
+		"res://assets/character_faces/ralsei_hood/ralsei_hood_1.png"
+	],
+	"rudy_0": [
+		"res://assets/character_faces/rudy/rudy_0.png"
+	],
+	"rudy_1": [
+		"res://assets/character_faces/rudy/rudy_1.png"
+	],
+	"rudy_2": [
+		"res://assets/character_faces/rudy/rudy_2.png"
+	],
+	"rudy_3": [
+		"res://assets/character_faces/rudy/rudy_3.png"
+	],
+	"rudy_4": [
+		"res://assets/character_faces/rudy/rudy_4.png"
+	],
+	"rudy_5": [
+		"res://assets/character_faces/rudy/rudy_5.png"
+	],
+	"rudy_6": [
+		"res://assets/character_faces/rudy/rudy_6.png"
+	],
+	"rudy_7": [
+		"res://assets/character_faces/rudy/rudy_7.png"
+	],
+	"rurus_0": [
+		"res://assets/character_faces/rurus/rurus_0.png"
+	],
+	"rurus_1": [
+		"res://assets/character_faces/rurus/rurus_1.png"
+	],
+	"rurus_2": [
+		"res://assets/character_faces/rurus/rurus_2.png"
+	],
+	"rurus_3": [
+		"res://assets/character_faces/rurus/rurus_3.png"
+	],
+	"rurus_4": [
+		"res://assets/character_faces/rurus/rurus_4.png"
+	],
+	"rurus_5": [
+		"res://assets/character_faces/rurus/rurus_5.png"
+	],
+	"rurus_6": [
+		"res://assets/character_faces/rurus/rurus_6.png"
+	],
+	"sans_0": [
+		"res://assets/character_faces/sans/sans_0.png"
+	],
+	"sans_1": [
+		"res://assets/character_faces/sans/sans_1.png"
+	],
+	"sans_2": [
+		"res://assets/character_faces/sans/sans_2.png"
+	],
+	"sans_3": [
+		"res://assets/character_faces/sans/sans_3.png"
+	],
+	"sans_4": [
+		"res://assets/character_faces/sans/sans_4.png"
+	],
+	"sans_5": [
+		"res://assets/character_faces/sans/sans_5.png"
+	],
+	"susie_0": [
+		"res://assets/character_faces/susie/susie_0.png"
+	],
+	"susie_1": [
+		"res://assets/character_faces/susie/susie_1.png"
+	],
+	"susie_2": [
+		"res://assets/character_faces/susie/susie_2.png"
+	],
+	"susie_3": [
+		"res://assets/character_faces/susie/susie_3.png"
+	],
+	"susie_4": [
+		"res://assets/character_faces/susie/susie_4.png"
+	],
+	"susie_5": [
+		"res://assets/character_faces/susie/susie_5.png"
+	],
+	"susie_6": [
+		"res://assets/character_faces/susie/susie_6.png"
+	],
+	"susie_7": [
+		"res://assets/character_faces/susie/susie_7.png"
+	],
+	"susie_8": [
+		"res://assets/character_faces/susie/susie_8.png"
+	],
+	"susie_9": [
+		"res://assets/character_faces/susie/susie_9.png"
+	],
+	"susie_10": [
+		"res://assets/character_faces/susie/susie_10.png"
+	],
+	"susie_11": [
+		"res://assets/character_faces/susie/susie_11.png"
+	],
+	"susie_12": [
+		"res://assets/character_faces/susie/susie_12.png"
+	],
+	"susie_13": [
+		"res://assets/character_faces/susie/susie_13.png"
+	],
+	"susie_14": [
+		"res://assets/character_faces/susie/susie_14.png"
+	],
+	"susie_15": [
+		"res://assets/character_faces/susie/susie_15.png"
+	],
+	"susie_16": [
+		"res://assets/character_faces/susie/susie_16.png"
+	],
+	"susie_17": [
+		"res://assets/character_faces/susie/susie_17.png"
+	],
+	"susie_18": [
+		"res://assets/character_faces/susie/susie_18.png"
+	],
+	"susie_19": [
+		"res://assets/character_faces/susie/susie_19.png"
+	],
+	"susie_20": [
+		"res://assets/character_faces/susie/susie_20.png"
+	],
+	"susie_21": [
+		"res://assets/character_faces/susie/susie_21.png"
+	],
+	"susie_22": [
+		"res://assets/character_faces/susie/susie_22.png"
+	],
+	"susie_23": [
+		"res://assets/character_faces/susie/susie_23.png"
+	],
+	"susie_24": [
+		"res://assets/character_faces/susie/susie_24.png"
+	],
+	"susie_25": [
+		"res://assets/character_faces/susie/susie_25.png"
+	],
+	"susie_26": [
+		"res://assets/character_faces/susie/susie_26.png"
+	],
+	"susie_27": [
+		"res://assets/character_faces/susie/susie_27.png"
+	],
+	"susie_28": [
+		"res://assets/character_faces/susie/susie_28.png"
+	],
+	"susie_29": [
+		"res://assets/character_faces/susie/susie_29.png"
+	],
+	"susie_30": [
+		"res://assets/character_faces/susie/susie_30.png"
+	],
+	"susie_31": [
+		"res://assets/character_faces/susie/susie_31.png"
+	],
+	"susie_32": [
+		"res://assets/character_faces/susie/susie_32.png"
+	],
+	"susie_33": [
+		"res://assets/character_faces/susie/susie_33.png"
+	],
+	"susie_34": [
+		"res://assets/character_faces/susie/susie_34.png"
+	],
+	"susie_35": [
+		"res://assets/character_faces/susie/susie_35.png"
+	],
+	"susie_36": [
+		"res://assets/character_faces/susie/susie_36.png"
+	],
+	"susie_37": [
+		"res://assets/character_faces/susie/susie_37.png"
+	],
+	"susie_38": [
+		"res://assets/character_faces/susie/susie_38.png"
+	],
+	"susie_39": [
+		"res://assets/character_faces/susie/susie_39.png"
+	],
+	"susie_40": [
+		"res://assets/character_faces/susie/susie_40.png"
+	],
+	"susie_41": [
+		"res://assets/character_faces/susie/susie_41.png"
+	],
+	"susie_42": [
+		"res://assets/character_faces/susie/susie_42.png"
+	],
+	"susie_43": [
+		"res://assets/character_faces/susie/susie_43.png"
+	],
+	"susie_44": [
+		"res://assets/character_faces/susie/susie_44.png"
+	],
+	"susie_45": [
+		"res://assets/character_faces/susie/susie_45.png"
+	],
+	"susie_46": [
+		"res://assets/character_faces/susie/susie_46.png"
+	],
+	"susie_47": [
+		"res://assets/character_faces/susie/susie_47.png"
+	],
+	"susie_48": [
+		"res://assets/character_faces/susie/susie_48.png"
+	],
+	"susie_49": [
+		"res://assets/character_faces/susie/susie_49.png"
+	],
+	"susie_50": [
+		"res://assets/character_faces/susie/susie_50.png"
+	],
+	"susie_51": [
+		"res://assets/character_faces/susie/susie_51.png"
+	],
+	"susie_52": [
+		"res://assets/character_faces/susie/susie_52.png"
+	],
+	"susie_53": [
+		"res://assets/character_faces/susie/susie_53.png"
+	],
+	"susie_ch1_0": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_0.png"
+	],
+	"susie_ch1_1": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_1.png"
+	],
+	"susie_ch1_2": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_2.png"
+	],
+	"susie_ch1_3": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_3.png"
+	],
+	"susie_ch1_4": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_4.png"
+	],
+	"susie_ch1_5": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_5.png"
+	],
+	"susie_ch1_6": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_6.png"
+	],
+	"susie_ch1_7": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_7.png"
+	],
+	"susie_ch1_8": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_8.png"
+	],
+	"susie_ch1_9": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_9.png"
+	],
+	"susie_ch1_10": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_10.png"
+	],
+	"susie_ch1_11": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_11.png"
+	],
+	"susie_ch1_12": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_12.png"
+	],
+	"susie_ch1_13": [
+		"res://assets/character_faces/susie_ch1/susie_ch1_13.png"
+	],
+	"toriel_0": [
+		"res://assets/character_faces/toriel/toriel_0.png"
+	],
+	"toriel_1": [
+		"res://assets/character_faces/toriel/toriel_1.png"
+	],
+	"toriel_2": [
+		"res://assets/character_faces/toriel/toriel_2.png"
+	],
+	"toriel_3": [
+		"res://assets/character_faces/toriel/toriel_3.png"
+	],
+	"toriel_4": [
+		"res://assets/character_faces/toriel/toriel_4.png"
+	],
+	"toriel_5": [
+		"res://assets/character_faces/toriel/toriel_5.png"
+	],
+	"toriel_6": [
+		"res://assets/character_faces/toriel/toriel_6.png"
+	],
+	"toriel_7": [
+		"res://assets/character_faces/toriel/toriel_7.png"
+	],
+	"toriel_8": [
+		"res://assets/character_faces/toriel/toriel_8.png"
+	],
+	"toriel_9": [
+		"res://assets/character_faces/toriel/toriel_9.png"
+	],
+	"undyne_0": [
+		"res://assets/character_faces/undyne/undyne_0.png"
+	],
+	"undyne_1": [
+		"res://assets/character_faces/undyne/undyne_1.png"
+	],
+	"undyne_2": [
+		"res://assets/character_faces/undyne/undyne_2.png"
+	],
+	"undyne_3": [
+		"res://assets/character_faces/undyne/undyne_3.png"
+	],
+	"undyne_4": [
+		"res://assets/character_faces/undyne/undyne_4.png"
+	],
+	"undyne_5": [
+		"res://assets/character_faces/undyne/undyne_5.png"
+	],
+	"undyne_6": [
+		"res://assets/character_faces/undyne/undyne_6.png"
+	],
+	"undyne_7": [
+		"res://assets/character_faces/undyne/undyne_7.png"
+	],
+	"undyne_8": [
+		"res://assets/character_faces/undyne/undyne_8.png"
+	],
+	"undyne_9": [
+		"res://assets/character_faces/undyne/undyne_9.png"
+	]
 }

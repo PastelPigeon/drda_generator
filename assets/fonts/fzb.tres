@@ -1,8 +1,8 @@
 [gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://cgejr2nhtmh8w"]
 
-[ext_resource type="FontFile" uid="uid://l66kvf7q2r5j" path="res://assets/fonts/FZBitmap-GBK-11X12-2.ttf" id="1_yl8cu"]
+[ext_resource type="FontFile" uid="uid://oxxceqpgm51d" path="res://assets/fonts/fzb_original.ttf" id="1_jxgl4"]
 
 [resource]
-base_font = ExtResource("1_yl8cu")
+base_font = ExtResource("1_jxgl4")
 spacing_glyph = 8
 spacing_bottom = 22
