@@ -122,7 +122,6 @@ offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
-text = "[font=res://assets/fonts/fzb_font_variation.tres][font_size=48]苏西，我喜欢你"
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.142857
@@ -161,7 +160,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
-text = "[font=res://assets/fonts/fzb_font_variation.tres][font_size=48]苏西，我喜欢你"
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.142857
