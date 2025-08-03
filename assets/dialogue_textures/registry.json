@@ -1,14 +1,14 @@
 {
-	"dark": [
-		"res://assets/dialogue_textures/dark/dialogue_1.png",
-		"res://assets/dialogue_textures/dark/dialogue_2.png",
-		"res://assets/dialogue_textures/dark/dialogue_3.png",
-		"res://assets/dialogue_textures/dark/dialogue_4.png",
-		"res://assets/dialogue_textures/dark/dialogue_5.png",
-		"res://assets/dialogue_textures/dark/dialogue_6.png",
-		"res://assets/dialogue_textures/dark/dialogue_7.png"
-	],
-	"light": [
-		"res://assets/dialogue_textures/light/dialogue_8.png"
-	]
+  "dark": [
+    "res://assets/dialogue_textures/dark/dialogue_1.png",
+    "res://assets/dialogue_textures/dark/dialogue_2.png",
+    "res://assets/dialogue_textures/dark/dialogue_3.png",
+    "res://assets/dialogue_textures/dark/dialogue_4.png",
+    "res://assets/dialogue_textures/dark/dialogue_5.png",
+    "res://assets/dialogue_textures/dark/dialogue_6.png",
+    "res://assets/dialogue_textures/dark/dialogue_7.png"
+  ],
+  "light": [
+    "res://assets/dialogue_textures/light/dialogue_8.png"
+  ]
 }

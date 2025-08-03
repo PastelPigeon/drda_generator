@@ -1,14 +1,14 @@
 {
-	"dtm": [
-		"res://assets/fonts/dtm_font_variation.tres"
-	],
-	"fzb": [
-		"res://assets/fonts/fzb_font_variation.tres"
-	],
-	"dtm_original": [
-		"res://assets/fonts/DTM-Mono-1.otf"
-	],
-	"fzb_original": [
-		"res://assets/fonts/FZBitmap-GBK-11X12-2.ttf"
-	]
+  "dtm": [
+    "res://assets/fonts/dtm.tres"
+  ],
+  "dtm_original": [
+    "res://assets/fonts/dtm_original.otf"
+  ],
+  "fzb": [
+    "res://assets/fonts/fzb.tres"
+  ],
+  "fzb_original": [
+    "res://assets/fonts/fzb_original.otf"
+  ]
 }
