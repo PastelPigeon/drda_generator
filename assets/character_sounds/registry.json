@@ -36,8 +36,7 @@
 		"res://assets/character_sounds/papyrus/snd_txtpap.wav"
 	],
 	"queen": [
-		"res://assets/character_sounds/queen/snd_txtq.wav",
-		"res://assets/character_sounds/queen/snd_txtq_2.wav"
+		"res://assets/character_sounds/queen/snd_txtq.wav"
 	],
 	"ralsei": [
 		"res://assets/character_sounds/ralsei/snd_txtral.wav"

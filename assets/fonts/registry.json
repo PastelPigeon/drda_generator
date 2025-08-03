@@ -1,14 +1,14 @@
 {
   "dtm": [
-    "res://assets/fonts/dtm.tres"
+	"res://assets/fonts/dtm.tres"
   ],
   "dtm_original": [
-    "res://assets/fonts/dtm_original.otf"
+	"res://assets/fonts/dtm_original.otf"
   ],
   "fzb": [
-    "res://assets/fonts/fzb.tres"
+	"res://assets/fonts/fzb.tres"
   ],
   "fzb_original": [
-    "res://assets/fonts/fzb_original.otf"
+	"res://assets/fonts/fzb_original.ttf"
   ]
 }
