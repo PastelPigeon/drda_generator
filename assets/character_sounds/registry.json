@@ -1,76 +1,76 @@
 {
-	"alphys": [
-		"res://assets/character_sounds/alphys/snd_txtal.wav"
-	],
-	"asgore": [
-		"res://assets/character_sounds/asgore/snd_txtasg.wav"
-	],
-	"berdly": [
-		"res://assets/character_sounds/berdly/snd_txtber.wav"
-	],
-	"carol": [
-		"res://assets/character_sounds/carol/snd_txtcar.wav"
-	],
-	"default": [
-		"res://assets/character_sounds/default/snd_text.wav"
-	],
-	"gerson": [
-		"res://assets/character_sounds/gerson/snd_txger.wav"
-	],
-	"jackenstein": [
-		"res://assets/character_sounds/jackenstein/snd_txtjack_low2.wav"
-	],
-	"jackenstein_cute": [
-		"res://assets/character_sounds/jackenstein_cute/snd_txtjack_high_cute.wav"
-	],
-	"joker": [
-		"res://assets/character_sounds/joker/snd_txtjok.wav"
-	],
-	"lancer": [
-		"res://assets/character_sounds/lancer/snd_txtlan.wav"
-	],
-	"noelle": [
-		"res://assets/character_sounds/noelle/snd_txtnoe.wav"
-	],
-	"papyrus": [
-		"res://assets/character_sounds/papyrus/snd_txtpap.wav"
-	],
-	"queen": [
-		"res://assets/character_sounds/queen/snd_txtq_2.wav"
-	],
-	"ralsei": [
-		"res://assets/character_sounds/ralsei/snd_txtral.wav"
-	],
-	"rudy": [
-		"res://assets/character_sounds/rudy/snd_txtrud.wav"
-	],
-	"sans": [
-		"res://assets/character_sounds/sans/snd_txtsans.wav"
-	],
-	"spamton": [
-		"res://assets/character_sounds/spamton/snd_txtspam2.wav"
-	],
-	"spamton_neo": [
-		"res://assets/character_sounds/spamton_neo/snd_txtspam2.wav"
-	],
-	"susie": [
-		"res://assets/character_sounds/susie/snd_txtsus.wav"
-	],
-	"tenna": [
-		"res://assets/character_sounds/tenna/snd_tv_voice_short.wav",
-		"res://assets/character_sounds/tenna/snd_tv_voice_short_2.wav",
-		"res://assets/character_sounds/tenna/snd_tv_voice_short_3.wav",
-		"res://assets/character_sounds/tenna/snd_tv_voice_short_4.wav",
-		"res://assets/character_sounds/tenna/snd_tv_voice_short_5.wav",
-		"res://assets/character_sounds/tenna/snd_tv_voice_short_6.wav",
-		"res://assets/character_sounds/tenna/snd_tv_voice_short_7.wav",
-		"res://assets/character_sounds/tenna/snd_tv_voice_short_8.wav",
-		"res://assets/character_sounds/tenna/snd_tv_voice_short_9.wav"
-	],
-	"toriel": [
-		"res://assets/character_sounds/toriel/snd_txttor.wav"
-	],
-	"undyne": [
-		"res://assets/character_sounds/undyne/snd_txtund.wav"
-	]
+    "alphys": [
+        "res://assets/character_sounds/alphys/snd_txtal@1-1.wav"
+    ],
+    "asgore": [
+        "res://assets/character_sounds/asgore/snd_txtasg@1-1.wav"
+    ],
+    "berdly": [
+        "res://assets/character_sounds/berdly/snd_txtber@1-1.wav"
+    ],
+    "carol": [
+        "res://assets/character_sounds/carol/snd_txtcar@1-1.wav"
+    ],
+    "default": [
+        "res://assets/character_sounds/default/snd_text@1-1.wav"
+    ],
+    "gerson": [
+        "res://assets/character_sounds/gerson/snd_txger@3-1.wav"
+    ],
+    "jackenstein": [
+        "res://assets/character_sounds/jackenstein/snd_txtjack_low2@3-1.25.wav"
+    ],
+    "jackenstein_cute": [
+        "res://assets/character_sounds/jackenstein_cute/snd_txtjack_high_cute@3-1.25.wav"
+    ],
+    "joker": [
+        "res://assets/character_sounds/joker/snd_txtjok@1-1.wav"
+    ],
+    "lancer": [
+        "res://assets/character_sounds/lancer/snd_txtlan@1-1.wav"
+    ],
+    "noelle": [
+        "res://assets/character_sounds/noelle/snd_txtnoe@1-1.wav"
+    ],
+    "papyrus": [
+        "res://assets/character_sounds/papyrus/snd_txtpap@1-1.wav"
+    ],
+    "queen": [
+        "res://assets/character_sounds/queen/snd_txtq_2@2-1.1.wav"
+    ],
+    "ralsei": [
+        "res://assets/character_sounds/ralsei/snd_txtral@1-1.wav"
+    ],
+    "rudy": [
+        "res://assets/character_sounds/rudy/snd_txtrud@1-1.wav"
+    ],
+    "sans": [
+        "res://assets/character_sounds/sans/snd_txtsans@2-1.wav"
+    ],
+    "spamton": [
+        "res://assets/character_sounds/spamton/snd_txtspam2@2-1.wav"
+    ],
+    "spamton_neo": [
+        "res://assets/character_sounds/spamton_neo/snd_txtspam2@1-1.wav"
+    ],
+    "susie": [
+        "res://assets/character_sounds/susie/snd_txtsus@1-1.wav"
+    ],
+    "tenna": [
+        "res://assets/character_sounds/tenna/snd_tv_voice_short_0@3-1.15.wav",
+        "res://assets/character_sounds/tenna/snd_tv_voice_short_1@3-1.15.wav",
+        "res://assets/character_sounds/tenna/snd_tv_voice_short_2@3-1.15.wav",
+        "res://assets/character_sounds/tenna/snd_tv_voice_short_3@3-1.15.wav",
+        "res://assets/character_sounds/tenna/snd_tv_voice_short_4@3-1.15.wav",
+        "res://assets/character_sounds/tenna/snd_tv_voice_short_5@3-1.15.wav",
+        "res://assets/character_sounds/tenna/snd_tv_voice_short_6@3-1.15.wav",
+        "res://assets/character_sounds/tenna/snd_tv_voice_short_7@3-1.15.wav",
+        "res://assets/character_sounds/tenna/snd_tv_voice_short_8@3-1.15.wav"
+    ],
+    "toriel": [
+        "res://assets/character_sounds/toriel/snd_txttor@1-1.wav"
+    ],
+    "undyne": [
+        "res://assets/character_sounds/undyne/snd_txtund@1-1.wav"
+    ]
 }
