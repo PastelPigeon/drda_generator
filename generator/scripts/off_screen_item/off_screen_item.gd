@@ -26,7 +26,7 @@ func _on_face_property_changed():
 ## 当text属性变化时执行
 func _on_text_property_changed():
 	# 设置Text节点文本（自动设置文本字体样式）
-	$HBoxContainer/MarginContainer/Text.text = _set_text_font_style(text, 18, AssetFinder.find_asset(AssetFinder.AssetType.FONTS, "fzb_original")[0], AssetFinder.find_asset(AssetFinder.AssetType.FONTS, "dtm")[0])
+	$HBoxContainer/MarginContainer/Text.text = _set_text_font_style(text, 20, AssetFinder.find_asset(AssetFinder.AssetType.FONTS, "fzb_original")[0], AssetFinder.find_asset(AssetFinder.AssetType.FONTS, "dtm")[0])
 		
 ## 设置文本字体样式
 func _set_text_font_style(text: String, font_size: int, zh_font_path: String, en_font_path: String) -> String:

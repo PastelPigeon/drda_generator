@@ -13,6 +13,8 @@ theme_override_constants/separation = 30
 [node name="CharacterFace" type="TextureRect" parent="HBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
