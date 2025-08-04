@@ -72,7 +72,7 @@ func generate_audio_animation(dialogues: Array, options: Dictionary) -> Animatio
 				# 获取指定对话音效资源路径（随机音效）
 				asset_path = AssetFinder.find_asset(AssetFinder.AssetType.CHARACTER_SOUNDS, tokens[token_index]["bbcode_tags"]["sound"]["value"])[randi_range(0, len(AssetFinder.find_asset(AssetFinder.AssetType.CHARACTER_SOUNDS, tokens[token_index]["bbcode_tags"]["sound"]["value"])) - 1)]
 				
-			# 设置sound_timer（根据资源文件名中的%x-x设置）
+			# 设置sound_timer（根据资源文件名中的@x-x设置）
 			sound_timer = float(asset_path.get_file().replace(".%s" % asset_path.get_extension(), "").split("@")[1].split("-")[0])
 			
 			# 初始化AudioStreamRandomizer
@@ -81,7 +81,7 @@ func generate_audio_animation(dialogues: Array, options: Dictionary) -> Animatio
 			# 将对话音效stream添加到AudioStreamRandomizer
 			sound_stream.add_stream(0, load(asset_path))
 			
-			# 设置随机程度（根据资源文件名中的%x-x设置）
+			# 设置随机程度（根据资源文件名中的@x-x设置）
 			sound_stream.random_pitch = float(asset_path.get_file().replace(".%s" % asset_path.get_extension(), "").split("@")[1].split("-")[1])
 			
 			# 将sound_stream添加到animation中（时间为该字符的absolute_start_time）
