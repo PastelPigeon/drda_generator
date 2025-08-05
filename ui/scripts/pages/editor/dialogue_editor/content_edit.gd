@@ -34,3 +34,15 @@ func _update_ui():
 	
 	# 将文本设为对话内容
 	text = content
+	
+func _unhandled_input(event: InputEvent) -> void:
+	# 处理快捷输入
+	if event.is_action_pressed("ui_editor_dialogue_editor_content_edit_insert_en_font"):
+		# 快速插入英文字体样式
+		insert_text_at_caret("[font=res://assets/fonts/dtm.tres][font_size=48]")
+	elif event.is_action_pressed("ui_editor_dialogue_editor_content_edit_insert_zh_font"):
+		# 快速插入中文字体样式
+		insert_text_at_caret("[font=res://assets/fonts/fzb.tres][font_size=48]")
+	elif event.is_action_pressed("ui_editor_dialogue_editor_content_edit_insert_world_state_dark"):
+		# 快速插入暗世界对话框样式
+		insert_text_at_caret("[world_state=dark]")
