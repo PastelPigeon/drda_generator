@@ -51,16 +51,20 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer/CenterContainer"]
 layout_mode = 2
 
-[node name="SubViewport" type="SubViewport" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer/CenterContainer/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(32, 32)
 render_target_update_mode = 4
 
-[node name="Icon" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_onr6b")]
+[node name="Icon" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer/CenterContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_onr6b")]
 
 [node name="Msg" type="Label" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
 layout_mode = 2
