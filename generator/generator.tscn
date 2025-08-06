@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdek1m6ysenjg"]
+[gd_scene load_steps=10 format=3 uid="uid://cdek1m6ysenjg"]
 
 [ext_resource type="Script" uid="uid://cmijniia7p5ab" path="res://generator/scripts/generator/generator.gd" id="1_n178k"]
 [ext_resource type="Script" uid="uid://jqtk34kfuj22" path="res://generator/scripts/generator/background.gd" id="2_rcwul"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://ch0xc8bhtmyva" path="res://generator/scripts/generator/dialogue_texture_light.gd" id="4_xmo7a"]
 [ext_resource type="PackedScene" uid="uid://c7afxxrj8e8y0" path="res://generator/off_screen_items_container.tscn" id="5_1rbap"]
 [ext_resource type="Script" uid="uid://wdxffr1yusu0" path="res://generator/scripts/generator/animation_player.gd" id="5_nd3na"]
+[ext_resource type="PackedScene" uid="uid://d0gxhis4vmwyu" path="res://generator/option_items_container.tscn" id="6_bevll"]
 
 [sub_resource type="Gradient" id="Gradient_rcwul"]
 offsets = PackedFloat32Array(0, 0.974026)
@@ -179,6 +180,13 @@ offset_right = -138.0
 offset_bottom = -44.0
 grow_horizontal = 0
 grow_vertical = 0
+
+[node name="OptionItemsContainer" parent="Dialogue" instance=ExtResource("6_bevll")]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 1140.0
+offset_bottom = 290.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 script = ExtResource("5_nd3na")

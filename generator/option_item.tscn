@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp5rfx488j36x"]
+
+[ext_resource type="Script" uid="uid://br622pu45cpp2" path="res://generator/scripts/option_item/option_item.gd" id="1_1t8y3"]
+
+[node name="OptionItem" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+theme_override_constants/separation = 20
+script = ExtResource("1_1t8y3")
+
+[node name="Soul" type="TextureRect" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Text" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0
