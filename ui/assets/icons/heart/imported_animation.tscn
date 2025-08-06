@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cinqmoivq6874"]
+
+[ext_resource type="AnimationLibrary" path="res://ui/assets/icons/heart/animation_library.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://d2n8i1jnqs1cs" path="res://ui/assets/icons/heart/heart/0.png" id="1_3xkbr"]
+[ext_resource type="Script" uid="uid://cce3ea4vvw2wr" path="res://ui/assets/icons/heart/animation_player.gd" id="3_i73m3"]
+
+[node name="ImportedAnimation" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_3xkbr")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": ExtResource("1")
+}
+script = ExtResource("3_i73m3")

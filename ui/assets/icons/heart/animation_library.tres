@@ -1,0 +1,8 @@
+[gd_resource type="AnimationLibrary" load_steps=2 format=2]
+
+[ext_resource path="res://./ui/assets/icons/heart/heart.tres" type="Texture" id=1]
+
+[resource]
+_data = {
+"heart": ExtResource( 1 )
+}

@@ -1,0 +1,24 @@
+[gd_resource type="Animation" load_steps=5 format=2]
+
+[ext_resource path="res://./ui/assets/icons/heart/heart/0.png" type="Texture" id=1]
+[ext_resource path="res://./ui/assets/icons/heart/heart/1.png" type="Texture" id=2]
+[ext_resource path="res://./ui/assets/icons/heart/heart/2.png" type="Texture" id=3]
+[ext_resource path="res://./ui/assets/icons/heart/heart/3.png" type="Texture" id=4]
+
+[resource]
+resource_name = "heart"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = 
+{
+"times": PoolRealArray( 0, 0.10, 0.20, 0.30 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ]
+}
