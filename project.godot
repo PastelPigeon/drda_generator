@@ -41,6 +41,7 @@ EditorBbcodeParser="*res://ui/scripts/helpers/string/editor_bbcode_parser.gd"
 OptionsConfigManager="*res://ui/scripts/helpers/config/options_config_manager.gd"
 SettingsConfigManager="*res://ui/scripts/helpers/config/settings_config_manager.gd"
 TempFilesManager="*res://ui/scripts/helpers/temp_file/temp_files_manager.gd"
+AutoTextFontStyleProcesser="*res://generator/scripts/helpers/string/auto_text_font_style_processer.gd"
 
 [display]
 
