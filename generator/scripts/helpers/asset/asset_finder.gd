@@ -5,7 +5,8 @@ enum AssetType {
 	CHARACTER_FACES,
 	CHARACTER_SOUNDS,
 	DIALOGUE_TEXTURES,
-	FONTS
+	FONTS,
+	MISC
 }
 
 ## 从资产类型和资产键名查找资产路径（未查找到资产时返回空Array）
@@ -22,6 +23,8 @@ func find_asset(asset_type: AssetType, asset_key_name: String) -> Array:
 			registry_path = "res://assets/dialogue_textures/registry.json"
 		AssetType.FONTS:
 			registry_path = "res://assets/fonts/registry.json"
+		AssetType.MISC:
+			registry_path = "res://assets/misc/registry.json"
 		_:
 			# 资产类型未查找到时直接返回空Array
 			return []

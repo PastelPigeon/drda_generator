@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7afxxrj8e8y0"]
+
+[ext_resource type="Script" uid="uid://fr1e1d0yppuv" path="res://generator/scripts/off_screen_items_container/off_screen_items_container.gd" id="1_104f5"]
+
+[node name="OffScreenItemsContainer" type="HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+script = ExtResource("1_104f5")

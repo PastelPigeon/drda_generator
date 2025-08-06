@@ -1,0 +1,8 @@
+{
+  "soul": [
+    "res://assets/misc/spr_heart_0.png"
+  ],
+  "options_layout": [
+    "res://assets/misc/options_layout.json"
+  ]
+}

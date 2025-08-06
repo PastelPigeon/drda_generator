@@ -9,7 +9,8 @@ const CONTROLLER_TAGS = [
 	"wait",
 	"disable_sound",
 	"dialogue_display_mode",
-	"off_screen"
+	"off_screen",
+	"options"
 ]
 
 ## 从dialogue中删除bbcode标签（当bbcode_tags留空时，删除所有标签）
