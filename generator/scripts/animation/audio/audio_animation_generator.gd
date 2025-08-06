@@ -56,6 +56,10 @@ func generate_audio_animation(dialogues: Array, options: Dictionary) -> Animatio
 			else:
 				sound_timer -= 0
 				
+			# 判断该字符是否为自闭合标签，是直接跳过
+			if tokens[token_index]["char"] == "":
+				continue
+				
 			# 判断该字符是否在SKIPPED_CHARS当中，在直接跳过
 			if SKIPPED_CHARS.has(tokens[token_index]["char"]):
 				continue
