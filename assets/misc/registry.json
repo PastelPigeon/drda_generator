@@ -4,5 +4,11 @@
   ],
   "options_layout": [
     "res://assets/misc/options_layout.json"
+  ],
+  "options_select_sound": [
+    "res://assets/misc/move.wav"
+  ],
+  "options_confirm_sound": [
+    "res://assets/misc/snd_select.wav"
   ]
 }

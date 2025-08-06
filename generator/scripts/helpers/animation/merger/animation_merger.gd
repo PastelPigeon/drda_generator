@@ -23,11 +23,6 @@ func merge_animations(animations: Array[Animation]) -> Animation:
 			
 			# 处理路径冲突：如果路径已存在，添加后缀
 			var new_path = path
-			var suffix = 1
-			while track_paths.get(new_path, false):
-				new_path = StringName("%s_%d" % [path, suffix])
-				suffix += 1
-			track_paths[new_path] = true
 			
 			# 添加轨道
 			var new_track_idx = merged_anim.add_track(type)
