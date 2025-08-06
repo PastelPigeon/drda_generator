@@ -35,7 +35,7 @@ var loaded_options: Array: ## 已加载的options数组
 		# 处理layout-defualt_select
 		select_option(layout["default_select"])
 		
-var selected_option_index: int: ## 已选中的属性索引
+var selected_option_index: int: ## 已选中的选项索引
 	set(value):
 		# 设置selected_option_index
 		selected_option_index = value
