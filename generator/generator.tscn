@@ -182,6 +182,7 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="OptionItemsContainer" parent="Dialogue" instance=ExtResource("6_bevll")]
+visible = false
 layout_mode = 0
 offset_left = 40.0
 offset_top = 40.0
