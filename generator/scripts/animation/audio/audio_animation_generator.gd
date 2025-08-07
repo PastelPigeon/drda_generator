@@ -65,7 +65,7 @@ func generate_audio_animation(dialogues: Array, options: Dictionary) -> Animatio
 				continue
 				
 			# sound_timer大于0时直接跳过该字符
-			if sound_timer > 0:
+			if is_equal_approx(sound_timer, 0) == false and (sound_timer < 0) == false:
 				continue
 				
 			# 获取对话音效资源路径（当没有sound标签时，使用默认对话音效default）
