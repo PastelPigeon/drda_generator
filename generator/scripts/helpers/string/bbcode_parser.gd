@@ -63,7 +63,7 @@ func parse_bbcode_string_to_tokens(bbcode_string: String) -> Array:
 			continue
 		
 		# 处理普通字符
-		if char != " " and char != "\t" and char != "\n":
+		if char != "\t" and char != "\n":
 			tokens.append(_create_token(char_index, char, current_tags.duplicate(true)))
 			char_index += 1
 		
