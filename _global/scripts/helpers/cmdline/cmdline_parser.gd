@@ -16,15 +16,15 @@ enum CmdlineStatus {
 	UI_MODE,
 	DOC_MODE,
 	NO_DIALOGUES,
-	INVAILD_DIALOGUES,
-	INVAILD_DIALOGUES_FILE,
-	INVAILD_FPS,
-	INVAILD_BACKGROUND,
-	INVAILD_RECORDING_MODE,
+	INVALID_DIALOGUES,
+	INVALID_DIALOGUES_FILE,
+	INVALID_FPS,
+	INVALID_BACKGROUND,
+	INVALID_RECORDING_MODE,
 	NO_RECORDINGS_OUTPUT_DIR,
-	INVAILD_RECORDINGS_OUTPUT_DIR,
-	INVAILD_RECORDING_FORMAT,
-	INVAILD_RECORDING_ENABLE_TRANSPARENT,
+	INVALID_RECORDINGS_OUTPUT_DIR,
+	INVALID_RECORDING_FORMAT,
+	INVALID_RECORDING_ENABLE_TRANSPARENT,
 	RECORDING_ENABLE_TRANSPARENT_NOT_SUPPORTED
 }
 
@@ -143,30 +143,30 @@ func get_cmdline_args_status(cmdline_args: Array) -> Dictionary:
 	elif _arg_exists_cmdline_args_array("dialogues", cmdline_args):
 		if FileAccess.file_exists(_get_arg_value_cmdline_args_array("dialogues", cmdline_args)) == false:
 			return {
-				"status": CmdlineStatus.INVAILD_DIALOGUES,
+				"status": CmdlineStatus.INVALID_DIALOGUES,
 				"user": "对话文件不存在"
 			}
 		elif JSON.parse_string(FileAccess.open(_get_arg_value_cmdline_args_array("dialogues", cmdline_args), FileAccess.READ).get_as_text()) == null:
 			return {
-				"status": CmdlineStatus.INVAILD_DIALOGUES_FILE,
+				"status": CmdlineStatus.INVALID_DIALOGUES_FILE,
 				"user": "对话文件解析时出错"
 			}
 	elif _arg_exists_cmdline_args_array("fps", cmdline_args):
 		if StringTypesChecker.is_float_string(_get_arg_value_cmdline_args_array("fps", cmdline_args)) == false:
 			return {
-				"status": CmdlineStatus.INVAILD_FPS,
+				"status": CmdlineStatus.INVALID_FPS,
 				"user": "错误的fps参数形式，预期数字或浮点数（小数）"
 			}
 	elif _arg_exists_cmdline_args_array("background", cmdline_args):
 		if StringTypesChecker.is_color_string(_get_arg_value_cmdline_args_array("background", cmdline_args)) == false:
 			return {
-				"status": CmdlineStatus.INVAILD_BACKGROUND,
+				"status": CmdlineStatus.INVALID_BACKGROUND,
 				"user": "错误的background参数形式，预期颜色值（hex或颜色名称）"
 			}
 	elif _arg_exists_cmdline_args_array("recording_mode", cmdline_args):
 		if _get_arg_value_cmdline_args_array("recording_mode", cmdline_args) != "single" and _get_arg_value_cmdline_args_array("recording_mode", cmdline_args) != "multiple":
 			return {
-				"status": CmdlineStatus.INVAILD_RECORDING_MODE,
+				"status": CmdlineStatus.INVALID_RECORDING_MODE,
 				"user": "错误的recording参数形式，预期single或multiple"
 			}
 	elif _arg_exists_cmdline_args_array("recordings_output_dir", cmdline_args) == false:
@@ -177,19 +177,19 @@ func get_cmdline_args_status(cmdline_args: Array) -> Dictionary:
 	elif _arg_exists_cmdline_args_array("recordings_output_dir", cmdline_args):
 		if DirAccess.dir_exists_absolute(_get_arg_value_cmdline_args_array("recordings_output_dir", cmdline_args)):
 			return {
-				"status": CmdlineStatus.INVAILD_RECORDINGS_OUTPUT_DIR,
+				"status": CmdlineStatus.INVALID_RECORDINGS_OUTPUT_DIR,
 				"user": "指定的输出路径不存在"
 			}
 	elif _arg_exists_cmdline_args_array("recording_format", cmdline_args):
 		if _get_arg_value_cmdline_args_array("recording_format", cmdline_args) != "mp4" and _get_arg_value_cmdline_args_array("recording_format", cmdline_args) != "mov" and _get_arg_value_cmdline_args_array("recording_format", cmdline_args) != "gif":
 			return {
-				"status": CmdlineStatus.INVAILD_RECORDING_FORMAT,
+				"status": CmdlineStatus.INVALID_RECORDING_FORMAT,
 				"user": "给出的格式不支持"
 			}
 	elif _arg_exists_cmdline_args_array("recording_enable_transparent", cmdline_args):
 		if _get_arg_value_cmdline_args_array("recording_enable_transparent", cmdline_args) != "true" and _get_arg_value_cmdline_args_array("recording_enable_transparent", cmdline_args) != "false":
 			return {
-				"status": CmdlineStatus.INVAILD_RECORDING_ENABLE_TRANSPARENT,
+				"status": CmdlineStatus.INVALID_RECORDING_ENABLE_TRANSPARENT,
 				"user": "开启透明选项值错误，应为true或者false"
 			}
 			
