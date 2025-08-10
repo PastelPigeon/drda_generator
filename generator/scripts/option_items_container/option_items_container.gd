@@ -92,9 +92,4 @@ func select_option(option_index: int):
 
 ## 读取options_layout
 func _get_options_layout():
-	var options_layout_path = AssetFinder.find_asset(AssetFinder.AssetType.MISC, "options_layout")[0]
-	var options_layout_file = FileAccess.open(options_layout_path, FileAccess.READ)
-	var options_layout = JSON.parse_string(options_layout_file.get_as_text())
-	options_layout_file.close()
-	
-	return options_layout
+	return AssetLoader.load_asset(AssetFinder.find_asset(AssetFinder.AssetType.MISC, "options_layout")[0])

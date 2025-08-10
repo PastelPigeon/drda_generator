@@ -43,6 +43,8 @@ SettingsConfigManager="*res://ui/scripts/helpers/config/settings_config_manager.
 TempFilesManager="*res://ui/scripts/helpers/temp_file/temp_files_manager.gd"
 AutoTextFontStyleProcesser="*res://generator/scripts/helpers/string/auto_text_font_style_processer.gd"
 OptionsAnimationGenerator="*res://generator/scripts/animation/options/options_animation_generator.gd"
+AssetLoader="*res://generator/scripts/helpers/asset/asset_loader.gd"
+RuntimeAssetRegistriesManager="*res://_global/scripts/helpers/asset/runtime_asset_registries_manager.gd"
 
 [display]
 

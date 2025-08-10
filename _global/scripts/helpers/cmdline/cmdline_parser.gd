@@ -7,7 +7,8 @@ const DEFAULT = {
 	"recording_mode": "single",
 	"recordings_output_dir": "",
 	"recording_format": "mp4",
-	"recording_enable_transparent": false
+	"recording_enable_transparent": false,
+	"external_assets_manifest": ""
 }
 
 enum CmdlineStatus {
@@ -25,7 +26,9 @@ enum CmdlineStatus {
 	INVALID_RECORDINGS_OUTPUT_DIR,
 	INVALID_RECORDING_FORMAT,
 	INVALID_RECORDING_ENABLE_TRANSPARENT,
-	RECORDING_ENABLE_TRANSPARENT_NOT_SUPPORTED
+	RECORDING_ENABLE_TRANSPARENT_NOT_SUPPORTED,
+	INVALID_EXTERNAL_ASSETS_MANIFEST,
+	INVALID_EXTERNAL_ASSETS_MANIFEST_FILE,
 }
 
 ## 获取某一参数在命令行中的名称
@@ -83,6 +86,11 @@ func convert_cmdline_args_array_to_dict(cmdline_args: Array) -> Dictionary:
 			if _arg_exists_cmdline_args_array("recording_format", cmdline_args):
 				if _get_arg_value_cmdline_args_array("recording_format", cmdline_args) == "mov" or _get_arg_value_cmdline_args_array("recording_format", cmdline_args) == "gif":
 					cmdline_args_dict["recording_enable_transparent"] = true if _get_arg_value_cmdline_args_array("recording_enable_transparent", cmdline_args) == "true" else false
+					
+	# 处理external_assets_manifest参数
+	if _arg_exists_cmdline_args_array("external_assets_manifest", cmdline_args):
+		if FileAccess.file_exists(_get_arg_value_cmdline_args_array("external_assets_manifest", cmdline_args)) and JSON.parse_string(FileAccess.open(_get_arg_value_cmdline_args_array("external_assets_manifest", cmdline_args), FileAccess.READ).get_as_text()) != null:
+			cmdline_args_dict["external_assets_manifest"] = _get_arg_value_cmdline_args_array("external_assets_manifest", cmdline_args)
 			
 	return cmdline_args_dict
 	
@@ -205,7 +213,17 @@ func get_cmdline_args_status(cmdline_args: Array) -> Dictionary:
 					"status": CmdlineStatus.RECORDING_ENABLE_TRANSPARENT_NOT_SUPPORTED,
 					"user": "您所选用的输出格式不支持启用透明选项，请尝试将输出格式更改为mov或gif"
 				}
-
+	elif _arg_exists_cmdline_args_array("external_assets_manifest", cmdline_args):
+		if FileAccess.file_exists(_get_arg_value_cmdline_args_array("external_assets_manifest", cmdline_args)) == false:
+			return {
+				"status": CmdlineStatus.INVALID_EXTERNAL_ASSETS_MANIFEST,
+				"user": "外部资源清单文件不存在"
+			}
+		elif JSON.parse_string(FileAccess.open(_get_arg_value_cmdline_args_array("external_assets_manifest", cmdline_args), FileAccess.READ).get_as_text()) == null:
+			return {
+				"status": CmdlineStatus.INVALID_EXTERNAL_ASSETS_MANIFEST_FILE,
+				"user": "外部资源清单文件解析时出错"
+			}
 
 	return {
 		"status": CmdlineStatus.OK,

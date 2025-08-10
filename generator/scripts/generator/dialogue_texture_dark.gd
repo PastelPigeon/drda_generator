@@ -6,7 +6,7 @@ var _current_texture_index = 0
 
 func _process(delta: float) -> void:
 	if _time_to_next_texture <= 0:
-		texture = load(AssetFinder.find_asset(AssetFinder.AssetType.DIALOGUE_TEXTURES, "dark")[_current_texture_index])
+		texture = AssetLoader.load_asset(AssetFinder.find_asset(AssetFinder.AssetType.DIALOGUE_TEXTURES, "dark")[_current_texture_index])
 		
 		if _current_texture_index == len(AssetFinder.find_asset(AssetFinder.AssetType.DIALOGUE_TEXTURES, "dark")) - 1:
 			_current_texture_index = 0

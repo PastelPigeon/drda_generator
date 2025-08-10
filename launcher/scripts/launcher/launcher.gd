@@ -6,6 +6,8 @@ func _ready() -> void:
 	if cmdline_args_status == CmdlineParser.CmdlineStatus.OK or cmdline_args_status == CmdlineParser.CmdlineStatus.EDITOR:
 		var cmdline_args_dict = CmdlineParser.convert_cmdline_args_array_to_dict(OS.get_cmdline_args())
 		
+		RuntimeAssetRegistriesManager.create_runtime_registries(cmdline_args_dict["external_assets_manifest"])
+		
 		var dialogue_scene_res: PackedScene = load("res://generator/generator.tscn")
 		var dialogue_scene_ins = dialogue_scene_res.instantiate()
 		

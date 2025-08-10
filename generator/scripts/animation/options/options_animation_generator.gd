@@ -68,7 +68,7 @@ func generate_options_animation(dialogues: Array, options: Dictionary) -> Animat
 						"args": [option_index]
 					})
 					
-					options_animation.audio_track_insert_key(audio_track_index, absolute_action_time, load(AssetFinder.find_asset(AssetFinder.AssetType.MISC, "options_select_sound")[0]))
+					options_animation.audio_track_insert_key(audio_track_index, absolute_action_time, AssetLoader.load_asset(AssetFinder.find_asset(AssetFinder.AssetType.MISC, "options_select_sound")[0]))
 				else:
 					# 当option_index为-2时，动作类型为确认
 					options_animation.track_insert_key(visible_track_index, absolute_action_time, {
@@ -76,6 +76,6 @@ func generate_options_animation(dialogues: Array, options: Dictionary) -> Animat
 						"args": []
 					})
 					
-					options_animation.audio_track_insert_key(audio_track_index, absolute_action_time, load(AssetFinder.find_asset(AssetFinder.AssetType.MISC, "options_confirm_sound")[0]))
+					options_animation.audio_track_insert_key(audio_track_index, absolute_action_time, AssetLoader.load_asset(AssetFinder.find_asset(AssetFinder.AssetType.MISC, "options_confirm_sound")[0]))
 					
 	return options_animation

@@ -83,7 +83,7 @@ func generate_audio_animation(dialogues: Array, options: Dictionary) -> Animatio
 			var sound_stream = AudioStreamRandomizer.new()
 			
 			# 将对话音效stream添加到AudioStreamRandomizer
-			sound_stream.add_stream(0, load(asset_path))
+			sound_stream.add_stream(0, AssetLoader.load_asset(asset_path))
 			
 			# 设置随机程度（根据资源文件名中的@x-x设置）
 			sound_stream.random_pitch = float(asset_path.get_file().replace(".%s" % asset_path.get_extension(), "").split("@")[1].split("-")[1])
