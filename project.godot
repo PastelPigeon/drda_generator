@@ -45,6 +45,7 @@ AutoTextFontStyleProcesser="*res://generator/scripts/helpers/string/auto_text_fo
 OptionsAnimationGenerator="*res://generator/scripts/animation/options/options_animation_generator.gd"
 AssetLoader="*res://_global/scripts/helpers/asset/asset_loader.gd"
 RuntimeAssetRegistriesManager="*res://_global/scripts/helpers/asset/runtime_asset_registries_manager.gd"
+ExternalAssetsManager="*res://ui/scripts/helpers/external_asset/external_assets_manager.gd"
 
 [display]
 
