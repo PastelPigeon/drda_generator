@@ -257,7 +257,7 @@ func set_asset_attribute_CHARACTER_SOUNDS(key: String, index: int, sound_timer: 
 		return
 		
 	# 重命名指定资产
-	rename_asset(AssetType.CHARACTER_SOUNDS, key, index, "%s@%s-%s" % [registry[key][index].get_file().replace(".%s" % registry[key][index].get_extension(), ""), str(sound_timer), str(random_pitch)])
+	rename_asset(AssetType.CHARACTER_SOUNDS, key, index, "%s@%s-%s" % [registry[key][index].get_file().replace(".%s" % registry[key][index].get_extension(), "").split("@")[0], str(sound_timer), str(random_pitch)])
 	
 ## 读取指定注册表
 func get_registry(type: AssetType):
@@ -392,7 +392,7 @@ func _get_asset_info_CHARACTER_SOUNDS(key: String, index: int):
 	var asset_path = registry[key][index]
 	
 	# 获取资产名称
-	var asset_name = registry[key][index].get_file().replace(".%s" % registry[key][index].get_extension(), "")
+	var asset_name = registry[key][index].get_file().replace(".%s" % registry[key][index].get_extension(), "").split("@")[0]
 	
 	# 获取资产扩展名
 	var asset_extension = registry[key][index].get_extension()
@@ -419,7 +419,7 @@ func _get_asset_info_CHARACTER_SOUNDS(key: String, index: int):
 		"length": asset_length,
 		"duration": asset_duration,
 		"sound_timer": asset_sound_timer,
-		"random_picth": asset_random_pitch
+		"random_pitch": asset_random_pitch
 	}
 	
 ## 获取资产信息（DIALOGUE_TEXTURES类型）

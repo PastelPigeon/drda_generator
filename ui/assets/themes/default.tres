@@ -151,6 +151,7 @@ Label/font_sizes/font_size = 14
 Label/fonts/font = ExtResource("1_m31k4")
 LineEdit/colors/caret_color = Color(0.12549, 0.12549, 0.12549, 1)
 LineEdit/colors/font_color = Color(0.12549, 0.12549, 0.12549, 1)
+LineEdit/colors/font_uneditable_color = Color(0.376471, 0.376471, 0.376471, 1)
 LineEdit/font_sizes/font_size = 14
 LineEdit/fonts/font = ExtResource("1_m31k4")
 LineEdit/styles/focus = SubResource("StyleBoxFlat_2r6kn")

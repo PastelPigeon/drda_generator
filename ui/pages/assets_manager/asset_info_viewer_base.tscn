@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://rmmhxsn40aws"]
+
+[ext_resource type="Script" uid="uid://dcs3pdlq6pfse" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_base/asset_info_viewers_container.gd" id="1_0fddq"]
+[ext_resource type="PackedScene" uid="uid://ufmjaticsb6k" path="res://ui/pages/assets_manager/asset_info_viewer_none.tscn" id="2_cog5o"]
+[ext_resource type="PackedScene" uid="uid://c7jh2wjlimmxo" path="res://ui/pages/assets_manager/asset_info_viewer_key.tscn" id="3_nm42l"]
+[ext_resource type="PackedScene" uid="uid://cdh471ex2q42o" path="res://ui/pages/assets_manager/asset_info_viewer_default.tscn" id="4_jlegx"]
+[ext_resource type="PackedScene" uid="uid://d3hmgqkyb45dd" path="res://ui/pages/assets_manager/asset_info_viewer_character_faces.tscn" id="5_npnaq"]
+[ext_resource type="PackedScene" uid="uid://conswafqs6fgt" path="res://ui/pages/assets_manager/asset_info_viewer_character_sounds.tscn" id="6_ch66u"]
+[ext_resource type="PackedScene" uid="uid://jx301ly5afl0" path="res://ui/pages/assets_manager/asset_info_viewer_dialogue_textures.tscn" id="7_4741a"]
+
+[node name="AssetInfoViewerBase" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="Title" type="Label" parent="VSplitContainer"]
+layout_mode = 2
+text = "资产信息"
+
+[node name="AssetInfoViewersContainer" type="Control" parent="VSplitContainer"]
+layout_mode = 2
+script = ExtResource("1_0fddq")
+
+[node name="AssetInfoViewerNone" parent="VSplitContainer/AssetInfoViewersContainer" instance=ExtResource("2_cog5o")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="AssetInfoViewerKey" parent="VSplitContainer/AssetInfoViewersContainer" instance=ExtResource("3_nm42l")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="AssetInfoViewerDefault" parent="VSplitContainer/AssetInfoViewersContainer" instance=ExtResource("4_jlegx")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="AssetInfoViewerCharacterFaces" parent="VSplitContainer/AssetInfoViewersContainer" instance=ExtResource("5_npnaq")]
+layout_mode = 1
+
+[node name="AssetInfoViewerCharacterSounds" parent="VSplitContainer/AssetInfoViewersContainer" instance=ExtResource("6_ch66u")]
+layout_mode = 1
+
+[node name="AssetInfoViewerDialogueTextures" parent="VSplitContainer/AssetInfoViewersContainer" instance=ExtResource("7_4741a")]
+layout_mode = 1

@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://b20d1y3c8g4nx"]
+
+[ext_resource type="Texture2D" uid="uid://bsf81gqkw16hr" path="res://ui/assets/icons/add-one.svg" id="1_m6xbu"]
+[ext_resource type="Script" uid="uid://6b5wrieubgcx" path="res://ui/scripts/pages/assets_manager/assets_viewer/add_key_button.gd" id="2_2l21g"]
+[ext_resource type="Script" uid="uid://d1qoaiyfb5jgg" path="res://ui/scripts/pages/assets_manager/assets_viewer/assets_tree.gd" id="2_l3d1y"]
+[ext_resource type="Script" uid="uid://crj68b7vabrit" path="res://ui/scripts/pages/assets_manager/assets_viewer/add_asset_button.gd" id="3_kgoh1"]
+
+[node name="AssetsViewer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 31
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="Header" type="Control" parent="VSplitContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VSplitContainer/Header"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "资产浏览器"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/Header"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 7
+
+[node name="AddKeyButton" type="Button" parent="VSplitContainer/Header/HBoxContainer"]
+layout_mode = 2
+text = "添加键"
+icon = ExtResource("1_m6xbu")
+script = ExtResource("2_2l21g")
+
+[node name="AddAssetButton" type="Button" parent="VSplitContainer/Header/HBoxContainer"]
+layout_mode = 2
+text = "添加资产"
+icon = ExtResource("1_m6xbu")
+script = ExtResource("3_kgoh1")
+
+[node name="AssetsTree" type="Tree" parent="VSplitContainer"]
+layout_mode = 2
+theme_type_variation = &"assets_viewer_assets_tree"
+script = ExtResource("2_l3d1y")

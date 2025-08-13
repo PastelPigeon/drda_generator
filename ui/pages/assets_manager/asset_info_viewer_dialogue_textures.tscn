@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://jx301ly5afl0"]
+
+[ext_resource type="PackedScene" uid="uid://cdh471ex2q42o" path="res://ui/pages/assets_manager/asset_info_viewer_default.tscn" id="1_56squ"]
+[ext_resource type="Script" uid="uid://c06a2oaf72aud" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_dialogue_textures/preview_texture_rect.gd" id="2_xu4sq"]
+[ext_resource type="Script" uid="uid://caj1qcjw3uhfa" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_dialogue_textures/size_input_width.gd" id="3_pskk8"]
+[ext_resource type="Script" uid="uid://b2n714x8a213r" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_dialogue_textures/size_input_height.gd" id="4_0kunp"]
+
+[node name="AssetInfoViewerDialogueTextures" instance=ExtResource("1_56squ")]
+
+[node name="Msg" parent="VBoxContainer/Top/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/CenterContainer" index="0"]
+visible = false
+
+[node name="PreviewTextureRect" type="TextureRect" parent="VBoxContainer/Top/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/CenterContainer" index="1"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("2_xu4sq")
+
+[node name="SizeInfoUnit" type="VBoxContainer" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer" index="3"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Name" type="Label" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/SizeInfoUnit" index="0"]
+layout_mode = 2
+text = "资产尺寸"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/SizeInfoUnit" index="1"]
+layout_mode = 2
+
+[node name="SizeInputWidth" type="LineEdit" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/SizeInfoUnit/HBoxContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+editable = false
+script = ExtResource("3_pskk8")
+
+[node name="X" type="Label" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/SizeInfoUnit/HBoxContainer" index="1"]
+layout_mode = 2
+text = "X"
+
+[node name="SizeInputHeight" type="LineEdit" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/SizeInfoUnit/HBoxContainer" index="2"]
+layout_mode = 2
+size_flags_horizontal = 3
+editable = false
+script = ExtResource("4_0kunp")
+
+[editable path="VBoxContainer/Top/Window"]

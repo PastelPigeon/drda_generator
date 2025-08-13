@@ -1,0 +1,123 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdh471ex2q42o"]
+
+[ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="1_5musk"]
+[ext_resource type="Script" uid="uid://cqvj8vqr63i25" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_default/name_input.gd" id="2_j4iau"]
+[ext_resource type="Script" uid="uid://drepmis7pgnkq" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_default/extension_input.gd" id="3_dfoq5"]
+[ext_resource type="Script" uid="uid://weg6kp65fpuo" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_default/length_input.gd" id="4_3qxgx"]
+[ext_resource type="Script" uid="uid://boyqqxwdm1oqq" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_default/remove_button.gd" id="5_i5osf"]
+
+[node name="AssetInfoViewerDefault" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="Window" parent="VBoxContainer/Top" instance=ExtResource("1_5musk")]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="TitleBar" parent="VBoxContainer/Top/Window/MarginContainer/VSplitContainer/Top" index="0"]
+visible = false
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/Top/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Msg" type="Label" parent="VBoxContainer/Top/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/CenterContainer"]
+layout_mode = 2
+text = "预览不可用"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Top"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Top/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="InfoUnitsContainer" type="VBoxContainer" parent="VBoxContainer/Top/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="NameInfoUnit" type="VBoxContainer" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Name" type="Label" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/NameInfoUnit"]
+layout_mode = 2
+text = "资产名称"
+
+[node name="NameInput" type="LineEdit" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/NameInfoUnit"]
+layout_mode = 2
+script = ExtResource("2_j4iau")
+
+[node name="ExtensionInfoUnit" type="VBoxContainer" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Name" type="Label" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/ExtensionInfoUnit"]
+layout_mode = 2
+text = "资产扩展名"
+
+[node name="ExtensionInput" type="LineEdit" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/ExtensionInfoUnit"]
+layout_mode = 2
+editable = false
+script = ExtResource("3_dfoq5")
+
+[node name="LengthInfoUnit" type="VBoxContainer" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Name" type="Label" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/LengthInfoUnit"]
+layout_mode = 2
+text = "资产大小"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/LengthInfoUnit"]
+layout_mode = 2
+
+[node name="LengthInput" type="LineEdit" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/LengthInfoUnit/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+editable = false
+script = ExtResource("4_3qxgx")
+
+[node name="KB" type="Label" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/LengthInfoUnit/HBoxContainer"]
+layout_mode = 2
+text = "KB"
+
+[node name="Bottom" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="RemoveButton" type="Button" parent="VBoxContainer/Bottom"]
+layout_mode = 2
+text = "删除资产"
+script = ExtResource("5_i5osf")
+
+[editable path="VBoxContainer/Top/Window"]

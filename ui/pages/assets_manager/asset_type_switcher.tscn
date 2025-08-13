@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtmgxecaf8oh1"]
+
+[ext_resource type="Texture2D" uid="uid://cfsfbuxorn21o" path="res://ui/assets/icons/Ralsei_face_partymenu.png" id="1_g0cvg"]
+[ext_resource type="Texture2D" uid="uid://bq721u50kf7ux" path="res://ui/assets/icons/loudspeaker_rays-1.png" id="2_esw1h"]
+[ext_resource type="Texture2D" uid="uid://cwg2ryp4r4qvt" path="res://ui/assets/icons/msg_information-0.png" id="3_lauo0"]
+[ext_resource type="Texture2D" uid="uid://cjt5a2rsdr065" path="res://ui/assets/icons/font_tt-1.png" id="4_pg0jq"]
+[ext_resource type="Texture2D" uid="uid://bo8cj484hmfv6" path="res://ui/assets/icons/directory_open_file_mydocs_cool-5.png" id="5_i1diw"]
+[ext_resource type="Script" uid="uid://btur32bxqbabd" path="res://ui/scripts/pages/assets_manager/asset_type_switcher/switcher_item_list.gd" id="6_g1rfu"]
+
+[node name="AssetTypeSwitcher" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="Title" type="Label" parent="VSplitContainer"]
+layout_mode = 2
+text = "资产类型"
+
+[node name="SwitcherItemList" type="ItemList" parent="VSplitContainer"]
+layout_mode = 2
+theme_type_variation = &"asset_type_switcher_switcher_item_list"
+item_count = 5
+fixed_icon_size = Vector2i(16, 16)
+item_0/text = "脸图"
+item_0/icon = ExtResource("1_g0cvg")
+item_1/text = "对话音效"
+item_1/icon = ExtResource("2_esw1h")
+item_2/text = "对话框贴图"
+item_2/icon = ExtResource("3_lauo0")
+item_3/text = "字体"
+item_3/icon = ExtResource("4_pg0jq")
+item_3/disabled = true
+item_4/text = "其他"
+item_4/icon = ExtResource("5_i1diw")
+script = ExtResource("6_g1rfu")
