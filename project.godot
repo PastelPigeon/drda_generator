@@ -46,6 +46,7 @@ OptionsAnimationGenerator="*res://generator/scripts/animation/options/options_an
 AssetLoader="*res://_global/scripts/helpers/asset/asset_loader.gd"
 RuntimeAssetRegistriesManager="*res://_global/scripts/helpers/asset/runtime_asset_registries_manager.gd"
 ExternalAssetsManager="*res://ui/scripts/helpers/external_asset/external_assets_manager.gd"
+AssetsManagerDataManager="*res://ui/scripts/helpers/data/assets_manager_data_manager.gd"
 
 [display]
 

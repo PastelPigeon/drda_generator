@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=15 format=3 uid="uid://226iil5wgiep"]
+[gd_resource type="Theme" load_steps=19 format=3 uid="uid://226iil5wgiep"]
 
 [ext_resource type="FontFile" uid="uid://coywg1yikumhu" path="res://ui/assets/fonts/ark-pixel-12px-monospaced-zh_cn.otf" id="1_m31k4"]
 
@@ -85,6 +85,14 @@ bg_color = Color(1, 1, 1, 1)
 border_width_bottom = 1
 border_color = Color(0.501961, 0.501961, 0.501961, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_365c8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7uojx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q2fk5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hyblj"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7uojx"]
 bg_color = Color(0.752941, 0.752941, 0.752941, 1)
 border_width_top = 1
@@ -153,6 +161,26 @@ about_more_info_item/styles/panel = SubResource("StyleBoxFlat_etngc")
 about_secondary_label/base_type = &"Label"
 about_secondary_label/colors/font_color = Color(0.25098, 0.25098, 0.25098, 1)
 about_secondary_label/font_sizes/font_size = 12
+asset_type_switcher_switcher_item_list/base_type = &"ItemList"
+asset_type_switcher_switcher_item_list/colors/font_color = Color(0.12549, 0.12549, 0.12549, 1)
+asset_type_switcher_switcher_item_list/colors/font_hovered_color = Color(0.25098, 0.25098, 0.25098, 1)
+asset_type_switcher_switcher_item_list/colors/font_hovered_selected_color = Color(0.698039, 0.698039, 0, 1)
+asset_type_switcher_switcher_item_list/colors/font_selected_color = Color(0.698039, 0.698039, 0, 1)
+asset_type_switcher_switcher_item_list/constants/v_separation = 10
+asset_type_switcher_switcher_item_list/font_sizes/font_size = 14
+asset_type_switcher_switcher_item_list/fonts/font = ExtResource("1_m31k4")
+asset_type_switcher_switcher_item_list/styles/focus = SubResource("StyleBoxEmpty_365c8")
+asset_type_switcher_switcher_item_list/styles/panel = SubResource("StyleBoxEmpty_7uojx")
+assets_viewer_assets_tree/base_type = &"Tree"
+assets_viewer_assets_tree/colors/font_color = Color(0.12549, 0.12549, 0.12549, 1)
+assets_viewer_assets_tree/colors/font_disabled_color = Color(0.376471, 0.376471, 0.376471, 1)
+assets_viewer_assets_tree/colors/font_hovered_color = Color(0.25098, 0.25098, 0.25098, 1)
+assets_viewer_assets_tree/colors/font_selected_color = Color(0.696525, 0.696525, 0, 1)
+assets_viewer_assets_tree/constants/v_separation = 6
+assets_viewer_assets_tree/font_sizes/font_size = 14
+assets_viewer_assets_tree/fonts/font = ExtResource("1_m31k4")
+assets_viewer_assets_tree/styles/focus = SubResource("StyleBoxEmpty_q2fk5")
+assets_viewer_assets_tree/styles/panel = SubResource("StyleBoxEmpty_hyblj")
 content_err_msg_label_err/base_type = &"Label"
 content_err_msg_label_err/colors/font_color = Color(1, 0, 0, 1)
 content_err_msg_label_err/colors/font_shadow_color = Color(0, 0, 0, 1)

@@ -266,7 +266,7 @@ func get_registry(type: AssetType):
 		init()
 		
 	# 读取指定注册文件
-	var registry_file_read = FileAccess.open("%s/%s/%s" % [EXTERNAL_ASSETS_DIR, ASSET_TYPE_ASSET_DIR_NAMES_MAPPING[AssetType.CHARACTER_SOUNDS], "registry.json"], FileAccess.READ)
+	var registry_file_read = FileAccess.open("%s/%s/%s" % [EXTERNAL_ASSETS_DIR, ASSET_TYPE_ASSET_DIR_NAMES_MAPPING[type], "registry.json"], FileAccess.READ)
 	var registry = JSON.parse_string(registry_file_read.get_as_text())
 	registry_file_read.close()
 	
