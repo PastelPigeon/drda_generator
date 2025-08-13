@@ -14,7 +14,7 @@ visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 expand_mode = 1
-stretch_mode = 3
+stretch_mode = 5
 script = ExtResource("2_y4poh")
 
 [node name="SizeInfoUnit" type="VBoxContainer" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer" index="3"]

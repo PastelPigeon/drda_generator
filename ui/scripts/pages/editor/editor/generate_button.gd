@@ -44,7 +44,8 @@ func _get_cmdline_args():
 	return CmdlineParser.convert_cmdline_args_dict_to_array(
 		DictionaryMerger.merge_dictionaries([
 			{
-				"dialogues": dialogues_file_path
+				"dialogues": dialogues_file_path,
+				"external_assets_manifest": ProjectSettings.globalize_path("%s/%s" % [ExternalAssetsManager.EXTERNAL_ASSETS_DIR, "manifest.json"]) if DirAccess.dir_exists_absolute(ProjectSettings.globalize_path(ExternalAssetsManager.EXTERNAL_ASSETS_DIR)) else ""
 			},
 			options
 		])
