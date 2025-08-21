@@ -58,7 +58,7 @@ func generate_options_animation(dialogues: Array, options: Dictionary) -> Animat
 				var option_index = float(tokens[token_index]["bbcode_tags"]["options"]["actions"][action_index].split("|")[1])
 				
 				# 获取动作绝对时间
-				var absolute_action_time = tokens[token_index]["bbcode_tags"]["options"]["actions"].slice(0, action_index + 1).map(func (action): return float(action.split("|")[0])).reduce(func (a, num): return a + num)
+				var absolute_action_time = char_schedule["absolute_start_time"] + tokens[token_index]["bbcode_tags"]["options"]["actions"].slice(0, action_index + 1).map(func (action): return float(action.split("|")[0])).reduce(func (a, num): return a + num)
 				
 				# 根据option_index判断动作类型
 				if option_index != -2:
