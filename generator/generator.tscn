@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cdek1m6ysenjg"]
+[gd_scene load_steps=11 format=3 uid="uid://cdek1m6ysenjg"]
 
 [ext_resource type="Script" uid="uid://cmijniia7p5ab" path="res://generator/scripts/generator/generator.gd" id="1_n178k"]
 [ext_resource type="Script" uid="uid://jqtk34kfuj22" path="res://generator/scripts/generator/background.gd" id="2_rcwul"]
+[ext_resource type="PackedScene" uid="uid://bavxyrtd6myib" path="res://generator/dialogue_texture.tscn" id="3_iydt6"]
 [ext_resource type="Script" uid="uid://df1dqpi4c4jxh" path="res://generator/scripts/generator/dialogue_texture_dark.gd" id="3_jdrsx"]
 [ext_resource type="Script" uid="uid://ch0xc8bhtmyva" path="res://generator/scripts/generator/dialogue_texture_light.gd" id="4_xmo7a"]
 [ext_resource type="PackedScene" uid="uid://c7afxxrj8e8y0" path="res://generator/off_screen_items_container.tscn" id="5_1rbap"]
@@ -42,7 +43,11 @@ offset_top = 622.0
 offset_right = 1281.0
 offset_bottom = 954.0
 
+[node name="DialogueTexture" parent="Dialogue" instance=ExtResource("3_iydt6")]
+layout_mode = 1
+
 [node name="DialogueTextureDark" type="TextureRect" parent="Dialogue"]
+visible = false
 layout_mode = 0
 offset_right = 1232.0
 offset_bottom = 332.0

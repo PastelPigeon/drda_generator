@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bavxyrtd6myib"]
+
+[ext_resource type="Script" uid="uid://cthwlygykya1f" path="res://generator/scripts/dialogue_texture/dialogue_texture.gd" id="1_0dkj7"]
+
+[node name="DialogueTexture" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("1_0dkj7")

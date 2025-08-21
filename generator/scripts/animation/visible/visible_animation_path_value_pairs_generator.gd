@@ -3,6 +3,7 @@ extends Node
 ## 生成可见动画的动画值
 func generate_visible_animation_path_value_pairs(token: Dictionary, dialogue: String) -> Dictionary:
 	var dialogue_pvp = _generate_animation_path_value_pairs_dialogue(token)
+	var dialoguetexture_pvp = _generate_animation_path_value_pairs_dialoguetexture(token, dialogue)
 	var dialoguetexturedark_pvp = _generate_animation_path_value_pairs_dialoguetexturedark(token)
 	var dialoguetexturelight_pvp = _generate_animation_path_value_pairs_dialoguetexturelight(token)
 	var characterface_pvp = _generate_animation_path_value_pairs_characterface(token)
@@ -14,8 +15,9 @@ func generate_visible_animation_path_value_pairs(token: Dictionary, dialogue: St
 	
 	return DictionaryMerger.merge_dictionaries([
 		dialogue_pvp,
-		dialoguetexturedark_pvp,
-		dialoguetexturelight_pvp,
+		dialoguetexture_pvp,
+		#dialoguetexturedark_pvp,
+		#dialoguetexturelight_pvp,
 		characterface_pvp,
 		placeholderchar_pvp,
 		placeholderchar_shadow_pvp,
@@ -53,6 +55,34 @@ func _generate_animation_path_value_pairs_dialogue(token: Dictionary) -> Diction
 		
 	return {
 		POSITION_PATH: position_value
+	}
+
+## 生成DialogueTexture节点的动画值
+func _generate_animation_path_value_pairs_dialoguetexture(token: Dictionary, dialogue: String) -> Dictionary:
+	# 节点路径
+	const NODE_PATH = "Dialogue/DialogueTexture"
+	
+	# 属性路径
+	const DIALOGUE_STYLE_PATH = "%s:dialogue_style" % NODE_PATH
+	const TEXT_ANIMATION_STATE_PATH = "%s:text_animation_state" % NODE_PATH
+	
+	# 可能的属性值
+	var text_animation_state_value_playing = "playing"
+	var text_animation_state_value_ended = "ended"
+	
+	# 初始化属性值
+	var dialogue_style_value = token["bbcode_tags"]["world_state"]["value"] if token["bbcode_tags"].has("world_state") else "light"
+	var text_animation_state_value = null
+	
+	# 处理text_animation_state属性
+	if token["char_index"] == len(DialogueBbcodeTagsCleaner.clean_bbcode_tags_from_dialogue(dialogue)) - 1:
+		text_animation_state_value = text_animation_state_value_ended
+	else:
+		text_animation_state_value = text_animation_state_value_playing
+		
+	return {
+		DIALOGUE_STYLE_PATH: dialogue_style_value,
+		TEXT_ANIMATION_STATE_PATH: text_animation_state_value
 	}
 	
 ## 生成DialogueTextureDark节点的动画值

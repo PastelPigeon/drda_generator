@@ -3,8 +3,10 @@ extends Node
 ## 动画的所有路径
 const TRACK_PATHS = [
 	"%s:position" % "Dialogue",
-	"%s:visible" % "Dialogue/DialogueTextureDark",
-	"%s:visible" % "Dialogue/DialogueTextureLight",
+	"%s:dialogue_style" % "Dialogue/DialogueTexture",
+	"%s:text_animation_state" % "Dialogue/DialogueTexture",
+	#"%s:visible" % "Dialogue/DialogueTextureDark",
+	#"%s:visible" % "Dialogue/DialogueTextureLight",
 	"%s:texture" % "Dialogue/CharacterFace",
 	"%s:visible" % "Dialogue/CharacterFace",
 	"%s:position" % "Dialogue/PlaceholderChar",
