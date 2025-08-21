@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://jx301ly5afl0"]
+[gd_scene load_steps=7 format=3 uid="uid://jx301ly5afl0"]
 
 [ext_resource type="PackedScene" uid="uid://cdh471ex2q42o" path="res://ui/pages/assets_manager/asset_info_viewer_default.tscn" id="1_56squ"]
 [ext_resource type="Script" uid="uid://c06a2oaf72aud" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_dialogue_textures/preview_texture_rect.gd" id="2_xu4sq"]
 [ext_resource type="Script" uid="uid://caj1qcjw3uhfa" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_dialogue_textures/size_input_width.gd" id="3_pskk8"]
 [ext_resource type="Script" uid="uid://b2n714x8a213r" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_dialogue_textures/size_input_height.gd" id="4_0kunp"]
+[ext_resource type="Script" uid="uid://d4kjebxm1ytq7" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_dialogue_textures/next_texture_timer_input.gd" id="5_jixwi"]
+[ext_resource type="Script" uid="uid://dq1rfaugiqc5m" path="res://ui/scripts/pages/assets_manager/asset_info_viewer_dialogue_textures/text_animation_state_input.gd" id="6_e8scj"]
 
 [node name="AssetInfoViewerDialogueTextures" instance=ExtResource("1_56squ")]
 
@@ -43,5 +45,36 @@ layout_mode = 2
 size_flags_horizontal = 3
 editable = false
 script = ExtResource("4_0kunp")
+
+[node name="NextTextureTimerInfoUnit" type="VBoxContainer" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer" index="4"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Name" type="Label" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/NextTextureTimerInfoUnit" index="0"]
+layout_mode = 2
+text = "持续帧数"
+
+[node name="NextTextureTimerInput" type="LineEdit" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/NextTextureTimerInfoUnit" index="1"]
+layout_mode = 2
+script = ExtResource("5_jixwi")
+
+[node name="TextAnimationStateInfoUnit" type="VBoxContainer" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer" index="5"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Name" type="Label" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/TextAnimationStateInfoUnit" index="0"]
+layout_mode = 2
+text = "适用于"
+
+[node name="TextAnimationStateInput" type="OptionButton" parent="VBoxContainer/Top/ScrollContainer/MarginContainer/InfoUnitsContainer/TextAnimationStateInfoUnit" index="1"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "文字动画播放中"
+popup/item_0/id = 0
+popup/item_1/text = "文字动画结束"
+popup/item_1/id = 1
+popup/item_2/text = "通用"
+popup/item_2/id = 2
+script = ExtResource("6_e8scj")
 
 [editable path="VBoxContainer/Top/Window"]

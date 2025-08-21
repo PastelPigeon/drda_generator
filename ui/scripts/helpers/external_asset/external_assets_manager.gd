@@ -177,6 +177,11 @@ func add_asset(type: AssetType, key: String, file: String):
 	if type == AssetType.CHARACTER_SOUNDS:
 		set_asset_attribute_CHARACTER_SOUNDS(key, registry[key].find(ProjectSettings.globalize_path("%s/%s/%s" % [EXTERNAL_ASSETS_DIR, ASSET_TYPE_ASSET_DIR_NAMES_MAPPING[type], file.get_file()])), 1, 1.0)
 		
+	# 如果类型为DIALOGUE_TEXTURES，初始化资产属性
+	if type == AssetType.DIALOGUE_TEXTURES:
+		set_asset_attribute_DIALOGUE_TEXTURES(key, registry[key].find(ProjectSettings.globalize_path("%s/%s/%s" % [EXTERNAL_ASSETS_DIR, ASSET_TYPE_ASSET_DIR_NAMES_MAPPING[type], file.get_file()])), 1, "all")
+	
+		
 ## 移除资产
 func remove_asset(type: AssetType, key: String, index: int):
 	# 判断是否初始化，未初始化先初始化
@@ -258,6 +263,28 @@ func set_asset_attribute_CHARACTER_SOUNDS(key: String, index: int, sound_timer: 
 		
 	# 重命名指定资产
 	rename_asset(AssetType.CHARACTER_SOUNDS, key, index, "%s@%s-%s" % [registry[key][index].get_file().replace(".%s" % registry[key][index].get_extension(), "").split("@")[0], str(sound_timer), str(random_pitch)])
+	
+## 设置资产属性（DIALOGUE_TEXTURES）
+func set_asset_attribute_DIALOGUE_TEXTURES(key: String, index: int, next_texture_timer: int, text_animation_state: String):
+	# 判断是否初始化，未初始化先初始化
+	if DirAccess.dir_exists_absolute(ProjectSettings.globalize_path(EXTERNAL_ASSETS_DIR)) == false:
+		init()
+		
+	# 读取指定注册文件
+	var registry_file_read = FileAccess.open("%s/%s/%s" % [EXTERNAL_ASSETS_DIR, ASSET_TYPE_ASSET_DIR_NAMES_MAPPING[AssetType.DIALOGUE_TEXTURES], "registry.json"], FileAccess.READ)
+	var registry = JSON.parse_string(registry_file_read.get_as_text())
+	registry_file_read.close()
+	
+	# 判断指定键是否存在，不存在直接返回
+	if registry.has(key) == false:
+		return
+		
+	# 判断指定索引是否存在，不存在直接返回
+	if index < 0 or index > len(registry[key]) - 1:
+		return
+		
+	# 重命名指定资产
+	rename_asset(AssetType.DIALOGUE_TEXTURES, key, index, "%s@%s-%s" % [registry[key][index].get_file().replace(".%s" % registry[key][index].get_extension(), "").split("@")[0], str(next_texture_timer), text_animation_state])
 	
 ## 读取指定注册表
 func get_registry(type: AssetType):
@@ -445,7 +472,7 @@ func _get_asset_info_DIALOGUE_TEXTURES(key: String, index: int):
 	var asset_path = registry[key][index]
 	
 	# 获取资产名称
-	var asset_name = registry[key][index].get_file().replace(".%s" % registry[key][index].get_extension(), "")
+	var asset_name = registry[key][index].get_file().replace(".%s" % registry[key][index].get_extension(), "").split("@")[0]
 	
 	# 获取资产扩展名
 	var asset_extension = registry[key][index].get_extension()
@@ -459,10 +486,18 @@ func _get_asset_info_DIALOGUE_TEXTURES(key: String, index: int):
 	var loaded_asset = AssetLoader.load_asset(registry[key][index])
 	var asset_size = [loaded_asset.get_image().get_width(), loaded_asset.get_image().get_height()]
 	
+	# 获取纹理切换计时器
+	var asset_next_texture_timer = int(registry[key][index].get_file().replace(".%s" % registry[key][index].get_extension(), "").split("@")[1].split("-")[0])
+	
+	# 获取文字动画状态
+	var asset_text_animation_state = registry[key][index].get_file().replace(".%s" % registry[key][index].get_extension(), "").split("@")[1].split("-")[1]
+	
 	return {
 		"path": asset_path,
 		"name": asset_name,
 		"extension": asset_extension,
 		"length": asset_length,
-		"size": asset_size
+		"size": asset_size,
+		"next_texture_timer": asset_next_texture_timer,
+		"text_animation_state": asset_text_animation_state
 	}
