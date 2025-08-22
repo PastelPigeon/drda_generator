@@ -1,12 +1,12 @@
 {
   "dark": [
-    "res://assets/dialogue_textures/dark/dialogue_1@1-all.png",
-    "res://assets/dialogue_textures/dark/dialogue_2@1-all.png",
-    "res://assets/dialogue_textures/dark/dialogue_3@1-all.png",
-    "res://assets/dialogue_textures/dark/dialogue_4@1-all.png",
-    "res://assets/dialogue_textures/dark/dialogue_5@1-all.png",
-    "res://assets/dialogue_textures/dark/dialogue_6@1-all.png",
-    "res://assets/dialogue_textures/dark/dialogue_7@1-all.png"
+    "res://assets/dialogue_textures/dark/dialogue_1@3-all.png",
+    "res://assets/dialogue_textures/dark/dialogue_2@3-all.png",
+    "res://assets/dialogue_textures/dark/dialogue_3@3-all.png",
+    "res://assets/dialogue_textures/dark/dialogue_4@3-all.png",
+    "res://assets/dialogue_textures/dark/dialogue_5@3-all.png",
+    "res://assets/dialogue_textures/dark/dialogue_6@3-all.png",
+    "res://assets/dialogue_textures/dark/dialogue_7@3-all.png"
   ],
   "light": [
     "res://assets/dialogue_textures/light/dialogue_8@1-all.png"
