@@ -1,0 +1,12 @@
+﻿[
+    {
+        "title":  "编辑器概览",
+        "id":  "editor_overview",
+        "file":  "res://ui/assets/doc/ui_overview/editor_overview.txt"
+    },
+    {
+        "title":  "选项管理器",
+        "id":  "options_manager",
+        "file":  "res://ui/assets/doc/ui_overview/options_manager.txt"
+    }
+]

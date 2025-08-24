@@ -1,0 +1,32 @@
+﻿[
+    {
+        "title":  "帧率选项",
+        "id":  "fps_option",
+        "file":  "res://ui/assets/doc/config_options/fps_option.txt"
+    },
+    {
+        "title":  "背景颜色选项",
+        "id":  "background_option",
+        "file":  "res://ui/assets/doc/config_options/background_option.txt"
+    },
+    {
+        "title":  "生成模式选项",
+        "id":  "recording_mode_option",
+        "file":  "res://ui/assets/doc/config_options/recording_mode_option.txt"
+    },
+    {
+        "title":  "输出路径选项",
+        "id":  "output_dir_option",
+        "file":  "res://ui/assets/doc/config_options/output_dir_option.txt"
+    },
+    {
+        "title":  "生成格式选项",
+        "id":  "format_option",
+        "file":  "res://ui/assets/doc/config_options/format_option.txt"
+    },
+    {
+        "title":  "透明背景选项",
+        "id":  "transparent_option",
+        "file":  "res://ui/assets/doc/config_options/transparent_option.txt"
+    }
+]

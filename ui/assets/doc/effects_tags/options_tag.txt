@@ -1,0 +1,12 @@
+﻿[b]选项对话框标签[/b]插入一个选项对话框。
+
+格式：[code][options options=<option1, option2> actions=<1|1, 2|-2>/][/code]
+
+参数说明：
+*   [b]options[/b]：选项列表，定义选项文本，采用[code]<>[/code]包裹，[code],[/code]分割
+*   [b]actions[/b]：动作列表，定义选择或确定等动作，采用[code]<>[/code]包裹，[code],[/code]分割，动作项采用[code]|[/code]分割，格式[code]动作延时|选中选项[/code]（当选中选项为-2时，意为确认选择）
+
+示例：
+[code][options options=<选项一, 选项二> actions=<1|1, 2|-2>/][/code]
+
+[tip]建议将[code]options[/code]自闭合标签放在单独对话中。[/tip]

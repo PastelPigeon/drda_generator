@@ -1,0 +1,13 @@
+﻿[b]波浪标签[/b]让文字像波浪一样上下起伏。
+
+格式：[code][wave amp=50.0 freq=5.0]波浪文本[/wave][/code]
+
+参数说明：
+*   [b]amp[/b]：波浪高度
+*   [b]freq[/b]：波动速度
+*   [b]connected[/b]：[code]1[/code]：字符连在一起动；[code]0[/code]：字符分开动
+
+示例：
+[code][wave amp=50.0 freq=5.0]波浪文字[/wave][/code]
+
+[warning]注意：[/warning][code]freq=0[/code] 时效果消失。

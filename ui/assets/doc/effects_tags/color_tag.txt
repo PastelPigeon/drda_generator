@@ -1,0 +1,12 @@
+﻿[b]颜色标签[/b]改变文字颜色。
+
+格式：[code][color=green]绿色文本[/color][/code] 或 [code][color=#00ff00]绿色文本[/][/code]
+
+参数说明：
+参数可以是颜色名（如[code]red[/code], [code]blue[/code]）或HEX值（如[code]#ffff00[/code]代表黄色）
+
+示例：
+[code][color=red]红色文字[/color][/code]
+[code][color=#0000ff]蓝色文字[/color][/code]
+
+[tip]基础但重要！[/tip]

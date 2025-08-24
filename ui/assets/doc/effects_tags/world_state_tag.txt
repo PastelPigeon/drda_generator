@@ -1,0 +1,12 @@
+﻿[b]对话框样式标签[/b]设置这段对话使用的对话框样式。
+
+格式：[code][world_state=dark]暗世界文本[/world_state][/code]
+
+参数说明：
+*   [code]light[/code]：光世界样式 (默认)
+*   [code]dark[/code]：暗世界样式
+
+示例：
+[code][world_state=dark]暗世界对话[/world_state][/code]
+
+[tip]建议：一句话内保持样式统一。区分不同世界或场景氛围。[/tip]

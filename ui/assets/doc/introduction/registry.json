@@ -1,0 +1,12 @@
+﻿[
+    {
+        "title":  "这是什么？",
+        "id":  "what_is_this",
+        "file":  "res://ui/assets/doc/introduction/what_is_this.txt"
+    },
+    {
+        "title":  "使用方式",
+        "id":  "usage_methods",
+        "file":  "res://ui/assets/doc/introduction/usage_methods.txt"
+    }
+]

@@ -1,0 +1,13 @@
+﻿[b]抖动标签[/b]让文字快速抖动。
+
+格式：[code][shake rate=20.0 level=5]抖动文本[/shake][/code]
+
+参数说明：
+*   [b]rate[/b]：抖动频率（越快越晃）
+*   [b]level[/b]：抖动幅度（越大越晃）
+*   [b]connected[/b]：[code]1[/code]：字符连在一起动；[code]0[/code]：字符分开动
+
+示例：
+[code][shake rate=20.0 level=5]发抖文字[/shake][/code]
+
+[tip]表现愤怒、恐惧或寒冷。[/tip]

@@ -1,0 +1,13 @@
+﻿[b]脸图标签[/b]指定这段文字出现时显示的角色头像。
+
+格式：[code][face=spr_face_susie_alt_0]说话文本[/face][/code]
+
+参数说明：
+参数是头像文件名（不加路径和后缀）
+
+示例：
+[code][face=spr_face_susie_alt_0]苏西说话[/face][/code]
+
+[tip]核心功能！[/tip]设置对话时使用的脸图。
+
+素材包在 [code]assets/character_faces/[/code] 或 [url=https://wwjo.lanzouu.com/ixce832j25sf]下载链接[/url]

@@ -1,0 +1,32 @@
+﻿[
+    {
+        "title":  "介绍",
+        "id":  "introduction",
+        "icon":  "",
+        "file":  "res://ui/assets/doc/introduction/registry.json"
+    },
+    {
+        "title":  "界面概览",
+        "id":  "ui_overview",
+        "icon":  "",
+        "file":  "res://ui/assets/doc/ui_overview/registry.json"
+    },
+    {
+        "title":  "BBCODE 语法",
+        "id":  "bbcode_syntax",
+        "icon":  "",
+        "file":  "res://ui/assets/doc/bbcode_syntax/registry.json"
+    },
+    {
+        "title":  "特效标签",
+        "id":  "effects_tags",
+        "icon":  "",
+        "file":  "res://ui/assets/doc/effects_tags/registry.json"
+    },
+    {
+        "title":  "配置选项",
+        "id":  "config_options",
+        "icon":  "",
+        "file":  "res://ui/assets/doc/config_options/registry.json"
+    }
+]

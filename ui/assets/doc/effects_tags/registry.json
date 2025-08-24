@@ -1,0 +1,77 @@
+﻿[
+    {
+        "title":  "脉冲标签",
+        "id":  "pulse_tag",
+        "file":  "res://ui/assets/doc/effects_tags/pulse_tag.txt"
+    },
+    {
+        "title":  "波浪标签",
+        "id":  "wave_tag",
+        "file":  "res://ui/assets/doc/effects_tags/wave_tag.txt"
+    },
+    {
+        "title":  "旋风标签",
+        "id":  "tornado_tag",
+        "file":  "res://ui/assets/doc/effects_tags/tornado_tag.txt"
+    },
+    {
+        "title":  "抖动标签",
+        "id":  "shake_tag",
+        "file":  "res://ui/assets/doc/effects_tags/shake_tag.txt"
+    },
+    {
+        "title":  "渐隐标签",
+        "id":  "fade_tag",
+        "file":  "res://ui/assets/doc/effects_tags/fade_tag.txt"
+    },
+    {
+        "title":  "彩虹标签",
+        "id":  "rainbow_tag",
+        "file":  "res://ui/assets/doc/effects_tags/rainbow_tag.txt"
+    },
+    {
+        "title":  "颜色标签",
+        "id":  "color_tag",
+        "file":  "res://ui/assets/doc/effects_tags/color_tag.txt"
+    },
+    {
+        "title":  "脸图标签",
+        "id":  "face_tag",
+        "file":  "res://ui/assets/doc/effects_tags/face_tag.txt"
+    },
+    {
+        "title":  "音效标签",
+        "id":  "sound_tag",
+        "file":  "res://ui/assets/doc/effects_tags/sound_tag.txt"
+    },
+    {
+        "title":  "静音标签",
+        "id":  "disable_sound_tag",
+        "file":  "res://ui/assets/doc/effects_tags/disable_sound_tag.txt"
+    },
+    {
+        "title":  "文本延时标签",
+        "id":  "delay_tag",
+        "file":  "res://ui/assets/doc/effects_tags/delay_tag.txt"
+    },
+    {
+        "title":  "对话框样式标签",
+        "id":  "world_state_tag",
+        "file":  "res://ui/assets/doc/effects_tags/world_state_tag.txt"
+    },
+    {
+        "title":  "等待标签",
+        "id":  "wait_tag",
+        "file":  "res://ui/assets/doc/effects_tags/wait_tag.txt"
+    },
+    {
+        "title":  "小对话框标签",
+        "id":  "off_screen_tag",
+        "file":  "res://ui/assets/doc/effects_tags/off_screen_tag.txt"
+    },
+    {
+        "title":  "选项对话框标签",
+        "id":  "options_tag",
+        "file":  "res://ui/assets/doc/effects_tags/options_tag.txt"
+    }
+]
