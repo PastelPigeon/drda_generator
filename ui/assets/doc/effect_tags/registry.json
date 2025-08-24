@@ -1,0 +1,77 @@
+﻿[
+    {
+        "title":  "脉冲效果",
+        "id":  "pulse",
+        "file":  "res://ui/assets/doc/effect_tags/pulse.txt"
+    },
+    {
+        "title":  "波浪效果",
+        "id":  "wave",
+        "file":  "res://ui/assets/doc/effect_tags/wave.txt"
+    },
+    {
+        "title":  "旋风效果",
+        "id":  "tornado",
+        "file":  "res://ui/assets/doc/effect_tags/tornado.txt"
+    },
+    {
+        "title":  "抖动效果",
+        "id":  "shake",
+        "file":  "res://ui/assets/doc/effect_tags/shake.txt"
+    },
+    {
+        "title":  "渐隐效果",
+        "id":  "fade",
+        "file":  "res://ui/assets/doc/effect_tags/fade.txt"
+    },
+    {
+        "title":  "彩虹效果",
+        "id":  "rainbow",
+        "file":  "res://ui/assets/doc/effect_tags/rainbow.txt"
+    },
+    {
+        "title":  "颜色效果",
+        "id":  "color",
+        "file":  "res://ui/assets/doc/effect_tags/color.txt"
+    },
+    {
+        "title":  "脸图效果",
+        "id":  "face",
+        "file":  "res://ui/assets/doc/effect_tags/face.txt"
+    },
+    {
+        "title":  "音效效果",
+        "id":  "sound",
+        "file":  "res://ui/assets/doc/effect_tags/sound.txt"
+    },
+    {
+        "title":  "静音效果",
+        "id":  "disable_sound",
+        "file":  "res://ui/assets/doc/effect_tags/disable_sound.txt"
+    },
+    {
+        "title":  "文本延时",
+        "id":  "delay",
+        "file":  "res://ui/assets/doc/effect_tags/delay.txt"
+    },
+    {
+        "title":  "对话框样式",
+        "id":  "world_state",
+        "file":  "res://ui/assets/doc/effect_tags/world_state.txt"
+    },
+    {
+        "title":  "等待效果",
+        "id":  "wait",
+        "file":  "res://ui/assets/doc/effect_tags/wait.txt"
+    },
+    {
+        "title":  "小对话框(画外音)",
+        "id":  "off_screen",
+        "file":  "res://ui/assets/doc/effect_tags/off_screen.txt"
+    },
+    {
+        "title":  "选项对话框",
+        "id":  "options",
+        "file":  "res://ui/assets/doc/effect_tags/options.txt"
+    }
+]

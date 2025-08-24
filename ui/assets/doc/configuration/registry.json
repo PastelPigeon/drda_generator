@@ -1,0 +1,32 @@
+﻿[
+    {
+        "title":  "帧率(FPS)",
+        "id":  "fps",
+        "file":  "res://ui/assets/doc/configuration/fps.txt"
+    },
+    {
+        "title":  "背景颜色",
+        "id":  "background",
+        "file":  "res://ui/assets/doc/configuration/background.txt"
+    },
+    {
+        "title":  "生成/录制模式",
+        "id":  "recording_mode",
+        "file":  "res://ui/assets/doc/configuration/recording_mode.txt"
+    },
+    {
+        "title":  "输出路径",
+        "id":  "output_dir",
+        "file":  "res://ui/assets/doc/configuration/output_dir.txt"
+    },
+    {
+        "title":  "生成内容格式",
+        "id":  "recording_format",
+        "file":  "res://ui/assets/doc/configuration/recording_format.txt"
+    },
+    {
+        "title":  "启用透明背景",
+        "id":  "transparent_bg",
+        "file":  "res://ui/assets/doc/configuration/transparent_bg.txt"
+    }
+]

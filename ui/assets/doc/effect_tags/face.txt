@@ -1,0 +1,17 @@
+﻿[b]脸图效果[/b]
+
+指定这段文字出现时显示的角色头像。
+
+用法：
+[lb]face=spr_face_susie_alt_0]说话文本[lb]/face]
+
+参数是头像文件名（不加路径和后缀）。
+
+素材包位置：
+• assets/character_faces/
+• 或从[url=https://wwjo.lanzouu.com/ixce832j25sf]下载链接[/url]获取
+
+这是核心功能！用于设置对话时使用的脸图。
+
+示例：
+[lb]face=spr_face_ralsei_0]你好，我是Ralsei[lb]/]

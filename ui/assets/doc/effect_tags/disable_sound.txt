@@ -1,0 +1,11 @@
+﻿[b]静音效果[/b]
+
+这段文字出现时不播放任何音效。
+
+用法：
+[lb]disable_sound]无声文本[lb]/disable_sound]
+
+用于旁白、内心独白或需要安静的场合。
+
+示例：
+[lb]disable_sound]（内心思考中...）[lb]/]

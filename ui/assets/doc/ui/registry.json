@@ -1,0 +1,32 @@
+﻿[
+    {
+        "title":  "编辑器概述",
+        "id":  "editor_overview",
+        "file":  "res://ui/assets/doc/ui/editor_overview.txt"
+    },
+    {
+        "title":  "对话管理器",
+        "id":  "dialogue_manager",
+        "file":  "res://ui/assets/doc/ui/dialogue_manager.txt"
+    },
+    {
+        "title":  "对话编辑器",
+        "id":  "dialogue_editor",
+        "file":  "res://ui/assets/doc/ui/dialogue_editor.txt"
+    },
+    {
+        "title":  "预览区",
+        "id":  "preview_area",
+        "file":  "res://ui/assets/doc/ui/preview_area.txt"
+    },
+    {
+        "title":  "快速插入按钮",
+        "id":  "quick_buttons",
+        "file":  "res://ui/assets/doc/ui/quick_buttons.txt"
+    },
+    {
+        "title":  "选项管理器",
+        "id":  "option_manager",
+        "file":  "res://ui/assets/doc/ui/option_manager.txt"
+    }
+]

@@ -1,0 +1,13 @@
+﻿[b]生成内容格式[/b]
+
+作用：选择生成的动画文件格式。
+
+格式对比：
+[table]
+[cell]格式[/cell][cell]文件大小[/cell][cell]支持透明背景?[/cell][cell]支持对话音效?[/cell][cell]适用场景[/cell]
+[cell]MP4[/cell][cell]小[/cell][cell]❌ 不支持[/cell][cell]✔️ 支持[/cell][cell]标准视频，带声音，文件小[/cell]
+[cell]MOV[/cell][cell]大[/cell][cell]✔️ 支持[/cell][cell]✔️ 支持[/cell][cell]需要透明背景+声音的高质量视频[/cell]
+[cell]GIF[/cell][cell]小[/cell][cell]✔️ 支持[/cell][cell]❌ 不支持[/cell][cell]网页动图、表情包，无声音[/cell]
+[/table]
+
+根据你的需求选择合适的格式。

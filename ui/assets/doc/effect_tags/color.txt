@@ -1,0 +1,14 @@
+﻿[b]颜色效果[/b]
+
+改变文字颜色，基础但重要！
+
+用法：
+[lb]color=green]绿色文本[lb]/color]
+或
+[lb]color=#00ff00]绿色文本[lb]/]
+
+参数可以是颜色名（如red, blue）或HEX值（如#ffff00代表黄色）。
+
+示例：
+[lb]color=red]红色警告文字[lb]/]
+[lb]color=#0000ff]蓝色说明文字[lb]/]

@@ -6,27 +6,27 @@
         "file":  "res://ui/assets/doc/introduction/registry.json"
     },
     {
-        "title":  "界面概览",
-        "id":  "ui_overview",
+        "title":  "图形界面",
+        "id":  "ui",
         "icon":  "",
-        "file":  "res://ui/assets/doc/ui_overview/registry.json"
+        "file":  "res://ui/assets/doc/ui/registry.json"
     },
     {
-        "title":  "BBCODE 语法",
+        "title":  "BBCode语法",
         "id":  "bbcode_syntax",
         "icon":  "",
         "file":  "res://ui/assets/doc/bbcode_syntax/registry.json"
     },
     {
         "title":  "特效标签",
-        "id":  "effects_tags",
+        "id":  "effect_tags",
         "icon":  "",
-        "file":  "res://ui/assets/doc/effects_tags/registry.json"
+        "file":  "res://ui/assets/doc/effect_tags/registry.json"
     },
     {
         "title":  "配置选项",
-        "id":  "config_options",
+        "id":  "configuration",
         "icon":  "",
-        "file":  "res://ui/assets/doc/config_options/registry.json"
+        "file":  "res://ui/assets/doc/configuration/registry.json"
     }
 ]

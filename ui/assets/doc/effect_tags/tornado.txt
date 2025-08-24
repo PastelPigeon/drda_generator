@@ -1,0 +1,14 @@
+﻿[b]旋风效果[/b]
+
+让文字绕圈旋转，营造混乱或俏皮的感觉。
+
+用法：
+[lb]tornado radius=10.0 freq=1.0]旋转文本[lb]/tornado]
+
+参数：
+• [b]radius[/b]：旋转半径
+• [b]freq[/b]：旋转速度（正数顺转，负数逆转，0暂停）
+• [b]connected[/b]：1=字符连在一起动；0=字符分开动
+
+示例：
+[lb]tornado radius=15 freq=-2]旋转的文字[lb]/]

@@ -1,1 +1,7 @@
-﻿[b]drda_generator[/b] (全称：[b]D[/b]elta[b]R[/b]une [b]D[/b]ialogues [b]A[/b]nimation Generator，三角符文对话动画生成器) 是一款使用 [b]Godot 引擎[/b]开发的辅助软件。它能帮助你快速制作出类似《DELTARUNE》游戏中的对话动画效果，[b]大幅提升动画制作效率[/b]！
+﻿[center][b]三角符文对话动画生成器[/b][/center]
+
+DRDA GENERATOR (全称：[b]D[/b]elta[b]R[/b]une [b]D[/b]ialogues [b]A[/b]nimation Generator) 是一款使用 [b]Godot 引擎[/b]开发的辅助软件。它能帮助你快速制作出类似《DELTARUNE》游戏中的对话动画效果，[b]大幅提升动画制作效率[/b]！
+
+你可以通过两种方式使用它：
+1.  [b]命令行[/b] 🖥️ (适合高级用户或批量操作)
+2.  [b]图形界面 (UI)[/b] 🖱️ (推荐大多数用户)

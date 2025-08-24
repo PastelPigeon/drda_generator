@@ -1,17 +1,22 @@
 ﻿[
     {
-        "title":  "BBCODE 基础",
+        "title":  "BBCode基础",
         "id":  "bbcode_basics",
         "file":  "res://ui/assets/doc/bbcode_syntax/bbcode_basics.txt"
     },
     {
         "title":  "包裹型标签",
-        "id":  "wrapping_tags",
-        "file":  "res://ui/assets/doc/bbcode_syntax/wrapping_tags.txt"
+        "id":  "wrap_tags",
+        "file":  "res://ui/assets/doc/bbcode_syntax/wrap_tags.txt"
     },
     {
         "title":  "自闭合型标签",
         "id":  "self_closing_tags",
         "file":  "res://ui/assets/doc/bbcode_syntax/self_closing_tags.txt"
+    },
+    {
+        "title":  "嵌套规则",
+        "id":  "nesting_rules",
+        "file":  "res://ui/assets/doc/bbcode_syntax/nesting_rules.txt"
     }
 ]

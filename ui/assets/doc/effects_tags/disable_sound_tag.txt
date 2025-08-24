@@ -1,8 +1,0 @@
-﻿[b]静音标签[/b]这段文字出现时[b]不播放[/b]任何音效。
-
-格式：[code][disable_sound]无声文本[/disable_sound][/code]
-
-示例：
-[code][disable_sound]内心独白[/disable_sound][/code]
-
-[tip]用于旁白、内心独白或需要安静的场合。[/tip]

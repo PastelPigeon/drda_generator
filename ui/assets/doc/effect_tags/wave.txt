@@ -1,0 +1,16 @@
+﻿[b]波浪效果[/b]
+
+让文字像波浪一样上下起伏。
+
+用法：
+[lb]wave amp=50.0 freq=5.0]波浪文本[lb]/wave]
+
+参数：
+• [b]amp[/b]：波浪高度
+• [b]freq[/b]：波动速度
+• [b]connected[/b]：1=字符连在一起动；0=字符分开动
+
+注意：freq=0时效果消失。
+
+示例：
+[lb]wave amp=30 freq=3 connected=1]波浪文字效果[lb]/]
