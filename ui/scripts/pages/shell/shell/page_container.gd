@@ -17,6 +17,10 @@ const REGISTERED_PAGES = [
 	{
 		"index": 3,
 		"node": "About"
+	},
+	{
+		"index": 4,
+		"node": "Doc"
 	}
 ]
 

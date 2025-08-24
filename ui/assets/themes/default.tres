@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=19 format=3 uid="uid://226iil5wgiep"]
+[gd_resource type="Theme" load_steps=20 format=3 uid="uid://226iil5wgiep"]
 
 [ext_resource type="FontFile" uid="uid://coywg1yikumhu" path="res://ui/assets/fonts/ark-pixel-12px-monospaced-zh_cn.otf" id="1_m31k4"]
+[ext_resource type="FontFile" uid="uid://bqryicn8qdjja" path="res://ui/assets/fonts/CascadiaCodeNF-Regular.otf" id="2_365c8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m31k4"]
 
@@ -192,6 +193,14 @@ dialogues_view_item_content_label/base_type = &"Label"
 dialogues_view_item_content_label/font_sizes/font_size = 13
 dialogues_view_item_content_label_no_content/base_type = &"dialogues_view_item_content_label"
 dialogues_view_item_content_label_no_content/colors/font_color = Color(0.376471, 0.376471, 0.376471, 1)
+doc_article_viewer_content/base_type = &"RichTextLabel"
+doc_article_viewer_content/font_sizes/bold_font_size = 14
+doc_article_viewer_content/font_sizes/mono_font_size = 14
+doc_article_viewer_content/font_sizes/normal_font_size = 14
+doc_article_viewer_content/fonts/bold_font = ExtResource("1_m31k4")
+doc_article_viewer_content/fonts/mono_font = ExtResource("2_365c8")
+doc_article_viewer_content/fonts/normal_font = ExtResource("1_m31k4")
+doc_categories_bar_item_articles_item_list/base_type = &"asset_type_switcher_switcher_item_list"
 extended_bar/base_type = &"Panel"
 extended_bar/styles/panel = SubResource("StyleBoxFlat_7uojx")
 loading_mask/base_type = &"Panel"

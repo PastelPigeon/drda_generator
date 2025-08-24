@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://cev1oiyyi64io"]
+
+[ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="1_gioad"]
+[ext_resource type="Script" uid="uid://blbtbgudswpuw" path="res://ui/scripts/pages/doc/categories_bar_item/categories_bar_item.gd" id="1_lv8pv"]
+[ext_resource type="Script" uid="uid://dnnu8mt2v24h2" path="res://ui/scripts/pages/doc/categories_bar_item/articles_item_list.gd" id="3_hfd5p"]
+
+[node name="CategoriesBarItem" type="VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+script = ExtResource("1_lv8pv")
+
+[node name="Header" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Icon" type="TextureRect" parent="Header"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Header"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Window" parent="." instance=ExtResource("1_gioad")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TitleBar" parent="Window/MarginContainer/VSplitContainer/Top" index="0"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ArticlesItemList" type="ItemList" parent="Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"doc_categories_bar_item_articles_item_list"
+script = ExtResource("3_hfd5p")
+
+[editable path="Window"]

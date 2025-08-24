@@ -48,6 +48,7 @@ RuntimeAssetRegistriesManager="*res://_global/scripts/helpers/asset/runtime_asse
 ExternalAssetsManager="*res://ui/scripts/helpers/external_asset/external_assets_manager.gd"
 AssetsManagerDataManager="*res://ui/scripts/helpers/data/assets_manager_data_manager.gd"
 DocManager="*res://ui/scripts/helpers/doc/doc_manager.gd"
+DocDataManager="*res://ui/scripts/helpers/data/doc_data_manager.gd"
 
 [display]
 

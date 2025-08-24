@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://drmcj4setiipp"]
+[gd_scene load_steps=22 format=3 uid="uid://drmcj4setiipp"]
 
 [ext_resource type="Script" uid="uid://ctvt16jnigdss" path="res://ui/scripts/pages/shell/shell/shell.gd" id="1_83ih7"]
 [ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="1_sqfqq"]
@@ -14,9 +14,12 @@
 [ext_resource type="Script" uid="uid://564s33bwa5fn" path="res://ui/scripts/pages/shell/shell/about_nav_button.gd" id="11_0n48c"]
 [ext_resource type="PackedScene" uid="uid://333da4qf700w" path="res://ui/pages/editor/editor.tscn" id="11_g5tn6"]
 [ext_resource type="PackedScene" uid="uid://lynxwb1j8v5e" path="res://ui/pages/options_manager/options_manager.tscn" id="12_0k1ap"]
+[ext_resource type="Texture2D" uid="uid://wivjy1whig6b" path="res://ui/assets/icons/more_info.png" id="12_04d4b"]
 [ext_resource type="Shader" uid="uid://dxqcqk6orwlyx" path="res://ui/assets/shaders/chromatic_chaos_distortion.gdshader" id="12_buvc6"]
+[ext_resource type="Script" uid="uid://sdcg6uku0rhw" path="res://ui/scripts/pages/shell/shell/doc_nav_button.gd" id="13_covgs"]
 [ext_resource type="PackedScene" uid="uid://r8idrhxm4e1k" path="res://ui/pages/assets_manager/assets_manager.tscn" id="13_wwttj"]
 [ext_resource type="PackedScene" uid="uid://ckraucf2pmg1w" path="res://ui/pages/about/about.tscn" id="16_0n48c"]
+[ext_resource type="PackedScene" uid="uid://cdeewg4jts4ms" path="res://ui/pages/doc/doc.tscn" id="17_h743f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0k1ap"]
 shader = ExtResource("12_buvc6")
@@ -83,6 +86,14 @@ icon = ExtResource("10_sqdgc")
 flat = true
 script = ExtResource("11_0n48c")
 
+[node name="DocNavButton" type="Button" parent="MainWindow/MarginContainer/VSplitContainer/Top/ExtendedBar/CenterContainer/PagesNav"]
+layout_mode = 2
+theme_override_constants/icon_max_width = 25
+text = "文档"
+icon = ExtResource("12_04d4b")
+flat = true
+script = ExtResource("13_covgs")
+
 [node name="PageContainer" type="Control" parent="MainWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
 layout_mode = 1
 anchors_preset = 15
@@ -105,6 +116,10 @@ unique_name_in_owner = true
 layout_mode = 1
 
 [node name="About" parent="MainWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/PageContainer" instance=ExtResource("16_0n48c")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="Doc" parent="MainWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/PageContainer" instance=ExtResource("17_h743f")]
 unique_name_in_owner = true
 layout_mode = 1
 
