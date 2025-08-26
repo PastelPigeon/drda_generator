@@ -22,6 +22,6 @@ func _on_item_selected(index: int):
 ## 更新ui
 func _update_ui():
 	# 选中项
-	if AssetsManagerDataManager.selected_key != "" and AssetsManagerDataManager.selected_index != -1:
+	if AssetsManagerDataManager.selected_key != "" and AssetsManagerDataManager.selected_index != -1 and AssetsManagerDataManager.selected_asset_type == ExternalAssetsManager.AssetType.DIALOGUE_TEXTURES:
 		var text_animation_state = ExternalAssetsManager.get_asset_info(AssetsManagerDataManager.selected_asset_type, AssetsManagerDataManager.selected_key, AssetsManagerDataManager.selected_index)["text_animation_state"]
 		select(0 if text_animation_state == "playing" else 1 if text_animation_state == "ended" else 2)

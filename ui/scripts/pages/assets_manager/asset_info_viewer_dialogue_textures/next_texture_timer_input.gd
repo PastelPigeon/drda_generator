@@ -28,5 +28,5 @@ func _on_text_submitted(new_text: String):
 ## 更新ui
 func _update_ui():
 	# 设置文本
-	if AssetsManagerDataManager.selected_key != "" and AssetsManagerDataManager.selected_index != -1:
+	if AssetsManagerDataManager.selected_key != "" and AssetsManagerDataManager.selected_index != -1 and AssetsManagerDataManager.selected_asset_type == ExternalAssetsManager.AssetType.DIALOGUE_TEXTURES:
 		text = str(ExternalAssetsManager.get_asset_info(AssetsManagerDataManager.selected_asset_type, AssetsManagerDataManager.selected_key, AssetsManagerDataManager.selected_index)["next_texture_timer"])
