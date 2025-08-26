@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bgr47cd65r2lq"]
+[gd_scene load_steps=14 format=3 uid="uid://bgr47cd65r2lq"]
 
 [ext_resource type="Script" uid="uid://biw4wkgrdsycw" path="res://ui/scripts/pages/editor/dialogue_editor/normal.gd" id="1_c71x3"]
 [ext_resource type="Texture2D" uid="uid://mwqhhyj54gvb" path="res://ui/assets/icons/notepad.png" id="1_qugqf"]
@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://b52d3264yb35c" path="res://ui/scripts/pages/editor/dialogue_editor/content_edit.gd" id="3_5ck3i"]
 [ext_resource type="Script" uid="uid://c8dh4oq07v05x" path="res://ui/scripts/pages/editor/dialogue_editor/content_err_msg.gd" id="3_eh6ha"]
 [ext_resource type="Texture2D" uid="uid://cmymkyjqoy6l3" path="res://ui/assets/icons/preview.png" id="3_srfkx"]
+[ext_resource type="Script" uid="uid://cjl0jlu1ruxhf" path="res://ui/scripts/pages/editor/dialogue_editor/fz_button.gd" id="4_y1ku4"]
+[ext_resource type="Script" uid="uid://cwn8n6xp65nl6" path="res://ui/scripts/pages/editor/dialogue_editor/fe_button.gd" id="5_bq3e8"]
+[ext_resource type="Script" uid="uid://cu7afam0uemjp" path="res://ui/scripts/pages/editor/dialogue_editor/wd_button.gd" id="6_238nn"]
 [ext_resource type="Script" uid="uid://1qb8hu67v5bq" path="res://ui/scripts/pages/editor/dialogue_editor/preview_label.gd" id="6_diejw"]
 [ext_resource type="Texture2D" uid="uid://q6aqeeu11krm" path="res://ui/assets/icons/warning.png" id="8_34kkw"]
 [ext_resource type="Script" uid="uid://dvfj477l5nv80" path="res://ui/scripts/pages/editor/dialogue_editor/no_selected_dialogue_alert.gd" id="8_bkp6b"]
@@ -64,16 +67,42 @@ is_extended_bar_enabled = true
 [node name="TitleBar" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top" index="0"]
 visible = false
 
-[node name="CenterContainer" type="CenterContainer" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar" index="0"]
+[node name="MarginContainer" type="MarginContainer" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar" index="0"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 
-[node name="ContentErrMsg" type="Label" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/CenterContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer"]
 layout_mode = 2
+
+[node name="Functions" type="HBoxContainer" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="FZButton" type="Button" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/HBoxContainer/Functions"]
+layout_mode = 2
+text = "FZ"
+script = ExtResource("4_y1ku4")
+
+[node name="FEButton" type="Button" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/HBoxContainer/Functions"]
+layout_mode = 2
+text = "FE"
+script = ExtResource("5_bq3e8")
+
+[node name="WDButton" type="Button" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/HBoxContainer/Functions"]
+layout_mode = 2
+text = "WD"
+script = ExtResource("6_238nn")
+
+[node name="ContentErrMsg" type="Label" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
 text = "{ERRMSGPLACEHOLDER}"
 script = ExtResource("3_eh6ha")
 
@@ -90,6 +119,7 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="ContentEdit" type="CodeEdit" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 placeholder_text = "输入对话内容"
 gutters_draw_line_numbers = true
