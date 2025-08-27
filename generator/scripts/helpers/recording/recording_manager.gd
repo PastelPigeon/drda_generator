@@ -26,6 +26,7 @@ class RecordingInfo:
 	var audio_bus_index: int
 	var start_time: float  # 开始时间戳
 	var frame_times: Array[float] = []  # 记录每帧的实际时间
+	var last_frame_image: Image  # 存储上一帧图像用于补帧
 
 var _state: RecordingState = RecordingState.IDLE
 var _current_recording: RecordingInfo = null
@@ -36,13 +37,59 @@ var _global_output_dir: String = "user://recordings"
 var _master_bus_index: int = 0  # 主总线索引
 var _record_effect_index: int = -1  # 录制效果在总线中的位置
 var _time_since_last_frame: float = 0.0  # 跟踪帧间时间
+var _thread: Thread  # 用于多线程处理
+var _should_thread_exit: bool = false  # 线程退出标志
+var _frame_queue: Array = []  # 帧队列，用于线程间通信
+var _frame_queue_mutex: Mutex  # 保护帧队列的互斥锁
 
 func _ready() -> void:
+	# 初始化互斥锁
+	_frame_queue_mutex = Mutex.new()
+	
 	# 自动初始化音频录制
 	initialize_audio_recording()
 	
 	# 设置默认帧率
 	Engine.max_fps = 0  # 不限制最大FPS
+	
+	# 启动处理线程
+	_thread = Thread.new()
+	_thread.start(_thread_process)
+
+# 线程处理函数
+func _thread_process() -> void:
+	while not _should_thread_exit:
+		# 检查队列中是否有帧需要处理
+		_frame_queue_mutex.lock()
+		var queue_size = _frame_queue.size()
+		if queue_size > 0:
+			var frame_data = _frame_queue.pop_front()
+			_frame_queue_mutex.unlock()
+			
+			# 处理帧数据
+			_process_frame_data(frame_data)
+		else:
+			_frame_queue_mutex.unlock()
+			# 队列为空，短暂休眠避免占用过多CPU
+			OS.delay_usec(5000)  # 休眠5ms
+
+# 处理帧数据（在子线程中执行）
+func _process_frame_data(frame_data: Dictionary) -> void:
+	var img: Image = frame_data.image
+	var frame_path: String = frame_data.path
+	var frame_time: float = frame_data.time
+	
+	# 保存帧
+	var error = img.save_png(frame_path)
+	if error != OK:
+		push_error("Failed to save frame: " + frame_path)
+		return
+	
+	# 记录帧时间（如果提供了）
+	if frame_data.has("recording") and frame_data.recording != null:
+		_frame_queue_mutex.lock()
+		frame_data.recording.frame_times.append(frame_time)
+		_frame_queue_mutex.unlock()
 
 # 设置全局输出目录
 func set_output_dir(dir: String) -> void:
@@ -126,39 +173,64 @@ func start_recording(fps: float = 30.0, custom_output_dir: String = "") -> bool:
 	set_process(true)
 	
 	# 立即捕获第一帧
-	_capture_frame()
+	_capture_frame(true)
 	
 	return true
 
 # 捕获一帧
-func _capture_frame():
+# is_actual_frame: 是否为实际捕获的帧（false表示补帧）
+func _capture_frame(is_actual_frame: bool = true) -> void:
 	if _state != RecordingState.RECORDING:
 		return
 	
-	# 记录当前帧的时间戳
 	var current_time = Time.get_ticks_usec() / 1000000.0
-	_current_recording.frame_times.append(current_time - _current_recording.start_time)
+	var elapsed_time = current_time - _current_recording.start_time
 	
-	# 获取视口图像
-	var viewport = get_viewport()
-	if not viewport:
-		push_error("No viewport available!")
-		return
+	# 获取或创建图像
+	var img: Image
+	if is_actual_frame:
+		# 获取视口图像
+		var viewport = get_viewport()
+		if not viewport:
+			push_error("No viewport available!")
+			return
+		
+		# 捕获视频帧
+		img = viewport.get_texture().get_image()
+		if not img:
+			push_error("Failed to capture viewport image!")
+			return
+		
+		# 保存当前帧用于可能的补帧
+		_current_recording.last_frame_image = img
+	else:
+		# 使用上一帧图像进行补帧
+		if _current_recording.last_frame_image:
+			img = _current_recording.last_frame_image.duplicate()
+		else:
+			# 没有上一帧可用，跳过
+			return
 	
-	# 捕获视频帧
-	var img = viewport.get_texture().get_image()
-	if not img:
-		push_error("Failed to capture viewport image!")
-		return
-	
-	# 保存帧
+	# 准备帧数据
 	var frame_path = "%sframe_%08d.png" % [_current_recording.frames_path, _current_recording.frame_count]
-	var error = img.save_png(frame_path)
-	if error != OK:
-		push_error("Failed to save frame: %d" % _current_recording.frame_count)
-		return
+	var frame_data = {
+		"image": img,
+		"path": frame_path,
+		"time": elapsed_time,
+		"recording": _current_recording if is_actual_frame else null
+	}
+	
+	# 将帧数据添加到队列（线程安全）
+	_frame_queue_mutex.lock()
+	_frame_queue.append(frame_data)
+	_frame_queue_mutex.unlock()
 	
 	_current_recording.frame_count += 1
+	
+	# 每30帧打印一次状态
+	if _current_recording.frame_count % 30 == 0:
+		var actual_fps = _current_recording.frame_count / elapsed_time
+		print("Frames: %d, Actual FPS: %.1f (Target: %d)" % [_current_recording.frame_count, actual_fps, _target_fps])
 
 # 自动处理帧捕获
 func _process(delta):
@@ -173,13 +245,18 @@ func _process(delta):
 	
 	# 如果距离上一帧的时间已经超过目标间隔，捕获新帧
 	if _time_since_last_frame >= target_frame_interval:
-		_capture_frame()
-		_time_since_last_frame = 0.0  # 重置计时器
+		# 计算需要补多少帧
+		var frames_to_capture = floor(_time_since_last_frame / target_frame_interval)
 		
-		# 计算实际帧率
-		var actual_fps = 1.0 / (_frame_timer / _current_recording.frame_count)
-		if _current_recording.frame_count % 30 == 0:  # 每30帧打印一次
-			print("Actual FPS: %.1f (Target: %d)" % [actual_fps, _target_fps])
+		# 捕获实际帧
+		_capture_frame(true)
+		
+		# 补帧
+		for i in range(1, frames_to_capture):
+			_capture_frame(false)
+		
+		# 调整时间计数器，考虑补帧
+		_time_since_last_frame -= frames_to_capture * target_frame_interval
 
 # 停止录制并返回ID
 func stop_recording() -> String:
@@ -189,6 +266,10 @@ func stop_recording() -> String:
 	
 	_state = RecordingState.IDLE
 	set_process(false)
+	
+	# 等待所有帧处理完成
+	while _frame_queue.size() > 0:
+		OS.delay_usec(10000)  # 等待10ms
 	
 	# 停止音频录制
 	if _current_recording.audio_effect_record:
@@ -458,6 +539,11 @@ func get_recording_info(recording_id: String) -> Dictionary:
 
 # 当节点退出场景时清理
 func _exit_tree():
+	# 停止录制线程
+	_should_thread_exit = true
+	if _thread and _thread.is_started():
+		_thread.wait_to_finish()
+	
 	if _state == RecordingState.RECORDING:
 		var id = stop_recording()
 		print("Recording aborted: ", id)
