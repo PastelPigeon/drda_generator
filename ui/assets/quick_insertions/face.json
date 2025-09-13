@@ -1,0 +1,19 @@
+{
+	"id": "face",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/face.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "face"
+	},
+	"replacement": "[face={face}]{text}[/face]",
+	"options": [
+		{
+			"id": "face",
+			"type": {
+				"type": "string"
+			},
+			"default": "ralsei_0"
+		}
+	]
+}

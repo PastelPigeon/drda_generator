@@ -1,0 +1,43 @@
+{
+	"id": "wave",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/wave.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "wave"
+	},
+	"replacement": "[wave amp={amp} freq={freq} connected={connected}]{text}[/wave]",
+	"options": [
+		{
+			"id": "freq",
+			"type": {
+				"type": "number",
+				"min_value": 0.0,
+				"max_value": 100.0,
+				"step": 1.0
+			},
+			"default": 5.0
+		},
+		{
+			"id": "amp",
+			"type": {
+				"type": "number",
+				"min_value": 0.0,
+				"max_value": 100.0,
+				"step": 1.0
+			},
+			"default": 50.0
+		},
+		{
+			"id": "connected",
+			"type": {
+				"type": "options",
+				"options": [
+					"0",
+					"1"
+				]
+			},
+			"default": "1"
+		}
+	]
+}

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://pfrqqf0jlm5t"]
+
+[ext_resource type="Script" uid="uid://dbimnyscfixws" path="res://ui/scripts/pages/editor/quick_insertion_buttons_container/quick_insertion_buttons_container.gd" id="1_u2qbc"]
+
+[node name="QuickInsertionButtonsContainer" type="HBoxContainer"]
+script = ExtResource("1_u2qbc")

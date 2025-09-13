@@ -1,0 +1,26 @@
+{
+	"id": "options",
+	"type": "closed",
+	"icon": "res://ui/assets/quick_insertions/icons/options.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "options"
+	},
+	"replacement": "[options options={options} actions={actions}/]",
+	"options": [
+		{
+			"id": "options",
+			"type": {
+				"type": "string"
+			},
+			"default": "<我不知道, 我不清楚, 我不晓得>"
+		},
+		{
+			"id": "actions",
+			"type": {
+				"type": "string"
+			},
+			"default": "<1|0, 1|1, 1|2, 1|-2>"
+		}
+	]
+}

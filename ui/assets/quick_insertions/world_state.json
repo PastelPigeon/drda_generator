@@ -1,0 +1,19 @@
+{
+	"id": "world_state",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/world_state.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "world_state"
+	},
+	"replacement": "[world_state={world_state}]{text}[/world_state]",
+	"options": [
+		{
+			"id": "world_state",
+			"type": {
+				"type": "string"
+			},
+			"default": "dark"
+		}
+	]
+}

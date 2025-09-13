@@ -1,0 +1,19 @@
+{
+	"id": "color",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/color.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "color"
+	},
+	"replacement": "[color={color}]{text}[/color]",
+	"options": [
+		{
+			"id": "color",
+			"type": {
+				"type": "color"
+			},
+			"default": "yellow"
+		}
+	]
+}

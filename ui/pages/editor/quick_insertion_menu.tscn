@@ -1,0 +1,115 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0nvi4vo5vv7f"]
+
+[ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="1_delej"]
+[ext_resource type="Script" uid="uid://bdj2mfnbr5vtx" path="res://ui/scripts/pages/editor/quick_insertion_menu/quick_insertion_menu.gd" id="1_i6ve4"]
+[ext_resource type="Script" uid="uid://ckbstwi6arrxq" path="res://ui/scripts/pages/editor/quick_insertion_menu/close_button.gd" id="3_3jtah"]
+[ext_resource type="Script" uid="uid://cc7tu2sihbkm3" path="res://ui/scripts/pages/editor/quick_insertion_menu/doc_label.gd" id="3_i7ctf"]
+[ext_resource type="Script" uid="uid://cuj507dogigjp" path="res://ui/scripts/pages/editor/quick_insertion_menu/option_items_container.gd" id="4_p563g"]
+[ext_resource type="Script" uid="uid://bwry3u5rho412" path="res://ui/scripts/pages/editor/quick_insertion_menu/insert_button.gd" id="5_0x140"]
+
+[node name="QuickInsertionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i6ve4")
+
+[node name="Mask" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"loading_mask"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" parent="CenterContainer" instance=ExtResource("1_delej")]
+custom_minimum_size = Vector2(500, 350)
+layout_mode = 2
+title = "快速插入"
+
+[node name="Icon" parent="CenterContainer/Window/MarginContainer/VSplitContainer/Top/TitleBar/Left" index="0"]
+visible = false
+
+[node name="MinButton" parent="CenterContainer/Window/MarginContainer/VSplitContainer/Top/TitleBar/Right" index="0"]
+visible = false
+
+[node name="CloseButton" parent="CenterContainer/Window/MarginContainer/VSplitContainer/Top/TitleBar/Right" index="1"]
+script = ExtResource("3_3jtah")
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HSplitContainer" type="HSplitContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+layout_mode = 2
+split_offset = 200
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer"]
+layout_mode = 2
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="DocLabel" type="RichTextLabel" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"doc_article_viewer_content"
+bbcode_enabled = true
+scroll_active = false
+script = ExtResource("3_i7ctf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="OptionItemsContainer" type="VBoxContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10
+script = ExtResource("4_p563g")
+
+[node name="InsertButton" type="Button" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "插入"
+script = ExtResource("5_0x140")
+
+[editable path="CenterContainer/Window"]

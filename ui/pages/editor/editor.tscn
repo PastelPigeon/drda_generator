@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://333da4qf700w"]
+[gd_scene load_steps=6 format=3 uid="uid://333da4qf700w"]
 
 [ext_resource type="PackedScene" uid="uid://dsbnblavs2fiy" path="res://ui/pages/editor/dialogues_view.tscn" id="1_oiuug"]
 [ext_resource type="PackedScene" uid="uid://bgr47cd65r2lq" path="res://ui/pages/editor/dialogue_editor.tscn" id="2_swlvm"]
 [ext_resource type="Script" uid="uid://c6b72tf2apqf0" path="res://ui/scripts/pages/editor/editor/generate_button.gd" id="2_xeoy1"]
 [ext_resource type="PackedScene" uid="uid://dsef32iw4me8x" path="res://ui/pages/editor/loading.tscn" id="4_0hrba"]
+[ext_resource type="PackedScene" uid="uid://c0nvi4vo5vv7f" path="res://ui/pages/editor/quick_insertion_menu.tscn" id="5_sdlis"]
 
 [node name="Editor" type="Control"]
 layout_mode = 3
@@ -47,8 +48,13 @@ grow_vertical = 0
 text = "生成"
 script = ExtResource("2_xeoy1")
 
-[node name="DialogueEditor" parent="MarginContainer/HSplitContainer" instance=ExtResource("2_swlvm")]
+[node name="DialogueEditor" parent="MarginContainer/HSplitContainer" node_paths=PackedStringArray("quick_insertion_menu") instance=ExtResource("2_swlvm")]
 layout_mode = 2
+quick_insertion_menu = NodePath("../../../QuickInsertionMenu")
+
+[node name="QuickInsertionMenu" parent="." instance=ExtResource("5_sdlis")]
+visible = false
+layout_mode = 1
 
 [node name="Loading" parent="." instance=ExtResource("4_0hrba")]
 unique_name_in_owner = true

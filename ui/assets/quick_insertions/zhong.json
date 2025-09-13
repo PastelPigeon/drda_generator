@@ -1,0 +1,11 @@
+{
+	"id": "zhong",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/zhong.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "zhong"
+	},
+	"replacement": "[font=res://assets/fonts/fzb_variation.tres][font_size=48]{text}[/font_size][/font]",
+	"options": []
+}

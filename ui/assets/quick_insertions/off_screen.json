@@ -1,0 +1,26 @@
+{
+	"id": "off_screen",
+	"type": "closed",
+	"icon": "res://ui/assets/quick_insertions/icons/off_screen.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "off_screen"
+	},
+	"replacement": "[off_screen text={text} face={face}/]",
+	"options": [
+		{
+			"id": "text",
+			"type": {
+				"type": "string"
+			},
+			"default": "我不知道, 我不清楚, 我不晓得"
+		},
+		{
+			"id": "face",
+			"type": {
+				"type": "string"
+			},
+			"default": "susie_0"
+		}
+	]
+}

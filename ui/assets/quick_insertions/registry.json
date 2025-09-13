@@ -1,0 +1,21 @@
+{
+	"color": "res://ui/assets/quick_insertions/color.json",
+	"pulse": "res://ui/assets/quick_insertions/pulse.json",
+	"wave": "res://ui/assets/quick_insertions/wave.json",
+	"tornado": "res://ui/assets/quick_insertions/tornado.json",
+	"shake": "res://ui/assets/quick_insertions/shake.json",
+	"fade": "res://ui/assets/quick_insertions/fade.json",
+	"rainbow": "res://ui/assets/quick_insertions/rainbow.json",
+	"face": "res://ui/assets/quick_insertions/face.json",
+	"sound": "res://ui/assets/quick_insertions/sound.json",
+	"disable_sound": "res://ui/assets/quick_insertions/disable_sound.json",
+	"delay": "res://ui/assets/quick_insertions/delay.json",
+	"world_state": "res://ui/assets/quick_insertions/world_state.json",
+	"font": "res://ui/assets/quick_insertions/font.json",
+	"font_size": "res://ui/assets/quick_insertions/font_size.json",
+	"zhong": "res://ui/assets/quick_insertions/zhong.json",
+	"english": "res://ui/assets/quick_insertions/english.json",
+	"wait": "res://ui/assets/quick_insertions/wait.json",
+	"options": "res://ui/assets/quick_insertions/options.json",
+	"off_screen": "res://ui/assets/quick_insertions/off_screen.json"
+}

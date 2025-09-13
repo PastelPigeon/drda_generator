@@ -1,0 +1,52 @@
+{
+	"id": "rainbow",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/rainbow.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "rainbow"
+	},
+	"replacement": "[rainbow freq={freq} sat={sat} val={val} speed={speed}]{text}[/rainbow]",
+	"options": [
+		{
+			"id": "freq",
+			"type": {
+				"type": "number",
+				"min_value": 0.0,
+				"max_value": 10.0,
+				"step": 0.1
+			},
+			"default": 1.0
+		},
+		{
+			"id": "sat",
+			"type": {
+				"type": "number",
+				"min_value": 0.0,
+				"max_value": 10.0,
+				"step": 0.1
+			},
+			"default": 0.8
+		},
+		{
+			"id": "val",
+			"type": {
+				"type": "number",
+				"min_value": 0.0,
+				"max_value": 10.0,
+				"step": 0.1
+			},
+			"default": 0.8
+		},
+		{
+			"id": "speed",
+			"type": {
+				"type": "number",
+				"min_value": -10.0,
+				"max_value": 10.0,
+				"step": 1.0
+			},
+			"default": 1.0
+		}
+	]
+}

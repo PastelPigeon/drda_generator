@@ -1,0 +1,22 @@
+{
+	"id": "font_size",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/font_size.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "font_size"
+	},
+	"replacement": "[font_size={font_size}]{text}[/font_size]",
+	"options": [
+		{
+			"id": "font_size",
+			"type": {
+				"type": "number",
+				"min_value": 0,
+				"max_value": 100,
+				"step": 1
+			},
+			"default": 48
+		}
+	]
+}

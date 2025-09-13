@@ -1,0 +1,19 @@
+{
+	"id": "font",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/font.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "font"
+	},
+	"replacement": "[font={font}]{text}[/font]",
+	"options": [
+		{
+			"id": "font",
+			"type": {
+				"type": "string"
+			},
+			"default": "res://assets/fonts/fzb_variation.tres"
+		}
+	]
+}

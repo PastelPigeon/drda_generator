@@ -1,0 +1,32 @@
+{
+	"id": "fade",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/fade.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "fade"
+	},
+	"replacement": "[fade start={start} length={length}]{text}[/fade]",
+	"options": [
+		{
+			"id": "start",
+			"type": {
+				"type": "number",
+				"min_value": 0,
+				"max_value": 100,
+				"step": 1
+			},
+			"default": 4
+		},
+		{
+			"id": "length",
+			"type": {
+				"type": "number",
+				"min_value": 0,
+				"max_value": 100,
+				"step": 1
+			},
+			"default": 14
+		}
+	]
+}

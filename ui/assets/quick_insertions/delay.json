@@ -1,0 +1,22 @@
+{
+	"id": "delay",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/delay.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "delay"
+	},
+	"replacement": "[delay={delay}]{text}[/delay]",
+	"options": [
+		{
+			"id": "delay",
+			"type": {
+				"type": "number",
+				"min_value": 0.0,
+				"max_value": 100.0,
+				"step": 1.0
+			},
+			"default": 1.0
+		},
+	]
+}

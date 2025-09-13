@@ -1,13 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://bgr47cd65r2lq"]
+[gd_scene load_steps=17 format=3 uid="uid://bgr47cd65r2lq"]
 
 [ext_resource type="Script" uid="uid://biw4wkgrdsycw" path="res://ui/scripts/pages/editor/dialogue_editor/normal.gd" id="1_c71x3"]
+[ext_resource type="Script" uid="uid://c2veyrm0mwbf0" path="res://ui/scripts/pages/editor/dialogue_editor/dialogue_editor.gd" id="1_o12an"]
 [ext_resource type="Texture2D" uid="uid://mwqhhyj54gvb" path="res://ui/assets/icons/notepad.png" id="1_qugqf"]
 [ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="2_ph81u"]
 [ext_resource type="Script" uid="uid://b52d3264yb35c" path="res://ui/scripts/pages/editor/dialogue_editor/content_edit.gd" id="3_5ck3i"]
 [ext_resource type="Script" uid="uid://c8dh4oq07v05x" path="res://ui/scripts/pages/editor/dialogue_editor/content_err_msg.gd" id="3_eh6ha"]
 [ext_resource type="Texture2D" uid="uid://cmymkyjqoy6l3" path="res://ui/assets/icons/preview.png" id="3_srfkx"]
+[ext_resource type="PackedScene" uid="uid://pfrqqf0jlm5t" path="res://ui/pages/editor/quick_insertion_buttons_container.tscn" id="4_li6dr"]
 [ext_resource type="Script" uid="uid://cjl0jlu1ruxhf" path="res://ui/scripts/pages/editor/dialogue_editor/fz_button.gd" id="4_y1ku4"]
 [ext_resource type="Script" uid="uid://cwn8n6xp65nl6" path="res://ui/scripts/pages/editor/dialogue_editor/fe_button.gd" id="5_bq3e8"]
+[ext_resource type="Script" uid="uid://bjtges1emwux3" path="res://ui/scripts/pages/editor/dialogue_editor/quick_insertion_buttons_container.gd" id="5_f5fl4"]
 [ext_resource type="Script" uid="uid://cu7afam0uemjp" path="res://ui/scripts/pages/editor/dialogue_editor/wd_button.gd" id="6_238nn"]
 [ext_resource type="Script" uid="uid://1qb8hu67v5bq" path="res://ui/scripts/pages/editor/dialogue_editor/preview_label.gd" id="6_diejw"]
 [ext_resource type="Texture2D" uid="uid://q6aqeeu11krm" path="res://ui/assets/icons/warning.png" id="8_34kkw"]
@@ -21,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_o12an")
 
 [node name="Normal" type="Control" parent="."]
 layout_mode = 1
@@ -82,7 +86,13 @@ theme_override_constants/margin_bottom = 5
 [node name="HBoxContainer" type="HBoxContainer" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer"]
 layout_mode = 2
 
+[node name="QuickInsertionButtonsContainer" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/HBoxContainer" instance=ExtResource("4_li6dr")]
+layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("5_f5fl4")
+
 [node name="Functions" type="HBoxContainer" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="FZButton" type="Button" parent="Normal/VBoxContainer/Editor/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/HBoxContainer/Functions"]

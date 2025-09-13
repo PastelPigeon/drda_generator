@@ -1,0 +1,11 @@
+{
+	"id": "english",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/english.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "english"
+	},
+	"replacement": "[font=res://assets/fonts/dtm_variation.tres][font_size=48]{text}[/font_size][/font]",
+	"options": []
+}

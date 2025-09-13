@@ -1,0 +1,11 @@
+{
+	"id": "disable_sound",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/disable_sound.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "disable_sound"
+	},
+	"replacement": "[disable_sound]{text}[/disable_sound]",
+	"options": []
+}

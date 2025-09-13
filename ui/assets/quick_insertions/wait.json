@@ -1,0 +1,22 @@
+{
+	"id": "wait",
+	"type": "closed",
+	"icon": "res://ui/assets/quick_insertions/icons/wait.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "wait"
+	},
+	"replacement": "[wait={wait}/]",
+	"options": [
+		{
+			"id": "wait",
+			"type": {
+				"type": "number",
+				"min_value": 0.0,
+				"max_value": 100.0,
+				"step": 1.0
+			},
+			"default": 1.0
+		},
+	]
+}

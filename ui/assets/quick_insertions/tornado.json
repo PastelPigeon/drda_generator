@@ -1,0 +1,43 @@
+{
+	"id": "tornado",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/tornado.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "tornado"
+	},
+	"replacement": "[tornado radius={radius} freq={freq} connected={connected}]{text}[/tornado]",
+	"options": [
+		{
+			"id": "freq",
+			"type": {
+				"type": "number",
+				"min_value": 0.0,
+				"max_value": 100.0,
+				"step": 1.0
+			},
+			"default": 5.0
+		},
+		{
+			"id": "radius",
+			"type": {
+				"type": "number",
+				"min_value": 0.0,
+				"max_value": 100.0,
+				"step": 1.0
+			},
+			"default": 10.0
+		},
+		{
+			"id": "connected",
+			"type": {
+				"type": "options",
+				"options": [
+					"0",
+					"1"
+				]
+			},
+			"default": "1"
+		}
+	]
+}

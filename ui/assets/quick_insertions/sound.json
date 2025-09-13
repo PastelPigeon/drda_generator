@@ -1,0 +1,19 @@
+{
+	"id": "sound",
+	"type": "wrappered",
+	"icon": "res://ui/assets/quick_insertions/icons/sound.png",
+	"doc": {
+		"category": "effect_tags",
+		"article": "sound"
+	},
+	"replacement": "[sound={sound}]{text}[/sound]",
+	"options": [
+		{
+			"id": "sound",
+			"type": {
+				"type": "string"
+			},
+			"default": "ralsei"
+		}
+	]
+}
