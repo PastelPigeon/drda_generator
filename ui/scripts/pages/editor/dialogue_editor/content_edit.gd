@@ -251,3 +251,6 @@ func _on_quick_insertion_menu_insert_button_pressed(quick_insertion_id: String, 
 		"closed":
 			# 自闭合型
 			insert_text_at_caret(quick_insertion_info["replacement"].format(options))
+			
+	# 手动发送信号
+	text_changed.emit()
