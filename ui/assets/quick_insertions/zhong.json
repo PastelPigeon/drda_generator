@@ -6,6 +6,6 @@
 		"category": "effect_tags",
 		"article": "zhong"
 	},
-	"replacement": "[font=res://assets/fonts/fzb_variation.tres][font_size=48]{text}[/font_size][/font]",
+	"replacement": "[font=res://assets/fonts/fzb.tres][font_size=48]{text}[/font_size][/font]",
 	"options": []
 }
