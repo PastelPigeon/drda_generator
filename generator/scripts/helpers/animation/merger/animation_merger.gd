@@ -1,7 +1,7 @@
 extends Node
 
 ## 将多个动画合并到一个动画当中（AI代码）
-func merge_animations(animations: Array[Animation]) -> Animation:
+func merge_animations(animations: Array[Animation], fps: float = 0) -> Animation:
 	var merged_anim := Animation.new()
 	var max_length: float = 0.0
 	
@@ -49,4 +49,9 @@ func merge_animations(animations: Array[Animation]) -> Animation:
 	
 	# 设置合并后动画的总长度
 	merged_anim.length = max_length
+	
+	# 设置合并后动画的帧率
+	if fps != 0:
+		merged_anim.step = 1 / fps
+	
 	return merged_anim

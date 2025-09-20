@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bgr47cd65r2lq"]
+[gd_scene load_steps=31 format=3 uid="uid://bgr47cd65r2lq"]
 
 [ext_resource type="Script" uid="uid://biw4wkgrdsycw" path="res://ui/scripts/pages/editor/dialogue_editor/normal.gd" id="1_c71x3"]
 [ext_resource type="Script" uid="uid://c2veyrm0mwbf0" path="res://ui/scripts/pages/editor/dialogue_editor/dialogue_editor.gd" id="1_o12an"]
@@ -9,13 +9,29 @@
 [ext_resource type="Texture2D" uid="uid://cmymkyjqoy6l3" path="res://ui/assets/icons/preview.png" id="3_srfkx"]
 [ext_resource type="PackedScene" uid="uid://pfrqqf0jlm5t" path="res://ui/pages/editor/quick_insertion_buttons_container.tscn" id="4_li6dr"]
 [ext_resource type="Script" uid="uid://cjl0jlu1ruxhf" path="res://ui/scripts/pages/editor/dialogue_editor/fz_button.gd" id="4_y1ku4"]
+[ext_resource type="PackedScene" uid="uid://chxw0nk4o6mts" path="res://generator/generator_preview.tscn" id="5_5u1i6"]
 [ext_resource type="Script" uid="uid://cwn8n6xp65nl6" path="res://ui/scripts/pages/editor/dialogue_editor/fe_button.gd" id="5_bq3e8"]
 [ext_resource type="Script" uid="uid://bjtges1emwux3" path="res://ui/scripts/pages/editor/dialogue_editor/quick_insertion_buttons_container.gd" id="5_f5fl4"]
+[ext_resource type="Texture2D" uid="uid://rq8vfked7cxt" path="res://ui/assets/icons/to_start.png" id="5_u0vm0"]
 [ext_resource type="Script" uid="uid://cu7afam0uemjp" path="res://ui/scripts/pages/editor/dialogue_editor/wd_button.gd" id="6_238nn"]
 [ext_resource type="Script" uid="uid://1qb8hu67v5bq" path="res://ui/scripts/pages/editor/dialogue_editor/preview_label.gd" id="6_diejw"]
+[ext_resource type="Script" uid="uid://co6krf241r8q3" path="res://ui/scripts/pages/editor/dialogue_editor/to_start_button.gd" id="6_oih41"]
+[ext_resource type="Texture2D" uid="uid://rmypo8ldku4e" path="res://ui/assets/icons/previous_frame.png" id="6_vw0c5"]
+[ext_resource type="Texture2D" uid="uid://bguyscdfylc53" path="res://ui/assets/icons/play.png" id="7_oih41"]
+[ext_resource type="Texture2D" uid="uid://dmbwd72sb3fgs" path="res://ui/assets/icons/next_frame.png" id="8_4x1qe"]
 [ext_resource type="Texture2D" uid="uid://q6aqeeu11krm" path="res://ui/assets/icons/warning.png" id="8_34kkw"]
 [ext_resource type="Script" uid="uid://dvfj477l5nv80" path="res://ui/scripts/pages/editor/dialogue_editor/no_selected_dialogue_alert.gd" id="8_bkp6b"]
+[ext_resource type="Script" uid="uid://dsa81soiovsxo" path="res://ui/scripts/pages/editor/dialogue_editor/previous_frame_button.gd" id="8_ugils"]
 [ext_resource type="Script" uid="uid://bgawt0hqj06jo" path="res://ui/scripts/pages/editor/dialogue_editor/add_button.gd" id="9_dsilc"]
+[ext_resource type="Texture2D" uid="uid://cm2q0bvmvjp0k" path="res://ui/assets/icons/to_end.png" id="9_ugils"]
+[ext_resource type="Script" uid="uid://d1p0mf36m5cmu" path="res://ui/scripts/pages/editor/dialogue_editor/play_pause_button.gd" id="10_ugils"]
+[ext_resource type="Script" uid="uid://bfuplq4useqhu" path="res://ui/scripts/pages/editor/dialogue_editor/generator_preview.gd" id="11_vw0c5"]
+[ext_resource type="Script" uid="uid://yr6xo6lvrnm8" path="res://ui/scripts/pages/editor/dialogue_editor/next_frame_button.gd" id="12_xfumm"]
+[ext_resource type="Script" uid="uid://dghdv5kwa1h66" path="res://ui/scripts/pages/editor/dialogue_editor/to_end_button.gd" id="14_2blux"]
+[ext_resource type="Script" uid="uid://dn6o4diwi5ovl" path="res://ui/scripts/pages/editor/dialogue_editor/anim_time_label.gd" id="15_070bx"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_g7h28"]
+viewport_path = NodePath("Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/AspectRatioContainer/SubViewport")
 
 [node name="DialogueEditor" type="Control"]
 layout_mode = 3
@@ -43,6 +59,121 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
+
+[node name="Preview" type="VBoxContainer" parent="Normal/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="UnitTitleBar" type="HBoxContainer" parent="Normal/VBoxContainer/Preview"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="Normal/VBoxContainer/Preview/UnitTitleBar"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+texture = ExtResource("3_srfkx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="Normal/VBoxContainer/Preview/UnitTitleBar"]
+layout_mode = 2
+text = "视监"
+
+[node name="Window" parent="Normal/VBoxContainer/Preview" instance=ExtResource("2_ph81u")]
+layout_mode = 2
+size_flags_vertical = 3
+is_extended_bar_enabled = true
+
+[node name="TitleBar" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top" index="0"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top/ExtendedBar" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Control" type="Control" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer"]
+layout_mode = 2
+
+[node name="Left" type="HBoxContainer" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="ToStartButton" type="Button" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/Control/Left"]
+layout_mode = 2
+icon = ExtResource("5_u0vm0")
+script = ExtResource("6_oih41")
+
+[node name="PreviousFrameButton" type="Button" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/Control/Left"]
+layout_mode = 2
+icon = ExtResource("6_vw0c5")
+script = ExtResource("8_ugils")
+
+[node name="PlayPauseButton" type="Button" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/Control/Left"]
+layout_mode = 2
+icon = ExtResource("7_oih41")
+script = ExtResource("10_ugils")
+
+[node name="NextFrameButton" type="Button" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/Control/Left"]
+layout_mode = 2
+icon = ExtResource("8_4x1qe")
+script = ExtResource("12_xfumm")
+
+[node name="ToEndButton" type="Button" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/Control/Left"]
+layout_mode = 2
+icon = ExtResource("9_ugils")
+script = ExtResource("14_2blux")
+
+[node name="Right" type="HBoxContainer" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="AnimTimeLabel" type="Label" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top/ExtendedBar/MarginContainer/Control/Right"]
+layout_mode = 2
+script = ExtResource("15_070bx")
+
+[node name="MarginContainer" type="MarginContainer" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+layout_mode = 2
+ratio = 1.33
+
+[node name="TextureRect" type="TextureRect" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/AspectRatioContainer"]
+layout_mode = 2
+texture = SubResource("ViewportTexture_g7h28")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SubViewport" type="SubViewport" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/AspectRatioContainer"]
+size = Vector2i(1280, 960)
+
+[node name="GeneratorPreview" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/AspectRatioContainer/SubViewport" instance=ExtResource("5_5u1i6")]
+unique_name_in_owner = true
+script = ExtResource("11_vw0c5")
 
 [node name="Editor" type="VBoxContainer" parent="Normal/VBoxContainer"]
 layout_mode = 2
@@ -136,33 +267,34 @@ gutters_draw_line_numbers = true
 auto_brace_completion_enabled = true
 script = ExtResource("3_5ck3i")
 
-[node name="Preview" type="VBoxContainer" parent="Normal/VBoxContainer"]
+[node name="PreviewOld" type="VBoxContainer" parent="Normal/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 7
 
-[node name="UnitTitleBar" type="HBoxContainer" parent="Normal/VBoxContainer/Preview"]
+[node name="UnitTitleBar" type="HBoxContainer" parent="Normal/VBoxContainer/PreviewOld"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="Icon" type="TextureRect" parent="Normal/VBoxContainer/Preview/UnitTitleBar"]
+[node name="Icon" type="TextureRect" parent="Normal/VBoxContainer/PreviewOld/UnitTitleBar"]
 custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
 texture = ExtResource("3_srfkx")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Title" type="Label" parent="Normal/VBoxContainer/Preview/UnitTitleBar"]
+[node name="Title" type="Label" parent="Normal/VBoxContainer/PreviewOld/UnitTitleBar"]
 layout_mode = 2
 text = "预览"
 
-[node name="Window" parent="Normal/VBoxContainer/Preview" instance=ExtResource("2_ph81u")]
+[node name="Window" parent="Normal/VBoxContainer/PreviewOld" instance=ExtResource("2_ph81u")]
 custom_minimum_size = Vector2(0, 240)
 layout_mode = 2
 
-[node name="TitleBar" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/Top" index="0"]
+[node name="TitleBar" parent="Normal/VBoxContainer/PreviewOld/Window/MarginContainer/VSplitContainer/Top" index="0"]
 visible = false
 
-[node name="MarginContainer" type="MarginContainer" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+[node name="MarginContainer" type="MarginContainer" parent="Normal/VBoxContainer/PreviewOld/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -174,7 +306,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="PreviewLabel" type="RichTextLabel" parent="Normal/VBoxContainer/Preview/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+[node name="PreviewLabel" type="RichTextLabel" parent="Normal/VBoxContainer/PreviewOld/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
 layout_mode = 2
 bbcode_enabled = true
 script = ExtResource("6_diejw")
@@ -235,6 +367,7 @@ grow_vertical = 0
 text = "创建新的对话"
 script = ExtResource("9_dsilc")
 
-[editable path="Normal/VBoxContainer/Editor/Window"]
 [editable path="Normal/VBoxContainer/Preview/Window"]
+[editable path="Normal/VBoxContainer/Editor/Window"]
+[editable path="Normal/VBoxContainer/PreviewOld/Window"]
 [editable path="NoSelectedDialogueAlert/CenterContainer/AlertWindow"]

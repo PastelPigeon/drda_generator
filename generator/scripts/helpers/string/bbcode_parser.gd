@@ -95,7 +95,11 @@ func _parse_tag(content: String) -> Dictionary:
 	if "=" in content and " " not in content:
 		var parts = content.split("=", false, 1)
 		result.name = parts[0].strip_edges()
-		result.attrs["value"] = _parse_value(parts[1])
+		# 检查是否有属性值，避免索引越界
+		if parts.size() > 1:
+			result.attrs["value"] = _parse_value(parts[1])
+		else:
+			result.attrs["value"] = _parse_value("")
 		return result
 	
 	# 解析标签名
@@ -107,7 +111,11 @@ func _parse_tag(content: String) -> Dictionary:
 		if "=" in result.name:
 			var name_value = result.name.split("=", false, 1)
 			result.name = name_value[0]
-			result.attrs["value"] = _parse_value(name_value[1])
+			# 检查是否有属性值，避免索引越界
+			if name_value.size() > 1:
+				result.attrs["value"] = _parse_value(name_value[1])
+			else:
+				result.attrs["value"] = _parse_value("")
 		
 		return result
 	
@@ -117,7 +125,11 @@ func _parse_tag(content: String) -> Dictionary:
 	if "=" in result.name:
 		var name_value = result.name.split("=", false, 1)
 		result.name = name_value[0]
-		result.attrs["value"] = _parse_value(name_value[1])
+		# 检查是否有属性值，避免索引越界
+		if name_value.size() > 1:
+			result.attrs["value"] = _parse_value(name_value[1])
+		else:
+			result.attrs["value"] = _parse_value("")
 		return result
 	
 	# 解析属性

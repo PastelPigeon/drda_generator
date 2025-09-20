@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://chxw0nk4o6mts"]
+
+[ext_resource type="PackedScene" uid="uid://cdek1m6ysenjg" path="res://generator/generator.tscn" id="1_j801h"]
+[ext_resource type="Script" uid="uid://rhg4xotwypyw" path="res://generator/scripts/generator_preview/generator_preview.gd" id="2_hhrm4"]
+
+[node name="GeneratorPreview" instance=ExtResource("1_j801h")]
+script = ExtResource("2_hhrm4")
+
+[node name="Background" parent="." index="0"]
+color = Color(0, 0, 0, 1)
+script = null
+
+[node name="AnimationPlayer" parent="." index="2"]
+unique_name_in_owner = true
+script = null
