@@ -247,7 +247,7 @@ func _on_quick_insertion_menu_insert_button_pressed(quick_insertion_id: String, 
 	match  quick_insertion_info["type"]:
 		"wrappered":
 			# 包裹型 - 使用当前存储的字符索引
-			text = "%s%s%s" % [text.substr(0, _stored_start_char_index), quick_insertion_info["replacement"].format(DictionaryMerger.merge_dictionaries([options, {"text": text.substr(_stored_start_char_index, _stored_end_char_index - _stored_start_char_index)}])), text.substr(_stored_end_char_index + 1)]
+			text = "%s%s%s" % [text.substr(0, _stored_start_char_index), quick_insertion_info["replacement"].format(DictionaryMerger.merge_dictionaries([options, {"text": text.substr(_stored_start_char_index, _stored_end_char_index - _stored_start_char_index)}])), text.substr(_stored_end_char_index)]
 		"closed":
 			# 自闭合型
 			insert_text_at_caret(quick_insertion_info["replacement"].format(options))
