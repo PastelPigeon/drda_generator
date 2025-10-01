@@ -26,6 +26,8 @@ func _on_option_type_property_changed():
 			%OptionsInput.visible = true
 		"color":
 			%ColorInput.visible = true
+		"asset":
+			%AssetInput.visible = true
 	
 ## 当选项默认值发生改变时执行
 func _on_option_default_property_changed():

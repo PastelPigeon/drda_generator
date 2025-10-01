@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bdmjb6tiweuoi"]
+[gd_scene load_steps=10 format=3 uid="uid://bdmjb6tiweuoi"]
 
 [ext_resource type="Script" uid="uid://dk724jhfoerx6" path="res://ui/scripts/pages/editor/quick_insertion_menu_option_item/quick_insertion_menu_option_item.gd" id="1_5tibl"]
 [ext_resource type="Script" uid="uid://mgen7tsl7pq7" path="res://ui/scripts/pages/editor/quick_insertion_menu_option_item/id_label.gd" id="2_sicfo"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://duc1nomhvyr72" path="res://ui/scripts/pages/editor/quick_insertion_menu_option_item/number_input.gd" id="5_d085t"]
 [ext_resource type="Script" uid="uid://c5c25jc858c1x" path="res://ui/scripts/pages/editor/quick_insertion_menu_option_item/options_input.gd" id="6_rqidv"]
 [ext_resource type="Script" uid="uid://bce7xky14e55r" path="res://ui/scripts/pages/editor/quick_insertion_menu_option_item/color_input.gd" id="7_dnxbk"]
+[ext_resource type="PackedScene" uid="uid://ci24yogbovnx7" path="res://ui/controls/asset_selector.tscn" id="8_i552u"]
+[ext_resource type="Script" uid="uid://bfl2viuw7p3k6" path="res://ui/scripts/pages/editor/quick_insertion_menu_option_item/asset_input.gd" id="9_v7ky5"]
 
 [node name="QuickInsertionMenuOptionItem" type="VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
@@ -61,3 +63,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("7_dnxbk")
+
+[node name="AssetInput" parent="Inputs" instance=ExtResource("8_i552u")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_v7ky5")

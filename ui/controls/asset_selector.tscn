@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci24yogbovnx7"]
+
+[ext_resource type="Script" uid="uid://byeba5222asdq" path="res://ui/scripts/controls/asset_selector/asset_selector.gd" id="1_nh6gp"]
+
+[node name="AssetSelector" type="OptionButton"]
+theme_override_constants/icon_max_width = 16
+script = ExtResource("1_nh6gp")

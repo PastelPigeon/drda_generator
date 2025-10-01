@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=20 format=3]
+[gd_resource type="Theme" load_steps=21 format=3 uid="uid://tyr758h14ftc"]
 
 [ext_resource type="FontFile" uid="uid://coywg1yikumhu" path="res://ui/assets/fonts/ark-pixel-12px-monospaced-zh_cn.otf" id="1_m31k4"]
 [ext_resource type="FontFile" uid="uid://bqryicn8qdjja" path="res://ui/assets/fonts/CascadiaCodeNF-Regular.otf" id="2_365c8"]
@@ -81,6 +81,17 @@ corner_radius_bottom_left = 4
 shadow_color = Color(0.1, 0.1, 0.1, 1)
 shadow_size = 1
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e13hd"]
+bg_color = Color(0.12549, 0.12549, 0.12549, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etngc"]
 bg_color = Color(0.15, 0.15, 0.15, 1)
 border_width_bottom = 1
@@ -157,6 +168,11 @@ LineEdit/font_sizes/font_size = 14
 LineEdit/fonts/font = ExtResource("1_m31k4")
 LineEdit/styles/focus = SubResource("StyleBoxFlat_2r6kn")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_2r42l")
+PopupMenu/constants/icon_max_width = 24
+PopupMenu/constants/v_separation = 7
+PopupMenu/font_sizes/font_size = 14
+PopupMenu/fonts/font = ExtResource("1_m31k4")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_e13hd")
 RichTextLabel/colors/default_color = Color(0.9, 0.9, 0.9, 1)
 about_more_info_item/base_type = &"Panel"
 about_more_info_item/styles/panel = SubResource("StyleBoxFlat_etngc")

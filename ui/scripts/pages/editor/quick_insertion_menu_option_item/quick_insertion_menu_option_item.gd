@@ -37,3 +37,5 @@ func get_value():
 			return %OptionsInput.get_item_text(%OptionsInput.selected)
 		"color":
 			return "#%s" % %ColorInput.color.to_html()
+		"asset":
+			return %AssetInput.get_item_text(%AssetInput.selected)

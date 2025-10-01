@@ -11,7 +11,8 @@
 		{
 			"id": "face",
 			"type": {
-				"type": "string"
+				"type": "asset",
+				"asset_types": ["character_faces"]
 			},
 			"default": "ralsei_0"
 		}

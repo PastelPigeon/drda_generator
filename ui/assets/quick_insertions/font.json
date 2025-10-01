@@ -11,7 +11,8 @@
 		{
 			"id": "font",
 			"type": {
-				"type": "string"
+				"type": "asset",
+				"asset_types": ["fonts"]
 			},
 			"default": "res://assets/fonts/fzb.tres"
 		}

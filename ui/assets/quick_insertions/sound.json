@@ -11,7 +11,8 @@
 		{
 			"id": "sound",
 			"type": {
-				"type": "string"
+				"type": "asset",
+				"asset_types": ["character_sounds"]
 			},
 			"default": "ralsei"
 		}
