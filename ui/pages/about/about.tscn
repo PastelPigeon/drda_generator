@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckraucf2pmg1w"]
+[gd_scene load_steps=12 format=3 uid="uid://ckraucf2pmg1w"]
 
 [ext_resource type="PackedScene" uid="uid://cefpdn618h3a2" path="res://ui/assets/about_header/imported_animation.tscn" id="1_grm5w"]
 [ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="2_x4vr7"]
@@ -10,6 +10,9 @@
 [ext_resource type="Script" uid="uid://ca1yu17fwin48" path="res://ui/scripts/pages/about/about/license_nav_button.gd" id="7_oqxg7"]
 [ext_resource type="Script" uid="uid://6lhefdj7jrtd" path="res://ui/scripts/pages/about/about/repo_nav_button.gd" id="9_gmfn2"]
 [ext_resource type="Script" uid="uid://cnt1hjyl30enr" path="res://ui/scripts/pages/about/about/readme_nav_button.gd" id="10_grm5w"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_grm5w"]
+viewport_path = NodePath("VSplitContainer/TextureRect/SubViewport")
 
 [node name="About" type="Control"]
 layout_mode = 3
@@ -30,15 +33,18 @@ split_offset = 200
 dragging_enabled = false
 dragger_visibility = 2
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="VSplitContainer"]
+[node name="TextureRect" type="TextureRect" parent="VSplitContainer"]
 layout_mode = 2
+texture = SubResource("ViewportTexture_grm5w")
+expand_mode = 1
+stretch_mode = 6
 
-[node name="SubViewport" type="SubViewport" parent="VSplitContainer/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="VSplitContainer/TextureRect"]
 handle_input_locally = false
 size = Vector2i(992, 200)
 render_target_update_mode = 4
 
-[node name="ImportedAnimation" parent="VSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("1_grm5w")]
+[node name="ImportedAnimation" parent="VSplitContainer/TextureRect/SubViewport" instance=ExtResource("1_grm5w")]
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VSplitContainer"]
 layout_mode = 2
