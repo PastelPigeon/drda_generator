@@ -57,6 +57,9 @@ func _update_ui():
 				else:
 					add_icon_item(AssetLoader.load_asset(asset["files"][0]), asset["key"])
 			"fonts":
-				add_item(asset["key"])
+				if len(asset["files"]) == 0:
+					continue
+				else:
+					add_item(asset["files"][0])
 			"misc":
 				add_item(asset["key"])
