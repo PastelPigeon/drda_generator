@@ -19,6 +19,8 @@ func _ready() -> void:
 		options.erase("dialogues")
 		dialogue_scene_ins.options = cmdline_args_dict
 	elif cmdline_args_status == CmdlineParser.CmdlineStatus.UI_MODE:
+		RuntimeAssetRegistriesManager.create_runtime_registries("user://external_assets/manifest.json")
+		
 		var ui_mode_scene_res: PackedScene = load("res://ui/ui.tscn")
 		var ui_mode_scene_ins = ui_mode_scene_res.instantiate()
 		add_child(ui_mode_scene_ins)
