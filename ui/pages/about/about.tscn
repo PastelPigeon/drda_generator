@@ -69,6 +69,7 @@ size_flags_horizontal = 4
 theme_override_constants/separation = 20
 
 [node name="UpdateWindow" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_x4vr7")]
+visible = false
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 script = ExtResource("3_rkres")
