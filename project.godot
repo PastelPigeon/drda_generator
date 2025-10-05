@@ -52,6 +52,7 @@ DocDataManager="*res://ui/scripts/helpers/data/doc_data_manager.gd"
 DynamicThemeGenerator="*res://ui/scripts/helpers/theme/dynamic_theme_generator.gd"
 SystemThemeDetector="*res://ui/scripts/helpers/theme/system_theme_detector.gd"
 QuickInsertionsManager="*res://ui/scripts/helpers/quick_insertion/quick_insertions_manager.gd"
+AutoUpdater="*res://ui/scripts/helpers/update/auto_updater.gd"
 
 [display]
 
