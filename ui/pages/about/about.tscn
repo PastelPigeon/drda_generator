@@ -1,10 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://ckraucf2pmg1w"]
+[gd_scene load_steps=15 format=3 uid="uid://ckraucf2pmg1w"]
 
 [ext_resource type="PackedScene" uid="uid://cefpdn618h3a2" path="res://ui/assets/about_header/imported_animation.tscn" id="1_grm5w"]
 [ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="2_x4vr7"]
+[ext_resource type="Script" uid="uid://ddpr0yabv2j7l" path="res://ui/scripts/pages/about/about/update_window.gd" id="3_rkres"]
 [ext_resource type="Texture2D" uid="uid://pyyo83y3pjy2" path="res://icon.png" id="3_xgotf"]
+[ext_resource type="Texture2D" uid="uid://cwg2ryp4r4qvt" path="res://ui/assets/icons/msg_information-0.png" id="4_ama0c"]
 [ext_resource type="Texture2D" uid="uid://wivjy1whig6b" path="res://ui/assets/icons/more_info.png" id="4_soajv"]
 [ext_resource type="Texture2D" uid="uid://cyf0lfryfl1by" path="res://ui/assets/icons/loading.png" id="5_1n2wf"]
+[ext_resource type="Script" uid="uid://d0yiyt8ngr25k" path="res://ui/scripts/pages/about/about/update_label.gd" id="5_ama0c"]
 [ext_resource type="Texture2D" uid="uid://mwqhhyj54gvb" path="res://ui/assets/icons/notepad.png" id="6_o40ct"]
 [ext_resource type="Texture2D" uid="uid://uimupoeqwbme" path="res://ui/assets/icons/github-mark.png" id="7_i1mvd"]
 [ext_resource type="Script" uid="uid://ca1yu17fwin48" path="res://ui/scripts/pages/about/about/license_nav_button.gd" id="7_oqxg7"]
@@ -64,6 +67,51 @@ custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 20
+
+[node name="UpdateWindow" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_x4vr7")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+script = ExtResource("3_rkres")
+
+[node name="Top" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer" index="0"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("4_ama0c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "更新可用"
+
+[node name="UpdateLabel" type="RichTextLabel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"doc_article_viewer_content"
+bbcode_enabled = true
+text = "[url]立即更新！"
+fit_content = true
+script = ExtResource("5_ama0c")
 
 [node name="AboutWindow" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_x4vr7")]
 custom_minimum_size = Vector2(0, 150)
@@ -321,5 +369,6 @@ grow_vertical = 2
 text = "查看"
 script = ExtResource("10_grm5w")
 
+[editable path="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow"]
 [editable path="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow"]
 [editable path="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window"]
