@@ -1,0 +1,127 @@
+[gd_scene load_steps=9 format=3 uid="uid://0frt5rbq01l7"]
+
+[ext_resource type="Script" uid="uid://cyewow3vhiwal" path="res://ui/scripts/pages/update_dialog/update_dialog/update_dialog.gd" id="1_f0okc"]
+[ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="1_p3vyn"]
+[ext_resource type="Script" uid="uid://c372q1nd7y0uy" path="res://ui/scripts/pages/update_dialog/update_dialog/close_button.gd" id="2_1egda"]
+[ext_resource type="Script" uid="uid://d4gvbvws62sso" path="res://ui/scripts/pages/update_dialog/update_dialog/release_body.gd" id="4_hnvn6"]
+[ext_resource type="Script" uid="uid://bqwufrkwpndqu" path="res://ui/scripts/pages/update_dialog/update_dialog/content.gd" id="5_po8ke"]
+[ext_resource type="Script" uid="uid://p74vxt328hcx" path="res://ui/scripts/pages/update_dialog/update_dialog/update_button.gd" id="6_mokvl"]
+[ext_resource type="Script" uid="uid://bu412l60k4oxc" path="res://ui/scripts/pages/update_dialog/update_dialog/remind_me_later_button.gd" id="7_dm6va"]
+[ext_resource type="Script" uid="uid://cfd47royw0qks" path="res://ui/scripts/pages/update_dialog/update_dialog/release_url.gd" id="8_85k84"]
+
+[node name="UpdateDialog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f0okc")
+
+[node name="Mask" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"loading_mask"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" parent="CenterContainer" instance=ExtResource("1_p3vyn")]
+custom_minimum_size = Vector2(530, 350)
+layout_mode = 2
+title = "更新可用"
+
+[node name="Icon" parent="CenterContainer/Window/MarginContainer/VSplitContainer/Top/TitleBar/Left" index="0"]
+visible = false
+
+[node name="MinButton" parent="CenterContainer/Window/MarginContainer/VSplitContainer/Top/TitleBar/Right" index="0"]
+visible = false
+
+[node name="CloseButton" parent="CenterContainer/Window/MarginContainer/VSplitContainer/Top/TitleBar/Right" index="1"]
+script = ExtResource("2_1egda")
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HSplitContainer" type="HSplitContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+layout_mode = 2
+split_offset = 200
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="ReleaseBody" type="RichTextLabel" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"doc_article_viewer_content"
+bbcode_enabled = true
+script = ExtResource("4_hnvn6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Title" type="Label" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "更新可用"
+
+[node name="Content" type="Label" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("5_po8ke")
+
+[node name="Options" type="VBoxContainer" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 7
+
+[node name="UpdateButton" type="Button" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/VBoxContainer/Options"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "现在更新"
+script = ExtResource("6_mokvl")
+
+[node name="RemindMeLaterButton" type="Button" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/VBoxContainer/Options"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "稍后提醒"
+script = ExtResource("7_dm6va")
+
+[node name="ReleaseURL" type="RichTextLabel" parent="CenterContainer/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_type_variation = &"doc_article_viewer_content"
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+fit_content = true
+script = ExtResource("8_85k84")
+
+[editable path="CenterContainer/Window"]

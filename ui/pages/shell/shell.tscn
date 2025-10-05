@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://drmcj4setiipp"]
+[gd_scene load_steps=23 format=3 uid="uid://drmcj4setiipp"]
 
 [ext_resource type="Script" uid="uid://ctvt16jnigdss" path="res://ui/scripts/pages/shell/shell/shell.gd" id="1_83ih7"]
 [ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="1_sqfqq"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://r8idrhxm4e1k" path="res://ui/pages/assets_manager/assets_manager.tscn" id="13_wwttj"]
 [ext_resource type="PackedScene" uid="uid://ckraucf2pmg1w" path="res://ui/pages/about/about.tscn" id="16_0n48c"]
 [ext_resource type="PackedScene" uid="uid://cdeewg4jts4ms" path="res://ui/pages/doc/doc.tscn" id="17_h743f"]
+[ext_resource type="PackedScene" uid="uid://0frt5rbq01l7" path="res://ui/pages/update_dialog/update_dialog.tscn" id="20_covgs"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0k1ap"]
 shader = ExtResource("12_buvc6")
@@ -123,7 +124,11 @@ layout_mode = 1
 unique_name_in_owner = true
 layout_mode = 1
 
-[node name="ShaderMask" type="ColorRect" parent="MainWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="1"]
+[node name="UpdateDialog" parent="MainWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="1" instance=ExtResource("20_covgs")]
+visible = false
+layout_mode = 1
+
+[node name="ShaderMask" type="ColorRect" parent="MainWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="2"]
 visible = false
 material = SubResource("ShaderMaterial_0k1ap")
 layout_mode = 1
