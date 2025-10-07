@@ -13,7 +13,7 @@ config_version=5
 config/name="drda_generator"
 config/version="1.5.2"
 run/main_scene="uid://ce6dpfqbtquso"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://pyyo83y3pjy2"
 
 [autoload]
@@ -60,6 +60,10 @@ AutoUpdater="*res://ui/scripts/helpers/update/auto_updater.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=960
 window/per_pixel_transparency/allowed=true
+
+[dotnet]
+
+project/assembly_name="drda_generator"
 
 [editor]
 

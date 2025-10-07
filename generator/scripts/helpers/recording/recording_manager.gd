@@ -331,6 +331,17 @@ func _convert_recording(recording: RecordingInfo, format: RecordingFormat = Reco
 			ffmpeg_path = ProjectSettings.globalize_path("res://externals/ffmpeg.exe")
 		"macOS", "Linux":
 			ffmpeg_path = ProjectSettings.globalize_path("res://externals/ffmpeg")
+			if not FileAccess.file_exists(ffmpeg_path):
+				var env_path = OS.get_environment("PATH").split(":")
+				for path_item in env_path:
+					if FileAccess.file_exists(path_item.path_join("ffmpeg")):
+						ffmpeg_path = path_item.path_join("ffmpeg")
+						break
+				return {
+					"success": false,
+					"message": "Failed to find ffmpeg in PATH. Make sure you installed it through package manager!",
+					"output_path": ""
+				}
 		_:
 			return {
 				"success": false,
@@ -480,6 +491,7 @@ func _convert_recording(recording: RecordingInfo, format: RecordingFormat = Reco
 	var exit_code = OS.execute(ffmpeg_path, args, output, true)
 	
 	if exit_code != 0:
+		print("damn")
 		var error_msg = "FFmpeg failed with code: %d\n" % exit_code
 		for line in output:
 			error_msg += line + "\n"
@@ -488,7 +500,7 @@ func _convert_recording(recording: RecordingInfo, format: RecordingFormat = Reco
 			"message": error_msg,
 			"output_path": ""
 		}
-	
+	print("nmad")
 	return {
 		"success": true,
 		"message": "%s saved successfully" % file_extension.to_upper(),

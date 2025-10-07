@@ -26,14 +26,10 @@ const COLORIZATION_COLOR_KEY = "ColorizationColor"
 const COLOR_PREVALENCE_KEY = "ColorPrevalence"
 
 # 缓存上次检测的值以减少不必要的处理
-var _last_theme_value: int = -1
-var _last_accent_value: int = -1
+var _last_theme_value: bool = false
+var _last_accent_value: Color = DisplayServer.get_accent_color()
 
 func _ready():
-	# 只在Windows平台上运行
-	if OS.get_name() != "Windows":
-		push_error("SystemThemeDetector only works on Windows platform")
-		return
 	
 	# 初始化当前值
 	_update_theme_values()
@@ -59,27 +55,27 @@ func _check_for_changes():
 
 # 更新主题值
 func _update_theme_values():
+		
 	var theme_changed = false
 	var accent_changed = false
 	
 	# 检测主题变化
-	var theme_value = _get_registry_value(REGISTRY_PATH, THEME_KEY)
+	var theme_value = DisplayServer.is_dark_mode()
 	if theme_value != _last_theme_value:
 		_last_theme_value = theme_value
-		var new_scheme = SystemThemeScheme.DARK if theme_value == 0 else SystemThemeScheme.LIGHT
+		var new_scheme = SystemThemeScheme.DARK if theme_value else SystemThemeScheme.LIGHT
 		if new_scheme != _current_scheme:
 			_current_scheme = new_scheme
 			theme_changed = true
 	
 	# 检测强调色变化
-	var accent_value = _get_accent_color_value()
+	var accent_value = DisplayServer.get_accent_color()
 	
 	if accent_value != _last_accent_value:
 		_last_accent_value = accent_value
-		var new_accent_color = _convert_windows_color(accent_value)
 		
-		if new_accent_color != _current_accent_color:
-			_current_accent_color = new_accent_color
+		if accent_value != _current_accent_color:
+			_current_accent_color = accent_value
 			accent_changed = true
 	
 	# 发出信号
@@ -91,21 +87,6 @@ func _update_theme_values():
 			system_theme_accent_color_changed.emit(_current_accent_color)
 		
 		system_theme_changed.emit(_current_scheme, _current_accent_color)
-
-# 获取强调色值
-func _get_accent_color_value() -> int:
-	# 首先尝试获取 AccentColor
-	var color_value = _get_registry_value(DWM_REGISTRY_PATH, ACCENT_COLOR_KEY)
-	
-	# 如果 AccentColor 为 0 或无效，尝试获取 ColorizationColor
-	if color_value == 0:
-		color_value = _get_registry_value(DWM_REGISTRY_PATH, COLORIZATION_COLOR_KEY)
-	
-	# 如果仍然没有有效的颜色值，使用默认颜色
-	if color_value == 0:
-		return _get_default_accent_color_value()
-	
-	return color_value
 
 # 获取默认强调色值
 func _get_default_accent_color_value() -> int:
