@@ -109,4 +109,10 @@
 
 ---
 
+## ⚠️ Linux用户格外注意
+
+目前尚未提供Linux构建产物，但是项目已被移植到Linux平台（可能macOS）上，可以自行构建。
+
+在Linux/macOS上运行时，可能需要使用系统包管理器安装ffmpeg以导出，或者您可以在构建时在externals下放置`ffmpeg`二进制。大多数情况下，请确保`ffmpeg`在您的`PATH`中。
+
 **开始创作你的《DELTARUNE》风格动画吧！** 🎬✨
