@@ -1,5 +1,7 @@
 # 🎮 DRDA GENERATOR - 三角符文对话动画生成器
 
+中文|[English](README_en.md)
+
 **轻松创建《DELTARUNE》风格的对话动画！**
 
 ![drda_generator](https://socialify.git.ci/PastelPigeon/drda_generator/image?language=1&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAACYAAAAsCAYAAAAJpsrIAAAAAXNSR0IArs4c6QAAAplJREFUWIXtmLtq40AUhn8HddPkEVI6TfYB3Lpxsw9gMOqMcRM1xkUIyRZbiDR2s4R0JpAHSKMUhkCI2S5h3cSlYV8gLEytLcTxjqS5HFkjAkt%2BCNie0ZlP5zYzAf5HCdFJm7J9UBeCfm8S0iobQBNQrSpQVSTlimXbJOfDPrwh5aolRCetAmud6DtEXsCaSmYunHZS0xXGgdu1iw8rd4NKfYwLGEaxfxpFO5e6gAhkMZvmvquiMZu4Ocbq%2FEUIk7fCKPbmyaBqbjUdQlILsIcxjGKIy2O2wR%2BHX41jVfqYM5S%2BoEp2HZt%2FQB9o29AtNn6%2Fdy5Mc0xSvSVEJ11uEkyG8%2FTq5hTddq%2B0XQXFh3SABOda3CbVZhjFmAzn1vm5tyBATkGoRWBqE8X8lJdvGIxOAAC312sAwPrlEc%2FJeSn3djlmgpJy1aIxagdb2cdiNtUCLTcJlpskB6PTYHSC9csjrm5OtY5gV4kQnTSMYnz7%2Fiv3%2B5G4K4F12z2EUYzFbFpqzLq5QLli2QfFrewbxy%2FOvjgXJtBiEZhaSG0w8piaT2ouqeq2e363JCDzShHoSNwhjGKM3%2B%2Bt%2Fe72eo3JcJ7BM3ca1tFa9ZbqIdumrRaAClgMpxcw8pBNtDB5hgAnwzlenx7YoQxsg0UoVbocysDySd1t91Ig8%2FDr0wOHCQDjMrKVfW1L0IlCReJWoE7O5C9CAVl1Uec2QRGMDpKj2tc3tVfZ5A2sicuJ11D6VJWX3fteaXr7Os%2FWAuOGwwXoslPpXlklR%2Br%2BtycHRkdeXXffZ6G6cDmwn7%2F%2F7P7GZ89p3erU2eTYPaCH6SBI0jXMfaCKNoF%2Fh0YbXEDhM6luONQ9lT4PRokKqd2qtFc2X2DcNPCWi5%2F6VAX9BUskp5l8scTEAAAAAElFTkSuQmCC&name=1&owner=1&stargazers=1&theme=Auto)  
@@ -19,7 +21,7 @@
 1.  **编辑器** (主工作区):
 	*   **左侧：对话管理器** - 方便地添加、删除、选择和排序你的对话段落。
 	*   **右侧：对话编辑器** - 在这里编写具体对话内容（使用 `BBcode` 语法，下面会详细介绍）。
-	*   **下方：预览区** - 实时查看当前对话的动画效果！
+	*   **上方：预览区** - 实时查看当前对话的动画效果！
 	*   **编辑器上方按钮**:
 		*   `fz`：快速插入**中文字体样式标签**。
 		*   `fe`：快速插入**英文字体样式标签**。
@@ -39,7 +41,7 @@
 `BBcode` 是一种用方括号 `[ ]` 标记文本的简单语言（类似HTML），它能让你在对话里添加各种炫酷效果！在 `drda_generator` 中，主要使用两种标签：
 
 1.  **包裹型标签** (最常见):
-	*   格式：`[标签名=参数]你的文本[/标签名]` 或 `[标签名=参数]你的文本[/]` (简便写法)。
+	*   **格式**：`[标签名=参数]你的文本[/标签名]` 或 `[标签名=参数]你的文本[/]` (简便写法)。
 	*   **作用**：改变被包裹文本的样式或添加动画。
 	*   **效果可以叠加**！例如：
 		```bbcode
