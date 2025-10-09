@@ -155,8 +155,15 @@ func _generate_animation_path_value_pairs_characterface(token: Dictionary) -> Di
 	# 属性路径
 	const TEXTURE_PATH = "%s:texture" % NODE_PATH
 	const VISIBLE_PATH = "%s:visible" % NODE_PATH
+
+	const EMPTY_RESULT = { TEXTURE_PATH: null, VISIBLE_PATH: false }
+
+	if (not "bbcode_tags" in token) or (not "face" in token["bbcode_tags"]):
+		return EMPTY_RESULT
 	
 	# 可能的属性值
+	if not "value" in token["bbcode_tags"]["face"]:
+		return EMPTY_RESULT
 	var texture_value_cf = AssetLoader.load_asset(AssetFinder.find_asset(AssetFinder.AssetType.CHARACTER_FACES, token["bbcode_tags"]["face"]["value"])[0]) if token["bbcode_tags"].has("face") and len(AssetFinder.find_asset(AssetFinder.AssetType.CHARACTER_FACES, token["bbcode_tags"]["face"]["value"])) == 1 else null
 	var texture_value_ncf = null
 	var visible_value_cf = true

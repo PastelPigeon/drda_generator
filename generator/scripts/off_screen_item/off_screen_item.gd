@@ -21,7 +21,10 @@ func _init() -> void:
 ## 当face属性变化时执行
 func _on_face_property_changed():
 	# 设置CharacterFace节点纹理
-	$HBoxContainer/CharacterFace.texture = AssetLoader.load_asset(AssetFinder.find_asset(AssetFinder.AssetType.CHARACTER_FACES, face)[0])
+	var assets = AssetFinder.find_asset(AssetFinder.AssetType.CHARACTER_FACES, face)
+	if assets.is_empty():
+		$HBoxContainer/CharacterFace.texture = ImageTexture.new()
+	$HBoxContainer/CharacterFace.texture = AssetLoader.load_asset(assets[0])
 	
 ## 当text属性变化时执行
 func _on_text_property_changed():
