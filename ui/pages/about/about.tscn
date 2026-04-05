@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ckraucf2pmg1w"]
+[gd_scene format=3 uid="uid://ckraucf2pmg1w"]
 
 [ext_resource type="PackedScene" uid="uid://cefpdn618h3a2" path="res://ui/assets/about_header/imported_animation.tscn" id="1_grm5w"]
 [ext_resource type="PackedScene" uid="uid://df01ectyjal4f" path="res://ui/controls/window.tscn" id="2_x4vr7"]
@@ -17,7 +17,7 @@
 [sub_resource type="ViewportTexture" id="ViewportTexture_grm5w"]
 viewport_path = NodePath("VSplitContainer/TextureRect/SubViewport")
 
-[node name="About" type="Control"]
+[node name="About" type="Control" unique_id=632418141]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,35 +25,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VSplitContainer" type="VSplitContainer" parent="."]
+[node name="VSplitContainer" type="VSplitContainer" parent="." unique_id=1533991291]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-split_offset = 200
+split_offsets = PackedInt32Array(200)
 dragging_enabled = false
 dragger_visibility = 2
+split_offset = 200
 
-[node name="TextureRect" type="TextureRect" parent="VSplitContainer"]
+[node name="TextureRect" type="TextureRect" parent="VSplitContainer" unique_id=1891375234]
 layout_mode = 2
 texture = SubResource("ViewportTexture_grm5w")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="SubViewport" type="SubViewport" parent="VSplitContainer/TextureRect"]
+[node name="SubViewport" type="SubViewport" parent="VSplitContainer/TextureRect" unique_id=963132606]
 handle_input_locally = false
 size = Vector2i(992, 200)
 render_target_update_mode = 4
 
-[node name="ImportedAnimation" parent="VSplitContainer/TextureRect/SubViewport" instance=ExtResource("1_grm5w")]
+[node name="ImportedAnimation" parent="VSplitContainer/TextureRect/SubViewport" unique_id=1173154425 instance=ExtResource("1_grm5w")]
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VSplitContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="VSplitContainer" unique_id=2084886590]
 layout_mode = 2
 vertical_scroll_mode = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer" unique_id=1185341224]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -62,13 +63,13 @@ theme_override_constants/margin_top = 35
 theme_override_constants/margin_right = 1
 theme_override_constants/margin_bottom = 75
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer" unique_id=641585769]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 20
 
-[node name="UpdateWindow" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_x4vr7")]
+[node name="UpdateWindow" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1602264205 instance=ExtResource("2_x4vr7")]
 visible = false
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
@@ -77,7 +78,7 @@ script = ExtResource("3_rkres")
 [node name="Top" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer" index="0"]
 visible = false
 
-[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0" unique_id=412001964]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -89,22 +90,22 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer" unique_id=90534508]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer" unique_id=25331912]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 texture = ExtResource("4_ama0c")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer" unique_id=1141000101]
 layout_mode = 2
 text = "更新可用"
 
-[node name="UpdateLabel" type="RichTextLabel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+[node name="UpdateLabel" type="RichTextLabel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/UpdateWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer" unique_id=970289328]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -114,13 +115,13 @@ text = "[url]立即更新！"
 fit_content = true
 script = ExtResource("5_ama0c")
 
-[node name="AboutWindow" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_x4vr7")]
+[node name="AboutWindow" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1142569456 instance=ExtResource("2_x4vr7")]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 title = "关于"
 icon = ExtResource("3_xgotf")
 
-[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0" unique_id=700895399]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -132,57 +133,57 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer" unique_id=1285483350]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer" unique_id=1010023664]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 texture = ExtResource("3_xgotf")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer" unique_id=474126258]
 layout_mode = 2
 alignment = 1
 
-[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer/VBoxContainer" unique_id=25462089]
 layout_mode = 2
 text = "DRDA_GENERATOR"
 
-[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/AboutWindow/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/HBoxContainer/VBoxContainer" unique_id=239539439]
 layout_mode = 2
 theme_type_variation = &"about_secondary_label"
 text = "轻松创建《DELTARUNE》风格的对话动画！"
 
-[node name="MoreInfo" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+[node name="MoreInfo" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=284913071]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="UnitTitleBar" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo"]
+[node name="UnitTitleBar" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo" unique_id=1195851384]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/UnitTitleBar"]
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/UnitTitleBar" unique_id=391620479]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 texture = ExtResource("4_soajv")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Title" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/UnitTitleBar"]
+[node name="Title" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/UnitTitleBar" unique_id=1410160100]
 layout_mode = 2
 text = "更多信息"
 
-[node name="Window" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo" instance=ExtResource("2_x4vr7")]
+[node name="Window" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo" unique_id=1727402632 instance=ExtResource("2_x4vr7")]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 
 [node name="TitleBar" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/Top" index="0"]
 visible = false
 
-[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0"]
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent" index="0" unique_id=680741947]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -194,74 +195,74 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer" unique_id=403360063]
 layout_mode = 2
 
-[node name="MoreInfoItem" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
+[node name="MoreInfoItem" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer" unique_id=25519232]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_type_variation = &"about_more_info_item"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem" unique_id=925151787]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer"]
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer" unique_id=1446817693]
 custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
 texture = ExtResource("5_1n2wf")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer" unique_id=523213142]
 layout_mode = 2
 alignment = 1
 
-[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer/VBoxContainer"]
+[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer/VBoxContainer" unique_id=607723873]
 layout_mode = 2
 text = "版本"
 
-[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer/VBoxContainer"]
+[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem/HBoxContainer/VBoxContainer" unique_id=277297138]
 layout_mode = 2
 theme_type_variation = &"about_secondary_label"
-text = "v1.5.2"
+text = "v1.5.3"
 
-[node name="MoreInfoItem2" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
+[node name="MoreInfoItem2" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer" unique_id=1192716669]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_type_variation = &"about_more_info_item"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2" unique_id=1100777374]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer"]
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer" unique_id=1725466502]
 custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
 texture = ExtResource("6_o40ct")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer" unique_id=1620758785]
 layout_mode = 2
 alignment = 1
 
-[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer/VBoxContainer"]
+[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer/VBoxContainer" unique_id=1164487743]
 layout_mode = 2
 text = "开源协议"
 
-[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer/VBoxContainer"]
+[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2/HBoxContainer/VBoxContainer" unique_id=23179346]
 layout_mode = 2
 theme_type_variation = &"about_secondary_label"
 text = "基于MIT协议开放源代码"
 
-[node name="LicenseNavButton" type="Button" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2"]
+[node name="LicenseNavButton" type="Button" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem2" unique_id=2114757586]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -276,39 +277,39 @@ grow_vertical = 2
 text = "查看"
 script = ExtResource("7_oqxg7")
 
-[node name="MoreInfoItem3" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
+[node name="MoreInfoItem3" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer" unique_id=468338129]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_type_variation = &"about_more_info_item"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3" unique_id=759154162]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer"]
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer" unique_id=234797205]
 custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
 texture = ExtResource("7_i1mvd")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer" unique_id=1878625005]
 layout_mode = 2
 alignment = 1
 
-[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer/VBoxContainer"]
+[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer/VBoxContainer" unique_id=1157350750]
 layout_mode = 2
 text = "Github链接"
 
-[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer/VBoxContainer"]
+[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3/HBoxContainer/VBoxContainer" unique_id=1525454622]
 layout_mode = 2
 theme_type_variation = &"about_secondary_label"
 text = "查看在线代码存储库"
 
-[node name="RepoNavButton" type="Button" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3"]
+[node name="RepoNavButton" type="Button" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem3" unique_id=249233906]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -323,39 +324,39 @@ grow_vertical = 2
 text = "查看"
 script = ExtResource("9_gmfn2")
 
-[node name="MoreInfoItem4" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer"]
+[node name="MoreInfoItem4" type="Panel" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer" unique_id=813048997]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_type_variation = &"about_more_info_item"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4" unique_id=422621980]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer"]
+[node name="Icon" type="TextureRect" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer" unique_id=1172084052]
 custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
 texture = ExtResource("4_soajv")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer" unique_id=558329801]
 layout_mode = 2
 alignment = 1
 
-[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer/VBoxContainer"]
+[node name="Primary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer/VBoxContainer" unique_id=981187876]
 layout_mode = 2
 text = "遇到了软件使用上的困难？"
 
-[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer/VBoxContainer"]
+[node name="Secondary" type="Label" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4/HBoxContainer/VBoxContainer" unique_id=815503793]
 layout_mode = 2
 theme_type_variation = &"about_secondary_label"
 text = "查看在线帮助文档"
 
-[node name="ReadmeNavButton" type="Button" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4"]
+[node name="ReadmeNavButton" type="Button" parent="VSplitContainer/ScrollContainer/MarginContainer/VBoxContainer/MoreInfo/Window/MarginContainer/VSplitContainer/MarginContainer/WindowContent/MarginContainer/VBoxContainer/MoreInfoItem4" unique_id=1038378028]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0

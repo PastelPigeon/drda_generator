@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="drda_generator"
-config/version="1.5.2"
+config/version="1.5.3"
 run/main_scene="uid://ce6dpfqbtquso"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://pyyo83y3pjy2"
