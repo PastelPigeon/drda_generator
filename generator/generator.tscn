@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cdek1m6ysenjg"]
+[gd_scene format=3 uid="uid://cdek1m6ysenjg"]
 
 [ext_resource type="Script" uid="uid://cmijniia7p5ab" path="res://generator/scripts/generator/generator.gd" id="1_n178k"]
 [ext_resource type="Script" uid="uid://jqtk34kfuj22" path="res://generator/scripts/generator/background.gd" id="2_rcwul"]
@@ -17,7 +17,7 @@ colors = PackedColorArray(0.188235, 0.188235, 0.313726, 1, 0.0117647, 0.0117647,
 gradient = SubResource("Gradient_rcwul")
 fill_to = Vector2(0, 1)
 
-[node name="Generator" type="Control"]
+[node name="Generator" type="Control" unique_id=1326785610]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_n178k")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=415904055]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,17 +36,17 @@ grow_vertical = 2
 color = Color(0, 1, 0, 1)
 script = ExtResource("2_rcwul")
 
-[node name="Dialogue" type="Control" parent="."]
+[node name="Dialogue" type="Control" parent="." unique_id=1406040870]
 anchors_preset = 0
 offset_left = 49.0
 offset_top = 622.0
 offset_right = 1281.0
 offset_bottom = 954.0
 
-[node name="DialogueTexture" parent="Dialogue" instance=ExtResource("3_iydt6")]
+[node name="DialogueTexture" parent="Dialogue" unique_id=1080532600 instance=ExtResource("3_iydt6")]
 layout_mode = 1
 
-[node name="DialogueTextureDark" type="TextureRect" parent="Dialogue"]
+[node name="DialogueTextureDark" type="TextureRect" parent="Dialogue" unique_id=541441500]
 visible = false
 layout_mode = 0
 offset_right = 1232.0
@@ -55,7 +55,7 @@ expand_mode = 1
 stretch_mode = 4
 script = ExtResource("3_jdrsx")
 
-[node name="DialogueTextureLight" type="TextureRect" parent="Dialogue"]
+[node name="DialogueTextureLight" type="TextureRect" parent="Dialogue" unique_id=1242442955]
 visible = false
 layout_mode = 0
 offset_right = 1232.0
@@ -64,23 +64,23 @@ expand_mode = 1
 stretch_mode = 4
 script = ExtResource("4_xmo7a")
 
-[node name="CharacterFace" type="TextureRect" parent="Dialogue"]
+[node name="CharacterFace" type="TextureRect" parent="Dialogue" unique_id=1761179580]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 76.0
+offset_left = 57.0
+offset_top = 48.0
 offset_right = 278.0
-offset_bottom = 272.0
+offset_bottom = 274.0
 expand_mode = 1
-stretch_mode = 4
+stretch_mode = 5
 
-[node name="PlaceholderChar" type="Control" parent="Dialogue"]
+[node name="PlaceholderChar" type="Control" parent="Dialogue" unique_id=1928596466]
 anchors_preset = 0
 offset_left = 299.0
 offset_top = 58.0
 offset_right = 339.0
 offset_bottom = 98.0
 
-[node name="Shadow" type="RichTextLabel" parent="Dialogue/PlaceholderChar"]
+[node name="Shadow" type="RichTextLabel" parent="Dialogue/PlaceholderChar" unique_id=645263752]
 clip_children = 2
 layout_mode = 0
 offset_left = 2.0
@@ -91,7 +91,7 @@ bbcode_enabled = true
 text = "[font=res://assets/fonts/dtm.tres][font_size=51]*"
 fit_content = true
 
-[node name="TextureRect" type="TextureRect" parent="Dialogue/PlaceholderChar/Shadow"]
+[node name="TextureRect" type="TextureRect" parent="Dialogue/PlaceholderChar/Shadow" unique_id=95941391]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -100,7 +100,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_jdrsx")
 
-[node name="Text" type="RichTextLabel" parent="Dialogue/PlaceholderChar"]
+[node name="Text" type="RichTextLabel" parent="Dialogue/PlaceholderChar" unique_id=57515769]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -108,14 +108,14 @@ bbcode_enabled = true
 text = "[font=res://assets/fonts/dtm.tres][font_size=51]*"
 fit_content = true
 
-[node name="Text" type="Control" parent="Dialogue"]
+[node name="Text" type="Control" parent="Dialogue" unique_id=1870981887]
 anchors_preset = 0
 offset_left = 362.0
 offset_top = 63.0
 offset_right = 1094.0
 offset_bottom = 288.0
 
-[node name="Shadow" type="RichTextLabel" parent="Dialogue/Text"]
+[node name="Shadow" type="RichTextLabel" parent="Dialogue/Text" unique_id=163349317]
 clip_children = 2
 layout_mode = 1
 anchors_preset = 15
@@ -133,7 +133,7 @@ visible_characters = 0
 visible_characters_behavior = 1
 visible_ratio = 0.142857
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue/Text/Shadow"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue/Text/Shadow" unique_id=1708803024]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -141,25 +141,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Dialogue/Text/Shadow/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Dialogue/Text/Shadow/VBoxContainer" unique_id=289532346]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 texture = SubResource("GradientTexture2D_jdrsx")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="Dialogue/Text/Shadow/VBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="Dialogue/Text/Shadow/VBoxContainer" unique_id=1200380809]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 texture = SubResource("GradientTexture2D_jdrsx")
 expand_mode = 1
 
-[node name="TextureRect3" type="TextureRect" parent="Dialogue/Text/Shadow/VBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="Dialogue/Text/Shadow/VBoxContainer" unique_id=1099509593]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 texture = SubResource("GradientTexture2D_jdrsx")
 expand_mode = 1
 
-[node name="Text" type="RichTextLabel" parent="Dialogue/Text"]
+[node name="Text" type="RichTextLabel" parent="Dialogue/Text" unique_id=2063236283]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -172,7 +172,7 @@ visible_characters = 0
 visible_characters_behavior = 1
 visible_ratio = 0.142857
 
-[node name="OffScreenItemsContainer" parent="Dialogue" instance=ExtResource("5_1rbap")]
+[node name="OffScreenItemsContainer" parent="Dialogue" unique_id=1273977342 instance=ExtResource("5_1rbap")]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -186,7 +186,7 @@ offset_bottom = -44.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="OptionItemsContainer" parent="Dialogue" instance=ExtResource("6_bevll")]
+[node name="OptionItemsContainer" parent="Dialogue" unique_id=1631415184 instance=ExtResource("6_bevll")]
 visible = false
 layout_mode = 0
 offset_left = 40.0
@@ -194,7 +194,7 @@ offset_top = 40.0
 offset_right = 1140.0
 offset_bottom = 290.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1926726998]
 script = ExtResource("5_nd3na")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1883144606]
