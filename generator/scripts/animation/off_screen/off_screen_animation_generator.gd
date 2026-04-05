@@ -37,7 +37,7 @@ func generate_off_screen_animation(dialogues: Array, options: Dictionary) -> Ani
 			# 创建小对话框
 			off_screen_animation.track_insert_key(track_index, char_schedule["absolute_start_time"] - 1 / options["fps"], {
 				"method": "add_item",
-				"args": [off_screen_item_name, tokens[token_index]["bbcode_tags"]["off_screen"]["face"], tokens[token_index]["bbcode_tags"]["off_screen"]["text"]]
+				"args": [off_screen_item_name, str(tokens[token_index]["bbcode_tags"]["off_screen"]["face"]), str(tokens[token_index]["bbcode_tags"]["off_screen"]["text"])]
 			})
 			
 			# 播放小对话框出现动画

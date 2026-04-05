@@ -1,6 +1,6 @@
 extends Node
 
-## 将bbcode字符串解析为token Array (AI代码)
+## 将 BBCode 字符串解析为 token Array
 func parse_bbcode_string_to_tokens(bbcode_string: String) -> Array:
 	var tokens: Array = []
 	var tag_stack: Array = []
@@ -71,7 +71,7 @@ func parse_bbcode_string_to_tokens(bbcode_string: String) -> Array:
 	
 	return tokens
 
-# 创建token字典
+# 创建 token 字典
 func _create_token(index: int, char: String, tags: Dictionary) -> Dictionary:
 	return {
 		"char_index": index,
@@ -87,15 +87,14 @@ func _update_current_tags(stack: Array, current_tags: Dictionary) -> void:
 		var tag_attrs = tag[1]
 		current_tags[tag_name] = tag_attrs
 
-# 解析标签内容 - 修复版本
+# 解析标签内容（支持引号包裹的属性值）
 func _parse_tag(content: String) -> Dictionary:
 	var result = { name = "", attrs = {} }
 	
-	# 首先检查无名属性标签（如 [world_state=dark]）
+	# 处理无名属性标签（如 [world_state=dark]）
 	if "=" in content and " " not in content:
 		var parts = content.split("=", false, 1)
 		result.name = parts[0].strip_edges()
-		# 检查是否有属性值，避免索引越界
 		if parts.size() > 1:
 			result.attrs["value"] = _parse_value(parts[1])
 		else:
@@ -106,26 +105,22 @@ func _parse_tag(content: String) -> Dictionary:
 	var name_end = content.find(" ")
 	if name_end == -1:
 		result.name = content
-		
-		# 检查标签名中是否有等号（如 [font_size=48]）
+		# 处理标签名中包含等号的情况（如 [font_size=48]）
 		if "=" in result.name:
 			var name_value = result.name.split("=", false, 1)
 			result.name = name_value[0]
-			# 检查是否有属性值，避免索引越界
 			if name_value.size() > 1:
 				result.attrs["value"] = _parse_value(name_value[1])
 			else:
 				result.attrs["value"] = _parse_value("")
-		
 		return result
 	
 	result.name = content.substr(0, name_end)
 	
-	# 处理无名属性 (如 [color=green])
+	# 处理标签名中嵌等号的情况（如 [color=green]）
 	if "=" in result.name:
 		var name_value = result.name.split("=", false, 1)
 		result.name = name_value[0]
-		# 检查是否有属性值，避免索引越界
 		if name_value.size() > 1:
 			result.attrs["value"] = _parse_value(name_value[1])
 		else:
@@ -135,15 +130,19 @@ func _parse_tag(content: String) -> Dictionary:
 	# 解析属性
 	var attr_str = content.substr(name_end + 1).strip_edges()
 	var pos = 0
-	var in_array = false
+	var length = attr_str.length()
 	var current_attr = ""
 	var current_value = ""
+	var in_quotes = false
+	var quote_char = ""
+	var in_array = false
 	var array_depth = 0
 	
-	while pos < attr_str.length():
+	while pos < length:
 		var char = attr_str[pos]
 		
-		if char == "<" and !in_array:
+		# 处理数组值 <...>（优先级高于引号）
+		if char == "<" and not in_quotes:
 			in_array = true
 			array_depth = 1
 			current_value += char
@@ -155,17 +154,28 @@ func _parse_tag(content: String) -> Dictionary:
 			current_value += char
 			if array_depth == 0:
 				in_array = false
-		elif char == "=" and !in_array and current_attr == "":
-			# 遇到等号，且不在数组中，且当前属性名为空
+		elif in_array:
+			current_value += char
+		# 处理引号包裹的值
+		elif not in_quotes and (char == '"' or char == "'"):
+			in_quotes = true
+			quote_char = char
+			# 不将引号加入值，继续下一个字符
+		elif in_quotes and char == quote_char:
+			in_quotes = false
+			# 引号结束，此时 current_value 已经存储了值的内容
+		elif not in_quotes and char == "=" and current_attr == "":
+			# 遇到等号，且不在引号中，且当前属性名为空
 			current_attr = current_value.strip_edges()
 			current_value = ""
-		elif char == " " and !in_array:
-			# 完成当前属性解析
+		elif not in_quotes and char == " ":
+			# 完成当前属性解析（仅在非引号、非数组模式下）
 			if current_attr != "" and current_value != "":
 				result.attrs[current_attr] = _parse_value(current_value.strip_edges())
 				current_attr = ""
 				current_value = ""
 		else:
+			# 普通字符：如果是引号内的内容或普通值，都追加
 			current_value += char
 		
 		pos += 1
